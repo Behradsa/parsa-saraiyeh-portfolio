@@ -1,0 +1,6 @@
+.home-page-container {
+  width: 1100px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
