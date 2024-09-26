@@ -8,7 +8,6 @@ const router = createHashRouter([
     path: "/",
     element: <HomePage />,
   },
-  { basename: "/parsa-saraiyeh-portfolio" },
 ]);
 
 createRoot(document.getElementById("root")).render(
