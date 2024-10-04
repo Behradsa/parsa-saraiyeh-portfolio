@@ -1,5 +1,14 @@
-import React from "react";
 import "./MainGrid.css";
+import React from "react";
+import dribble_logo_img from "../assets/dirrble-frame.svg";
+import dribble_logo_hover_img from "../assets/dribble-frame:hover.svg";
+import linkedin_logo_img from "../assets/linkedin-frame.svg";
+import linkedin_logo_hover_img from "../assets/linkedin-frame:hover.svg";
+import behance_logo_img from "../assets/behance-frame.svg";
+import behance_logo_hover_img from "../assets/behance-frame:hover.svg";
+import parsa_portfolio_img from "../assets/parsa-portfolio-picture.png";
+import link_icon_img from "../assets/link-frame.svg";
+
 function MainGrid() {
   return (
     <div className="main-grid">
@@ -13,24 +22,21 @@ function MainGrid() {
           <div className="introduction-buttons-container">
             <button className="button-contact-me">Contact Me</button>
             <button className="logo-button">
-              <img src="/src/assets/dirrble-frame.svg" alt="dribble" />
-              <img src="/src/assets/dribble-frame:hover.svg" alt="dribble" />
+              <img src={dribble_logo_img} alt="dribble" />
+              <img src={dribble_logo_hover_img} alt="dribble" />
             </button>
             <button className="logo-button">
-              <img src="/src/assets/linkedin-frame.svg" alt="linkedin" />
-              <img src="/src/assets/linkedin-frame:hover.svg" alt="linkedin" />
+              <img src={linkedin_logo_img} alt="linkedin" />
+              <img src={linkedin_logo_hover_img} alt="linkedin" />
             </button>
             <button className="logo-button">
-              <img src="/src/assets/behance-frame.svg" alt="behance" />
-              <img src="/src/assets/behance-frame:hover.svg" alt="behance" />
+              <img src={behance_logo_img} alt="behance" />
+              <img src={behance_logo_hover_img} alt="behance" />
             </button>
           </div>
         </div>
         <div className="introduction-image-container ">
-          <img
-            src="/src/assets/parsa-portfolio-picture.png"
-            alt="parsa-picture"
-          />
+          <img src={parsa_portfolio_img} alt="parsa-picture" />
         </div>
       </div>
       <div className="grid-cell nickandish-frame">
@@ -40,21 +46,21 @@ function MainGrid() {
           Brand identity owner
         </p>
         <button>
-          <img src="/src/assets/link-frame.svg" alt="link" />
+          <img src={link_icon_img} alt="link" />
         </button>
       </div>
       <div className="grid-cell nabulox-frame">
         <h3>Nebulox</h3>
         <p>Visual Designer</p>
         <button>
-          <img src="/src/assets/link-frame.svg" alt="link" />
+          <img src={link_icon_img} alt="link" />
         </button>
       </div>
       <div className="grid-cell snapp-trip-frame">
         <h3>Snapp Tripp</h3>
         <p>Graphic Designer</p>
         <button>
-          <img src="/src/assets/link-frame.svg" alt="link" />
+          <img src={link_icon_img} alt="link" />
         </button>
       </div>
       <div className="grid-cell carriot-frame">
@@ -63,14 +69,14 @@ function MainGrid() {
           Graphic Designer <br /> UI Designer
         </p>
         <button>
-          <img src="/src/assets/link-frame.svg" alt="link" />
+          <img src={link_icon_img} alt="link" />
         </button>
       </div>
       <div className="grid-cell omid-frame">
         <h3>Omid Analyzer</h3>
         <p>Graphic Designer</p>
         <button>
-          <img src="/src/assets/link-frame.svg" alt="link" />
+          <img src={link_icon_img} alt="link" />
         </button>
       </div>
       <div className="grid-cell mano-frame">
@@ -79,7 +85,7 @@ function MainGrid() {
           Graphic Designer <br /> UI Designer
         </p>
         <button>
-          <img src="/src/assets/link-frame.svg" alt="link" />
+          <img src={link_icon_img} alt="link" />
         </button>
       </div>
       <div className="grid-cell-other">
@@ -88,7 +94,7 @@ function MainGrid() {
           Graphic Designer <br /> UI Designer
         </p>
         <button>
-          <img src="/src/assets/link-frame.svg" alt="link" />
+          <img src={link_icon_img} alt="link" />
         </button>
       </div>
       <div className="grid-cell-contactme">
@@ -105,16 +111,16 @@ function MainGrid() {
         <div className="introduction-buttons-container">
           <button className="button-contact-me">Contact Me</button>
           <button className="logo-button">
-            <img src="/src/assets/dirrble-frame.svg" alt="dribble" />
-            <img src="/src/assets/dribble-frame:hover.svg" alt="dribble" />
+            <img src={dribble_logo_img} alt="dribble" />
+            <img src={dribble_logo_hover_img} alt="dribble" />
           </button>
           <button className="logo-button">
-            <img src="/src/assets/linkedin-frame.svg" alt="linkedin" />
-            <img src="/src/assets/linkedin-frame:hover.svg" alt="linkedin" />
+            <img src={linkedin_logo_img} alt="linkedin" />
+            <img src={linkedin_logo_hover_img} alt="linkedin" />
           </button>
           <button className="logo-button">
-            <img src="/src/assets/behance-frame.svg" alt="behance" />
-            <img src="/src/assets/behance-frame:hover.svg" alt="behance" />
+            <img src={behance_logo_img} alt="linkedin" />
+            <img src={behance_logo_hover_img} alt="linkedin" />
           </button>
         </div>
       </div>
