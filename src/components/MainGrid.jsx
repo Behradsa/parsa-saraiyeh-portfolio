@@ -20,7 +20,14 @@ function MainGrid() {
             creating user-centric, delightful, and human experiences.
           </p>
           <div className="introduction-buttons-container">
-            <button className="button-contact-me">Contact Me</button>
+            {/* <button className="button-contact-me">Contact Me</button> */}
+            <a href="#" class="button type--A">
+              <div class="button__line"></div>
+              <div class="button__line"></div>
+              <span class="button__text">Contact Me</span>
+              <div class="button__drow1"></div>
+              <div class="button__drow2"></div>
+            </a>
             <button className="logo-button">
               <img src={dribble_logo_img} alt="dribble" />
               <img src={dribble_logo_hover_img} alt="dribble" />
@@ -107,7 +114,14 @@ function MainGrid() {
           6793
         </div>
         <div className="introduction-buttons-container">
-          <button className="button-contact-me">Contact Me</button>
+          {/* <button className="button-contact-me">Contact Me</button> */}
+          <a href="#" class="button type--A">
+            <div class="button__line"></div>
+            <div class="button__line"></div>
+            <span class="button__text">Contact Me</span>
+            <div class="button__drow1"></div>
+            <div class="button__drow2"></div>
+          </a>
           <button className="logo-button">
             <img src={dribble_logo_img} alt="dribble" />
             <img src={dribble_logo_hover_img} alt="dribble" />
