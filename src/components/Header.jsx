@@ -8,10 +8,10 @@ function Header() {
         <div>PARSA</div>
       </div>
       <div className="header-buttons-container">
-        <button>Home</button>
-        <button>CV</button>
-        <button>Projects</button>
-        <button>Contact</button>
+        <button className="hover-underline-animation">Home</button>
+        <button className="hover-underline-animation">CV</button>
+        <button className="hover-underline-animation">Projects</button>
+        <button className="hover-underline-animation">Contact</button>
       </div>
     </header>
   );

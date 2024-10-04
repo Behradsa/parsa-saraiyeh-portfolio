@@ -14,18 +14,21 @@ function MainGrid() {
             <button className="button-contact-me">Contact Me</button>
             <button className="logo-button">
               <img src="/src/assets/dirrble-frame.svg" alt="dribble" />
+              <img src="/src/assets/dribble-frame:hover.svg" alt="dribble" />
             </button>
             <button className="logo-button">
               <img src="/src/assets/linkedin-frame.svg" alt="linkedin" />
+              <img src="/src/assets/linkedin-frame:hover.svg" alt="linkedin" />
             </button>
             <button className="logo-button">
               <img src="/src/assets/behance-frame.svg" alt="behance" />
+              <img src="/src/assets/behance-frame:hover.svg" alt="behance" />
             </button>
           </div>
         </div>
         <div className="introduction-image-container ">
           <img
-            src="/src/assets/parsa-portfolio-picture.jpeg"
+            src="/src/assets/parsa-portfolio-picture.png"
             alt="parsa-picture"
           />
         </div>
@@ -103,12 +106,15 @@ function MainGrid() {
           <button className="button-contact-me">Contact Me</button>
           <button className="logo-button">
             <img src="/src/assets/dirrble-frame.svg" alt="dribble" />
+            <img src="/src/assets/dribble-frame:hover.svg" alt="dribble" />
           </button>
           <button className="logo-button">
             <img src="/src/assets/linkedin-frame.svg" alt="linkedin" />
+            <img src="/src/assets/linkedin-frame:hover.svg" alt="linkedin" />
           </button>
           <button className="logo-button">
             <img src="/src/assets/behance-frame.svg" alt="behance" />
+            <img src="/src/assets/behance-frame:hover.svg" alt="behance" />
           </button>
         </div>
       </div>
