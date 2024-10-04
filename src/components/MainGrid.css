@@ -76,7 +76,16 @@
   display: flex;
   cursor: pointer;
   color: white;
+  background-size: 100%;
+  transition: background-size 0.5s ease-in-out;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+.grid-cell:hover {
+  background-size: 110%;
+}
+
 .grid-cell h3,
 .grid-cell-other h3 {
   position: absolute;
@@ -108,8 +117,15 @@
   cursor: pointer;
   position: relative;
   background-image: url("/src/assets/other-projects-frame.png");
-  background-size: cover;
+  background-size: 100%;
+  transition: background-size 0.5s ease-in-out;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
   color: white;
+}
+.grid-cell-other:hover {
+  background-size: 110%;
 }
 .grid-cell-other button {
   position: absolute;
@@ -161,29 +177,24 @@
 
 .nickandish-frame {
   background-image: url("/src/assets/nickandish-frame.png");
-  background-size: cover;
 }
+
 .snapp-trip-frame {
   background-image: url("/src/assets/snapp-trip-frame.png");
-  background-size: cover;
 }
 
 .carriot-frame {
   background-image: url("/src/assets/carriot-frame.png");
-  background-size: cover;
 }
 
 .omid-frame {
   background-image: url("/src/assets/omid-frame.png");
-  background-size: cover;
 }
 .mano-frame {
   background-image: url("/src/assets/mano-frame.png");
-  background-size: cover;
 }
 .nabulox-frame {
   background-image: url("/src/assets/nebulox-frame.png");
-  background-size: cover;
 }
 .logo-button {
   position: relative;

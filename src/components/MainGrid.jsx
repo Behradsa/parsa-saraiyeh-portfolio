@@ -95,7 +95,7 @@ function MainGrid() {
           <img src={link_icon_img} alt="link" />
         </button>
       </div>
-      <div className="grid-cell-other">
+      <div className="grid-cell-other ">
         <h3>Other Projects</h3>
         <p>
           Graphic Designer <br /> UI Designer
