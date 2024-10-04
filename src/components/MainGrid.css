@@ -126,6 +126,7 @@
   background-image: url("/src/assets/contactme-frame.png");
   background-size: cover;
   padding: 36px;
+  overflow: hidden;
 }
 .grid-cell-contactme h1 {
   font-size: 45px;
