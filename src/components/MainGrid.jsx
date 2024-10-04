@@ -100,14 +100,12 @@ function MainGrid() {
       <div className="grid-cell-contactme">
         <h1>Want to work together? </h1>
         <p>
-          <b>
-            Feel free to reach out for collaborations or just a friendly hello
-          </b>
-          <br />
-          <br />
-          <b>Mail:</b> Parsa.sa1999@gmail.com <br /> <b>Phone:</b> + 98 912 043
-          6793
+          Feel free to reach out for collaborations or just a friendly hello :)
         </p>
+        <div>
+          <b> Mail:</b> Parsa.sa1999@gmail.com <br /> <b>Phone:</b> + 98 912 043
+          6793
+        </div>
         <div className="introduction-buttons-container">
           <button className="button-contact-me">Contact Me</button>
           <button className="logo-button">

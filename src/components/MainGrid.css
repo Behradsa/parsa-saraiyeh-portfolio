@@ -108,6 +108,7 @@
   position: relative;
   background-image: url("/src/assets/other-projects-frame.png");
   background-size: cover;
+  color: white;
 }
 .grid-cell-other button {
   position: absolute;
@@ -133,11 +134,19 @@
 
 .grid-cell-contactme p {
   font-size: 18px;
-  margin-bottom: 50px;
-  line-height: 1.5em;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
-.grid-cell-contactme p b {
+.grid-cell-contactme div {
+  line-height: 1.5em;
+  margin-bottom: 50px;
+  font-weight: 400;
+  font-size: 18px;
+}
+.grid-cell-contactme div b {
+  margin-bottom: 50px;
+  font-weight: 500;
   font-size: 18px;
 }
 .introduction-square,
@@ -169,7 +178,6 @@
 .mano-frame {
   background-image: url("/src/assets/mano-frame.png");
   background-size: cover;
-  color: black;
 }
 .nabulox-frame {
   background-image: url("/src/assets/nebulox-frame.png");
@@ -204,5 +212,3 @@
   opacity: 0;
   visibility: hidden;
 }
-
-/* //////////// */
