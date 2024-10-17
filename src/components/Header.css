@@ -22,8 +22,10 @@ header {
   display: flex;
   justify-content: space-between;
   width: 300px;
+  align-items: center;
 }
-.header-buttons-container button {
+.header-buttons-container a {
+  display: inline-block;
   background: none;
   cursor: pointer;
   font-weight: 500;
@@ -41,7 +43,7 @@ header {
   width: 100%;
   transform: scaleX(0);
   height: 2px;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   background-color: black;
   transform-origin: bottom right;

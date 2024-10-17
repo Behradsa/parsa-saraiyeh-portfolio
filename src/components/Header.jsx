@@ -1,4 +1,5 @@
 import React from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import "./Header.css";
 import parsa_logo_img from "../assets/parsa-logo.svg";
 function Header() {
@@ -9,10 +10,20 @@ function Header() {
         <div>PARSA</div>
       </div>
       <div className="header-buttons-container">
-        <button className="hover-underline-animation">Home</button>
-        <button className="hover-underline-animation">CV</button>
-        <button className="hover-underline-animation">Projects</button>
-        <button className="hover-underline-animation">Contact</button>
+        <AnchorLink href="/" className="hover-underline-animation">
+          Home
+        </AnchorLink>
+
+        <AnchorLink className="hover-underline-animation">CV</AnchorLink>
+        <AnchorLink href="#first_project" className="hover-underline-animation">
+          Projects
+        </AnchorLink>
+        <AnchorLink
+          href="#contact_me_home_page"
+          className="hover-underline-animation"
+        >
+          Contact
+        </AnchorLink>
       </div>
     </header>
   );

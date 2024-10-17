@@ -28,25 +28,28 @@ function MainGrid() {
               <div class="button__drow1"></div>
               <div class="button__drow2"></div>
             </a>
-            <button className="logo-button">
+            <a href="" className="logo-button">
               <img src={dribble_logo_img} alt="dribble" />
               <img src={dribble_logo_hover_img} alt="dribble" />
-            </button>
-            <button className="logo-button">
+            </a>
+            <a
+              href="https://www.linkedin.com/in/parsa-saraiyeh/"
+              className="logo-button"
+            >
               <img src={linkedin_logo_img} alt="linkedin" />
               <img src={linkedin_logo_hover_img} alt="linkedin" />
-            </button>
-            <button className="logo-button">
+            </a>
+            <a href="" className="logo-button">
               <img src={behance_logo_img} alt="behance" />
               <img src={behance_logo_hover_img} alt="behance" />
-            </button>
+            </a>
           </div>
         </div>
         <div className="introduction-image-container ">
           <img src={parsa_portfolio_img} alt="parsa-picture" />
         </div>
       </div>
-      <div className="grid-cell nickandish-frame">
+      <div id="first_project" className="grid-cell nickandish-frame">
         <h3>NikAndish Design system</h3>
         <p>
           Visual Designer <br />
@@ -104,7 +107,7 @@ function MainGrid() {
           <img src={link_icon_img} alt="link" />
         </button>
       </div>
-      <div className="grid-cell-contactme">
+      <div id="contact_me_home_page" className="grid-cell-contactme">
         <h1>Want to work together? </h1>
         <p>
           Feel free to reach out for collaborations or just a friendly hello :)
