@@ -7,6 +7,7 @@
   grid-gap: 16px;
 }
 
+/* Introduction */
 .introduction-container {
   display: flex;
   grid-column-start: 1;
@@ -15,193 +16,41 @@
 }
 
 .introduction-square {
-  background-image: url("/src/assets/introduction-frame.png");
-  background-size: cover;
-  flex-basis: 65%;
+  background-color: lightsteelblue;
+  padding: 40px;
   margin-right: 16px;
-  padding: 36px;
   overflow: hidden;
-  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.introduction-square h1 {
-  font-size: 45px;
+.introduction-square .text-holder h1 {
+  font-size: 40px;
   font-weight: 500;
-  margin-bottom: 30px;
-  width: 500px;
+  line-height: 50px;
+  margin-bottom: 16px;
+  width: 580px;
 }
 
-.introduction-square p {
+.introduction-square .text-holder p {
   font-size: 18px;
+  line-height: 22px;
   font-weight: 400;
-  margin-bottom: 130px;
-  width: 550px;
+  width: 580px;
 }
 
 .introduction-buttons-container {
   display: flex;
-  justify-content: space-between;
-  width: 450px;
-  /* overflow-y: hidden; */
+  gap: 16px;
 }
-.button-contact-me {
-  width: 175px;
-  background-color: black;
-  color: white;
-  font-weight: 700;
-  font-size: 15px;
-  border-radius: 30px;
-  cursor: pointer;
-}
+
 .logo-button {
-  display: flex;
-  background: none;
-  cursor: pointer;
-}
-.logo-button img {
-  border-radius: 100px;
-}
-.introduction-image-container {
-  flex-grow: 1;
-  overflow: hidden;
-}
-
-.introduction-image-container img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.grid-cell {
-  padding-top: 100%;
-  position: relative;
-  display: flex;
-  cursor: pointer;
-  color: white;
-  background-size: 100%;
-  transition: background-size 0.5s ease-in-out;
-  overflow: hidden;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.grid-cell:hover {
-  background-size: 110%;
-}
-
-.grid-cell h3,
-.grid-cell-other h3 {
-  position: absolute;
-  top: 30px;
-  left: 36px;
-  font-weight: 400;
-  font-size: 20px;
-}
-.grid-cell p,
-.grid-cell-other p {
-  position: absolute;
-  top: 60px;
-  left: 36px;
-  font-weight: 300;
-  font-size: 18px;
-}
-.grid-cell button {
-  position: absolute;
-  top: 40px;
-  right: 36px;
-  font-weight: 300;
-  font-size: 18px;
-  background: none;
-}
-.grid-cell-other {
-  height: 150px;
-  grid-column-start: 1;
-  grid-column-end: 3;
   cursor: pointer;
   position: relative;
-  background-image: url("/src/assets/other-projects-frame.png");
-  background-size: 100%;
-  transition: background-size 0.5s ease-in-out;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  color: white;
-}
-.grid-cell-other:hover {
-  background-size: 110%;
-}
-.grid-cell-other button {
-  position: absolute;
-  top: 40px;
-  right: 36px;
-  font-weight: 300;
-  font-size: 18px;
-  background: none;
-}
-.grid-cell-contactme {
-  height: 350px;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  background-image: url("/src/assets/contactme-frame.png");
-  background-size: cover;
-  padding: 36px;
-  overflow: hidden;
-}
-.grid-cell-contactme h1 {
-  font-size: 45px;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-
-.grid-cell-contactme p {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-
-.grid-cell-contactme div {
-  line-height: 1.5em;
-  margin-bottom: 50px;
-  font-weight: 400;
-  font-size: 18px;
-}
-.grid-cell-contactme div b {
-  margin-bottom: 50px;
-  font-weight: 500;
-  font-size: 18px;
-}
-.introduction-square,
-.introduction-image-container,
-.grid-cell,
-.grid-cell-contactme,
-.grid-cell-other {
-  border-radius: 20px;
-}
-
-.nickandish-frame {
-  background-image: url("/src/assets/nickandish-frame.png");
-}
-
-.snapp-trip-frame {
-  background-image: url("/src/assets/snapp-trip-frame.png");
-}
-
-.carriot-frame {
-  background-image: url("/src/assets/carriot-frame.png");
-}
-
-.omid-frame {
-  background-image: url("/src/assets/omid-frame.png");
-}
-.mano-frame {
-  background-image: url("/src/assets/mano-frame.png");
-}
-.nabulox-frame {
-  background-image: url("/src/assets/nebulox-frame.png");
-}
-.logo-button {
-  position: relative;
-  width: 50px; /* Adjust size as needed */
-  height: 50px; /* Adjust size as needed */
+  width: 50px;
+  height: 50px;
 }
 
 .logo-button img {
@@ -227,8 +76,93 @@
   opacity: 0;
   visibility: hidden;
 }
-/* contactme button style */
 
+/* Projects */
+.main-grid > div,
+.introduction-square,
+.introduction-container img {
+  border-radius: 25px;
+}
+.project {
+  background-color: red;
+  cursor: pointer;
+  background-size: 100%;
+  transition: background-size 0.5s ease-in-out;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 40px;
+  position: relative;
+}
+.project:hover {
+  background-size: 110%;
+}
+
+.project img {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  width: 50px;
+  height: 50px;
+}
+.project h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 8px;
+}
+.project h4 {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+  color: white;
+  margin-bottom: 8px;
+}
+.project div {
+  padding: 8px;
+  background-color: white;
+  font-size: 14px;
+  font-weight: 900;
+  width: fit-content;
+  border-radius: 10px;
+}
+.hich {
+  height: 512px;
+  background-color: black;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.nikandish {
+  height: 512px;
+  background-image: url("../assets/nikandish-frame.png");
+}
+.nikandish div {
+  color: #8b4383;
+}
+.nebulox {
+  height: 512px;
+  background-image: url("../assets/nebulox-frame.png");
+}
+.nebulox div {
+  color: #020a1f;
+}
+.snapp {
+  height: 512px;
+  background-image: url("../assets/snapp-trip-frame.png");
+}
+.carriot {
+  height: 512px;
+  background-image: url("../assets/carriot-frame.png");
+}
+.omid {
+  height: 512px;
+  background-image: url("../assets/omid-frame.png");
+}
+.homano {
+  height: 512px;
+  background-image: url("../assets/mano-frame.png");
+}
+/* Conact me Button */
 .type--A {
   --line_color: black;
   --back_color: #d3d3d3;
@@ -252,6 +186,7 @@
   color: var(--line_color);
   letter-spacing: 2px;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 .button__text {
   display: flex;
@@ -470,21 +405,3 @@
     width: 124px;
   }
 }
-
-/* .introduction-square {
-  background: linear-gradient(-45deg, #ebad65, #ebad65, #326145, #326145);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-} */

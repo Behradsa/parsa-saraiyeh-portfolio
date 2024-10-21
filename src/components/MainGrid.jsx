@@ -1,149 +1,99 @@
-import "./MainGrid.css";
+import styles from "./MainGrid.module.css";
 import React from "react";
-import dribble_logo_img from "../assets/dirrble-frame.svg";
-import dribble_logo_hover_img from "../assets/dribble-frame:hover.svg";
-import linkedin_logo_img from "../assets/linkedin-frame.svg";
-import linkedin_logo_hover_img from "../assets/linkedin-frame:hover.svg";
-import behance_logo_img from "../assets/behance-frame.svg";
-import behance_logo_hover_img from "../assets/behance-frame:hover.svg";
+import dribble_logo_img from "../assets/logos/dribbble-logo.svg";
+import dribble_logo_hover_img from "../assets/logos/dribbble-logo:hover.svg";
+import linkedin_logo_img from "../assets/logos/linkedin-logo.svg";
+import linkedin_logo_hover_img from "../assets/logos/linkedin-logo:hover.svg";
+import behance_logo_img from "../assets/logos/behance-logo.svg";
+import behance_logo_hover_img from "../assets/logos/behance-logo:hover.svg";
 import parsa_portfolio_img from "../assets/parsa-portfolio-picture.png";
-import link_icon_img from "../assets/link-frame.svg";
+import link_icon_img from "../assets/logos/arrow-link-icon.svg";
 
 function MainGrid() {
   return (
-    <div className="main-grid">
-      <div className="introduction-container">
-        <div className="introduction-square">
-          <div class="bg"></div>
-          <div class="bg bg2"></div>
-          <div class="bg bg3"></div>
-          <h1>Hello, I’m Parsa, a Visual & Product Designer </h1>
-          <p>
-            I care a lot about using design for positive impact. and enjoy
-            creating user-centric, delightful, and human experiences.
-          </p>
-          <div className="introduction-buttons-container">
-            {/* <button className="button-contact-me">Contact Me</button> */}
-            <a href="#" class="button type--A">
-              <div class="button__line"></div>
-              <div class="button__line"></div>
-              <span class="button__text">Contact Me</span>
-              <div class="button__drow1"></div>
-              <div class="button__drow2"></div>
+    <div className={styles["main-grid"]}>
+      <div className={styles["introduction-container"]}>
+        <div className={styles["introduction-square"]}>
+          <div className={styles["text-holder"]}>
+            <h1>
+              Hello, I’m Parsa,
+              <br /> a Visual & Product Designer.
+            </h1>
+            <p>
+              I care a lot about using design for positive impact. and enjoy
+              creating user-centric, delightful, and human experiences.
+            </p>
+          </div>
+
+          <div className={styles["introduction-buttons-container"]}>
+            <a href="#" className={`${styles["button"]} ${styles["type--A"]}`}>
+              <div className={styles["button__line"]} />
+              <div className={styles["button__line"]} />
+              <span className={styles["button__text"]}>Contact Me</span>
+              <div className={styles["button__drow1"]} />
+              <div className={styles["button__drow2"]} />
             </a>
-            <a href="" className="logo-button">
+            <a href="" className={styles["logo-button"]}>
               <img src={dribble_logo_img} alt="dribble" />
               <img src={dribble_logo_hover_img} alt="dribble" />
             </a>
             <a
               href="https://www.linkedin.com/in/parsa-saraiyeh/"
-              className="logo-button"
+              className={styles["logo-button"]}
             >
               <img src={linkedin_logo_img} alt="linkedin" />
               <img src={linkedin_logo_hover_img} alt="linkedin" />
             </a>
-            <a href="" className="logo-button">
+            <a href="" className={styles["logo-button"]}>
               <img src={behance_logo_img} alt="behance" />
               <img src={behance_logo_hover_img} alt="behance" />
             </a>
           </div>
         </div>
-        <div className="introduction-image-container ">
-          <img src={parsa_portfolio_img} alt="parsa-picture" />
-        </div>
+        <img src={parsa_portfolio_img} alt="parsa-picture" />
       </div>
-      <div id="first_project" className="grid-cell nickandish-frame">
-        <h3>NikAndish Design system</h3>
-        <p>
-          Visual Designer <br />
-          Brand identity owner
-        </p>
-        <button>
-          <img src={link_icon_img} alt="link" />
-        </button>
+      <div className={`${styles["project"]} ${styles["hich"]}`}>
+        <img src={link_icon_img} alt="link" />
       </div>
-      <div className="grid-cell nabulox-frame">
+      <div className={`${styles["project"]} ${styles["nikandish"]}`}>
+        <img src={link_icon_img} alt="link" />
+        <h3>NikAndish</h3>
+        <h4>
+          Visual Designer <br /> Brand identity owner
+        </h4>
+        <div>Design System Case Study</div>
+      </div>
+      <div className={`${styles["project"]} ${styles["nebulox"]}`}>
+        <img src={link_icon_img} alt="link" />
         <h3>Nebulox</h3>
-        <p>Visual Designer</p>
-        <button>
-          <img src={link_icon_img} alt="link" />
-        </button>
+        <h4>Visual Designer</h4>
+        <div>Case Study</div>
       </div>
-      <div className="grid-cell snapp-trip-frame">
+      <div className={`${styles["project"]} ${styles["snapp"]}`}>
+        <img src={link_icon_img} alt="link" />
         <h3>Snapp Tripp</h3>
-        <p>Graphic Designer</p>
-        <button>
-          <img src={link_icon_img} alt="link" />
-        </button>
+        <h4>Graphic Designer</h4>
       </div>
-      <div className="grid-cell carriot-frame">
+      <div className={`${styles["project"]} ${styles["carriot"]}`}>
+        <img src={link_icon_img} alt="link" />
         <h3>Carriot</h3>
-        <p>
-          Graphic Designer <br /> UI Designer
-        </p>
-        <button>
-          <img src={link_icon_img} alt="link" />
-        </button>
+        <h4>
+          Graphic Designer <br />
+          Ui Designer
+        </h4>
       </div>
-      <div className="grid-cell omid-frame">
+      <div className={`${styles["project"]} ${styles["omid"]}`}>
+        <img src={link_icon_img} alt="link" />
         <h3>Omid Analyzer</h3>
-        <p>Graphic Designer</p>
-        <button>
-          <img src={link_icon_img} alt="link" />
-        </button>
+        <h4>Graphic Designer</h4>
       </div>
-      <div className="grid-cell mano-frame">
+      <div className={`${styles["project"]} ${styles["homano"]}`}>
+        <img src={link_icon_img} alt="link" />
         <h3>Homano / Mano</h3>
-        <p>
-          Graphic Designer <br /> UI Designer
-        </p>
-        <button>
-          <img src={link_icon_img} alt="link" />
-        </button>
-      </div>
-      <div className="grid-cell-other ">
-        <h3>Other Projects</h3>
-        <p>
-          Graphic Designer <br /> UI Designer
-        </p>
-        <button>
-          <img src={link_icon_img} alt="link" />
-        </button>
-      </div>
-      <div id="contact_me_home_page" className="grid-cell-contactme">
-        <h1>Want to work together? </h1>
-        <p>
-          Feel free to reach out for collaborations or just a friendly hello :)
-        </p>
-        <div>
-          <b> Mail:</b> Parsa.sa1999@gmail.com <br /> <b>Phone:</b> + 98 912 043
-          6793
-        </div>
-        <div className="introduction-buttons-container">
-          {/* <button className="button-contact-me">Contact Me</button> */}
-          <a href="#" class="button type--A">
-            <div class="button__line"></div>
-            <div class="button__line"></div>
-            <span class="button__text">Contact Me</span>
-            <div class="button__drow1"></div>
-            <div class="button__drow2"></div>
-          </a>
-          <a href="" className="logo-button">
-            <img src={dribble_logo_img} alt="dribble" />
-            <img src={dribble_logo_hover_img} alt="dribble" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/parsa-saraiyeh/"
-            className="logo-button"
-          >
-            <img src={linkedin_logo_img} alt="linkedin" />
-            <img src={linkedin_logo_hover_img} alt="linkedin" />
-          </a>
-          <a href="" className="logo-button">
-            <img src={behance_logo_img} alt="behance" />
-            <img src={behance_logo_hover_img} alt="behance" />
-          </a>
-        </div>
+        <h4>
+          Graphic Designer <br />
+          Ui Designer
+        </h4>
       </div>
     </div>
   );

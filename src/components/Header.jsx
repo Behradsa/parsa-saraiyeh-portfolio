@@ -1,7 +1,7 @@
 import React from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import "./Header.css";
-import parsa_logo_img from "../assets/parsa-logo.svg";
+import parsa_logo_img from "../assets/logos/parsa-logo.svg";
 function Header() {
   return (
     <header>
