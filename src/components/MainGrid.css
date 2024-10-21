@@ -20,6 +20,8 @@
   flex-basis: 65%;
   margin-right: 16px;
   padding: 36px;
+  overflow: hidden;
+  position: relative;
 }
 
 .introduction-square h1 {
@@ -468,3 +470,21 @@
     width: 124px;
   }
 }
+
+/* .introduction-square {
+  background: linear-gradient(-45deg, #ebad65, #ebad65, #326145, #326145);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */

@@ -14,6 +14,9 @@ function MainGrid() {
     <div className="main-grid">
       <div className="introduction-container">
         <div className="introduction-square">
+          <div class="bg"></div>
+          <div class="bg bg2"></div>
+          <div class="bg bg3"></div>
           <h1>Hello, I’m Parsa, a Visual & Product Designer </h1>
           <p>
             I care a lot about using design for positive impact. and enjoy
@@ -125,18 +128,21 @@ function MainGrid() {
             <div class="button__drow1"></div>
             <div class="button__drow2"></div>
           </a>
-          <button className="logo-button">
+          <a href="" className="logo-button">
             <img src={dribble_logo_img} alt="dribble" />
             <img src={dribble_logo_hover_img} alt="dribble" />
-          </button>
-          <button className="logo-button">
+          </a>
+          <a
+            href="https://www.linkedin.com/in/parsa-saraiyeh/"
+            className="logo-button"
+          >
             <img src={linkedin_logo_img} alt="linkedin" />
             <img src={linkedin_logo_hover_img} alt="linkedin" />
-          </button>
-          <button className="logo-button">
-            <img src={behance_logo_img} alt="linkedin" />
-            <img src={behance_logo_hover_img} alt="linkedin" />
-          </button>
+          </a>
+          <a href="" className="logo-button">
+            <img src={behance_logo_img} alt="behance" />
+            <img src={behance_logo_hover_img} alt="behance" />
+          </a>
         </div>
       </div>
     </div>
