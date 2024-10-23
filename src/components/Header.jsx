@@ -15,7 +15,7 @@ function Header() {
         </AnchorLink>
 
         <AnchorLink className="hover-underline-animation">CV</AnchorLink>
-        <AnchorLink href="#first_project" className="hover-underline-animation">
+        <AnchorLink href="#projects" className="hover-underline-animation">
           Projects
         </AnchorLink>
         <AnchorLink

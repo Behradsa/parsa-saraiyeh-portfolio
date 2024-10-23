@@ -1,51 +1,59 @@
-.main-grid {
-  display: grid;
+.main-page {
+  display: flex;
+  flex-direction: column;
   grid-template-columns: 1fr 1fr;
   width: 100%;
-  grid-auto-flow: row;
-  align-items: stretch;
-  grid-gap: 16px;
+  gap: 16px;
 }
 
 /* Introduction */
 .introduction-container {
   display: flex;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  height: 500px;
+  max-height: 512px;
+  height: 100%;
+  gap: 16px;
 }
-
 .introduction-square {
   background-color: lightsteelblue;
   padding: 40px;
-  margin-right: 16px;
   overflow: hidden;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 32px;
 }
-
+.introduction-square .text-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 .introduction-square .text-holder h1 {
   font-size: 40px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 50px;
-  margin-bottom: 16px;
-  width: 580px;
+  max-width: 580px;
 }
 
 .introduction-square .text-holder p {
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.5em;
   font-weight: 400;
-  width: 580px;
+  max-width: 580px;
+}
+
+b {
+  font-weight: 500;
 }
 
 .introduction-buttons-container {
   display: flex;
   gap: 16px;
 }
-
+.logo-button-container {
+  display: flex;
+  gap: 16px;
+}
 .logo-button {
   cursor: pointer;
   position: relative;
@@ -78,13 +86,17 @@
 }
 
 /* Projects */
-.main-grid > div,
+.projects-grid > div,
 .introduction-square,
 .introduction-container img {
   border-radius: 25px;
 }
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
 .project {
-  background-color: red;
   cursor: pointer;
   background-size: 100%;
   transition: background-size 0.5s ease-in-out;
@@ -93,6 +105,8 @@
   overflow: hidden;
   padding: 40px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .project:hover {
   background-size: 110%;
@@ -133,36 +147,50 @@
   grid-column-end: 3;
 }
 .nikandish {
-  height: 512px;
+  aspect-ratio: 1/1;
   background-image: url("../assets/nikandish-frame.png");
 }
 .nikandish div {
   color: #8b4383;
 }
 .nebulox {
-  height: 512px;
+  aspect-ratio: 1/1;
   background-image: url("../assets/nebulox-frame.png");
 }
 .nebulox div {
   color: #020a1f;
 }
 .snapp {
-  height: 512px;
+  aspect-ratio: 1/1;
   background-image: url("../assets/snapp-trip-frame.png");
 }
 .carriot {
-  height: 512px;
+  aspect-ratio: 1/1;
   background-image: url("../assets/carriot-frame.png");
 }
 .omid {
-  height: 512px;
+  aspect-ratio: 1/1;
   background-image: url("../assets/omid-frame.png");
 }
 .homano {
-  height: 512px;
+  aspect-ratio: 1/1;
   background-image: url("../assets/mano-frame.png");
 }
+/* Contactme cell */
+.contact-me {
+  height: 370px;
+  margin: 0;
+}
+.contact-me .text-holder div {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
 /* Conact me Button */
+
+.contact-me-button {
+  display: none;
+}
 .type--A {
   --line_color: black;
   --back_color: #d3d3d3;
@@ -179,7 +207,7 @@
   position: relative;
   z-index: 0;
   width: 245px;
-  height: auto;
+  height: 50px;
   text-decoration: none;
   font-size: 14px;
   font-weight: bold;
@@ -403,5 +431,60 @@
   }
   100% {
     width: 124px;
+  }
+}
+
+@media (max-width: 950px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .hich {
+    grid-column-end: 2;
+  }
+  .introduction-container {
+    flex-direction: column-reverse;
+    max-height: none;
+    height: auto;
+  }
+  .introduction-square {
+    height: 512px;
+  }
+  .introduction-container img {
+    object-fit: cover;
+    object-position: 0 30%;
+    aspect-ratio: 3/2;
+  }
+}
+
+@media (max-width: 530px) {
+  .introduction-square {
+    height: fit-content;
+  }
+  .introduction-square .text-holder h1 {
+    font-size: 24px;
+    line-height: 1.3em;
+  }
+  .introduction-buttons-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .hich {
+    aspect-ratio: 1/1;
+    height: auto;
+  }
+  .button {
+    display: none;
+  }
+  .contact-me-button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    align-content: center;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 15px;
   }
 }
