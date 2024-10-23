@@ -104,6 +104,7 @@ function MainGrid() {
       </section>
 
       <div
+        id="contact_me_home_page"
         className={`${styles["introduction-square"]} ${styles["contact-me"]}`}
       >
         <div className={styles["text-holder"]}>

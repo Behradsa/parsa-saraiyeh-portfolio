@@ -1,0 +1,27 @@
+.hamburger-menu {
+  position: fixed;
+  top: 75px;
+  right: -100vw;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  padding: 45px 35px;
+  transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0; /* Start hidden */
+  border-radius: 25px;
+}
+
+.hamburger-menu div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 32px;
+  font-weight: 600;
+}
+.hamburger-menu.show {
+  right: 0; /* Slide into view */
+  opacity: 100;
+}
