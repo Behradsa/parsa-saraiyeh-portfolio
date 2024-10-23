@@ -14,7 +14,10 @@
   gap: 16px;
 }
 .introduction-square {
-  background-color: lightsteelblue;
+  background-image: url("../assets/test.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 40px;
   overflow: hidden;
   flex-grow: 1;
@@ -22,6 +25,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 32px;
+  background-color: red;
 }
 .introduction-square .text-holder {
   display: flex;
@@ -467,6 +471,7 @@ b {
   .introduction-buttons-container {
     flex-direction: column-reverse;
     align-items: center;
+    gap: 32px;
   }
   .hich {
     aspect-ratio: 1/1;

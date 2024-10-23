@@ -10,7 +10,9 @@ header {
 .logo-container {
   display: flex;
   gap: 8px;
+  z-index: 101;
 }
+
 .logo-container div {
   font-size: 15px;
   font-weight: 500;

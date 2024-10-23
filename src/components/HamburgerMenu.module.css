@@ -8,7 +8,7 @@
   background-color: white;
   height: 100vh;
   width: 100vw;
-  padding: 45px 35px;
+  padding: 90px 46px;
   transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out;
   opacity: 0;
   border-radius: 25px;
@@ -18,8 +18,8 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 500;
 }
 .hamburger-menu.show {
   right: 0;
