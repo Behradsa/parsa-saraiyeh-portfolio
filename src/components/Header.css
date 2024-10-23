@@ -55,6 +55,7 @@ header {
 .ham-button {
   display: none;
   cursor: pointer;
+  z-index: 101;
 }
 
 .bar1,

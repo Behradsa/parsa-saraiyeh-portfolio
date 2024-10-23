@@ -30,7 +30,7 @@ function Header() {
         <div>PARSA</div>
       </div>
       <div className="header-buttons-container">
-        <AnchorLink href="/" className="hover-underline-animation">
+        <AnchorLink href="#top" className="hover-underline-animation">
           Home
         </AnchorLink>
 
@@ -45,14 +45,15 @@ function Header() {
           Contact
         </AnchorLink>
       </div>
-      <div
+      <AnchorLink
+        href="#top"
         className={`ham-button ${hamburgerOpen ? "ham-change" : ""}`}
         onClick={toggleHamburger}
       >
         <div className="bar1"></div>
         <div className="bar2"></div>
         <div className="bar3"></div>
-      </div>
+      </AnchorLink>
       <HamburgerMenu isOpen={hamburgerOpen} closeMenu={closeMenu} />
     </header>
   );
