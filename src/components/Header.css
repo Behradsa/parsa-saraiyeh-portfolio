@@ -4,6 +4,7 @@ header {
   padding: 30px 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo-container {
@@ -49,6 +50,34 @@ header {
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.ham-button {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 27px;
+  height: 2px;
+  border-radius: 5px;
+  background-color: black;
+  margin: 7px 0;
+  transition: transform 0.4s;
+}
+
+.ham-change .bar1 {
+  transform: translate(0, 7px) rotate(-45deg);
+}
+
+.ham-change .bar2 {
+  opacity: 0;
+}
+
+.ham-change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
 }
 @media (max-width: 530px) {
   .header-buttons-container {

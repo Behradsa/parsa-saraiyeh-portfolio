@@ -45,7 +45,14 @@ function Header() {
           Contact
         </AnchorLink>
       </div>
-      <button onClick={toggleHamburger}>ham</button>
+      <div
+        className={`ham-button ${hamburgerOpen ? "ham-change" : ""}`}
+        onClick={toggleHamburger}
+      >
+        <div className="bar1"></div>
+        <div className="bar2"></div>
+        <div className="bar3"></div>
+      </div>
       <HamburgerMenu isOpen={hamburgerOpen} closeMenu={closeMenu} />
     </header>
   );

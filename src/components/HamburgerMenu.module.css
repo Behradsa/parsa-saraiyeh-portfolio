@@ -10,7 +10,7 @@
   width: 100vw;
   padding: 45px 35px;
   transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  opacity: 0; /* Start hidden */
+  opacity: 0;
   border-radius: 25px;
 }
 
@@ -22,6 +22,6 @@
   font-weight: 600;
 }
 .hamburger-menu.show {
-  right: 0; /* Slide into view */
+  right: 0;
   opacity: 100;
 }
