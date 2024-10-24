@@ -37,7 +37,7 @@ function CarriotPage() {
       <img
         src={brandbook_main}
         alt="brandbook-main-img"
-        className={styles["main-img"]}
+        className={`${styles["main-img"]} ${styles["brandbook-main-img"]}`}
       />
       <div className={styles["brand-book-grid"]}>
         <div>
@@ -48,31 +48,38 @@ function CarriotPage() {
               shades, Mood-board, icons and Visual guidelines.
             </p>
           </div>
-          <div className={styles["img_with_label"]}>
-            <img src={brandbook_img_1} alt="img_1" />
-            <label>We spruced up and cleaned up the lettering.</label>
-          </div>
-          <div className={styles["img_with_label"]}>
-            <img src={brandbook_img_2} alt="img_2" />
-            <label>App Icon</label>
-          </div>
-        </div>
-        <div>
-          <div className={styles["img_with_label"]}>
+          <div className={`${styles["img_with_label"]} ${styles["img_1_s"]}`}>
             <img src={brandbook_img_3} alt="img_3" />
             <label>
               Our first task was to give a makeover to Carriot's logotype and
               corporate identity.
             </label>
           </div>
-          <div className={styles["img_with_label"]}>
+          <div className={`${styles["img_with_label"]} ${styles["img_2"]}`}>
+            <img src={brandbook_img_1} alt="img_1" />
+            <label>We spruced up and cleaned up the lettering.</label>
+          </div>
+          <div className={`${styles["img_with_label"]} ${styles["img_3"]}`}>
+            <img src={brandbook_img_2} alt="img_2" />
+            <label>App Icon</label>
+          </div>
+        </div>
+        <div>
+          <div className={`${styles["img_with_label"]} ${styles["img_1"]}`}>
+            <img src={brandbook_img_3} alt="img_3" />
+            <label>
+              Our first task was to give a makeover to Carriot's logotype and
+              corporate identity.
+            </label>
+          </div>
+          <div className={`${styles["img_with_label"]} ${styles["img_4"]}`}>
             <img src={brandbook_img_4} alt="img_4" />
             <label>
               The illustration style went through several phases and mustiple
               Iterations
             </label>
           </div>
-          <div className={styles["img_with_label"]}>
+          <div className={`${styles["img_with_label"]} ${styles["img_5"]}`}>
             <img src={brandbook_img_5} alt="img_5" />
             <label>3D style of illustrations for website visuals</label>
           </div>
@@ -101,7 +108,14 @@ function CarriotPage() {
               represented below.
             </p>
           </div>
-          <div className={styles["img_with_label"]}>
+          <div className={`${styles["img_with_label"]} ${styles["img_1_s"]}`}>
+            <img src={app_img_4} alt="img_4" />
+            <label>
+              Dashboard; representing weekly transport insights, active drivers
+              and the current deliveries detail.
+            </label>
+          </div>
+          <div className={`${styles["img_with_label"]}`}>
             <img src={app_img_1} alt="img_1" />
             <label>Admin’s profile page</label>
           </div>
@@ -115,7 +129,7 @@ function CarriotPage() {
           </div>
         </div>
         <div>
-          <div className={styles["img_with_label"]}>
+          <div className={`${styles["img_with_label"]} ${styles["img_1"]}`}>
             <img src={app_img_4} alt="img_4" />
             <label>
               Dashboard; representing weekly transport insights, active drivers
