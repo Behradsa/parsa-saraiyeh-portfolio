@@ -1,20 +1,21 @@
 import React from "react";
 import styles from "./HamburgerMenu.module.css";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Link } from "react-router-dom";
 
 function HamburgerMenu({ isOpen, closeMenu }) {
   return (
     <div className={`${styles["hamburger-menu"]} ${isOpen ? styles.show : ""}`}>
       <div>
-        <AnchorLink href="#top" onClick={closeMenu}>
+        <Link to="/" onClick={closeMenu}>
           Home
-        </AnchorLink>
-        <AnchorLink href="#projects" onClick={closeMenu}>
+        </Link>
+        <Link to="/#projects" onClick={closeMenu}>
           Projects
-        </AnchorLink>
-        <AnchorLink href="#contact_me_home_page" onClick={closeMenu}>
+        </Link>
+        <Link to="/#contact_me_home_page" onClick={closeMenu}>
           Contact
-        </AnchorLink>
+        </Link>
       </div>
     </div>
   );

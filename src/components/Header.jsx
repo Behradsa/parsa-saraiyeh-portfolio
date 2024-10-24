@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import "./Header.css";
 import HamburgerMenu from "./HamburgerMenu";
 import parsa_logo_img from "../assets/logos/parsa-logo.svg";
+
 function Header() {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
-
   useEffect(() => {
     if (hamburgerOpen) {
       document.body.style.overflow = "hidden";
@@ -30,20 +31,17 @@ function Header() {
         <div>PARSA</div>
       </div>
       <div className="header-buttons-container">
-        <AnchorLink href="#top" className="hover-underline-animation">
+        <Link to="/" className="hover-underline-animation">
           Home
-        </AnchorLink>
+        </Link>
 
-        <AnchorLink className="hover-underline-animation">CV</AnchorLink>
-        <AnchorLink href="#projects" className="hover-underline-animation">
+        <Link className="hover-underline-animation">CV</Link>
+        <Link to="/#projects" className="hover-underline-animation">
           Projects
-        </AnchorLink>
-        <AnchorLink
-          href="#contact_me_home_page"
-          className="hover-underline-animation"
-        >
+        </Link>
+        <Link to="/#contact_me_home_page" className="hover-underline-animation">
           Contact
-        </AnchorLink>
+        </Link>
       </div>
       <AnchorLink
         href="#top"
