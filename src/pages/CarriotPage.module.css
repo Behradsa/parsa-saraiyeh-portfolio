@@ -9,6 +9,86 @@
   width: 100%;
 }
 
-.carriot-intro {
+.main-img,
+.img_with_label > img {
   width: 100%;
+}
+
+.about-carriot {
+  gap: 16px;
+}
+h1 {
+  font-weight: 700;
+  font-size: 40px;
+}
+h3 {
+  font-weight: 700;
+  font-size: 24px;
+}
+p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24.39px;
+  text-align: justify;
+}
+label {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24.39px;
+  text-align: center;
+}
+.title-text-holder,
+.about-carriot,
+.brand-book-grid {
+  padding: 64px 14%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.brand-book-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 32px;
+}
+.brand-book-grid .text-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.brand-book-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.img_with_label {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.title-text-holder {
+  gap: 16px;
+}
+
+.title-text-holder a {
+  width: 152px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  align-content: center;
+  border-radius: 30px;
+  margin-top: 16px;
+  font-weight: 500;
+  font-size: 20;
+  cursor: pointer;
+}
+
+@media (max-width: 530px) {
+  .brand-book-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 32px;
+  }
 }
