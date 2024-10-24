@@ -1,5 +1,6 @@
 import styles from "./MainGrid.module.css";
 import React from "react";
+import { Link } from "react-router-dom";
 import dribble_logo_img from "../assets/logos/dribbble-logo.svg";
 import dribble_logo_hover_img from "../assets/logos/dribbble-logo:hover.svg";
 import linkedin_logo_img from "../assets/logos/linkedin-logo.svg";
@@ -80,14 +81,19 @@ function MainGrid() {
           <h3>Snapp Tripp</h3>
           <h4>Graphic Designer</h4>
         </div>
-        <div className={`${styles["project"]} ${styles["carriot"]}`}>
+
+        <Link
+          to="/carriot"
+          className={`${styles["project"]} ${styles["carriot"]}`}
+        >
           <img src={link_icon_img} alt="link" />
           <h3>Carriot</h3>
           <h4>
             Graphic Designer <br />
             Ui Designer
           </h4>
-        </div>
+        </Link>
+
         <div className={`${styles["project"]} ${styles["omid"]}`}>
           <img src={link_icon_img} alt="link" />
           <h3>Omid Analyzer</h3>

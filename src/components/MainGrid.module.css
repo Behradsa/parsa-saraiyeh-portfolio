@@ -90,7 +90,7 @@ b {
 }
 
 /* Projects */
-.projects-grid > div,
+.project,
 .introduction-square,
 .introduction-container img {
   border-radius: 25px;
