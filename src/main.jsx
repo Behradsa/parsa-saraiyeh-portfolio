@@ -4,14 +4,24 @@ import "./index.css";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CarriotPage from "./pages/CarriotPage";
+import ScrollToTop from "./functions/scrollToTop";
+
 const router = createHashRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: (
+      <>
+        <ScrollToTop /> <HomePage />
+      </>
+    ),
   },
   {
     path: "carriot/",
-    element: <CarriotPage />,
+    element: (
+      <>
+        <ScrollToTop /> <CarriotPage />
+      </>
+    ),
   },
 ]);
 

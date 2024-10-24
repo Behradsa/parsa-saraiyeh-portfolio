@@ -83,7 +83,7 @@ function MainGrid() {
         </div>
 
         <Link
-          to="/carriot"
+          to="/carriot#"
           className={`${styles["project"]} ${styles["carriot"]}`}
         >
           <img src={link_icon_img} alt="link" />
