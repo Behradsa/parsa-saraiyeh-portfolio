@@ -173,33 +173,33 @@ b {
 }
 .nikandish {
   aspect-ratio: 1/1;
-  background-image: url("../assets/nikandish-frame.png");
+  background-image: url("../assets/HomePage/nikandish-frame.png");
 }
 .nikandish div {
   color: #8b4383;
 }
 .nebulox {
   aspect-ratio: 1/1;
-  background-image: url("../assets/nebulox-frame.png");
+  background-image: url("../assets/HomePage/nebulox-frame.png");
 }
 .nebulox div {
   color: #020a1f;
 }
 .snapp {
   aspect-ratio: 1/1;
-  background-image: url("../assets/snapp-trip-frame.png");
+  background-image: url("../assets/HomePage/snapp-trip-frame.png");
 }
 .carriot {
   aspect-ratio: 1/1;
-  background-image: url("../assets/carriot-frame.png");
+  background-image: url("../assets/HomePage/carriot-frame.png");
 }
 .omid {
   aspect-ratio: 1/1;
-  background-image: url("../assets/omid-frame.png");
+  background-image: url("../assets/HomePage/omid-frame.png");
 }
 .homano {
   aspect-ratio: 1/1;
-  background-image: url("../assets/mano-frame.png");
+  background-image: url("../assets/HomePage/mano-frame.png");
 }
 /* Contactme cell */
 .contact-me {

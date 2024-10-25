@@ -7,7 +7,7 @@ import linkedin_logo_img from "../assets/logos/linkedin-logo.svg";
 import linkedin_logo_hover_img from "../assets/logos/linkedin-logo:hover.svg";
 import behance_logo_img from "../assets/logos/behance-logo.svg";
 import behance_logo_hover_img from "../assets/logos/behance-logo:hover.svg";
-import parsa_portfolio_img from "../assets/parsa-portfolio-picture.png";
+import parsa_portfolio_img from "../assets/HomePage/parsa-portfolio-picture.png";
 import link_icon_img from "../assets/logos/arrow-link-icon.svg";
 
 function MainGrid() {
@@ -76,14 +76,14 @@ function MainGrid() {
           <h4>Visual Designer</h4>
           <div>Case Study</div>
         </div>
-        <div className={`${styles["project"]} ${styles["snapp"]}`}>
+        <Link to="/snapp" className={`${styles["project"]} ${styles["snapp"]}`}>
           <img src={link_icon_img} alt="link" />
           <h3>Snapp Tripp</h3>
           <h4>Graphic Designer</h4>
-        </div>
+        </Link>
 
         <Link
-          to="/carriot#"
+          to="/carriot"
           className={`${styles["project"]} ${styles["carriot"]}`}
         >
           <img src={link_icon_img} alt="link" />

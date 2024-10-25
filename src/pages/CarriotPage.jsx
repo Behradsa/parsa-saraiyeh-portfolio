@@ -15,6 +15,7 @@ import app_img_3 from "../assets/Carriot/app-design-3.png";
 import app_img_4 from "../assets/Carriot/app-design-4.png";
 import app_img_5 from "../assets/Carriot/app-design-5.png";
 import truck from "../assets/Carriot/truck.png";
+
 function CarriotPage() {
   return (
     <div className={styles["page"]}>
