@@ -15,6 +15,8 @@ import hr_img_3 from "../assets/Snapp/hr-3.png";
 import ill_img_1 from "../assets/Snapp/ill-1.png";
 import ill_img_2 from "../assets/Snapp/ill-2.png";
 import ill_img_3 from "../assets/Snapp/ill-3.png";
+import layout_img_1 from "../assets/Snapp/layout-1.png";
+import layout_img_2 from "../assets/Snapp/layout-2.png";
 
 function SnappPage() {
   return (
@@ -22,6 +24,11 @@ function SnappPage() {
       <div className={styles["header-container"]}>
         <Header />
       </div>
+      <img
+        src={intro_img}
+        alt="intro-main-img"
+        className={`${styles["main-img"]} ${styles["intro-main-img"]}`}
+      />
       <div className={styles["about-snapp"]}>
         <h3>Overview</h3>
         <p>
@@ -133,6 +140,24 @@ function SnappPage() {
       </div>
       <div className={styles["title-text-holder"]}>
         <h1>Website Banners Layout</h1>
+      </div>
+      <div className={styles["hr-grid"]}>
+        <div>
+          <div className={`${styles["img_with_label"]} `}>
+            <img src={layout_img_1} alt="img_1" />
+          </div>
+          <div className={`${styles["img_with_label"]} `}>
+            <img src={layout_img_2} alt="img_2" />
+          </div>
+        </div>
+      </div>
+      <div className={styles["title-text-holder"]}>
+        <h1>Carriot Website</h1>
+        <p>Different variations of the assets placed in the link below;</p>
+        <div>
+          <a href="https://carriot.ir/">Carriot.ir</a>
+          <a href="https://carriot.ir/">Carriot.ir</a>
+        </div>
       </div>
     </div>
   );
