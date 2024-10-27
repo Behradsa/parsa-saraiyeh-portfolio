@@ -27,7 +27,11 @@ function ManoPage() {
       <div className={styles["header-container"]}>
         <Header />
       </div>
-      <img src={intro_main_img} alt="Homano" className={styles["main-img"]} />
+      <img
+        src={intro_main_img}
+        alt="Homano"
+        className={`${styles["main-img"]} ${styles["intro-img"]}`}
+      />
       <div className={styles["about"]}>
         <h3>Overview</h3>
         <p>

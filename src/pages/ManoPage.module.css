@@ -71,4 +71,7 @@ label {
   .main-grid {
     flex-direction: column;
   }
+  .intro-img {
+    object-position: 60% 0;
+  }
 }
