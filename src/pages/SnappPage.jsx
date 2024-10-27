@@ -3,6 +3,7 @@ import styles from "./SnappPage.module.css";
 import Header from "../components/Header";
 import intro_img from "../assets/Snapp/intro.png";
 import visuals_img from "../assets/Snapp/visuals.png";
+import ill_main_img from "../assets/Snapp/ill-main.png";
 import social_img_1 from "../assets/Snapp/social-img-1.png";
 import social_img_2 from "../assets/Snapp/social-img-2.png";
 import social_img_3 from "../assets/Snapp/social-img-3.png";
@@ -116,7 +117,7 @@ function SnappPage() {
         <h1>Illustration</h1>
       </div>
       <img
-        src={visuals_img}
+        src={ill_main_img}
         alt="visuals-main-img"
         className={`${styles["main-img"]} ${styles["visuals-main-img"]}`}
       />

@@ -5,6 +5,7 @@ import { createHashRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CarriotPage from "./pages/CarriotPage";
 import SnappPage from "./pages/SnappPage";
+import ManoPage from "./pages/ManoPage";
 import ScrollToTop from "./functions/scrollToTop";
 
 const router = createHashRouter([
@@ -29,6 +30,14 @@ const router = createHashRouter([
     element: (
       <>
         <ScrollToTop /> <SnappPage />
+      </>
+    ),
+  },
+  {
+    path: "homano/",
+    element: (
+      <>
+        <ScrollToTop /> <ManoPage />
       </>
     ),
   },
