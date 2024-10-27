@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import CarriotPage from "./pages/CarriotPage";
 import SnappPage from "./pages/SnappPage";
 import ManoPage from "./pages/ManoPage";
+import OmidPage from "./pages/OmidPage";
 import ScrollToTop from "./functions/scrollToTop";
 
 const router = createHashRouter([
@@ -38,6 +39,14 @@ const router = createHashRouter([
     element: (
       <>
         <ScrollToTop /> <ManoPage />
+      </>
+    ),
+  },
+  {
+    path: "omid/",
+    element: (
+      <>
+        <ScrollToTop /> <OmidPage />
       </>
     ),
   },

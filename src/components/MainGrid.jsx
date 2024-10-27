@@ -94,11 +94,11 @@ function MainGrid() {
           </h4>
         </Link>
 
-        <div className={`${styles["project"]} ${styles["omid"]}`}>
+        <Link to="/omid" className={`${styles["project"]} ${styles["omid"]}`}>
           <img src={link_icon_img} alt="link" />
           <h3>Omid Analyzer</h3>
           <h4>Graphic Designer</h4>
-        </div>
+        </Link>
         <Link
           to="/homano"
           className={`${styles["project"]} ${styles["homano"]}`}
