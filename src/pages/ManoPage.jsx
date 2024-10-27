@@ -149,6 +149,11 @@ function ManoPage() {
           </div>
         </div>
       </div>
+      <div className={styles["title-text-holder"]}>
+        <h1>Homano Website</h1>
+        <p>Different variations of the assets placed in the link below;</p>
+        <a href="https://mano.ir/">Mano.ir</a>
+      </div>
     </div>
   );
 }
