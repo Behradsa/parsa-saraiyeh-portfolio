@@ -22,6 +22,6 @@ jobs:
 
       - name: Build, run, and push Docker image
         run: |
-          docker build . --tag ghcr.io/Behradsa/parsa-saraiyeh-portfolio:latest
-          docker run ghcr.io/Behradsa/parsa-saraiyeh-portfolio:latest
-          docker push ghcr.io/Behradsa/parsa-saraiyeh-portfolio:latest
+          docker build . --tag ghcr.io/behradsa/parsa-saraiyeh-portfolio:latest
+          docker run ghcr.io/behradsa/parsa-saraiyeh-portfolio:latest
+          docker push ghcr.io/behradsa/parsa-saraiyeh-portfolio:latest
