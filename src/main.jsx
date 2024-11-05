@@ -7,6 +7,8 @@ import CarriotPage from "./pages/CarriotPage";
 import SnappPage from "./pages/SnappPage";
 import ManoPage from "./pages/ManoPage";
 import OmidPage from "./pages/OmidPage";
+import NebuloxPage from "./pages/NebuloxPage";
+
 import ScrollToTop from "./functions/scrollToTop";
 
 const router = createHashRouter([
@@ -47,6 +49,14 @@ const router = createHashRouter([
     element: (
       <>
         <ScrollToTop /> <OmidPage />
+      </>
+    ),
+  },
+  {
+    path: "nebulox/",
+    element: (
+      <>
+        <ScrollToTop /> <NebuloxPage />
       </>
     ),
   },

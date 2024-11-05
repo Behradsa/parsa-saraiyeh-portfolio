@@ -1,0 +1,92 @@
+header {
+  width: 100%;
+  height: 80px;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  gap: 8px;
+  z-index: 101;
+}
+
+.logo-container div {
+  font-size: 15px;
+  font-weight: 500;
+}
+.header-buttons-container {
+  display: flex;
+  width: 312px;
+  align-items: center;
+  gap: 40px;
+}
+.header-buttons-container a {
+  display: inline-block;
+  background: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.ham-button {
+  display: none;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 27px;
+  height: 2px;
+  border-radius: 5px;
+  background-color: black;
+  margin: 7px 0;
+  transition: transform 0.4s;
+}
+
+.ham-change .bar1 {
+  transform: translate(0, 7px) rotate(-45deg);
+}
+
+.ham-change .bar2 {
+  opacity: 0;
+}
+
+.ham-change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+@media (max-width: 530px) {
+  .header-buttons-container {
+    display: none;
+  }
+  .ham-button {
+    display: inline-block;
+  }
+}
