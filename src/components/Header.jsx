@@ -28,7 +28,12 @@ function Header() {
   };
 
   return (
-    <header id="top">
+    <header
+      id="top"
+      className={` ${
+        location.pathname === "/nebulox" ? "nebulox-set-text-color" : ""
+      }`}
+    >
       <div className="logo-container">
         <img src={parsa_logo_img} alt="logo" />
         <div>PARSA</div>
@@ -54,19 +59,37 @@ function Header() {
         </div>
       ) : (
         <div className="header-buttons-container">
-          <Link to="/" className="hover-underline-animation">
+          <Link
+            to="/"
+            className={`hover-underline-animation ${
+              true ? "nebulox-set-bar-color" : ""
+            }`}
+          >
             Home
           </Link>
 
-          <Link className="hover-underline-animation">CV</Link>
+          <Link
+            className={`hover-underline-animation ${
+              true ? "nebulox-set-bar-color" : ""
+            }`}
+          >
+            CV
+          </Link>
 
-          <Link to="/#projects" className="hover-underline-animation">
+          <Link
+            to="/#projects"
+            className={`hover-underline-animation ${
+              true ? "nebulox-set-bar-color" : ""
+            }`}
+          >
             Projects
           </Link>
 
           <Link
             to="/#contact_me_home_page"
-            className="hover-underline-animation"
+            className={`hover-underline-animation ${
+              true ? "nebulox-set-bar-color" : ""
+            }`}
           >
             Contact
           </Link>
@@ -78,9 +101,9 @@ function Header() {
         className={`ham-button ${hamburgerOpen ? "ham-change" : ""}`}
         onClick={toggleHamburger}
       >
-        <div className="bar1"></div>
-        <div className="bar2"></div>
-        <div className="bar3"></div>
+        <div className={`bar1 ${true ? "nebulox-set-bar-color" : ""}`}></div>
+        <div className={`bar2 ${true ? "nebulox-set-bar-color" : ""} `}></div>
+        <div className={`bar3 ${true ? "nebulox-set-bar-color" : ""} `}></div>
       </AnchorLink>
 
       <HamburgerMenu isOpen={hamburgerOpen} closeMenu={closeMenu} />

@@ -1,3 +1,9 @@
+:root {
+  --nebulox-primary-color: #4ed8e9;
+  --nebulox-secondary-color: #e3e2e6;
+  --nebulox-bg-color: #001224;
+}
+
 header {
   width: 100%;
   height: 80px;
@@ -82,6 +88,18 @@ header {
 .ham-change .bar3 {
   transform: translate(0, -11px) rotate(45deg);
 }
+
+/* nebolux */
+.nebulox-set-text-color {
+  color: var(--nebulox-secondary-color);
+}
+.nebulox-set-bar-color::after {
+  background-color: var(--nebulox-secondary-color);
+}
+.nebulox-set-bar-color {
+  background-color: var(--nebulox-secondary-color);
+}
+
 @media (max-width: 530px) {
   .header-buttons-container {
     display: none;

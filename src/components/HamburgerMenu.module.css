@@ -25,3 +25,17 @@
   right: 0;
   opacity: 100;
 }
+
+/* nebolux */
+.nebulox-set-text-color {
+  color: var(--nebulox-secondary-color);
+}
+.nebulox-set-bar-color::after {
+  background-color: var(--nebulox-secondary-color);
+}
+.nebulox-set-bar-color {
+  background-color: var(--nebulox-secondary-color);
+}
+.nebulox-set-bg-color {
+  background-color: var(--nebulox-bg-color);
+}

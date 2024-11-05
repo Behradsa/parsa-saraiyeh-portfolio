@@ -6,7 +6,13 @@ import { Link, useLocation } from "react-router-dom";
 function HamburgerMenu({ isOpen, closeMenu }) {
   const location = useLocation();
   return (
-    <div className={`${styles["hamburger-menu"]} ${isOpen ? styles.show : ""}`}>
+    <div
+      className={`${styles["hamburger-menu"]} ${isOpen ? styles.show : ""} ${
+        location.pathname === "/nebulox"
+          ? `${styles["nebulox-set-bg-color"]} ${styles["nebulox-set-text-color"]}`
+          : ""
+      }`}
+    >
       {location.pathname === "/" ? (
         <div>
           <AnchorLink onClick={closeMenu} href="#top">
