@@ -153,10 +153,10 @@ function SnappPage() {
         </div>
       </div>
       <div className={styles["title-text-holder"]}>
-        <h1>Carriot Website</h1>
+        <h1>SnappTrip Website</h1>
         <p>Different variations of the assets placed in the link below;</p>
         <div>
-          <a href="https://carriot.ir/">Carriot.ir</a>
+          <a href="https://www.snapptrip.com/">SnappTrip.com</a>
           <a href="https://carriot.ir/">Carriot.ir</a>
         </div>
       </div>

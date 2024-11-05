@@ -19,7 +19,7 @@ h1 {
   font-weight: 700;
   font-size: 40px;
 }
-h3 {  
+h3 {
   font-weight: 700;
   font-size: 24px;
 }
@@ -85,6 +85,6 @@ label {
     flex-direction: column;
   }
   .intro-img {
-    object-position: 60% 0;
+    object-position: 0 0;
   }
 }

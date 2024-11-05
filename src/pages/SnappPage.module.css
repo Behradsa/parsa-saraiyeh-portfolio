@@ -113,4 +113,7 @@ label {
   .illustration-grid > div {
     flex-direction: column;
   }
+  .intro-main-img {
+    min-height: 250px;
+  }
 }

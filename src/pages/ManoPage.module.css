@@ -85,6 +85,6 @@ label {
     flex-direction: column;
   }
   .intro-img {
-    object-position: 60% 0;
+    object-position: 0 50%;
   }
 }
