@@ -17,6 +17,11 @@
 .main-container * {
   font-family: "Space Grotesk";
 }
+h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
 h2 {
   font-size: 32px;
   font-weight: 700;
@@ -39,7 +44,7 @@ li {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  text-align: justify;
+  text-align: left;
 }
 .header-container {
   max-width: 1000px;
@@ -47,6 +52,13 @@ li {
 }
 .main-container {
   max-width: 1000px;
+  width: 100%;
+  gap: 64px;
+  display: flex;
+  flex-direction: column;
+}
+.main-container > img {
+  width: 100%;
 }
 .introduction-section {
   display: flex;
@@ -88,14 +100,143 @@ li {
 .research_grid_1 > div > p {
   color: var(--primary-color);
 }
+.box > b {
+  color: var(--secondary-color);
+}
+
 .research_grid_1 > div > .title {
   padding: 16px;
   border-radius: 16px;
   color: var(--bg-primary-color);
   background-color: var(--primary-color);
+  font-weight: 700;
+  text-align: center;
 }
 .research_grid_1 .box {
   padding: 16px;
   background-color: var(--bg-secondary-color);
   border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.blue-container {
+  padding: 16px;
+  background-color: var(--primary-color);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.blue-container p {
+  color: var(--bg-primary-color);
+  font-weight: 700;
+}
+.list-container {
+  background-color: var(--bg-secondary-color);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.list-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.list-container > .list-container-title {
+  padding: 16px;
+  background-color: var(--bg-primary-color);
+  color: var(--primary-color);
+  width: fit-content;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.list-container > div > h3 {
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-weight: 700;
+}
+.list-container > div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.logo-img-container {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+  padding: 0 32px;
+}
+.logo-img-container img {
+  flex: 1;
+  width: 1px;
+}
+.logomark-img-container {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  gap: 16px;
+  padding: 0 32px;
+}
+.logomark-img-container img {
+  flex: 1;
+  width: 100px;
+  object-fit: contain;
+  justify-content: center;
+}
+.main-container a {
+  padding: 16px;
+  width: fit-content;
+  background-color: var(--primary-color);
+  color: var(--bg-primary-color);
+  border-radius: 16px;
+  font-weight: 700;
+}
+.main-container a:hover {
+  cursor: pointer;
+}
+.grid-2 {
+  display: flex;
+  width: 100%;
+  gap: 32px;
+}
+.grid-2 > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 16px;
+}
+.grid-2 .bluebox {
+  background-color: var(--primary-color);
+  color: var(--bg-primary-color);
+  padding: 16px;
+  width: 100%;
+  border-radius: 16px;
+  text-align: center;
+}
+.grid-2 .steps {
+  display: flex;
+  gap: 32px;
+  background-color: var(--bg-secondary-color);
+  border-radius: 16px;
+  padding: 32px;
+}
+.grid-2 .steps h3 {
+  color: var(--secondary-color);
+}
+.grid-2 .steps div:first-child {
+  color: var(--secondary-color);
+  font-size: 40px;
+}
+.grid-2 .steps > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.grid-2 img {
+  width: 100%;
 }
