@@ -1,11 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
 .page {
+  --primary-color: #4ed8e9;
+  --secondary-color: #e3e2e6;
+  --bg-primary-color: #001224;
+  --bg-secondary-color: #001b33;
+
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #001224;
+  background-color: var(--bg-primary-color);
+  padding: 0 32px;
+  padding-bottom: 32px;
+}
+.main-container * {
+  font-family: "Space Grotesk";
+}
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+}
+h3 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 28px;
+}
+ul {
+  margin-left: 1em;
+  text-align: left;
+}
+b {
+  font-weight: 700;
+}
+p,
+li {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: justify;
 }
 .header-container {
   max-width: 1000px;
   width: 100%;
+}
+.main-container {
+  max-width: 1000px;
+}
+.introduction-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.introduction-section h2,
+.introduction-section h3 {
+  color: var(--primary-color);
+}
+.introduction-section p,
+.introduction-section li {
+  color: var(--secondary-color);
+}
+/* //////////// */
+.design-circles-container {
+  display: flex;
+}
+.design-circles-container > div {
+  flex: 1;
+}
+.design-circles-container img {
+  width: 100%;
+}
+.design-circles-container p {
+  padding: 16px;
+}
+.research_grid_1 {
+  display: flex;
+  gap: 16px;
+}
+.research_grid_1 > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.research_grid_1 > div > p {
+  color: var(--primary-color);
+}
+.research_grid_1 > div > .title {
+  padding: 16px;
+  border-radius: 16px;
+  color: var(--bg-primary-color);
+  background-color: var(--primary-color);
+}
+.research_grid_1 .box {
+  padding: 16px;
+  background-color: var(--bg-secondary-color);
+  border-radius: 16px;
 }
