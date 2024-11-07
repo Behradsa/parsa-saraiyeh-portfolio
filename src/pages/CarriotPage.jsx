@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import styles from "./CarriotPage.module.css";
 import Header from "../components/Header";
 import carriot_intro from "../assets/Carriot/carriot-intro.png";
@@ -19,6 +20,31 @@ import truck from "../assets/Carriot/truck.png";
 function CarriotPage() {
   return (
     <div className={styles["page"]}>
+      <Helmet>
+        <title>Parsa Saraiyeh | Carriot</title>
+        <meta
+          name="description"
+          content="Carriot is a cloud-based platform designed to enhance last mile delivery, dispatching operation, and surge revenue. Owning to our powerful AI algorithms and reliable telematics, you can automate your daily delivery schedule and save a fortune."
+        />
+        <meta property="og:title" content="Parsa Saraiyeh | Carriot" />
+        <meta
+          property="og:description"
+          content="Carriot is a cloud-based platform designed to enhance last mile delivery, dispatching operation, and surge revenue. Owning to our powerful AI algorithms and reliable telematics, you can automate your daily delivery schedule and save a fortune."
+        />
+        <meta
+          property="og:image"
+          content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
+        />
+        <meta name="twitter:title" content="Parsa Saraiyeh | Carriot" />
+        <meta
+          name="twitter:description"
+          content="Carriot is a cloud-based platform designed to enhance last mile delivery, dispatching operation, and surge revenue. Owning to our powerful AI algorithms and reliable telematics, you can automate your daily delivery schedule and save a fortune."
+        />
+        <meta
+          name="twitter:image"
+          content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
+        />
+      </Helmet>
       <div className={styles["header-container"]}>
         <Header />
       </div>

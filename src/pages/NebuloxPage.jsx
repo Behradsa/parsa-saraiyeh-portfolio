@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import styles from "./NebuloxPage.module.css";
 import Header from "../components/Header";
 import scrollToHash from "../functions/scrollToHash";
@@ -20,15 +21,45 @@ import nebulox_img_2 from "../assets/Nebulox/nebulox-img-2.png";
 import logo_type_desktop from "../assets/Nebulox/logotype-desktop.png";
 import arch_img_1 from "../assets/Nebulox/arch-1.png";
 import arch_img_2 from "../assets/Nebulox/arch-2.png";
+import main_img from "../assets/Nebulox/main-img.png";
+
 function NebuloxPage() {
   scrollToHash();
 
   return (
     <div className={styles["page"]}>
+      <Helmet>
+        <title>Parsa Saraiyeh | Nebulox</title>
+        <meta
+          name="description"
+          content="Nebulox Case Study. A crypto payment gateway for businesses of various scales from entrepreneurs to enterprises."
+        />
+        <meta property="og:title" content="Parsa Saraiyeh | Nebulox" />
+        <meta
+          property="og:description"
+          content="Nebulox Case Study. A crypto payment gateway for businesses of various scales from entrepreneurs to enterprises."
+        />
+        <meta
+          property="og:image"
+          content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
+        />
+        <meta name="twitter:title" content="Parsa Saraiyeh | Nebulox" />
+        <meta
+          name="twitter:description"
+          content="Nebulox Case Study. A crypto payment gateway for businesses of various scales from entrepreneurs to enterprises."
+        />
+        <meta
+          name="twitter:image"
+          content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
+        />
+      </Helmet>
       <div className={styles["header-container"]}>
         <Header />
       </div>
       <div className={`${styles["main-container"]}`}>
+        <a href="https://nebulox.io/">
+          <img src={main_img} alt="main" />
+        </a>
         <section className={`${styles["introduction-section"]}`}>
           <h2>Introduction</h2>
           <p>

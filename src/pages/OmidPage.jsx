@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import styles from "./OmidPage.module.css";
 import Header from "../components/Header";
 import hero_main_img from "../assets/Omid/hero-main.png";
@@ -18,6 +19,31 @@ import b_6_img from "../assets/Omid/b_6.png";
 function ManoPage() {
   return (
     <div className={styles["page"]}>
+      <Helmet>
+        <title>Parsa Saraiyeh | Omid Analyzer</title>
+        <meta
+          name="description"
+          content="Omid Financial Group has introduced itself as a leading company in algorithmic trading and modern market-making services since 2015 in Iran Capital Market. Our focus has always been to provide smarter, faster, and safer financial solutions to manage clients'​ wealth efficiently. We have tried to engage talented and enthusiastic experts in our community as financial analysts, data scientists, developers, and marketing. Although we have been facing serious challenges, we could overcome them and make progress day by day. At this point, we announce proudly that our customers are growing increasingly."
+        />
+        <meta property="og:title" content="Parsa Saraiyeh | Omid Analyzer" />
+        <meta
+          property="og:description"
+          content="Omid Financial Group has introduced itself as a leading company in algorithmic trading and modern market-making services since 2015 in Iran Capital Market. Our focus has always been to provide smarter, faster, and safer financial solutions to manage clients'​ wealth efficiently. We have tried to engage talented and enthusiastic experts in our community as financial analysts, data scientists, developers, and marketing. Although we have been facing serious challenges, we could overcome them and make progress day by day. At this point, we announce proudly that our customers are growing increasingly."
+        />
+        <meta
+          property="og:image"
+          content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
+        />
+        <meta name="twitter:title" content="Parsa Saraiyeh | Omid Analyzer" />
+        <meta
+          name="twitter:description"
+          content="Omid Financial Group has introduced itself as a leading company in algorithmic trading and modern market-making services since 2015 in Iran Capital Market. Our focus has always been to provide smarter, faster, and safer financial solutions to manage clients'​ wealth efficiently. We have tried to engage talented and enthusiastic experts in our community as financial analysts, data scientists, developers, and marketing. Although we have been facing serious challenges, we could overcome them and make progress day by day. At this point, we announce proudly that our customers are growing increasingly."
+        />
+        <meta
+          name="twitter:image"
+          content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
+        />
+      </Helmet>
       <div className={styles["header-container"]}>
         <Header />
       </div>

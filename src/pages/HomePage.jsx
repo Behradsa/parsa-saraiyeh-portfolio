@@ -19,23 +19,29 @@ function HomePage() {
       }}
     >
       <Helmet>
-        <title>Home | Parsa's Protfolio</title>
+        <title>Parsa Saraiyeh | Protfolio</title>
         <meta
           name="description"
           content="Hello, I’m Parsa, a Visual & Product Designer."
         />
-        <meta property="og:title" content="Home | Parsa's Protfolio" />
+        <meta property="og:title" content="Parsa Saraiyeh | Protfolio" />
         <meta
           property="og:description"
           content="Hello, I’m Parsa, a Visual & Product Designer."
         />
-        <meta property="og:image" content="/src/assets/logos/parsa-logo.svg" />
-        <meta name="twitter:title" content="Home | Parsa's Protfolio" />
+        <meta
+          property="og:image"
+          content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
+        />
+        <meta name="twitter:title" content="Parsa Saraiyeh | Protfolio" />
         <meta
           name="twitter:description"
           content="Hello, I’m Parsa, a Visual & Product Designer."
         />
-        <meta name="twitter:image" content="/src/assets/logos/parsa-logo.svg" />
+        <meta
+          name="twitter:image"
+          content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
+        />
       </Helmet>
       <div className="home-page-container">
         <Header />

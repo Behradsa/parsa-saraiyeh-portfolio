@@ -8,6 +8,7 @@ import parsa_logo_img from "../assets/logos/parsa-logo.svg";
 function Header() {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
   const location = useLocation();
+  const isNebulox = location.pathname === "/nebulox";
 
   useEffect(() => {
     if (hamburgerOpen) {
@@ -30,9 +31,7 @@ function Header() {
   return (
     <header
       id="top"
-      className={` ${
-        location.pathname === "/nebulox" ? "nebulox-set-text-color" : ""
-      }`}
+      className={` ${isNebulox ? "nebulox-set-text-color" : ""}`}
     >
       <div className="logo-container">
         <img src={parsa_logo_img} alt="logo" />
@@ -62,7 +61,7 @@ function Header() {
           <Link
             to="/"
             className={`hover-underline-animation ${
-              true ? "nebulox-set-bar-color" : ""
+              isNebulox ? "nebulox-set-bar-color" : ""
             }`}
           >
             Home
@@ -70,7 +69,7 @@ function Header() {
 
           <Link
             className={`hover-underline-animation ${
-              true ? "nebulox-set-bar-color" : ""
+              isNebulox ? "nebulox-set-bar-color" : ""
             }`}
           >
             CV
@@ -79,7 +78,7 @@ function Header() {
           <Link
             to="/#projects"
             className={`hover-underline-animation ${
-              true ? "nebulox-set-bar-color" : ""
+              isNebulox ? "nebulox-set-bar-color" : ""
             }`}
           >
             Projects
@@ -88,7 +87,7 @@ function Header() {
           <Link
             to="/#contact_me_home_page"
             className={`hover-underline-animation ${
-              true ? "nebulox-set-bar-color" : ""
+              isNebulox ? "nebulox-set-bar-color" : ""
             }`}
           >
             Contact

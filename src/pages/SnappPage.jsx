@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import styles from "./SnappPage.module.css";
 import Header from "../components/Header";
 import intro_img from "../assets/Snapp/intro.png";
@@ -22,6 +23,31 @@ import layout_img_2 from "../assets/Snapp/layout-2.png";
 function SnappPage() {
   return (
     <div className={styles["page"]}>
+      <Helmet>
+        <title>Parsa Saraiyeh | SnappTrip</title>
+        <meta
+          name="description"
+          content="Snapptrip is a full service online travel booking platform. We work hard to make travel accessible, affordable and a great experience for all."
+        />
+        <meta property="og:title" content="Parsa Saraiyeh | SnappTrip" />
+        <meta
+          property="og:description"
+          content="Snapptrip is a full service online travel booking platform. We work hard to make travel accessible, affordable and a great experience for all."
+        />
+        <meta
+          property="og:image"
+          content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
+        />
+        <meta name="twitter:title" content="Parsa Saraiyeh | SnappTrip" />
+        <meta
+          name="twitter:description"
+          content="Snapptrip is a full service online travel booking platform. We work hard to make travel accessible, affordable and a great experience for all."
+        />
+        <meta
+          name="twitter:image"
+          content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
+        />
+      </Helmet>
       <div className={styles["header-container"]}>
         <Header />
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import styles from "./ManoPage.module.css";
 import Header from "../components/Header";
 import intro_main_img from "../assets/Homano/intro_main.png";
@@ -24,6 +25,31 @@ import d_4_img from "../assets/Homano/d_4.png";
 function ManoPage() {
   return (
     <div className={styles["page"]}>
+      <Helmet>
+        <title>Parsa Saraiyeh | Homano</title>
+        <meta
+          name="description"
+          content="Homano is a transparent and safe platform to facilitate investment in real estate and provide capital for construction projects across the country."
+        />
+        <meta property="og:title" content="Parsa Saraiyeh | Homano" />
+        <meta
+          property="og:description"
+          content="Homano is a transparent and safe platform to facilitate investment in real estate and provide capital for construction projects across the country."
+        />
+        <meta
+          property="og:image"
+          content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
+        />
+        <meta name="twitter:title" content="Parsa Saraiyeh | Homano" />
+        <meta
+          name="twitter:description"
+          content="Homano is a transparent and safe platform to facilitate investment in real estate and provide capital for construction projects across the country."
+        />
+        <meta
+          name="twitter:image"
+          content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
+        />
+      </Helmet>
       <div className={styles["header-container"]}>
         <Header />
       </div>

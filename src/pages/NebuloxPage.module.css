@@ -188,7 +188,7 @@ li {
   object-fit: contain;
   justify-content: center;
 }
-.main-container a {
+.main-container > section a {
   padding: 16px;
   width: fit-content;
   background-color: var(--primary-color);
@@ -238,5 +238,9 @@ li {
   gap: 16px;
 }
 .grid-2 img {
+  width: 100%;
+}
+
+.main-container > a:first-child > img {
   width: 100%;
 }

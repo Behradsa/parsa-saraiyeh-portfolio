@@ -5,10 +5,11 @@ import { Link, useLocation } from "react-router-dom";
 
 function HamburgerMenu({ isOpen, closeMenu }) {
   const location = useLocation();
+  const isNebulox = location.pathname === "/nebulox";
   return (
     <div
       className={`${styles["hamburger-menu"]} ${isOpen ? styles.show : ""} ${
-        location.pathname === "/nebulox"
+        isNebulox
           ? `${styles["nebulox-set-bg-color"]} ${styles["nebulox-set-text-color"]}`
           : ""
       }`}
