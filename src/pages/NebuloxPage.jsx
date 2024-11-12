@@ -29,7 +29,7 @@ function NebuloxPage() {
   return (
     <div className={styles["page"]}>
       <Helmet>
-        <meta name="viewport" content="width=1000" />
+        <meta name="viewport" content="width=10آنلیز عددی00" />
         <title>Parsa Saraiyeh | Nebulox</title>
         <meta
           name="description"
@@ -1155,7 +1155,7 @@ function NebuloxPage() {
           <p>
             These are the design deliverables and comps we ended up with at this
             stage and obviously we refine them as we get more data on the app
-            usage from qualitative insights and analytics data.{" "}
+            usage from qualitative insights and analytics data.
           </p>
           <a href="">Design Deliverables Repository </a>
         </section>

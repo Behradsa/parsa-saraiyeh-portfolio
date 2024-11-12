@@ -463,6 +463,15 @@ b {
   }
 }
 
+.updating-popup {
+  background-image: url("../assets/HomePage/updating-popup.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  overflow: hidden;
+  height: 1000px;
+}
+
 @media (max-width: 950px) {
   .projects-grid {
     grid-template-columns: 1fr;

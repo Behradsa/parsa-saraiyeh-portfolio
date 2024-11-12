@@ -159,6 +159,7 @@ function MainGrid() {
           </div>
         </div>
       </div>
+      <div className={styles["updating-popup"]}>asd</div>
     </div>
   );
 }
