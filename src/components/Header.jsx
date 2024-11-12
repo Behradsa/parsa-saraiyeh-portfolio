@@ -100,9 +100,15 @@ function Header() {
         className={`ham-button ${hamburgerOpen ? "ham-change" : ""}`}
         onClick={toggleHamburger}
       >
-        <div className={`bar1 ${true ? "nebulox-set-bar-color" : ""}`}></div>
-        <div className={`bar2 ${true ? "nebulox-set-bar-color" : ""} `}></div>
-        <div className={`bar3 ${true ? "nebulox-set-bar-color" : ""} `}></div>
+        <div
+          className={`bar1 ${isNebulox ? "nebulox-set-bar-color" : ""}`}
+        ></div>
+        <div
+          className={`bar2 ${isNebulox ? "nebulox-set-bar-color" : ""} `}
+        ></div>
+        <div
+          className={`bar3 ${isNebulox ? "nebulox-set-bar-color" : ""} `}
+        ></div>
       </AnchorLink>
 
       <HamburgerMenu isOpen={hamburgerOpen} closeMenu={closeMenu} />
