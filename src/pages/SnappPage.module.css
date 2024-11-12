@@ -116,4 +116,14 @@ label {
   .intro-main-img {
     min-height: 250px;
   }
+  .title-text-holder h1 {
+    font-size: 35px;
+  }
+  .title-text-holder,
+  .about-snapp,
+  .social-media-grid,
+  .hr-grid,
+  .illustration-grid {
+    padding: 32px 10%;
+  }
 }
