@@ -2,6 +2,8 @@
   --primary-color: #ffabf1;
   --secondary-color: #ffd7ef;
   --bg-primary-color: #290022;
+  --component-bg-primary-color: #702b6b;
+  --component-bg-secondary-color: #702b6b4d;
 
   width: 100%;
   background-color: #290022;
@@ -9,7 +11,110 @@
   flex-direction: column;
   align-items: center;
 }
+.page * {
+  font-family: "Space Grotesk";
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+h2,
+h3 {
+  color: var(--primary-color);
+}
+h2 {
+  font-weight: 700;
+  font-size: 32px;
+}
+h3 {
+  font-weight: 500;
+  font-size: 22px;
+}
+h4 {
+  font-weight: 700;
+  font-size: 16px;
+}
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+li,
+p,
+h4,
+div {
+  color: var(--secondary-color);
+}
 .header-container {
   max-width: 1000px;
+  width: 100%;
+}
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  gap: 32px;
+}
+section > div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+section > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.component-table {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.component-table > div {
+  background-color: var(--component-bg-secondary-color);
+  padding: 1em;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.component-table > .head {
+  background-color: var(--component-bg-primary-color);
+  text-align: center;
+}
+.component-table .head h3 {
+  color: var(--secondary-color);
+}
+
+#human-resource-distro {
+  gap: 16px;
+}
+#human-resource-distro > div {
+  display: flex;
+  gap: 32px;
+  max-height: 256px;
+}
+#human-resource-distro img {
+  object-fit: contain;
+  height: 100%;
+}
+
+#design-system-team-structures {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  flex-direction: row;
+  padding: 16px;
+}
+#design-system-team-structures > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#design-system-team-structures img {
+  object-fit: contain;
   width: 100%;
 }
