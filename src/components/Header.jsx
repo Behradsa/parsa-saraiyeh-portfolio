@@ -9,6 +9,7 @@ function Header() {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
   const location = useLocation();
   const isNebulox = location.pathname === "/nebulox";
+  const isNikandish = location.pathname === "/nikandish";
 
   useEffect(() => {
     if (hamburgerOpen) {
@@ -31,7 +32,9 @@ function Header() {
   return (
     <header
       id="top"
-      className={` ${isNebulox ? "nebulox-set-text-color" : ""}`}
+      className={` ${isNebulox ? "nebulox-set-text-color" : ""} ${
+        isNikandish ? "nikandish-set-text-color" : ""
+      }`}
     >
       <div className="logo-container">
         <img src={parsa_logo_img} alt="logo" />
@@ -62,7 +65,7 @@ function Header() {
             to="/"
             className={`hover-underline-animation ${
               isNebulox ? "nebulox-set-bar-color" : ""
-            }`}
+            } ${isNikandish ? "nikandish-set-bar-color" : ""}`}
           >
             Home
           </Link>
@@ -70,7 +73,7 @@ function Header() {
           <Link
             className={`hover-underline-animation ${
               isNebulox ? "nebulox-set-bar-color" : ""
-            }`}
+            } ${isNikandish ? "nikandish-set-bar-color" : ""}`}
           >
             CV
           </Link>
@@ -79,7 +82,7 @@ function Header() {
             to="/#projects"
             className={`hover-underline-animation ${
               isNebulox ? "nebulox-set-bar-color" : ""
-            }`}
+            } ${isNikandish ? "nikandish-set-bar-color" : ""}`}
           >
             Projects
           </Link>
@@ -88,7 +91,7 @@ function Header() {
             to="/#contact_me_home_page"
             className={`hover-underline-animation ${
               isNebulox ? "nebulox-set-bar-color" : ""
-            }`}
+            } ${isNikandish ? "nikandish-set-bar-color" : ""}`}
           >
             Contact
           </Link>
@@ -101,13 +104,19 @@ function Header() {
         onClick={toggleHamburger}
       >
         <div
-          className={`bar1 ${isNebulox ? "nebulox-set-bar-color" : ""}`}
+          className={`bar1 ${isNebulox ? "nebulox-set-bar-color" : ""} ${
+            isNikandish ? "nikandish-set-bar-color" : ""
+          }`}
         ></div>
         <div
-          className={`bar2 ${isNebulox ? "nebulox-set-bar-color" : ""} `}
+          className={`bar2 ${isNebulox ? "nebulox-set-bar-color" : ""} ${
+            isNikandish ? "nikandish-set-bar-color" : ""
+          } `}
         ></div>
         <div
-          className={`bar3 ${isNebulox ? "nebulox-set-bar-color" : ""} `}
+          className={`bar3 ${isNebulox ? "nebulox-set-bar-color" : ""} ${
+            isNikandish ? "nikandish-set-bar-color" : ""
+          } `}
         ></div>
       </AnchorLink>
 

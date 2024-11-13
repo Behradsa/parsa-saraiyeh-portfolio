@@ -2,6 +2,10 @@
   --nebulox-primary-color: #4ed8e9;
   --nebulox-secondary-color: #e3e2e6;
   --nebulox-bg-color: #001224;
+
+  --nikandish-primary-color: #ffabf1;
+  --nikandish-secondary-color: #ffd7ef;
+  --nikandish-bg-primary-color: #290022;
 }
 
 header {
@@ -98,6 +102,16 @@ header {
 }
 .nebulox-set-bar-color {
   background-color: var(--nebulox-secondary-color);
+}
+/* nikandish */
+.nikandish-set-text-color {
+  color: var(--nikandish-secondary-color);
+}
+.nikandish-set-bar-color::after {
+  background-color: var(--nikandish-secondary-color);
+}
+.nikandish-set-bar-color {
+  background-color: var(--nikandish-secondary-color);
 }
 
 @media (max-width: 530px) {

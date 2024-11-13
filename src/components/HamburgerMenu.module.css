@@ -39,3 +39,6 @@
 .nebulox-set-bg-color {
   background-color: var(--nebulox-bg-color);
 }
+.nikandish-set-bg-color {
+  background-color: var(--nikandish-bg-primary-color);
+}
