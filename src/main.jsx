@@ -10,6 +10,7 @@ import OmidPage from "./pages/OmidPage";
 import NebuloxPage from "./pages/NebuloxPage";
 
 import ScrollToTop from "./functions/scrollToTop";
+import NikandishPage from "./pages/NikandishPage";
 
 const router = createHashRouter([
   {
@@ -57,6 +58,14 @@ const router = createHashRouter([
     element: (
       <>
         <ScrollToTop /> <NebuloxPage />
+      </>
+    ),
+  },
+  {
+    path: "nikandish/",
+    element: (
+      <>
+        <ScrollToTop /> <NikandishPage />
       </>
     ),
   },

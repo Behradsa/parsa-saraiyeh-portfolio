@@ -1,0 +1,15 @@
+.page {
+  --primary-color: #ffabf1;
+  --secondary-color: #ffd7ef;
+  --bg-primary-color: #290022;
+
+  width: 100%;
+  background-color: #290022;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-container {
+  max-width: 1000px;
+  width: 100%;
+}

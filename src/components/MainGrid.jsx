@@ -62,14 +62,17 @@ function MainGrid() {
           <h3>Hich</h3>
           <h4>Product Designer</h4>
         </div>
-        <div className={`${styles["project"]} ${styles["nikandish"]}`}>
+        <Link
+          to="/nikandish"
+          className={`${styles["project"]} ${styles["nikandish"]}`}
+        >
           <img src={link_icon_img} alt="link" />
           <h3>NikAndish</h3>
           <h4>
             Visual Designer <br /> Brand identity owner
           </h4>
           <div>Design System Case Study</div>
-        </div>
+        </Link>
         <Link
           to="/nebulox"
           className={`${styles["project"]} ${styles["nebulox"]}`}
