@@ -50,9 +50,8 @@ function ManoPage() {
           content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
         />
       </Helmet>
-      <div className={styles["header-container"]}>
-        <Header />
-      </div>
+      <Header />
+
       <img
         src={intro_main_img}
         alt="Homano"

@@ -11,12 +11,23 @@
 header {
   width: 100%;
   height: 80px;
+  background-color: white;
   padding: 30px 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  position: sticky;
+  top: 0; /* Fixes it to the top */
+  left: 0; /* Sticks it to the left edge */
+  z-index: 1000; /* Makes sure the navbar stays on top */
 }
-
+header > div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1040px;
+  justify-content: space-between;
+}
 .logo-container {
   display: flex;
   gap: 8px;
@@ -26,12 +37,14 @@ header {
 .logo-container div {
   font-size: 15px;
   font-weight: 500;
+  align-self: center;
 }
 .header-buttons-container {
   display: flex;
-  width: 312px;
+  width: 450px;
   align-items: center;
   gap: 40px;
+  justify-content: right;
 }
 .header-buttons-container a {
   display: inline-block;
@@ -97,11 +110,20 @@ header {
 .nebulox-set-text-color {
   color: var(--nebulox-secondary-color);
 }
+.nebulox-set-text-secondary-color {
+  color: var(--nebulox-bg-color) !important;
+}
 .nebulox-set-bar-color::after {
   background-color: var(--nebulox-secondary-color);
 }
 .nebulox-set-bar-color {
   background-color: var(--nebulox-secondary-color);
+}
+.nebulox-set-bg-color {
+  background-color: var(--nebulox-bg-color);
+}
+.nebulox-set-bg-secondary-color {
+  background-color: var(--nebulox-primary-color) !important;
 }
 /* nikandish */
 .nikandish-set-text-color {
@@ -113,7 +135,21 @@ header {
 .nikandish-set-bar-color {
   background-color: var(--nikandish-secondary-color);
 }
-
+.nikandish-set-bg-color {
+  background-color: var(--nikandish-bg-primary-color);
+}
+.nikandish-set-bg-secondary-color {
+  background-color: var(--nikandish-primary-color) !important;
+}
+.nikandish-set-text-secondary-color {
+  color: var(--nikandish-bg-primary-color) !important;
+}
+#cv-button {
+  background-color: black;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 10px;
+}
 @media (max-width: 530px) {
   .header-buttons-container {
     display: none;

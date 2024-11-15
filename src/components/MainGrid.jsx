@@ -27,16 +27,27 @@ function MainGrid() {
           </div>
 
           <div className={styles["introduction-buttons-container"]}>
-            <a className={`${styles["button"]} ${styles["type--A"]}`}>
+            <a
+              href="mailto:parsa.sa1999@gmail.com"
+              className={`${styles["button"]} ${styles["type--A"]}`}
+            >
               <div className={styles["button__line"]} />
               <div className={styles["button__line"]} />
               <span className={styles["button__text"]}>Contact Me</span>
               <div className={styles["button__drow1"]} />
               <div className={styles["button__drow2"]} />
             </a>
-            <a className={styles["contact-me-button"]}>Contact Me</a>
+            <a
+              href="mailto:parsa.sa1999@gmail.com"
+              className={styles["contact-me-button"]}
+            >
+              Contact Me
+            </a>
             <div className={styles["logo-button-container"]}>
-              <a href="" className={styles["logo-button"]}>
+              <a
+                href="https://dribbble.com/parssa_sa"
+                className={styles["logo-button"]}
+              >
                 <img src={dribble_logo_img} alt="dribble" />
                 <img src={dribble_logo_hover_img} alt="dribble" />
               </a>
@@ -47,7 +58,10 @@ function MainGrid() {
                 <img src={linkedin_logo_img} alt="linkedin" />
                 <img src={linkedin_logo_hover_img} alt="linkedin" />
               </a>
-              <a href="" className={styles["logo-button"]}>
+              <a
+                href="https://www.behance.net/parsasaraiyeh"
+                className={styles["logo-button"]}
+              >
                 <img src={behance_logo_img} alt="behance" />
                 <img src={behance_logo_hover_img} alt="behance" />
               </a>
@@ -135,16 +149,28 @@ function MainGrid() {
         </div>
 
         <div className={styles["introduction-buttons-container"]}>
-          <a href="" className={`${styles["button"]} ${styles["type--A"]}`}>
+          <a
+            href="mailto:parsa.sa1999@gmail.com"
+            className={`${styles["button"]} ${styles["type--A"]}`}
+          >
             <div className={styles["button__line"]} />
             <div className={styles["button__line"]} />
             <span className={styles["button__text"]}>Contact Me</span>
             <div className={styles["button__drow1"]} />
             <div className={styles["button__drow2"]} />
           </a>
-          <a className={styles["contact-me-button"]}>Contact Me</a>
+
+          <a
+            href="mailto:parsa.sa1999@gmail.com"
+            className={styles["contact-me-button"]}
+          >
+            Contact Me
+          </a>
           <div className={styles["logo-button-container"]}>
-            <a href="" className={styles["logo-button"]}>
+            <a
+              href="https://dribbble.com/parssa_sa"
+              className={styles["logo-button"]}
+            >
               <img src={dribble_logo_img} alt="dribble" />
               <img src={dribble_logo_hover_img} alt="dribble" />
             </a>
@@ -155,7 +181,10 @@ function MainGrid() {
               <img src={linkedin_logo_img} alt="linkedin" />
               <img src={linkedin_logo_hover_img} alt="linkedin" />
             </a>
-            <a href="" className={styles["logo-button"]}>
+            <a
+              href="https://www.behance.net/parsasaraiyeh"
+              className={styles["logo-button"]}
+            >
               <img src={behance_logo_img} alt="behance" />
               <img src={behance_logo_hover_img} alt="behance" />
             </a>

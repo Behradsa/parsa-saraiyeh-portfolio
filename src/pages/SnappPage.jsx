@@ -48,9 +48,7 @@ function SnappPage() {
           content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
         />
       </Helmet>
-      <div className={styles["header-container"]}>
-        <Header />
-      </div>
+      <Header />
       <img
         src={intro_img}
         alt="intro-main-img"
@@ -183,7 +181,9 @@ function SnappPage() {
         <p>Different variations of the assets placed in the link below;</p>
         <div>
           <a href="https://www.snapptrip.com/">SnappTrip.com</a>
-          <a href="https://carriot.ir/">Carriot.ir</a>
+          <a href="src/assets/SnappTrip_Visual Design Guidelines Summary.pdf">
+            Snapp Trip Style Guide
+          </a>
         </div>
       </div>
     </div>

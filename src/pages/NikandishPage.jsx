@@ -67,9 +67,7 @@ export default function NickandishPage() {
           content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
         />
       </Helmet>
-      <div className={styles["header-container"]}>
-        <Header />
-      </div>
+      <Header />
       <a href="https://nikandishllc.com/">
         <img className={styles["main-img"]} src={start_img} alt="nikandish" />
       </a>
@@ -638,7 +636,9 @@ onSelectedValuesChange={newValues => /* ... */}/>
               etc. into Figma as well.
             </p>
           </div>
-          <a href="">Style Guides</a>
+          <a href="https://www.figma.com/design/6ey4Fa5SD7M1SQ1mMbUekr/Parsa's-Case-Studies?node-id=496-105429&t=2Ptn8oPo8j438vSS-1">
+            Style Guides
+          </a>
           <div>
             <img src={section_4_1_img} alt="Style Guides" />
           </div>
@@ -676,7 +676,9 @@ onSelectedValuesChange={newValues => /* ... */}/>
               <li>Preview: this page is useful for components’ preview</li>
               <li>Deprecated: all of our deprecated versions go here</li>
             </ul>
-            <a href="">File Structure</a>
+            <a href="https://www.figma.com/design/6ey4Fa5SD7M1SQ1mMbUekr/Parsa's-Case-Studies?node-id=493-71564&t=2Ptn8oPo8j438vSS-1">
+              File Structure
+            </a>
           </div>
         </section>
         <section
@@ -1477,7 +1479,7 @@ onSelectedValuesChange={newValues => /* ... */}/>
             </div>
           </div>
         </section>
-        <div id={styles["end"]}>Thank you for your time.</div>
+        <div className={styles["end"]}>Thank you for your time.</div>
       </main>
     </div>
   );

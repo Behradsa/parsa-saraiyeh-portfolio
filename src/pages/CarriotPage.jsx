@@ -45,9 +45,8 @@ function CarriotPage() {
           content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
         />
       </Helmet>
-      <div className={styles["header-container"]}>
-        <Header />
-      </div>
+      <Header />
+      <div className={styles["header-container"]}></div>
       <img src={carriot_intro} alt="Carriot" className={styles["main-img"]} />
       <div className={styles["about-carriot"]}>
         <h3>About Carriot</h3>

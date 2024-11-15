@@ -19,7 +19,7 @@ function HomePage() {
       }}
     >
       <Helmet>
-        <title>Parsa Saraiyeh | Protfolio</title>
+        <title>Parsa Saraiyeh</title>
         <meta
           name="description"
           content="Hello, I’m Parsa, a Visual & Product Designer."

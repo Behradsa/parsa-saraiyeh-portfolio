@@ -249,3 +249,9 @@ li {
 .main-container > a:first-child > img {
   width: 100%;
 }
+.end {
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--primary-color);
+  padding: 32px;
+}

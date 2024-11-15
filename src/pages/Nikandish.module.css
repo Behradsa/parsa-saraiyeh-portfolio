@@ -272,8 +272,9 @@ a:hover {
   border-radius: 32px;
   background-color: #3e0d38;
 }
-#end {
+.end {
   font-size: 56px;
   font-weight: 700;
   color: var(--primary-color);
+  padding: 32px;
 }

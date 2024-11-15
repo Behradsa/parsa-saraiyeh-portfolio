@@ -5,8 +5,8 @@ import Header from "../components/Header";
 import hero_main_img from "../assets/Omid/hero-main.png";
 import galaxy_main_img from "../assets/Omid/galaxy-main.png";
 import website_main_img from "../assets/Omid/website-main.png";
-import a_1_img from "../assets/Omid/a_3.png";
-import a_2_img from "../assets/Omid/a_3.png";
+import a_1_img from "../assets/Omid/a_1.png";
+import a_2_img from "../assets/Omid/a_2.png";
 import a_3_img from "../assets/Omid/a_3.png";
 import a_4_img from "../assets/Omid/a_4.png";
 import b_1_img from "../assets/Omid/b_1.png";
@@ -44,9 +44,7 @@ function ManoPage() {
           content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
         />
       </Helmet>
-      <div className={styles["header-container"]}>
-        <Header />
-      </div>
+      <Header />
       <img
         src={hero_main_img}
         alt="Hero"
@@ -92,7 +90,6 @@ function ManoPage() {
           </div>
           <div className={`${styles["img_with_label"]} ${styles["b_4"]}`}>
             <img src={a_4_img} alt="img_4" />
-            <label>We spruced up and cleaned up the lettering.</label>
           </div>
         </div>
       </div>

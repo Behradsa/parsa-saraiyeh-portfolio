@@ -21,14 +21,20 @@ function HamburgerMenu({ isOpen, closeMenu }) {
             Home
           </AnchorLink>
 
-          <AnchorLink onClick={closeMenu}>CV</AnchorLink>
-
           <AnchorLink onClick={closeMenu} href="#projects">
             Projects
           </AnchorLink>
 
           <AnchorLink onClick={closeMenu} href="#contact_me_home_page">
             Contact
+          </AnchorLink>
+
+          <AnchorLink
+            href="src/assets/Parsa_Saraiyeh_CV.pdf"
+            target="_blank"
+            onClick={closeMenu}
+          >
+            CV
           </AnchorLink>
         </div>
       ) : (
@@ -37,14 +43,20 @@ function HamburgerMenu({ isOpen, closeMenu }) {
             Home
           </Link>
 
-          <Link onClick={closeMenu}>CV</Link>
-
           <Link onClick={closeMenu} to="/#projects">
             Projects
           </Link>
 
           <Link onClick={closeMenu} to="/#contact_me_home_page">
             Contact
+          </Link>
+
+          <Link
+            href="src/assets/Parsa_Saraiyeh_CV.pdf"
+            target="_blank"
+            onClick={closeMenu}
+          >
+            CV
           </Link>
         </div>
       )}

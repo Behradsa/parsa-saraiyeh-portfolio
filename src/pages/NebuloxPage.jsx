@@ -21,6 +21,7 @@ import nebulox_img_2 from "../assets/Nebulox/nebulox-img-2.png";
 import logo_type_desktop from "../assets/Nebulox/logotype-desktop.png";
 import arch_img_1 from "../assets/Nebulox/arch-1.png";
 import arch_img_2 from "../assets/Nebulox/arch-2.png";
+import arch_img_3 from "../assets/Nebulox/arch-3.png";
 import main_img from "../assets/Nebulox/main-img.png";
 
 function NebuloxPage() {
@@ -54,9 +55,7 @@ function NebuloxPage() {
           content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
         />
       </Helmet>
-      <div className={styles["header-container"]}>
-        <Header />
-      </div>
+      <Header />
       <div className={`${styles["main-container"]}`}>
         <a href="https://nebulox.io/">
           <img className={styles["main-img"]} src={main_img} alt="main" />
@@ -939,7 +938,9 @@ function NebuloxPage() {
             (LTR,RTL, multi language support etc.) and environments. Here’s a
             snapshot of the style guide I designed for Nebulox.
           </p>
-          <a href="">Style guides</a>
+          <a href="https://www.figma.com/design/6ey4Fa5SD7M1SQ1mMbUekr/Parsa's-Case-Studies?node-id=418-71003&t=YyVNW980GZZlxBkk-1">
+            Style guides
+          </a>
         </section>
         <section className={`${styles["introduction-section"]}`}>
           <h2>Information architecture</h2>
@@ -1137,6 +1138,9 @@ function NebuloxPage() {
               <img src={arch_img_2} alt="arch-2" />
             </div>
           </div>
+
+          <h3>Preliminary Site Map</h3>
+          <img src={arch_img_3} alt="" />
           <h3>Feedbacks and iterations</h3>
           <p>
             As a part of our design thinking process, we experimented a lot with
@@ -1157,7 +1161,9 @@ function NebuloxPage() {
             stage and obviously we refine them as we get more data on the app
             usage from qualitative insights and analytics data.
           </p>
-          <a href="">Design Deliverables Repository </a>
+          <a href="https://www.figma.com/design/6ey4Fa5SD7M1SQ1mMbUekr/Parsa's-Case-Studies?node-id=417-116171&t=YyVNW980GZZlxBkk-1">
+            Design Deliverables Repository{" "}
+          </a>
         </section>
 
         <section className={`${styles["introduction-section"]}`}>
@@ -1179,7 +1185,7 @@ function NebuloxPage() {
             scale.
           </p>
         </section>
-        <div id={styles["end"]}>Thank you for your time.</div>
+        <div className={styles["end"]}>Thank you for your time.</div>
       </div>
     </div>
   );
