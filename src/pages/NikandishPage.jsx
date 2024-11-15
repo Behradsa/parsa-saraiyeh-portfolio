@@ -10,17 +10,34 @@ import section_2_0_img from "../assets/Nikandish/section-2-0.png";
 import section_2_1_img from "../assets/Nikandish/section-2-1.png";
 import section_2_2_img from "../assets/Nikandish/section-2-2.png";
 import section_3_0_img from "../assets/Nikandish/section-3-0.png";
+import section_3_1_img from "../assets/Nikandish/section-3-1.png";
+import section_3_2_img from "../assets/Nikandish/section-3-2.png";
+import section_3_3_img from "../assets/Nikandish/section-3-3.png";
+import section_3_4_img from "../assets/Nikandish/section-3-4.png";
+import section_3_5_img from "../assets/Nikandish/section-3-5.png";
+import section_3_6_img from "../assets/Nikandish/section-3-6.png";
+import section_3_7_img from "../assets/Nikandish/section-3-7.png";
+import section_3_8_img from "../assets/Nikandish/section-3-8.png";
+import section_4_0_img from "../assets/Nikandish/section-4-0.png";
+import section_4_1_img from "../assets/Nikandish/section-4-1.png";
+import section_4_2_img from "../assets/Nikandish/section-4-2.png";
+import section_4_3_img from "../assets/Nikandish/section-4-3.png";
+import section_4_4_img from "../assets/Nikandish/section-4-4.png";
+import section_4_5_img from "../assets/Nikandish/section-4-5.png";
+import section_4_6_img from "../assets/Nikandish/section-4-6.png";
 
 export default function NickandishPage() {
   scrollToHash();
 
   return (
-    <div className={styles["page"]}>
+    <div className={styles["nik-page"]}>
       <div className={styles["header-container"]}>
         <Header />
       </div>
-      <main>
-        <section className={`${styles["section-1-intro"]}`}>
+      <main className={styles.main}>
+        <section
+          className={`${styles["nik-section"]} {styles["section-1-intro"]}`}
+        >
           <div>
             <h2>Introduction</h2>
             <p>
@@ -315,7 +332,8 @@ options={[
                 Involves defining specific components to be used with a base
                 component:
               </p>
-              <pre>{`<Multiselect
+              <pre>
+                {`<Multiselect
 selectedValues={[1, 2]}
 onSelectedValuesChange={newValues => /* ... */}/>
 <Option optionValue={1}>One</Option>
@@ -323,9 +341,9 @@ onSelectedValuesChange={newValues => /* ... */}/>
 <Option optionValue={2}>Two</Option>
 <Option optionValue={3}>Three</Option>
 </Group>
-</Multiselect>
-
-The <Multiselect /> is the base component while the <Option /> and <Group /> components are the specific components`}</pre>
+</Multiselect>`}
+              </pre>
+              <p>{`The <Multiselect /> is the base component while the <Option /> and <Group /> components are the specific components`}</p>
             </div>
           </div>
           <div>
@@ -409,7 +427,9 @@ The <Multiselect /> is the base component while the <Option /> and <Group /> com
             </div>
           </div>
         </section>
-        <section className={`${styles["section-2-team-structure"]}`}>
+        <section
+          className={`${styles["nik-section"]} {styles["section-2-team-structure"]}`}
+        >
           <h2>Team Structure</h2>
           <div>
             <p>Here are some common design system’s team structures:</p>
@@ -458,7 +478,9 @@ The <Multiselect /> is the base component while the <Option /> and <Group /> com
             </p>
           </div>
         </section>
-        <section className={`${styles["section-3-multi-brand"]}`}>
+        <section
+          className={`${styles["nik-section"]} {styles["section-3-multi-brand"]}`}
+        >
           <div>
             <h2>Multi-Brand Design System</h2>
             <p>
@@ -491,6 +513,485 @@ The <Multiselect /> is the base component while the <Option /> and <Group /> com
               hub.
             </p>
           </div>
+          <div className={`${styles["design-tokens-imgs-grid"]}`}>
+            <h4>Problems Design Tokens Solve:</h4>
+            <div>
+              <div>
+                <div>
+                  <p>Consistency</p>
+                  <img src={section_3_1_img} alt="Consistency" />
+                </div>
+                <div>
+                  <p>Maintenance</p>
+                  <img src={section_3_2_img} alt="Maintenance" />
+                </div>
+              </div>
+              <div>
+                <div>
+                  <p>Logical Pairs</p>
+                  <img src={section_3_3_img} alt="Logical Pairs" />
+                </div>
+                <div>
+                  <p>Reducing QA Time</p>
+                  <img src={section_3_4_img} alt="Reducing QA Time" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={`${styles["design-tokens-imgs-grid"]}`}>
+            <h4>Types of Design Tokens:</h4>
+            <div>
+              <div>
+                <div>
+                  <p>Choice / Reference Tokens</p>
+                  <img src={section_3_5_img} alt="Choice / Reference Tokens" />
+                </div>
+                <div>
+                  <p>Decision / System Tokens</p>
+                  <img src={section_3_6_img} alt="Decision / System Tokens" />
+                </div>
+              </div>
+              <div>
+                <div>
+                  <p>Component Tokens</p>
+                  <img src={section_3_7_img} alt="Component Tokens" />
+                </div>
+              </div>
+              <div>
+                <img src={section_3_8_img} alt="Component Tokens" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          className={`${styles["nik-section"]} {styles["section-4-road-map"]}`}
+        >
+          <h2>Design system roadmap</h2>
+          <div>
+            <p>
+              I defined the roadmap for our design system early on and made it
+              available to all key stakeholders to achieve a better clarity in
+              terms of our communication within the organization. It also helped
+              us with the alignment and direction of various departments and
+              their efforts mainly design, product and engineering.
+            </p>
+            <img src={section_4_0_img} alt="roadmap" />
+          </div>
+        </section>
+        <section
+          className={`${styles["nik-section"]} {styles["section-5-style-guide"]}`}
+        >
+          <h2>Unified style guides</h2>
+          <div>
+            <p>
+              First step in our design system journey was to define a style
+              guide that could serve all products across the organization. I
+              started with an in-depth analysis of successful and well adopted
+              design systems of all different sizes and scales. Here is what I
+              ended up with, in terms of our style guides.
+              <br />
+              <br />
+              Later on, with the addition of the Figma variables support, we
+              were able to easily add most of our design tokens inside our style
+              guides files in Figma. Hopefully, with later Figma updates, we can
+              migrate rest of our tokens such as typography tokens, elevations
+              etc. into Figma as well.
+            </p>
+          </div>
+          <a href="">Style Guides</a>
+          <div>
+            <img src={section_4_1_img} alt="Style Guides" />
+          </div>
+          <h4>EXAMPLE - TYPOGRAPHY DESIGN TOKENS</h4>
+        </section>
+        <section
+          className={`${styles["nik-section"]} {styles["section-6-figma-structure"]}`}
+        >
+          <h2>Figma file structure</h2>
+          <div>
+            <p>
+              One of the challenges I needed to resolve, was the Figma file
+              structure. We needed a structure that could cater to all of our
+              products and made sense to both designers and engineers.
+            </p>
+            <div id={`${styles["path-img-container"]}`}>
+              <p>Each file includes these pages:</p>
+              <img src={section_4_2_img} alt="path" />
+            </div>
+            <ul>
+              <li>Cover: to easily navigate the files from project view</li>
+              <li>
+                Documentation: all documentation including research and findings
+                would be here
+              </li>
+              <li>Playground: this is the place for designers to experiment</li>
+              <li>
+                Design Approval: this is where stakeholders review design
+                outputs
+              </li>
+              <li>
+                Production: designs in this page have been finalized and are
+                production ready. ideally, this is what’s currently live.
+              </li>
+              <li>Preview: this page is useful for components’ preview</li>
+              <li>Deprecated: all of our deprecated versions go here</li>
+            </ul>
+            <a href="">File Structure</a>
+          </div>
+        </section>
+        <section
+          className={`${styles["nik-section"]} {styles["section-7-Governance-model"]}`}
+        >
+          <h2>Governance and Contribution Model</h2>
+          <div>
+            <p>Design systems are products, not one-off projects. </p>
+            <ul>
+              <li>
+                Governance is important, but design system team should focus on
+                the success of product teams within their organizations.
+              </li>
+              <li>
+                Contribution process should be simple, transparent, and
+                collaborative, and document all communication.
+              </li>
+              <li>
+                Designers and developers should work together on changes to the
+                system, thus fostering a shared system language.
+              </li>
+              <li>Accessibility issues should be identified and documented.</li>
+              <li>Proper task management and ticketing process</li>
+              <li>
+                Support and communication channels should be established for the
+                entire organization
+              </li>
+            </ul>
+          </div>
+          <div className={`${styles["box"]} ${styles["box-bg-color-1"]}`}>
+            <div>
+              <h4>Why do we need governance model?</h4>
+              <p>
+                For a design system to thrive and scale within a larger product
+                ecosystem, central system team members can’t make all the
+                decisions, design all design, code all code. Instead, a system
+                practice must model and foster a federated community, opening
+                the door to contributions far and wide starting from within the
+                organization and wider community later on.
+              </p>
+            </div>
+            <div>
+              <h4>Let’s define “contribution”</h4>
+              <p>
+                Contributions taking tangible form are obvious. Completing an
+                annotated component design as “ready to code” is a contribution.
+                Merging a code fix for a defect is a contribution. Authoring and
+                publishing a Do/Don’t guideline is a contribution. All are
+                measurable, tangible changes to move a system forward.
+                <br />
+                Yet, so many people frame softer activities as contributions
+                too. Is offering verbal feedback during a design critique a
+                “contribution?” Is influencing technical architecture a
+                “contribution?” Is attending a meeting and nodding tacit
+                agreement a “contribution?” These soft, unmeasurable examples
+                are important. They lead to tangible change. However, they
+                muddle conversations of contribution. We distinguish untraceable
+                collaborative acts as participation, not contribution.
+              </p>
+            </div>
+          </div>
+          <div className={`${styles["box"]} ${styles["box-bg-color-2"]}`}>
+            <h2>Components</h2>
+            <div>
+              <div>
+                <h3>Definitions</h3>
+                <div>
+                  <h4>Design system component</h4>
+                  <p>
+                    Accordion! Button! Card! Dropdown! Table! Design system
+                    components are shared, content-agnostic, and
+                    context-agnostic built for maximal reuse. These are the
+                    components you see in all the publicly-available design
+                    systems in the wild.
+                  </p>
+                </div>
+                <div>
+                  <h4>Recipes</h4>
+                  <p>
+                    Recipe components are specific compositions of design system
+                    components (for the most part) that are to be consistently
+                    used across a product, but aren’t agnostic enough to live in
+                    the design system. Some examples: ProductCard, ContactCard,
+                    NameField (e.g. a collection of first name, middle initial,
+                    last name, suffix), AddressField, and so on. These are
+                    valuable, reusable components but may only apply to one
+                    product. Recipes are often organisms in atomic design speak.
+                  </p>
+                </div>
+                <div>
+                  <h4>Snowflakes</h4>
+                  <p>
+                    “special snowflakes” are one-off components that are needed
+                    to build a product, but don’t really get reused outside of
+                    their first use case. When we worked with an airline, there
+                    was a Seat component that only really made sense for the
+                    “Select your seat” functionality on the website.
+                  </p>
+                </div>
+                <img
+                  id={styles["box-component-img"]}
+                  src={section_4_3_img}
+                  alt="components"
+                />
+              </div>
+            </div>
+          </div>
+          <div className={`${styles["box"]} ${styles["box-bg-color-3"]}`}>
+            <h2>Non-web implementations</h2>
+            <p>
+              iOS and Android mobile apps are certainly some of the more common
+              non-web digital products, but there can be a vast array of other
+              software interfaces floating around an organization. You may deal
+              with airplane seat-back UIs, banking ATM UIs, kiosk UIs, medical
+              equipment UIs, scientific equipment UIs, and more. All of these
+              UIs come to life somehow, and the technologies that power these
+              experiences vary widely (and often frighteningly!). Regardless of
+              the specific tech employed for these experiences, the same
+              guidance applies: create a dedicated repository for common
+              UI-specific code, and deploy that code using some form of software
+              registry.
+            </p>
+          </div>
+          <div className={`${styles["box"]} ${styles["box-bg-color-2"]}`}>
+            <h2>Introduction</h2>
+            <div>
+              <div>
+                <div>
+                  <h4>Welcome to NDS Component Library</h4>
+                  <p>
+                    Welcome to NDS component library, a place where we put our
+                    designers and developers needs at the forefront. NDS
+                    provides a unified design language for designers and
+                    developers to form a common language in terms of components
+                    name, design tokens, semantic versioning, component props
+                    and foundational style guides. We understand the critical
+                    role that product teams play in bringing our applications to
+                    life, and our library is designed to make everyone’s job
+                    easier and more efficient.
+                  </p>
+                </div>
+                <h3>NDS Principles</h3>
+                <div>
+                  <h4>Favor Usability</h4>
+                  <p>
+                    Our primary focus is the end-user. We design and implement
+                    with their satisfaction and mental model in mind. Every
+                    component is created with the goal of making interactions
+                    intuitive and delightful.
+                  </p>
+                </div>
+                <div>
+                  <h4>Consistency</h4>
+                  <p>
+                    Consistency is key to a harmonious user experience. We try
+                    our best to maintain consistent and cohesive solutions,
+                    standards, implementation, syntax, and more. This ensures
+                    that products leveraging NDS look and feel coherent and
+                    polished.
+                  </p>
+                </div>
+                <div>
+                  <h4>Clarity and Team Alignment</h4>
+                  <p>
+                    We believe that transparency and clear communication are
+                    essential for effective collaboration. NDS is designed to
+                    help teams align effortlessly and work seamlessly together.
+                    Our component library promotes clear and open communication,
+                    facilitating the best team alignment possible.
+                  </p>
+                </div>
+                <div>
+                  <h4>Always Improving</h4>
+                  <p>
+                    Design is an iterative journey, and there's always room for
+                    improvement. We embrace criticism and encourage constructive
+                    collaboration. With NDS, you're part of a community that's
+                    dedicated to constant enhancement and growth.
+                  </p>
+                </div>
+                <div>
+                  <h4>Efficiency</h4>
+                  <p>
+                    NDS is rooted in the idea of reducing workloads and
+                    minimizing duplicate efforts. We provide modular and
+                    flexible solutions, with system thinking in mind at all
+                    times, to help you work smarter, not harder.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <h2>Journey Starts Here</h2>
+            <p>
+              Whether you're a designer, developer, or product manager, the NDS
+              Component Library is your go-to resource for creating excellent
+              digital experiences. Dive in, explore NDS components, and let NDS
+              be your partner in crime on your design and development journey.
+            </p>
+          </div>
+          <div className={`${styles["box"]} ${styles["box-bg-color-2"]}`}>
+            <h2>Contributing</h2>
+            <div>
+              <h4>Contributing to Design System Component Library</h4>
+              <p>
+                NDS Component Library is a collaborative project that is built
+                on top of the contributions of designers and developers like
+                you. We appreciate your interest in making NDS better. Whether
+                you've discovered a bug, have a feature request, or want to
+                contribute your skills to enhance our library, there are several
+                ways to get involved:
+              </p>
+            </div>
+            <img id={styles["contrib-img"]} src={section_4_4_img} alt="d/e" />
+            <div className={styles["flex-row"]}>
+              <div>
+                <h4>Reporting Issues</h4>
+                <div>
+                  <p>
+                    If you come across any issues, bugs, or unexpected behavior
+                    while using NDS components, please let us know. By reporting
+                    these issues, you help everyone maintain and improve the
+                    quality of the component library. Best way to report these
+                    issues is communicating via “NDS Support and Comms” on
+                    Telegram or Zoho Cliq. Keep in mind the following when you
+                    are writing the issues:
+                  </p>
+                  <ul>
+                    <li>
+                      Start your message with the word “Issue-Component”
+                      followed by a colon “:”
+                    </li>
+                    <li>Then add your message directly after the colon</li>
+                    <li>Be as specific as you can</li>
+                    <li>
+                      State the version of the component you are reporting is
+                      it’s applicable
+                    </li>
+                    <li>Insert the link of the Figma file to your message</li>
+                    <li>Avoid reporting what already has been reported</li>
+                  </ul>
+                  <p>
+                    Here’s an example: Issue-Component: Trading Table v1.0.2 has
+                    problems regarding the boolean prop that controls the filter
+                    chips. Here’s the link of the master component: Figma file
+                  </p>
+                  <p>
+                    NDS design team will regularly reviews and addresses issues,
+                    and your input is invaluable in ensuring a seamless
+                    experience for all users.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <h4>Reporting Issues</h4>
+                <div>
+                  <p>
+                    If you come across any issues, bugs, or unexpected behavior
+                    while using NDS components, please let us know. By reporting
+                    these issues, you help everyone maintain and improve the
+                    quality of the component library.
+                  </p>
+                  <ol>
+                    <li>Go to our GitHub repository for NDS.</li>
+                    <li>Click on the "Issues" tab.</li>
+                    <li>
+                      Create a new issue and provide as much detail as possible.
+                      Be sure to include a clear title, description, and any
+                      relevant screenshots or code samples.
+                    </li>
+                  </ol>
+                  <p>
+                    NDS engineering team will regularly reviews and addresses
+                    issues, and your input is invaluable in ensuring a seamless
+                    experience for all users.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={`${styles["box"]} ${styles["box-bg-color-3"]}`}>
+            <h2>Component Library</h2>
+            <div>
+              <div>
+                <h3>Governance Process</h3>
+                <div>
+                  <p>
+                    Product teams’ primary concern is getting work out the door,
+                    not to uphold the integrity of the design system. Teams get
+                    creative and will find ways of getting things done, which
+                    may involve hacking styles, creating a slew of one-off
+                    components. This is why it is so incredibly important for
+                    the makers of the design system to establish a crystal-clear
+                    governance process that helps users understand what to do
+                    when:
+                  </p>
+                  <ul>
+                    <li>
+                      They can’t find a component that does what they need
+                    </li>
+                    <li>
+                      A design system component gets them 90% of the way there,
+                      but not 100%
+                    </li>
+                    <li>
+                      They have questions or concerns about the design system
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id={styles["senarios"]}
+            className={`${styles["box"]} ${styles["box-bg-color-2"]}`}
+          >
+            <div>
+              <h4>
+                Scenario 1: product teams use the design system to help design
+                and build new work
+              </h4>
+              <p>
+                Teams should default to using the design system’s components to
+                help create new product work. The best case scenario is that a
+                team comes to the library, finds the component they need and
+                finds that it fulfills all their requirements. They plug in the
+                component and carry on with more pressing matters. Hooray for
+                best case scenarios!
+              </p>
+            </div>
+            <div>
+              <h4>
+                Scenario 2: what happens when the design system’s components
+                don’t exist or don’t fulfill requirements?
+              </h4>
+              <div>
+                <p>
+                  If the team comes to the design system and doesn’t find the
+                  component they need, if an existing component doesn’t fulfill
+                  all the requirements, or if they’re just not sure if the
+                  system has what they need, the first step is for the product
+                  team to reach out to the design system team via design system
+                  support protocol which means they should contact DS group chat
+                  on either Telegram or Zoho cliq. The teams will have a
+                  conversation to better understand the issue, and then
+                  determine whether or not new work needs to happen. Often the
+                  design system team can help guide the product team to an
+                  existing solution that meets the requirements. Cheers to
+                  constructive conversation!
+                </p>
+                <img src={section_4_5_img} alt="s-2" />
+                <img src={section_4_6_img} alt="arrow" />
+              </div>
+            </div>
+          </div>
+          <div className={styles["steps"]}></div>
         </section>
       </main>
     </div>

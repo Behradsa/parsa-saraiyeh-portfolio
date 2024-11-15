@@ -1,4 +1,4 @@
-.page {
+.nik-page {
   --primary-color: #ffabf1;
   --secondary-color: #ffd7ef;
   --bg-primary-color: #290022;
@@ -10,14 +10,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
-.page * {
+.nik-page * {
   font-family: "Space Grotesk";
 }
-main {
+
+.main {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  max-width: 1200px;
+}
+.main img {
+  max-width: 100%;
+  height: auto;
 }
 h2,
 h3 {
@@ -50,27 +59,28 @@ div {
   max-width: 1000px;
   width: 100%;
 }
-section {
+.nik-section {
   width: 100%;
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
   gap: 32px;
 }
-section > div {
+.nik-section > div {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-section > div > div {
+.nik-section > div > div {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
+
 .component-table {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
 }
 .component-table > div {
   background-color: var(--component-bg-secondary-color);
@@ -90,15 +100,16 @@ section > div > div {
 
 #human-resource-distro {
   gap: 16px;
+  width: 100%;
+  max-width: 100%;
 }
 #human-resource-distro > div {
   display: flex;
   gap: 32px;
-  max-height: 256px;
+  flex-wrap: wrap;
 }
 #human-resource-distro img {
-  object-fit: contain;
-  height: 100%;
+  max-height: 250px;
 }
 
 #design-system-team-structures {
@@ -115,6 +126,100 @@ section > div > div {
   gap: 16px;
 }
 #design-system-team-structures img {
+  max-width: 100%;
+}
+.design-tokens-imgs-grid {
+  display: flex;
+}
+.design-tokens-imgs-grid > div {
+  display: flex;
+  gap: 32px;
+}
+.design-tokens-imgs-grid > div > div {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+.design-tokens-imgs-grid > div > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.design-tokens-imgs-grid img {
   object-fit: contain;
   width: 100%;
+}
+.main a {
+  padding: 16px;
+  background-color: var(--primary-color);
+  color: var(--bg-primary-color);
+  width: fit-content;
+  border-radius: 32px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.main a:hover {
+  cursor: pointer;
+}
+#path-img-container > img {
+  max-width: 357px;
+}
+.section-6-figma-structure > div {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.box {
+  padding: 64px;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.box * {
+  color: var(--secondary-color);
+}
+.box-bg-color-1 {
+  background-color: var(--component-bg-primary-color);
+}
+.box-bg-color-2 {
+  background-color: var(--component-bg-secondary-color);
+}
+.box-bg-color-3 {
+  background-color: var(--bg-primary-color);
+}
+.box > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.box > div > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#box-component-img {
+  max-width: 670px;
+  width: 100%;
+  align-self: center;
+  height: auto;
+}
+
+#contrib-img {
+  width: 100%;
+  height: auto;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+.flex-row > div {
+  flex: 1;
+}
+
+#senarios img:first-of-type {
+  max-width: 700px;
 }
