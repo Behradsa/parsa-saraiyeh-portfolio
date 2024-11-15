@@ -42,7 +42,6 @@ export default function NickandishPage() {
   return (
     <div className={styles["nik-page"]}>
       <Helmet>
-        <meta name="viewport" content="width=10آنلیز عددی00" />
         <title>Parsa Saraiyeh | Nikandish</title>
         <meta
           name="description"

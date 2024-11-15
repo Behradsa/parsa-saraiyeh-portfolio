@@ -30,7 +30,6 @@ function NebuloxPage() {
   return (
     <div className={styles["page"]}>
       <Helmet>
-        <meta name="viewport" content="width=10آنلیز عددی00" />
         <title>Parsa Saraiyeh | Nebulox</title>
         <meta
           name="description"
