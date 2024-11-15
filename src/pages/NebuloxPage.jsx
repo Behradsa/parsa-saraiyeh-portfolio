@@ -59,7 +59,7 @@ function NebuloxPage() {
       </div>
       <div className={`${styles["main-container"]}`}>
         <a href="https://nebulox.io/">
-          <img src={main_img} alt="main" />
+          <img className={styles["main-img"]} src={main_img} alt="main" />
         </a>
         <section className={`${styles["introduction-section"]}`}>
           <h2>Introduction</h2>
@@ -1179,7 +1179,7 @@ function NebuloxPage() {
             scale.
           </p>
         </section>
-        <h1>Thank you for your time.</h1>
+        <div id={styles["end"]}>Thank you for your time.</div>
       </div>
     </div>
   );

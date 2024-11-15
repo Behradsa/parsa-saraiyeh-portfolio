@@ -17,7 +17,11 @@
 .main-container * {
   font-family: "Space Grotesk";
 }
-h1 {
+.main-img {
+  object-fit: contain;
+  width: 100%;
+}
+#end {
   font-size: 56px;
   font-weight: 700;
   color: var(--primary-color);

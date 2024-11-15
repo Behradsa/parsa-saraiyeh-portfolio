@@ -25,15 +25,55 @@ import section_4_3_img from "../assets/Nikandish/section-4-3.png";
 import section_4_4_img from "../assets/Nikandish/section-4-4.png";
 import section_4_5_img from "../assets/Nikandish/section-4-5.png";
 import section_4_6_img from "../assets/Nikandish/section-4-6.png";
+import section_4_7_img from "../assets/Nikandish/section-4-7.png";
+import section_4_8_img from "../assets/Nikandish/section-4-8.png";
+import section_4_9_img from "../assets/Nikandish/section-4-9.png";
+import section_4_10_img from "../assets/Nikandish/section-4-10.png";
+import section_4_11_img from "../assets/Nikandish/section-4-11.png";
+import section_4_12_img from "../assets/Nikandish/section-4-12.png";
+import section_4_13_img from "../assets/Nikandish/section-4-13.png";
+import section_4_14_img from "../assets/Nikandish/section-4-14.png";
+import section_4_15_img from "../assets/Nikandish/section-4-15.png";
+import start_img from "../assets/Nikandish/start.png";
 
 export default function NickandishPage() {
   scrollToHash();
 
   return (
     <div className={styles["nik-page"]}>
+      <Helmet>
+        <meta name="viewport" content="width=10آنلیز عددی00" />
+        <title>Parsa Saraiyeh | Nikandish</title>
+        <meta
+          name="description"
+          content="Nikandish Case Study. Multi-brand, Multiplatform design system for large size organizations  "
+        />
+        <meta property="og:title" content="Parsa Saraiyeh | Nebulox" />
+        <meta
+          property="og:description"
+          content="Nikandish Case Study. Multi-brand, Multiplatform design system for large size organizations  "
+        />
+        <meta
+          property="og:image"
+          content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
+        />
+        <meta name="twitter:title" content="Parsa Saraiyeh | Nebulox" />
+        <meta
+          name="twitter:description"
+          content="Nikandish Case Study. Multi-brand, Multiplatform design system for large size organizations  "
+        />
+        <meta
+          name="twitter:image"
+          content="https://parsa-sa.com/src/assets/logos/parsa-logo.svg"
+        />
+      </Helmet>
       <div className={styles["header-container"]}>
         <Header />
       </div>
+      <a href="https://nikandishllc.com/">
+        <img className={styles["main-img"]} src={start_img} alt="nikandish" />
+      </a>
+
       <main className={styles.main}>
         <section
           className={`${styles["nik-section"]} {styles["section-1-intro"]}`}
@@ -948,51 +988,496 @@ onSelectedValuesChange={newValues => /* ... */}/>
               </div>
             </div>
           </div>
-          <div
-            id={styles["senarios"]}
-            className={`${styles["box"]} ${styles["box-bg-color-2"]}`}
-          >
-            <div>
-              <h4>
-                Scenario 1: product teams use the design system to help design
-                and build new work
-              </h4>
-              <p>
-                Teams should default to using the design system’s components to
-                help create new product work. The best case scenario is that a
-                team comes to the library, finds the component they need and
-                finds that it fulfills all their requirements. They plug in the
-                component and carry on with more pressing matters. Hooray for
-                best case scenarios!
-              </p>
-            </div>
-            <div>
-              <h4>
-                Scenario 2: what happens when the design system’s components
-                don’t exist or don’t fulfill requirements?
-              </h4>
+          <div className={`${styles["box"]} ${styles["box-bg-color-2"]} `}>
+            <div id={styles["senarios"]}>
               <div>
+                <h4>
+                  Scenario 1: product teams use the design system to help design
+                  and build new work
+                </h4>
                 <p>
-                  If the team comes to the design system and doesn’t find the
-                  component they need, if an existing component doesn’t fulfill
-                  all the requirements, or if they’re just not sure if the
-                  system has what they need, the first step is for the product
-                  team to reach out to the design system team via design system
-                  support protocol which means they should contact DS group chat
-                  on either Telegram or Zoho cliq. The teams will have a
-                  conversation to better understand the issue, and then
-                  determine whether or not new work needs to happen. Often the
-                  design system team can help guide the product team to an
-                  existing solution that meets the requirements. Cheers to
-                  constructive conversation!
+                  Teams should default to using the design system’s components
+                  to help create new product work. The best case scenario is
+                  that a team comes to the library, finds the component they
+                  need and finds that it fulfills all their requirements. They
+                  plug in the component and carry on with more pressing matters.
+                  Hooray for best case scenarios!
                 </p>
-                <img src={section_4_5_img} alt="s-2" />
-                <img src={section_4_6_img} alt="arrow" />
+              </div>
+              <div>
+                <h4>
+                  Scenario 2: what happens when the design system’s components
+                  don’t exist or don’t fulfill requirements?
+                </h4>
+                <div>
+                  <p>
+                    If the team comes to the design system and doesn’t find the
+                    component they need, if an existing component doesn’t
+                    fulfill all the requirements, or if they’re just not sure if
+                    the system has what they need, the first step is for the
+                    product team to reach out to the design system team via
+                    design system support protocol which means they should
+                    contact DS group chat on either Telegram or Zoho cliq. The
+                    teams will have a conversation to better understand the
+                    issue, and then determine whether or not new work needs to
+                    happen. Often the design system team can help guide the
+                    product team to an existing solution that meets the
+                    requirements. Cheers to constructive conversation!
+                  </p>
+                  <img src={section_4_5_img} alt="s-2" />
+                  <img src={section_4_6_img} alt="arrow" />
+                </div>
+              </div>
+            </div>
+            <div className={styles["steps"]}>
+              <div className={styles["step"]}>
+                <h3>
+                  Step 1: if new work is needed, is it a snowflake or part of
+                  the design system?
+                </h3>
+                <p>
+                  If the teams agree that new work needs to happen, the first
+                  thing that needs sorted is whether or not the the work is:{" "}
+                  <ol>
+                    <li>
+                      A “snowflake”, which is a one-off component that only
+                      really pertains to one specific product or use case (such
+                      as a mortgage calculator, a super intricate and specific
+                      data visualization, or any component that feels especially
+                      challenging to abstract into a general-use component)
+                    </li>
+                    <li>
+                      Part of the design system, which is a component or
+                      variation that is part of library that serves all products
+                      (such as adding a breadcrumbs component or perhaps adding
+                      an “x” button to a card component in order to make it
+                      dismissable)
+                    </li>
+                  </ol>
+                  If the teams decide the work is a snowflake, the work will be
+                  added to the specific product team’s backlog in accordance
+                  with the design system’s snowflake guidelines (Note: the
+                  design system team should establish guidelines for managing
+                  snowflakes to be able to track components and make refactoring
+                  into the design system easier down the road). If the teams
+                  determine the work is part of the design system, the work will
+                  be added to the design system backlog capturing the work to be
+                  done. <br />
+                  The teams will then prioritize the work to be done. If the
+                  work is a snowflake, it’s likely that the product team will
+                  own and execute the work. But if it’s design system work, the
+                  team who take the lead on the initial explorations depends on
+                  a number of factors, including priority, urgency, and
+                  available resources.
+                </p>
+                <img src={section_4_7_img} alt="step-1" />
+              </div>
+              <img src={section_4_8_img} alt="arrow" />
+              <div className={styles["step"]}>
+                <h3>Step 2: prototype initial concept</h3>
+                <p>
+                  Once the teams determine who will take the lead on the initial
+                  concept, that team will produce the initial concepts for the
+                  work. That may take the form of a wireframe, napkin sketch,
+                  comp, in-browser prototype, or any other artifact that quickly
+                  and clearly articulates the use case and defines the work to
+                  be done.
+                </p>
+                <img src={section_4_9_img} alt="step-1" />
+              </div>
+              <img src={section_4_8_img} alt="arrow" />
+              <div className={styles["step"]}>
+                <h3>Step 3: review initial concept</h3>
+                <p>
+                  The design system team and product team will regroup to review
+                  the concept and determine whether the concept meets all
+                  requirements. If things are missing, the team will iterate
+                  over the concept and the teams will continue reviewing until
+                  the requirements are met.
+                </p>
+                <img src={section_4_10_img} alt="step-1" />
+              </div>
+              <img src={section_4_8_img} alt="arrow" />
+              <div className={styles["step"]}>
+                <h3>
+                  Step 4: formal design system design/dev & testing process
+                </h3>
+                <p>
+                  <ul>
+                    <li>
+                      Content – can this component or variation handle a variety
+                      of content situations (such as lengthy or
+                      internationalized text including LTR and RTL)?
+                    </li>
+                    <li>
+                      Accessibility – does this component meet or exceed
+                      accessibility requirements and follow accessibility
+                      guidelines?
+                    </li>
+                    <li>
+                      Cross-browser/device – test across supported browsers and
+                      devices
+                    </li>
+                    <li>
+                      Responsive – test across the entire resolution spectrum to
+                      ensure proper display on any screen size
+                    </li>
+                    <li>Functionality – unit testing for functionality</li>
+                    <li>
+                      Create stress test examples in the workshop to capture
+                      common, edge, and stress scenarios
+                    </li>
+                    <li>
+                      Internal code review – ensure component code meets design
+                      system coding standards
+                    </li>
+                    <li>
+                      Internal design review – ensure work adheres to the design
+                      language and meets all design requirements
+                    </li>
+                    <li>
+                      Trial in applications – It may be helpful to collaborate
+                      with user devs to test a pre-release of the component in
+                      applications to ensure things work properly, API endpoints
+                      are intuitive, etc.
+                    </li>
+                    <li>Any other internal QA and testing</li>
+                  </ul>
+                </p>
+                <img src={section_4_11_img} alt="step-1" />
+              </div>
+              <img src={section_4_8_img} alt="arrow" />
+              <div className={styles["step"]}>
+                <h3>Step 5: final review with product team</h3>
+                <p>
+                  Since the concept, design, or execution may have shifted due
+                  to the work detailed in the previous step, the product team
+                  and design system team will meet for a final review. If the
+                  product team doesn’t approve the work, iteration will happen
+                  and the teams will regroup until the product team signs off on
+                  the work.
+                </p>
+                <img src={section_4_12_img} alt="step-1" />
+              </div>
+              <img src={section_4_8_img} alt="arrow" />
+              <div className={styles["step"]}>
+                <h3>Step 6: documentation and stage for release</h3>
+                <p>
+                  Once signoff happens, the component/variation will be
+                  documented on the style guide website, code and API
+                  documentation will be finalized, the changelog will be
+                  updated, and the feature branch is merged into the development
+                  branch, which means it is staged for the next release.
+                </p>
+                <img src={section_4_13_img} alt="step-1" />
+              </div>
+              <img src={section_4_8_img} alt="arrow" />
+            </div>
+            <div className={styles["step"]}>
+              <h3>Step 7: new design system release</h3>
+              <p>
+                When it’s time to create a new release (Note: teams should
+                establish a cadence for releasing design systems; see this great
+                post by Nathan Curtis on the topic), a new version of the design
+                system is released containing the new work (along with any other
+                new work) following the semantic versioning guidelines outlined
+                by the system. The design team communicates the new release via
+                all appropriate channels (Note: the design system team should
+                determine what communication channels are used to publicize a
+                new release).
+              </p>
+              <img src={section_4_14_img} alt="step-1" />
+            </div>
+            <img src={section_4_8_img} alt="arrow" />
+            <div className={styles["step"]}>
+              <h3>Step 8: product team adoption and QA process</h3>
+              <p>
+                The product team pulls in the new version of the design system
+                into their application environment and tests the new work. If
+                questions or bugs emerge, follow the support process to handle
+                any questions or issues. If no bugs are found, the work is
+                staged for the next release of the application and the new
+                component or variation makes its way into the live application!
+              </p>
+              <img src={section_4_15_img} alt="step-1" />
+            </div>
+          </div>
+          <div
+            className={`${styles["box"]} ${styles["box-v2"]} ${styles["box-bg-color-1"]} `}
+          >
+            <h2>Snowflakes Guidelines</h2>
+            <div>
+              <div>
+                <h3>
+                  A stylesheet dedicated to housing your nasty, hacky, quick-fix
+                  CSS
+                </h3>
+                <p>
+                  The idea is to isolate all the stuff that doesn’t belong in
+                  your beautiful, well-architected CSS architecture, in order to
+                  revisit it when the team has time to refactor code and create
+                  more sturdy solutions.
+                </p>
+              </div>
+              <div>
+                <h3>Application-specific components</h3>
+                <p>
+                  At the heart of a design system is a set of reusable UI
+                  components that individual applications pull into their
+                  projects. These components help ensure UI consistency and
+                  cohesion across products while helping teams launch
+                  higher-quality work faster than ever. BUT! It’s quite likely
+                  that individual applications contain components that fit the
+                  very real needs of a specific application (think calculators,
+                  holiday-season parallax hero units, context-specific
+                  interactive maps, and so on), but may not be able to be
+                  immediately (or ever) abstracted into a generic, reusable
+                  component that’s included in the design system. Ethan Marcotte
+                  had a great recent article on that topic. It’s important to be
+                  thoughtful and deliberate about how to handle changes to the
+                  system over time. Formalizing a process for making changes to
+                  system is important. and dealing with one-off components
+                  should be a part of that process.
+                </p>
+              </div>
+              <div>
+                <h3>“shame.css”, but for components</h3>
+                <div>
+                  <p>
+                    “Shame” is too strong & negative a word, but maybe it’s
+                    something like /one-offs, /app-specific, /departures,
+                    /non-design-system-components, or some other clever label.
+                    The idea is to standardize where all product teams put their
+                    application-specific components.
+                  </p>
+                  <p>
+                    This setup provides quite a few benefits:
+                    <ul>
+                      <li>
+                        It makes it easy for the design system team to
+                        periodically audit these one-off components to ensure
+                        individual applications are properly using the design
+                        system, and to look for trends across applications to
+                        inform the system’s roadmap.
+                      </li>
+                      <li>
+                        This setup makes lifting app-specific components out of
+                        individual apps and into the design system a lot easier.
+                      </li>
+                      <li>
+                        It makes replacing app-specific components with design
+                        system components a lot easier.
+                      </li>
+                      <li>
+                        It helps the design system team gauge how
+                        robust/comprehensive the design system should be. If
+                        each product’s application-specific folder has dozens of
+                        presentational components, perhaps that’s an indicator
+                        that the system needs to provide more solutions.
+                      </li>
+                      <li>
+                        This structure gives individual teams to get specific
+                        things done without the design system’s roadmap serving
+                        as a bottleneck.
+                      </li>
+                    </ul>
+                    It’s not likely every application will ultimately have an
+                    empty “one-offs” folder, but as the system matures the
+                    number of custom components should trend downwards. By
+                    standardizing the way custom components are handled, even
+                    deviations still work with the grain of the system.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div className={styles["steps"]}></div>
+          <div
+            className={`${styles["box"]} ${styles["box-v3"]} ${styles["box-bg-color-1"]} `}
+          >
+            <h2>Recipes Guidelines</h2>
+            <div>
+              <p>
+                If design system team is frantically trying to keep up with
+                every UI-related product decision happening across the
+                organization, the team runs from meeting to meeting, captures
+                other product teams’ UI needs in their already-crowded backlog,
+                and then gets to work implementing those requests. This road
+                leads to bottlenecks and burnout. There’s a better way. The
+                design system doesn’t have to own, include, or oversee every bit
+                of UI across a company’s product landscape. It just needs to
+                provide a core set of ingredients—and support/encourage teams to
+                build recipes with those ingredients.
+              </p>
+              <div>
+                <h3>Introducing Recipes</h3>
+                <div>
+                  <p>
+                    What are recipes, exactly? As the name suggests, recipes
+                    combine ingredients to create UI experiences that are
+                    complex, delicious, nutritious. The design system’s core
+                    components are the ingredients stocked in the pantry. Other
+                    product designers then take those ingredients to create
+                    product-specific compositions that meet their product needs.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <h3>Guidelines</h3>
+                <div>
+                  <div>
+                    <h4>This structure embraces the notion of composition</h4>
+                    <p>
+                      For example Card components should be incredibly basic at
+                      the DS component level. They are basically boxes that have
+                      slots for a CardHeader, CardBody, and CardFooter. That’s
+                      it. Almost every implementation of a Card takes the form
+                      of a recipe.
+                    </p>
+                  </div>
+                  <div>
+                    <h4>Components can move up and down levels</h4>
+                    <p>
+                      Something that might begin as a product-specific recipe
+                      may become so widely used or needed that moving it down to
+                      the more foundational design system level is a good idea.
+                      A word of caution: things should move down into the DS
+                      level rather than cluttering the design system library
+                      with a bunch of too-specific components that have to be
+                      weeded out later. Polluting a design system library with a
+                      bunch of product-specific components gets noisy and messy.
+                    </p>
+                  </div>
+                  <div>
+                    <h4>
+                      Consider a standalone “extras” library that contains
+                      recipes, snowflakes, and other utilities
+                    </h4>
+                    <p>
+                      Recipes and snowflakes are better off being managed in
+                      their own standalone library that gets consumed alongside
+                      the actual design system. Why do this? Well, keeps all or
+                      most UI work outside the application codebase, creating a
+                      separation of concerns. The application codebase can be
+                      freed up to focus on business logic and making things tick
+                      from a back-end point of view, where UI code is managed as
+                      a separate layer.
+                    </p>
+                  </div>
+                  <div>
+                    <h4>This takes practice</h4>
+                    <p>
+                      It’s clear that all of these parts, subsystems,
+                      conventions, vocabulary, processes, etc becomes a lot to
+                      digest all at once. We need to make sure everyone’s had
+                      enough time to get their heads around things. It’s ideal
+                      to have many conversations early and often about where
+                      things should live and how things should be structured.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                className={`${styles["purple-box"]} ${styles["box-bg-color-3"]} `}
+              >
+                <div>
+                  <div>
+                    <p>
+                      “No design system team can scale enough to support an
+                      enterprise scale business by itself. IBM Carbon's hub and
+                      spoke model has been success in combining a common core
+                      with empowered delivery teams.”
+                    </p>
+                    <p>Robin Cannon</p>
+                  </div>
+
+                  <p>
+                    We’d give a structure, guidance, and resources that would
+                    empower business units to extend and improve Carbon, ship
+                    their products, and then have a low-friction path to push
+                    their work back into the design system ecosystem for
+                    everyone else to use.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className={`${styles["box"]} ${styles["box-v2"]} ${styles["box-bg-color-1"]} `}
+          >
+            <h2>Smart Components Guidelines</h2>
+            <div>
+              <p>
+                Smart components are UI components wrapped in logic,
+                functionality, or other smarts to make the integration of common
+                components and services easier for product developers. Design
+                system UI components are intentionally dumb. This is by design!
+                In order to be as portable and interoperable as possible, design
+                system components (and many recipes) don’t contain business
+                logic and aren’t wired up to any backend services; they strictly
+                handle a component’s presentation and basic functionality (e.g.
+                an accordion opens and closes on click).
+              </p>
+            </div>
+            <div>
+              <div>
+                <h3>Introducing Smart Components</h3>
+                <p>
+                  Dumb components actually need to work eventually! Introducing
+                  the smart component layer. If core design system components
+                  are strictly front-of-front-end, then smart components
+                  introduce the back-of the-front-end. This is is a place where
+                  the dumb design system components and recipes get wrapped in
+                  logic in order to provide downstream development teams with
+                  drop-in, ready-to-use functional components and services.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            className={`${styles["box"]} ${styles["box-v2"]} ${styles["box-bg-color-1"]} `}
+          >
+            <h2>Incentivizing Contribution</h2>
+            <div>
+              <p>
+                If power is the main incentive in our organisations, then we can
+                think of currency as the systems that teams and individuals can
+                use to trade power.
+              </p>
+              <div>
+                <h3>Currency can be something that’s officially recognised</h3>
+                <p>
+                  For example, exceeding the objectives set out in your
+                  performance framework is a form of currency. Your performance
+                  over the course of a year surpasses what was expected of you,
+                  your line manager records this, and you receive power in the
+                  form of a bonus or a pay rise. In theory, at least.
+                </p>
+              </div>
+              <div>
+                <h3>Currency can be unofficial as well</h3>
+                <p>
+                  Being friends with your boss might be a form of currency. The
+                  organisation makes a round of redundancies, and they put in a
+                  request for you to be kept safe. Your power is derived from
+                  that relationship and results in job security. This kind of
+                  currency might even be denounced by your organisation at an
+                  official level, but that doesn’t make it less real, or indeed,
+                  less valuable.
+                </p>
+              </div>
+              <p>
+                Organisational currency can range from getting a shout out in
+                the monthly all-hands for a piece of work well done, all the way
+                through to a promotion to director level. Once we start to
+                understand the systems of currency our organisation uses to buy
+                and sell power, we have something to barter with. We understand
+                how to participate in those systems, and when and how to disrupt
+                them.
+              </p>
+            </div>
+          </div>
         </section>
+        <div id={styles["end"]}>Thank you for your time.</div>
       </main>
     </div>
   );

@@ -10,19 +10,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 32px;
-  padding-left: 32px;
-  padding-right: 32px;
 }
 .nik-page * {
   font-family: "Space Grotesk";
 }
-
+.main-img {
+  object-fit: contain;
+  width: 100%;
+}
 .main {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  max-width: 1200px;
+  max-width: 1000px;
+  padding-bottom: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 .main img {
   max-width: 100%;
@@ -159,7 +162,7 @@ div {
   font-size: 16px;
   font-weight: 600;
 }
-.main a:hover {
+a:hover {
   cursor: pointer;
 }
 #path-img-container > img {
@@ -222,4 +225,55 @@ div {
 
 #senarios img:first-of-type {
   max-width: 700px;
+}
+#senarios {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+#senarios > div {
+  gap: 16px;
+}
+.steps {
+  max-width: 70%;
+  align-self: center;
+}
+.step {
+  gap: 16px !important;
+}
+.box-v2 {
+  gap: 32px !important;
+}
+.box-v2 > div {
+  gap: 32px !important;
+}
+.box-v2 > div > div {
+  gap: 8px !important;
+}
+.box-v3 {
+  gap: 32px !important;
+}
+.box-v3 > div {
+  gap: 32px !important;
+}
+.box-v3 > div > div {
+  gap: 16px !important;
+}
+.box-v3 > div > div > div {
+  gap: 16px !important;
+}
+.box-v3 > div > div > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px !important;
+}
+.purple-box {
+  padding: 64px;
+  border-radius: 32px;
+  background-color: #3e0d38;
+}
+#end {
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--primary-color);
 }
