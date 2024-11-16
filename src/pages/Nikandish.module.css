@@ -24,6 +24,8 @@
   gap: 32px;
   max-width: 1000px;
   padding-bottom: 32px;
+  margin-right: 32px;
+  margin-left: 32px;
 }
 .main img {
   max-width: 100%;

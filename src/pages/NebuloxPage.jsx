@@ -31,6 +31,7 @@ function NebuloxPage() {
     <div className={styles["page"]}>
       <Helmet>
         <title>Parsa Saraiyeh | Nebulox</title>
+        <meta name="viewport" content="width=1024" />
         <meta
           name="description"
           content="Nebulox Case Study. A crypto payment gateway for businesses of various scales from entrepreneurs to enterprises."

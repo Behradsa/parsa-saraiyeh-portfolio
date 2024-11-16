@@ -43,6 +43,7 @@ export default function NickandishPage() {
     <div className={styles["nik-page"]}>
       <Helmet>
         <title>Parsa Saraiyeh | Nikandish</title>
+        <meta name="viewport" content="width=1024" />
         <meta
           name="description"
           content="Nikandish Case Study. Multi-brand, Multiplatform design system for large size organizations  "

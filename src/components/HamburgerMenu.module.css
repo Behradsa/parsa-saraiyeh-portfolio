@@ -42,3 +42,10 @@
 .nikandish-set-bg-color {
   background-color: var(--nikandish-bg-primary-color);
 }
+.ham-contact-me {
+  background-color: black;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 10px;
+  width: fit-content;
+}

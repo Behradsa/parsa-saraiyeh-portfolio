@@ -29,13 +29,14 @@ function HamburgerMenu({ isOpen, closeMenu }) {
             Contact
           </AnchorLink>
 
-          <AnchorLink
+          <a
+            className={styles["ham-contact-me"]}
             href="src/assets/Parsa_Saraiyeh_CV.pdf"
             target="_blank"
             onClick={closeMenu}
           >
             CV
-          </AnchorLink>
+          </a>
         </div>
       ) : (
         <div>
@@ -51,13 +52,14 @@ function HamburgerMenu({ isOpen, closeMenu }) {
             Contact
           </Link>
 
-          <Link
+          <a
+            className={styles["ham-contact-me"]}
             href="src/assets/Parsa_Saraiyeh_CV.pdf"
             target="_blank"
             onClick={closeMenu}
           >
             CV
-          </Link>
+          </a>
         </div>
       )}
     </div>
