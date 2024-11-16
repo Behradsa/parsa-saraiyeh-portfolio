@@ -68,8 +68,9 @@ li {
 .introduction-section {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
 }
+
 .introduction-section h2,
 .introduction-section h3 {
   color: var(--primary-color);
@@ -254,4 +255,20 @@ li {
   font-weight: 700;
   color: var(--primary-color);
   padding: 32px;
+}
+.flex-gap8 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.flex-gap16 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flex-gap32 {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
