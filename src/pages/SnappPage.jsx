@@ -181,7 +181,7 @@ function SnappPage() {
         <p>Different variations of the assets placed in the link below;</p>
         <div>
           <a href="https://www.snapptrip.com/">SnappTrip.com</a>
-          <a href="src/assets/SnappTrip_Visual Design Guidelines Summary.pdf">
+          <a href="/SnappTrip_Visual Design Guidelines Summary.pdf">
             Snapp Trip Style Guide
           </a>
         </div>

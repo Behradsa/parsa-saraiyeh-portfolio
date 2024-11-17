@@ -31,7 +31,7 @@ function HamburgerMenu({ isOpen, closeMenu }) {
 
           <a
             className={styles["ham-contact-me"]}
-            href="src/assets/Parsa_Saraiyeh_CV.pdf"
+            href="/Parsa_Saraiyeh_CV.pdf"
             target="_blank"
             onClick={closeMenu}
           >
@@ -54,7 +54,7 @@ function HamburgerMenu({ isOpen, closeMenu }) {
 
           <a
             className={styles["ham-contact-me"]}
-            href="src/assets/Parsa_Saraiyeh_CV.pdf"
+            href="/Parsa_Saraiyeh_CV.pdf"
             target="_blank"
             onClick={closeMenu}
           >
