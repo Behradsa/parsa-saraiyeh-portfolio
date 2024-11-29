@@ -2,11 +2,11 @@ import styles from "./MainGrid.module.css";
 import React from "react";
 import { Link } from "react-router-dom";
 import dribble_logo_img from "../assets/logos/dribbble-logo.svg";
-import dribble_logo_hover_img from "../assets/logos/dribbble-logo:hover.svg";
+import dribble_logo_hover_img from "../assets/logos/dribbble-logo-hover.svg";
 import linkedin_logo_img from "../assets/logos/linkedin-logo.svg";
-import linkedin_logo_hover_img from "../assets/logos/linkedin-logo:hover.svg";
+import linkedin_logo_hover_img from "../assets/logos/linkedin-logo-hover.svg";
 import behance_logo_img from "../assets/logos/behance-logo.svg";
-import behance_logo_hover_img from "../assets/logos/behance-logo:hover.svg";
+import behance_logo_hover_img from "../assets/logos/behance-logo-hover.svg";
 import parsa_portfolio_img from "../assets/HomePage/parsa-portfolio-picture.png";
 import link_icon_img from "../assets/logos/arrow-link-icon.svg";
 
