@@ -11,8 +11,14 @@
   display: flex;
   max-height: 512px;
   height: 100%;
-  gap: 16px;
+  gap: 8px;
 }
+
+/* Make <picture> not create a layout box */
+.introduction-container picture {
+  display: contents;
+}
+
 .introduction-square {
   padding: 35px;
   flex-grow: 1;
@@ -27,31 +33,12 @@
   background-image: url("../assets/HomePage/contact-me-frame-2.svg");
 }
 
-/* .introduction-square::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 150%;
-  aspect-ratio: 1/1;
-  top: -25%;
-  left: -25%;
-  z-index: -1;
-  transform: rotate(0deg);
-  transition: transform 5s ease-in-out; 
-  background-image: url("data:image/svg+xml,%0A%3Csvg%20width%3D%22864%22%20height%3D%22864%22%20viewBox%3D%220%200%20864%20864%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%3Cmask%20id%3D%22mask0_2025_193%22%20style%3D%22mask-type%3Aalpha%22%20maskUnits%3D%22userSpaceOnUse%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22864%22%20height%3D%22864%22%3E%0A%3Ccircle%20cx%3D%22432%22%20cy%3D%22432%22%20r%3D%22432%22%20fill%3D%22%23F1F1F1%22/%3E%0A%3C/mask%3E%0A%3Cg%20mask%3D%22url%28%23mask0_2025_193%29%22%3E%0A%3Ccircle%20cx%3D%22432%22%20cy%3D%22432%22%20r%3D%22432%22%20fill%3D%22%23F1F1F1%22/%3E%0A%3Cg%20filter%3D%22url%28%23filter0_f_2025_193%29%22%3E%0A%3Cellipse%20cx%3D%22810.124%22%20cy%3D%22655.219%22%20rx%3D%22197.238%22%20ry%3D%22194.833%22%20fill%3D%22%23EBAD65%22/%3E%0A%3C/g%3E%0A%3Cg%20filter%3D%22url%28%23filter1_f_2025_193%29%22%3E%0A%3Cellipse%20cx%3D%22810.121%22%20cy%3D%22163.084%22%20rx%3D%22197.238%22%20ry%3D%22195.314%22%20fill%3D%22%23326145%22/%3E%0A%3C/g%3E%0A%3C/g%3E%0A%3Cdefs%3E%0A%3Cfilter%20id%3D%22filter0_f_2025_193%22%20x%3D%22257.486%22%20y%3D%22104.986%22%20width%3D%221105.28%22%20height%3D%221100.47%22%20filterUnits%3D%22userSpaceOnUse%22%20color-interpolation-filters%3D%22sRGB%22%3E%0A%3CfeFlood%20flood-opacity%3D%220%22%20result%3D%22BackgroundImageFix%22/%3E%0A%3CfeBlend%20mode%3D%22normal%22%20in%3D%22SourceGraphic%22%20in2%3D%22BackgroundImageFix%22%20result%3D%22shape%22/%3E%0A%3CfeGaussianBlur%20stdDeviation%3D%22177.7%22%20result%3D%22effect1_foregroundBlur_2025_193%22/%3E%0A%3C/filter%3E%0A%3Cfilter%20id%3D%22filter1_f_2025_193%22%20x%3D%22257.483%22%20y%3D%22-387.63%22%20width%3D%221105.28%22%20height%3D%221101.43%22%20filterUnits%3D%22userSpaceOnUse%22%20color-interpolation-filters%3D%22sRGB%22%3E%0A%3CfeFlood%20flood-opacity%3D%220%22%20result%3D%22BackgroundImageFix%22/%3E%0A%3CfeBlend%20mode%3D%22normal%22%20in%3D%22SourceGraphic%22%20in2%3D%22BackgroundImageFix%22%20result%3D%22shape%22/%3E%0A%3CfeGaussianBlur%20stdDeviation%3D%22177.7%22%20result%3D%22effect1_foregroundBlur_2025_193%22/%3E%0A%3C/filter%3E%0A%3C/defs%3E%0A%3C/svg%3E%0A");
-  background-repeat: no-repeat;
-  background-size: contain;
-} 
-
- .introduction-square:hover::before {
-  transform: rotate(90deg);
-} */
-
 .introduction-square .text-holder {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
+
 .introduction-square .text-holder h1 {
   font-size: 40px;
   font-weight: 500;
@@ -74,10 +61,12 @@ b {
   display: flex;
   gap: 16px;
 }
+
 .logo-button-container {
   display: flex;
   gap: 16px;
 }
+
 .logo-button {
   cursor: pointer;
   position: relative;
@@ -115,11 +104,13 @@ b {
 .introduction-container img {
   border-radius: 25px;
 }
+
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
 }
+
 .project {
   cursor: pointer;
   background-size: 100%;
@@ -132,6 +123,7 @@ b {
   display: flex;
   flex-direction: column;
 }
+
 .project:hover {
   background-size: 110%;
 }
@@ -143,12 +135,14 @@ b {
   width: 50px;
   height: 50px;
 }
+
 .project h3 {
   font-size: 20px;
   font-weight: 500;
   color: white;
   margin-bottom: 8px;
 }
+
 .project h4 {
   font-size: 18px;
   font-weight: 300;
@@ -156,6 +150,7 @@ b {
   color: white;
   margin-bottom: 8px;
 }
+
 .project div {
   padding: 8px;
   background-color: white;
@@ -164,6 +159,7 @@ b {
   width: fit-content;
   border-radius: 10px;
 }
+
 .hich {
   height: 512px;
   background-color: black;
@@ -171,36 +167,45 @@ b {
   grid-column-end: 3;
   display: none;
 }
+
 .nikandish {
   aspect-ratio: 1/1;
   background-image: url("../assets/HomePage/nikandish-frame.png");
 }
+
 .nikandish div {
   color: #8b4383;
 }
+
 .nebulox {
   aspect-ratio: 1/1;
   background-image: url("../assets/HomePage/nebulox-frame.png");
 }
+
 .nebulox div {
   color: #020a1f;
 }
+
 .snapp {
   aspect-ratio: 1/1;
   background-image: url("../assets/HomePage/snapp-trip-frame.png");
 }
+
 .carriot {
   aspect-ratio: 1/1;
   background-image: url("../assets/HomePage/carriot-frame.png");
 }
+
 .omid {
   aspect-ratio: 1/1;
   background-image: url("../assets/HomePage/omid-frame.png");
 }
+
 .homano {
   aspect-ratio: 1/1;
   background-image: url("../assets/HomePage/mano-frame.png");
 }
+
 /* Contactme cell */
 .contact-me {
   height: 370px;
@@ -215,23 +220,27 @@ b {
   font-weight: 400;
   line-height: 28px;
 }
-/* Conact me Button */
 
+/* Conact me Button */
 .contact-me-button {
   display: none;
 }
+
 .type--A {
   --line_color: black;
   --back_color: #d3d3d3;
 }
+
 .type--B {
   --line_color: #1b1919;
   --back_color: #e9ecff;
 }
+
 .type--C {
   --line_color: #00135c;
   --back_color: #defffa;
 }
+
 .button {
   position: relative;
   z-index: 0;
@@ -245,6 +254,7 @@ b {
   transition: all 0.3s ease;
   cursor: pointer;
 }
+
 .button__text {
   display: flex;
   justify-content: center;
@@ -252,6 +262,7 @@ b {
   width: 100%;
   height: 100%;
 }
+
 .button::before,
 .button::after,
 .button__text::before,
@@ -263,26 +274,31 @@ b {
   background: var(--line_color);
   transition: all 0.5s ease;
 }
+
 .button::before {
   top: 0;
   left: 54px;
   width: calc(100% - 56px * 2 - 16px);
 }
+
 .button::after {
   top: 0;
   right: 54px;
   width: 8px;
 }
+
 .button__text::before {
   bottom: 0;
   right: 54px;
   width: calc(100% - 56px * 2 - 16px);
 }
+
 .button__text::after {
   bottom: 0;
   left: 54px;
   width: 8px;
 }
+
 .button__line {
   position: absolute;
   top: 0;
@@ -290,6 +306,7 @@ b {
   height: 100%;
   overflow: hidden;
 }
+
 .button__line::before {
   content: "";
   position: absolute;
@@ -300,25 +317,31 @@ b {
   border-radius: 300px;
   border: solid 3px var(--line_color);
 }
+
 .button__line:nth-child(1),
 .button__line:nth-child(1)::before {
   left: 0;
 }
+
 .button__line:nth-child(2),
 .button__line:nth-child(2)::before {
   right: 0;
 }
+
 .button:hover {
   letter-spacing: 6px;
 }
+
 .button:hover::before,
 .button:hover .button__text::before {
   width: 8px;
 }
+
 .button:hover::after,
 .button:hover .button__text::after {
   width: calc(100% - 56px * 2 - 16px);
 }
+
 .button__drow1,
 .button__drow2 {
   position: absolute;
@@ -326,6 +349,7 @@ b {
   border-radius: 16px;
   transform-origin: 16px 16px;
 }
+
 .button__drow1 {
   top: -16px;
   left: 40px;
@@ -333,6 +357,7 @@ b {
   height: 0;
   transform: rotate(30deg);
 }
+
 .button__drow2 {
   top: 44px;
   left: 77px;
@@ -340,6 +365,7 @@ b {
   height: 0;
   transform: rotate(-127deg);
 }
+
 .button__drow1::before,
 .button__drow1::after,
 .button__drow2::before,
@@ -347,6 +373,7 @@ b {
   content: "";
   position: absolute;
 }
+
 .button__drow1::before {
   bottom: 0;
   left: 0;
@@ -356,6 +383,7 @@ b {
   transform-origin: 16px 16px;
   transform: rotate(-60deg);
 }
+
 .button__drow1::after {
   top: -10px;
   left: 45px;
@@ -365,6 +393,7 @@ b {
   transform-origin: 16px 16px;
   transform: rotate(69deg);
 }
+
 .button__drow2::before {
   bottom: 0;
   left: 0;
@@ -374,6 +403,7 @@ b {
   transform-origin: 16px 16px;
   transform: rotate(-146deg);
 }
+
 .button__drow2::after {
   bottom: 26px;
   left: -40px;
@@ -383,6 +413,7 @@ b {
   transform-origin: 16px 16px;
   transform: rotate(-262deg);
 }
+
 .button__drow1,
 .button__drow1::before,
 .button__drow1::after,
@@ -391,30 +422,37 @@ b {
 .button__drow2::after {
   background: var(--back_color);
 }
+
 .button:hover .button__drow1 {
   animation: drow1 ease-in 0.06s;
   animation-fill-mode: forwards;
 }
+
 .button:hover .button__drow1::before {
   animation: drow2 linear 0.08s 0.06s;
   animation-fill-mode: forwards;
 }
+
 .button:hover .button__drow1::after {
   animation: drow3 linear 0.03s 0.14s;
   animation-fill-mode: forwards;
 }
+
 .button:hover .button__drow2 {
   animation: drow4 linear 0.06s 0.2s;
   animation-fill-mode: forwards;
 }
+
 .button:hover .button__drow2::before {
   animation: drow3 linear 0.03s 0.26s;
   animation-fill-mode: forwards;
 }
+
 .button:hover .button__drow2::after {
   animation: drow5 linear 0.06s 0.32s;
   animation-fill-mode: forwards;
 }
+
 @keyframes drow1 {
   0% {
     height: 0;
@@ -423,6 +461,7 @@ b {
     height: 100px;
   }
 }
+
 @keyframes drow2 {
   0% {
     width: 0;
@@ -438,6 +477,7 @@ b {
     width: 120px;
   }
 }
+
 @keyframes drow3 {
   0% {
     width: 0;
@@ -446,6 +486,7 @@ b {
     width: 80px;
   }
 }
+
 @keyframes drow4 {
   0% {
     height: 0;
@@ -454,6 +495,7 @@ b {
     height: 120px;
   }
 }
+
 @keyframes drow5 {
   0% {
     width: 0;
@@ -476,23 +518,32 @@ b {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
   .hich {
     grid-column-end: 2;
   }
+
   .introduction-container {
     flex-direction: column-reverse;
     max-height: none;
     height: auto;
+    align-items: stretch;
   }
+
   .contact-me {
     background-image: url("../assets//HomePage/contact-me-frame-2.svg");
   }
+
   .introduction-square {
     height: 512px;
     background-position: 75% 0;
   }
+
   .introduction-container img {
-    object-fit: cover;
+    width: 100%;
+    height: auto; /* keep ratio on mobile */
+    max-height: none;
+    object-fit: cover; /* restore original crop on mobile */
     object-position: 0 30%;
     aspect-ratio: 3/2;
   }
@@ -502,22 +553,27 @@ b {
   .introduction-square {
     height: fit-content;
   }
+
   .introduction-square .text-holder h1 {
     font-size: 24px;
     line-height: 1.3em;
   }
+
   .introduction-buttons-container {
     flex-direction: column-reverse;
     align-items: center;
     gap: 32px;
   }
+
   .hich {
     aspect-ratio: 1/1;
     height: auto;
   }
+
   .button {
     display: none;
   }
+
   .contact-me-button {
     display: inline-block;
     background-color: black;
@@ -530,10 +586,4 @@ b {
     font-weight: 700;
     font-size: 15px;
   }
-  /* .introduction-square::before {
-    width: 170%;
-    aspect-ratio: 1/1;
-    top: -25%;
-    left: -25%;
-  } */
 }

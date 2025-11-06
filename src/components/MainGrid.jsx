@@ -1,13 +1,18 @@
 import styles from "./MainGrid.module.css";
 import { Link } from "react-router-dom";
+
 import dribble_logo_img from "../assets/logos/dribbble-logo.svg";
 import dribble_logo_hover_img from "../assets/logos/dribbble-logo-hover.svg";
 import linkedin_logo_img from "../assets/logos/linkedin-logo.svg";
 import linkedin_logo_hover_img from "../assets/logos/linkedin-logo-hover.svg";
 import behance_logo_img from "../assets/logos/behance-logo.svg";
 import behance_logo_hover_img from "../assets/logos/behance-logo-hover.svg";
-import parsa_portfolio_img from "../assets/HomePage/parsa-portfolio-picture.png";
 import link_icon_img from "../assets/logos/arrow-link-icon.svg";
+
+// Responsive image via vite-imagetools
+import avifSet from "../assets/HomePage/parsa-portfolio-picture.png?w=480;768;1200&format=avif&as=srcset";
+import webpSet from "../assets/HomePage/parsa-portfolio-picture.png?w=480;768;1200&format=webp&as=srcset";
+import fallback768 from "../assets/HomePage/parsa-portfolio-picture.png?width=768";
 
 function MainGrid() {
   return (
@@ -67,14 +72,36 @@ function MainGrid() {
             </div>
           </div>
         </div>
-        <img src={parsa_portfolio_img} alt="parsa-picture" />
+
+        {/* Responsive image */}
+        <picture>
+          <source
+            type="image/avif"
+            srcSet={avifSet}
+            sizes="(max-width: 768px) 90vw, 800px"
+          />
+          <source
+            type="image/webp"
+            srcSet={webpSet}
+            sizes="(max-width: 768px) 90vw, 800px"
+          />
+          <img
+            src={fallback768}
+            alt="parsa-picture"
+            loading="lazy"  
+            decoding="async"
+            fetchPriority="low"
+          />
+        </picture>
       </div>
+
       <section id="projects" className={styles["projects-grid"]}>
         <div className={`${styles["project"]} ${styles["hich"]}`}>
           <img src={link_icon_img} alt="link" />
           <h3>Hich</h3>
           <h4>Product Designer</h4>
         </div>
+
         <Link
           to="/nikandish"
           className={`${styles["project"]} ${styles["nikandish"]}`}
@@ -86,6 +113,7 @@ function MainGrid() {
           </h4>
           <div>Design System Case Study</div>
         </Link>
+
         <Link
           to="/nebulox"
           className={`${styles["project"]} ${styles["nebulox"]}`}
@@ -95,6 +123,7 @@ function MainGrid() {
           <h4>Visual Designer</h4>
           <div>Case Study</div>
         </Link>
+
         <Link to="/snapp" className={`${styles["project"]} ${styles["snapp"]}`}>
           <img src={link_icon_img} alt="link" />
           <h3>Snapp Tripp</h3>
@@ -118,6 +147,7 @@ function MainGrid() {
           <h3>Omid Analyzer</h3>
           <h4>Graphic Designer</h4>
         </Link>
+
         <Link
           to="/homano"
           className={`${styles["project"]} ${styles["homano"]}`}
