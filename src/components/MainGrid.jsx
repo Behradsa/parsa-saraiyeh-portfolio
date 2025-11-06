@@ -88,7 +88,7 @@ function MainGrid() {
           <img
             src={fallback768}
             alt="parsa-picture"
-            loading="lazy"  
+            loading="eager"
             decoding="async"
             fetchPriority="low"
           />
