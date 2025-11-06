@@ -59,7 +59,11 @@ function Header() {
               Contact
             </AnchorLink>
 
-            <a id="cv-button" href="/Parsa_Saraiyeh_CV.pdf" target="_blank">
+            <a
+              id="cv-button"
+              href={`${import.meta.env.BASE_URL}Parsa_Saraiyeh_CV.pdf`}
+              target="_blank"
+            >
               My CV
             </a>
           </div>
