@@ -1,5 +1,4 @@
 import styles from "./MainGrid.module.css";
-import React from "react";
 import { Link } from "react-router-dom";
 import dribble_logo_img from "../assets/logos/dribbble-logo.svg";
 import dribble_logo_hover_img from "../assets/logos/dribbble-logo-hover.svg";

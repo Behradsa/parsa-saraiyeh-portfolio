@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 import Header from "../components/Header";
 import scrollToHash from "../functions/scrollToHash";
@@ -399,7 +398,7 @@ onSelectedValuesChange={newValues => /* ... */}/>
                   Working on a short term project? A UI kit is quick to set-up
                   and will likely work out well for you. After all, if
                   developers aren’t creating more than a few pages or a limited
-                  app, the extra development work isn't outweighed by the
+                  app, the extra development work isn&#39;t outweighed by the
                   benefits of a design system. That said if you’re looking for
                   long term projects, or even a project you wish to adapt,
                   expand, or otherwise shape over time, a design system is
@@ -853,10 +852,11 @@ onSelectedValuesChange={newValues => /* ... */}/>
                 <div>
                   <h4>Always Improving</h4>
                   <p>
-                    Design is an iterative journey, and there's always room for
-                    improvement. We embrace criticism and encourage constructive
-                    collaboration. With NDS, you're part of a community that's
-                    dedicated to constant enhancement and growth.
+                    Design is an iterative journey, and there&#39;s always room
+                    for improvement. We embrace criticism and encourage
+                    constructive collaboration. With NDS, you&#39;re part of a
+                    community that&#39;s dedicated to constant enhancement and
+                    growth.
                   </p>
                 </div>
                 <div>
@@ -872,10 +872,11 @@ onSelectedValuesChange={newValues => /* ... */}/>
             </div>
             <h2>Journey Starts Here</h2>
             <p>
-              Whether you're a designer, developer, or product manager, the NDS
-              Component Library is your go-to resource for creating excellent
-              digital experiences. Dive in, explore NDS components, and let NDS
-              be your partner in crime on your design and development journey.
+              Whether you&#39;re a designer, developer, or product manager, the
+              NDS Component Library is your go-to resource for creating
+              excellent digital experiences. Dive in, explore NDS components,
+              and let NDS be your partner in crime on your design and
+              development journey.
             </p>
           </div>
           <div className={`${styles["box"]} ${styles["box-bg-color-2"]}`}>
@@ -886,7 +887,7 @@ onSelectedValuesChange={newValues => /* ... */}/>
                 NDS Component Library is a collaborative project that is built
                 on top of the contributions of designers and developers like
                 you. We appreciate your interest in making NDS better. Whether
-                you've discovered a bug, have a feature request, or want to
+                you&#39;ve discovered a bug, have a feature request, or want to
                 contribute your skills to enhance our library, there are several
                 ways to get involved:
               </p>
@@ -942,7 +943,7 @@ onSelectedValuesChange={newValues => /* ... */}/>
                   </p>
                   <ol>
                     <li>Go to our GitHub repository for NDS.</li>
-                    <li>Click on the "Issues" tab.</li>
+                    <li>Click on the &quot;Issues&quot; tab.</li>
                     <li>
                       Create a new issue and provide as much detail as possible.
                       Be sure to include a clear title, description, and any
@@ -1385,9 +1386,9 @@ onSelectedValuesChange={newValues => /* ... */}/>
                   <div>
                     <p>
                       “No design system team can scale enough to support an
-                      enterprise scale business by itself. IBM Carbon's hub and
-                      spoke model has been success in combining a common core
-                      with empowered delivery teams.”
+                      enterprise scale business by itself. IBM Carbon&#39;s hub
+                      and spoke model has been success in combining a common
+                      core with empowered delivery teams.”
                     </p>
                     <p>Robin Cannon</p>
                   </div>

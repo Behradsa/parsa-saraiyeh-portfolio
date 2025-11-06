@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 import styles from "./CarriotPage.module.css";
 import Header from "../components/Header";
@@ -77,8 +76,8 @@ function CarriotPage() {
           <div className={`${styles["img_with_label"]} ${styles["img_1_s"]}`}>
             <img src={brandbook_img_3} alt="img_3" />
             <label>
-              Our first task was to give a makeover to Carriot's logotype and
-              corporate identity.
+              Our first task was to give a makeover to Carriot&#39;s logotype
+              and corporate identity.
             </label>
           </div>
           <div className={`${styles["img_with_label"]} ${styles["img_2"]}`}>
@@ -94,8 +93,8 @@ function CarriotPage() {
           <div className={`${styles["img_with_label"]} ${styles["img_1"]}`}>
             <img src={brandbook_img_3} alt="img_3" />
             <label>
-              Our first task was to give a makeover to Carriot's logotype and
-              corporate identity.
+              Our first task was to give a makeover to Carriot&#39;s logotype
+              and corporate identity.
             </label>
           </div>
           <div className={`${styles["img_with_label"]} ${styles["img_4"]}`}>
@@ -116,7 +115,7 @@ function CarriotPage() {
         <p>
           Plenty of illustrations and icons, bright hues, and micro animated
           functional elements all come together to really set a creative mood
-          and submerge the user in the app's special atmosphere
+          and submerge the user in the app&#39;s special atmosphere
         </p>
       </div>
       <img

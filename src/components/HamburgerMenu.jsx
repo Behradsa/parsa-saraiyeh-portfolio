@@ -1,7 +1,7 @@
-import React from "react";
 import styles from "./HamburgerMenu.module.css";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Link, useLocation } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function HamburgerMenu({ isOpen, closeMenu }) {
   const location = useLocation();
@@ -65,5 +65,10 @@ function HamburgerMenu({ isOpen, closeMenu }) {
     </div>
   );
 }
+
+HamburgerMenu.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  closeMenu: PropTypes.func.isRequired,
+};
 
 export default HamburgerMenu;

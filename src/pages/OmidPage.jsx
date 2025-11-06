@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 import styles from "./OmidPage.module.css";
 import Header from "../components/Header";
@@ -56,7 +55,7 @@ function ManoPage() {
           Omid Financial Group has introduced itself as a leading company in
           algorithmic trading and modern market-making services since 2015 in
           Iran Capital Market. Our focus has always been to provide smarter,
-          faster, and safer financial solutions to manage clients'​ wealth
+          faster, and safer financial solutions to manage clients wealth
           efficiently. We have tried to engage talented and enthusiastic experts
           in our community as financial analysts, data scientists, developers,
           and marketing. Although we have been facing serious challenges, we
