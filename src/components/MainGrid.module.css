@@ -167,43 +167,112 @@ b {
   grid-column-end: 3;
   display: none;
 }
-
+/* Nikandish */
 .nikandish {
   aspect-ratio: 1/1;
-  background-image: url("../assets/HomePage/nikandish-frame.png");
+  background-image: url("../assets/HomePage/nikandish-frame.png"); /* Fallback PNG */
 }
 
-.nikandish div {
-  color: #8b4383;
+@media (prefers-image-format: avif) {
+  .nikandish {
+    background-image: url("../assets/HomePage/nikandish-frame.avif");
+  }
 }
 
+@media (prefers-image-format: webp) {
+  .nikandish {
+    background-image: url("../assets/HomePage/nikandish-frame.webp");
+  }
+}
+
+/* Nebulox */
 .nebulox {
   aspect-ratio: 1/1;
-  background-image: url("../assets/HomePage/nebulox-frame.png");
+  background-image: url("../assets/HomePage/nebulox-frame.png"); /* Fallback PNG */
 }
 
-.nebulox div {
-  color: #020a1f;
+@media (prefers-image-format: avif) {
+  .nebulox {
+    background-image: url("../assets/HomePage/nebulox-frame.avif");
+  }
 }
 
+@media (prefers-image-format: webp) {
+  .nebulox {
+    background-image: url("../assets/HomePage/nebulox-frame.webp");
+  }
+}
+
+/* Snapp */
 .snapp {
   aspect-ratio: 1/1;
-  background-image: url("../assets/HomePage/snapp-trip-frame.png");
+  background-image: url("../assets/HomePage/snapp-trip-frame.png"); /* Fallback PNG */
 }
 
+@media (prefers-image-format: avif) {
+  .snapp {
+    background-image: url("../assets/HomePage/snapp-trip-frame.avif");
+  }
+}
+
+@media (prefers-image-format: webp) {
+  .snapp {
+    background-image: url("../assets/HomePage/snapp-trip-frame.webp");
+  }
+}
+
+/* Carriot */
 .carriot {
   aspect-ratio: 1/1;
-  background-image: url("../assets/HomePage/carriot-frame.png");
+  background-image: url("../assets/HomePage/carriot-frame.png"); /* Fallback PNG */
 }
 
+@media (prefers-image-format: avif) {
+  .carriot {
+    background-image: url("../assets/HomePage/carriot-frame.avif");
+  }
+}
+
+@media (prefers-image-format: webp) {
+  .carriot {
+    background-image: url("../assets/HomePage/carriot-frame.webp");
+  }
+}
+
+/* Omid */
 .omid {
   aspect-ratio: 1/1;
-  background-image: url("../assets/HomePage/omid-frame.png");
+  background-image: url("../assets/HomePage/omid-frame.png"); /* Fallback PNG */
 }
 
+@media (prefers-image-format: avif) {
+  .omid {
+    background-image: url("../assets/HomePage/omid-frame.avif");
+  }
+}
+
+@media (prefers-image-format: webp) {
+  .omid {
+    background-image: url("../assets/HomePage/omid-frame.webp");
+  }
+}
+
+/* Homano */
 .homano {
   aspect-ratio: 1/1;
-  background-image: url("../assets/HomePage/mano-frame.png");
+  background-image: url("../assets/HomePage/mano-frame.png"); /* Fallback PNG */
+}
+
+@media (prefers-image-format: avif) {
+  .homano {
+    background-image: url("../assets/HomePage/mano-frame.avif");
+  }
+}
+
+@media (prefers-image-format: webp) {
+  .homano {
+    background-image: url("../assets/HomePage/mano-frame.webp");
+  }
 }
 
 /* Contactme cell */
@@ -541,7 +610,6 @@ b {
 
   .introduction-container img {
     width: 100%;
-    height: auto; /* keep ratio on mobile */
     max-height: none;
     object-fit: cover; /* restore original crop on mobile */
     object-position: 0 30%;

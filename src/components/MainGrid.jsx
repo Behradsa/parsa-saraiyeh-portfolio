@@ -73,7 +73,6 @@ function MainGrid() {
           </div>
         </div>
 
-        {/* Responsive image */}
         <picture>
           <source
             type="image/avif"
