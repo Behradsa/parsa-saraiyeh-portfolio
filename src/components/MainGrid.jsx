@@ -140,7 +140,7 @@ function MainGrid() {
             Ui Designer
           </h4>
         </Link>
-        
+
         <Link to="/omid" className={`${styles["project"]} ${styles["omid"]}`}>
           <img src={link_icon_img} alt="link" />
           <h3>Omid Analyzer</h3>
@@ -160,7 +160,7 @@ function MainGrid() {
         </Link>
       </section>
 
-      <Link
+      {/* <Link
         to="/otherprojects"
         className={`${styles["project"]} ${styles["fullWidth"]} ${styles["otherprojects"]}`}
       >
@@ -171,7 +171,7 @@ function MainGrid() {
         Visual Identity Owner <br /> Procuct Designer
         </h4>
         
-    </Link>
+    </Link> */}
 
       <div
         id="contact_me_home_page"
