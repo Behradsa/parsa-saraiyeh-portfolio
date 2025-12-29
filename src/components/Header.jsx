@@ -59,7 +59,7 @@ function Header() {
               Contact
             </AnchorLink>
 
-            <a id="cv-button" href="/Parsa_Saraiyeh_CV.pdf" target="_blank">
+            <a id="cv-button" href="/Parsa_Saraiyeh_cv_Dec2025.pdf" target="_blank">
               My CV
             </a>
           </div>
@@ -94,7 +94,7 @@ function Header() {
 
             <a
               id="cv-button"
-              href="/Parsa_Saraiyeh_CV.pdf"
+              href="/Parsa_Saraiyeh_cv_Dec2025.pdf"
               target="_blank"
               className={` ${
                 isNebulox ? "nebulox-set-text-secondary-color" : ""

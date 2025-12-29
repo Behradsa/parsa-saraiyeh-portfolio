@@ -27,7 +27,7 @@ function MainGrid() {
 
           <div className={styles["introduction-buttons-container"]}>
             <a
-              href="mailto:parsa.sa1999@gmail.com"
+              href="mailto:contact@parsa-sa.com"
               className={`${styles["button"]} ${styles["type--A"]}`}
             >
               <div className={styles["button__line"]} />
@@ -37,7 +37,7 @@ function MainGrid() {
               <div className={styles["button__drow2"]} />
             </a>
             <a
-              href="mailto:parsa.sa1999@gmail.com"
+              href="mailto:contact@parsa-sa.com"
               className={styles["contact-me-button"]}
             >
               Contact Me
@@ -112,7 +112,7 @@ function MainGrid() {
             Ui Designer
           </h4>
         </Link>
-
+        
         <Link to="/omid" className={`${styles["project"]} ${styles["omid"]}`}>
           <img src={link_icon_img} alt="link" />
           <h3>Omid Analyzer</h3>
@@ -131,6 +131,19 @@ function MainGrid() {
         </Link>
       </section>
 
+      <Link
+        to="/otherprojects"
+        className={`${styles["project"]} ${styles["fullWidth"]} ${styles["otherprojects"]}`}
+      >
+        <img src={link_icon_img} alt="link" />
+
+        <h3>Other Projects</h3>
+        <h4>
+        Visual Identity Owner <br /> Procuct Designer
+        </h4>
+        
+    </Link>
+
       <div
         id="contact_me_home_page"
         className={`${styles["introduction-square"]} ${styles["contact-me"]}`}
@@ -142,14 +155,13 @@ function MainGrid() {
             :)
           </p>
           <div>
-            <b>Mail:</b> Parsa.sa1999@gmail.com <br />
-            <b>Phone:</b> + 98 912 043 6793
+            <b>Mail:</b> contact@parsa-sa.com <br />
           </div>
         </div>
 
         <div className={styles["introduction-buttons-container"]}>
           <a
-            href="mailto:parsa.sa1999@gmail.com"
+            href="mailto:contact@parsa-sa.com"
             className={`${styles["button"]} ${styles["type--A"]}`}
           >
             <div className={styles["button__line"]} />
@@ -160,7 +172,7 @@ function MainGrid() {
           </a>
 
           <a
-            href="mailto:parsa.sa1999@gmail.com"
+            href="mailto:contact@parsa-sa.com"
             className={styles["contact-me-button"]}
           >
             Contact Me
