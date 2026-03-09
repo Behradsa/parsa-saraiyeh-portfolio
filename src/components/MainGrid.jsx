@@ -101,8 +101,8 @@ function MainGrid() {
           <h4>Product Designer</h4>
         </div>
 
-        <Link
-          to="/nikandish"
+        <a
+          href="/design-system-case-study/index.html"
           className={`${styles["project"]} ${styles["nikandish"]}`}
         >
           <img src={link_icon_img} alt="link" />
@@ -111,7 +111,7 @@ function MainGrid() {
             Visual Designer <br /> Brand identity owner
           </h4>
           <div>Design System Case Study</div>
-        </Link>
+        </a>
 
         <Link
           to="/nebulox"
