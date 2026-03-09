@@ -31,7 +31,7 @@ function HamburgerMenu({ isOpen, closeMenu }) {
 
           <a
             className={styles["ham-contact-me"]}
-            href="/Parsa_Saraiyeh_CV.pdf"
+            href="/PS-CV-Feb26.pdf"
             target="_blank"
             onClick={closeMenu}
           >
