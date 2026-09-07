@@ -61,7 +61,7 @@ function Header() {
 
             <a
               id="cv-button"
-              href={`${import.meta.env.BASE_URL}PS-CV-Feb26.pdf`}
+              href={`${import.meta.env.BASE_URL}PARSA_SARAIYEH_2026-09-05.pdf`}
               target="_blank"
             >
               My CV
@@ -98,7 +98,7 @@ function Header() {
 
             <a
               id="cv-button"
-              href="/PS-CV-Feb26.pdf"
+              href="/PARSA_SARAIYEH_2026-09-05.pdf"
               target="_blank"
               className={` ${
                 isNebulox ? "nebulox-set-text-secondary-color" : ""
