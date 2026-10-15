@@ -102,14 +102,14 @@ a:hover { color: #8f1d06; }
 .mnu-in { width: 44px; height: 44px; border-radius: 999px; border: 1px solid rgba(248, 247, 243, 0.24); display: inline-flex !important; align-items: center; justify-content: center; }
 html.mnu-lock, html.mnu-lock body { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) { .mnu, .mnu.open, .mnu-list li, .mnu-foot { transition: none !important; } }
-/* Get in touch: a light pill like "Download my CV" with the pulsing red dot; opens into the contact card on hover/tap */
-.pcc-pill .pcc-card { width: 156px; height: 52px; border-radius: 26px; background: #f8f7f3; border: none; -webkit-backdrop-filter: none; backdrop-filter: none; transition: height .32s cubic-bezier(.4,0,.2,1), width .32s cubic-bezier(.4,0,.2,1), border-radius .32s cubic-bezier(.4,0,.2,1); }
+/* Get in touch: a dark-glass pill shaped like "Download my CV" with the pulsing red dot; opens into the contact card on hover/tap */
+.pcc-pill .pcc-card { width: 156px; height: 52px; border-radius: 26px; background: rgba(248, 247, 243, 0.13); border: 1px solid rgba(248, 247, 243, 0.12); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); transition: height .32s cubic-bezier(.4,0,.2,1), width .32s cubic-bezier(.4,0,.2,1), border-radius .32s cubic-bezier(.4,0,.2,1); }
 .pcc-pill .pcc-head { height: 52px; padding: 0 22px; flex-direction: row; align-items: center; justify-content: flex-start; gap: 12px; }
-.pcc-pill .pcc-t { font-size: 15px; font-weight: 600; color: #0a0a0a; white-space: nowrap; }
+.pcc-pill .pcc-t { font-size: 15px; font-weight: 600; color: #f8f7f3; white-space: nowrap; }
 .pcc-pill .pcc-dot { position: relative; top: auto; right: auto; flex-shrink: 0; }
 .pcc-pill .pcc-body { padding: 2px 22px 16px; }
-.pcc-pill .pcc-l { color: #6f6a61; }
-.pcc-pill .pcc-v { color: #0a0a0a !important; }
+.pcc-pill .pcc-l { color: rgba(248, 247, 243, 0.55); }
+.pcc-pill .pcc-v { color: #f8f7f3 !important; }
 .pcc-pill:hover .pcc-card, .pcc-pill:focus-within .pcc-card { width: 290px; height: 146px; border-radius: 20px; transition: height .55s cubic-bezier(.22,1,.36,1), width .55s cubic-bezier(.22,1,.36,1), border-radius .55s cubic-bezier(.22,1,.36,1); }
 .pcc-pill:hover .pcc-stack, .pcc-pill:focus-within .pcc-stack { transform: translateY(-50px); }
 .pcc-cta.pcc-pill { width: 290px; height: 52px; }
