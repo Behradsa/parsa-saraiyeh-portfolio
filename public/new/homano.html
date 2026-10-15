@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Homano — Parsa Saraiyeh</title>
+<script>
+(function(){var mob=false;function go(){var w=window.innerWidth;if(!mob&&w<820&&false)location.replace('m.html'+location.hash);if(mob&&w>=820)location.replace('index.html'+location.hash);}go();var t;addEventListener('resize',function(){clearTimeout(t);t=setTimeout(go,150);});})();
+</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<style>
+body { margin: 0; background: #f8f7f3; font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+a { color: #b32508; text-decoration: none; }
+a:hover { color: #8f1d06; }
+/* Case-study motion — same language as Home, quieter */
+.rvh { transition: color 1.1s cubic-bezier(.22,1,.36,1) var(--d, 0ms); }
+.rv-js .rvh:not(.rv-in) { color: #c4bfb7 !important; }
+.rvu { transition: opacity .9s ease var(--d, 0ms), transform 1.1s cubic-bezier(.22,1,.36,1) var(--d, 0ms); }
+.rv-js .rvu:not(.rv-in) { opacity: 0; transform: translateY(40px); }
+.csm { transition: opacity 1s ease var(--d, 0ms), transform 1.1s cubic-bezier(.22,1,.36,1) var(--d, 0ms); }
+.rv-js .csm:not(.rv-in) { opacity: 0; transform: translateY(32px); }
+.csn > span:last-child { transition: transform .45s cubic-bezier(.22,1,.36,1), background-color .3s ease; }
+.csn:hover > span:last-child { transform: translateX(8px); background-color: #ef3411 !important; }
+@media (prefers-reduced-motion: reduce) {
+  .rvh, .rvu, .csm, .csn > span:last-child { transition: none; }
+  .rv-js .rvh:not(.rv-in) { color: inherit !important; }
+  .rv-js .rvu:not(.rv-in), .rv-js .csm:not(.rv-in) { opacity: 1; transform: none; }
+}
+/* Phones and small tablets: the 1440 layout reflows to one column */
+@media (max-width: 819px) {
+  .cs-root { width: 100% !important; height: auto !important; }
+  .cs-hd { height: 60px !important; padding: 0 20px !important; }
+  .cs-hd nav { gap: 18px !important; }
+  .cs-hd nav > a:nth-child(n+3) { display: none !important; }
+  .cs-hd > div > :not(:first-child) { display: none !important; }
+  .cs-sec { height: auto !important; padding-left: 20px !important; padding-right: 20px !important; padding-top: 48px !important; }
+  .cs-sec.cs-first { padding-top: 32px !important; }
+  .cs-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 20px !important; }
+  .cs-grid2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 16px !important; }
+  .cs-gc { grid-column: auto !important; }
+  .cs-row { flex-wrap: wrap !important; gap: 16px !important; }
+  .cs-w { width: 100% !important; max-width: 100% !important; }
+  .cs-h { height: auto !important; }
+  .cs-img { height: auto !important; }
+  .cs-shot { height: auto !important; }
+  .cs-shot-in { position: static !important; transform: none !important; width: 100% !important; height: auto !important; }
+  .cs-pad { padding: 24px !important; }
+  .cs-xl { font-size: 44px !important; line-height: 0.98 !important; }
+  .cs-l { font-size: 26px !important; line-height: 1.15 !important; }
+  .cs-m { font-size: 20px !important; line-height: 1.25 !important; }
+}
+</style>
+<style>html,body{background:#f8f7f3;} body > div:first-of-type{margin:0 auto;}</style>
+<script>(function(){function z(){var w=document.documentElement.clientWidth;document.documentElement.style.zoom=(w<1440&&w>=820)?(w/1440).toFixed(4):'';}z();addEventListener('resize',z);})();</script>
+</head><body style="margin:0">
+<div style="width: 1440px; box-sizing: border-box; background: #f8f7f3; color: #0a0a0a; display: flex; flex-direction: column; overflow: hidden">
+
+<header style="height: 72px; box-sizing: border-box; padding: 0 60px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #dcd8d1; flex-shrink: 0;">
+<div style="display: flex; align-items: center; gap: 16px;">
+<a href="index.html" style="font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: #0a0a0a;">Parsa</a>
+<span style="display: inline-block; width: 1px; height: 18px; background: #dcd8d1;"></span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; color: #6f6a61;">HOMANO</span>
+</div>
+<nav style="display: flex; align-items: center; gap: 36px;">
+<a href="index.html" style="font-size: 15px; font-weight: 500; color: #0a0a0a;">Home</a>
+<a href="index.html" style="font-size: 15px; font-weight: 500; color: #0a0a0a; display: inline-flex; align-items: flex-start; gap: 5px;">Projects<span style="display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #ef3411; margin-top: 2px;"></span></a>
+<a href="mailto:contact@parsa-sa.com" style="font-size: 15px; font-weight: 500; color: #0a0a0a;">Contact</a>
+<a href="images/4dc11ed97142802f6f40e9215ed5ea68.pdf" style="font-size: 15px; font-weight: 500; color: #0a0a0a;">Resume</a>
+</nav>
+</header>
+
+<section style="height: 356px; box-sizing: border-box; padding: 72px 60px 0 60px; flex-shrink: 0; display: flex; flex-direction: column; gap: 24px;">
+<a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #5b574f;">
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#5b574f" stroke-width="1" aria-hidden="true"><path d="M9.5 3.5L5 8l4.5 4.5"></path></svg>
+All projects
+</a>
+<div style="display: flex; align-items: center; gap: 4px;">
+<span style="display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #ef3411;"></span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; color: #5b574f; margin-left: 6px;">CASE STUDY</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; align-items: end;">
+<h1 style="grid-column: span 4; margin: 0; font-size: 88px; line-height: 0.92; font-weight: 700; letter-spacing: -0.035em; color: #0a0a0a;">Homano.</h1>
+<p style="grid-column: span 8; margin: 0; max-width: 680px; font-size: 34px; line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; color: #0a0a0a;">A platform for buying a share of a flat while it is still being built. I designed its brand, its website and the investor panel, in Persian, right to left.</p>
+</div>
+</section>
+
+<section style="height: 540px; box-sizing: border-box; padding: 0 60px; flex-shrink: 0;">
+<div style="position: relative; width: 1320px; height: 500px; border-radius: 32px; overflow: hidden;">
+<img src="images/45ea7482d6c9629e8ddbce8ddf3ffaa8.jpg" alt="People at a laptop beneath the Homano logo" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+<span style="position: absolute; left: 20px; bottom: 20px; display: inline-flex; align-items: center; gap: 12px; background: #ffffff; border-radius: 999px; padding: 8px 16px; box-shadow: 0 2px 10px rgba(10, 10, 10, 0.12);">
+<span style="display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #ef3411;"></span>
+<span style="font-size: 13px; font-weight: 600; letter-spacing: -0.005em; color: #0a0a0a;">Homano</span>
+</span>
+</div>
+</section>
+
+<section style="height: 200px; box-sizing: border-box; padding: 64px 60px 0 60px; flex-shrink: 0;">
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; padding-top: 24px; border-top: 1px solid #dcd8d1;">
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; color: #6f6a61;">ROLE</span>
+<span style="font-size: 15px; line-height: 1.55; color: #0a0a0a;">Graphic Designer · UI Designer</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; color: #6f6a61;">TEAM</span>
+<span style="font-size: 15px; line-height: 1.55; color: #0a0a0a;">The marketing and product teams together, and me on brand and UI.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; color: #6f6a61;">SCOPE</span>
+<span style="font-size: 15px; line-height: 1.55; color: #0a0a0a;">Brand identity, marketing site, investor panel, UI element set</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; color: #6f6a61;">LIVE</span>
+<a href="https://mano.ir" style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; line-height: 1.55; color: #b32508;">mano.ir
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#b32508" stroke-width="1" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5.5h4.5v4.5"></path></svg>
+</a>
+</div>
+</div>
+</section>
+
+<section style="height: 440px; box-sizing: border-box; padding: 88px 60px 0 60px; flex-shrink: 0;">
+<div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; align-items: start;">
+<div style="grid-column: span 4; display: flex; align-items: center; gap: 4px; padding-top: 8px;">
+<span style="display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #ef3411;"></span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; color: #5b574f; margin-left: 6px;">THE PROBLEM</span>
+</div>
+<div style="grid-column: span 8; display: flex; flex-direction: column; gap: 24px;">
+<h2 style="margin: 0; max-width: 680px; font-size: 34px; line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; color: #0a0a0a;">Someone has to believe a building that does not exist yet is real, and that their money will still be there next year.</h2>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px;">
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5b574f;">Homano sells flats under construction by the share, paid in instalments until the keys are handed over. Some buyers want to move in when it is finished; others want their money to grow. Both decisions used to run on paperwork, brokers and word of mouth.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5b574f;">Progress has to be shown honestly — a building that is forty per cent up is forty per cent up — while the interface still has to look like somewhere you would leave money. Overstate it and it reads as a sales page; understate it and nobody invests.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section style="height: 560px; box-sizing: border-box; padding: 88px 60px 0 60px; flex-shrink: 0;">
+<h2 style="margin: 0 0 32px 0; font-size: 40px; line-height: 1; font-weight: 700; letter-spacing: -0.02em; color: #0a0a0a;">Key decisions.</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px;">
+<div style="height: 400px; box-sizing: border-box; background: #ffffff; border: 1px solid #e6e2db; border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+<span style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 999px; background: #ef3411; font-size: 19px; font-weight: 700; color: #ffffff;">1</span>
+<h3 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #0a0a0a;">Sold one share of a real flat, priced before you ask.</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5b574f;">The unit page is one numbered flat with its plan. Pick how many of its six shares, the down payment and the term, and the card works out the deposit, each instalment, the payment on delivery and the total.</p>
+<span style="margin-top: auto; padding-top: 16px; border-top: 1px solid #e6e2db; font-size: 13px; line-height: 1.5; color: #6f6a61;"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; color: #6f6a61;">THE COST</span> a long card of rial figures, each one a left-to-right number inside a right-to-left line.</span>
+</div>
+<div style="height: 400px; box-sizing: border-box; background: #ffffff; border: 1px solid #e6e2db; border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+<span style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 999px; background: #ef3411; font-size: 19px; font-weight: 700; color: #ffffff;">2</span>
+<h3 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #0a0a0a;">Made each contract its own card, with the building’s progress on it.</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5b574f;">The dashboard lists contracts, not one balance: paid, still owed, expected return to delivery, months left, and a bar for how far the building has got. The portfolio total sits to the side, split by risk category.</p>
+<span style="margin-top: auto; padding-top: 16px; border-top: 1px solid #e6e2db; font-size: 13px; line-height: 1.5; color: #6f6a61;"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; color: #6f6a61;">THE COST</span> more scrolling. One big number would have looked better, and said less.</span>
+</div>
+<div style="height: 400px; box-sizing: border-box; background: #ffffff; border: 1px solid #e6e2db; border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+<span style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 999px; background: #ef3411; font-size: 19px; font-weight: 700; color: #ffffff;">3</span>
+<h3 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #0a0a0a;">Put the people behind a request on the screen.</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5b574f;">Buying a share was not instant: someone called, checked the documents, booked a demo. So each request shows its five steps and a dated log of every call and note, not a status that just says pending.</p>
+<span style="margin-top: auto; padding-top: 16px; border-top: 1px solid #e6e2db; font-size: 13px; line-height: 1.5; color: #6f6a61;"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; color: #6f6a61;">THE COST</span> the team’s log becomes part of the product, so it has to be kept up.</span>
+</div>
+</div>
+</section>
+
+<section style="box-sizing: border-box; padding: 96px 60px 0 60px; flex-shrink: 0">
+<div style="height: 100px; display: flex; align-items: flex-start; justify-content: space-between;">
+<h2 style="margin: 0; font-size: 40px; line-height: 1; font-weight: 700; letter-spacing: -0.02em; color: #0a0a0a;">The work.</h2>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; color: #6f6a61; padding-top: 12px;">LIVE SCREENS, THEN THE PERSIAN ORIGINALS</span>
+</div>
+
+<div style="height: 948px; display: flex; flex-direction: column;">
+<div style="height: 60px; display: flex; align-items: baseline; gap: 16px; padding-bottom: 12px; border-bottom: 1px solid #dcd8d1;">
+<span style="display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #ef3411;"></span>
+<h3 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #0a0a0a;">Brand</h3>
+<span style="font-size: 13px; line-height: 1.5; color: #6f6a61;">The mark, the logotype and the texture built from them</span>
+</div>
+<div style="margin-top: 20px; display: flex; flex-direction: column; gap: 12px;">
+<img src="images/e9133ee6393da7f92dee60699a4a6687.jpg" alt="The Homano brand applied across website and panel" style="height: 460px; width: 100%; object-fit: cover; border-radius: 16px; display: block;">
+<span style="height: 24px; font-size: 12px; line-height: 1.4; color: #6f6a61;">The brand across both surfaces — marketing site on the left, investor panel on the right.</span>
+</div>
+<div style="margin-top: 24px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px;">
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<img src="images/af8c78e5910850e3a83fdfd525da792f.png" alt="The Homano house-icon logomark" style="height: 300px; width: 100%; object-fit: contain; border-radius: 16px; display: block; background-color: #353535">
+<span style="height: 36px; font-size: 12px; line-height: 1.4; color: #6f6a61;">The logomark — a house reduced to the fewest strokes that still read as one.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<img src="images/37c81ca6517f6b956daf034db169bf1f.png" alt="The Homano logotype on cream" style="height: 300px; width: 100%; object-fit: cover; border-radius: 16px; display: block;">
+<span style="height: 36px; font-size: 12px; line-height: 1.4; color: #6f6a61;">The logotype on the cream ground it is meant to be seen on.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<img src="images/d504f723a0063eaebe454fbc0983885e.png" alt="A gold abstract building pattern" style="height: 300px; width: 100%; object-fit: cover; border-radius: 16px; display: block;">
+<span style="height: 36px; font-size: 12px; line-height: 1.4; color: #6f6a61;">The building pattern — the brand’s texture, built from the mark.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<img src="images/346e5018e230105ef6ae400ade1bbd52.png" alt="The Homano app on a phone" style="height: 300px; width: 100%; object-fit: cover; border-radius: 16px; display: block;">
+<span style="height: 36px; font-size: 12px; line-height: 1.4; color: #6f6a61;">On a phone — the balance and how far the build has got, which is what gets checked between other things.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<img src="images/65a571d7dacaaddd8693ca02bcd40ce4.png" alt="The Homano site on a desktop monitor" style="height: 300px; width: 100%; object-fit: cover; border-radius: 16px; display: block;">
+<span style="height: 36px; font-size: 12px; line-height: 1.4; color: #6f6a61;">On a monitor — the width the panel was actually designed for.</span>
+</div>
+</div>
+</div>
+
+<div style="margin-top: 64px; height: 1230px; display: flex; flex-direction: column;">
+<div style="height: 60px; display: flex; align-items: baseline; gap: 16px; padding-bottom: 12px; border-bottom: 1px solid #dcd8d1;">
+<span style="display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #ef3411;"></span>
+<h3 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #0a0a0a;">The website</h3>
+<span style="font-size: 13px; line-height: 1.5; color: #6f6a61;">What someone sees before they have an account</span>
+</div>
+<div style="margin-top: 20px; display: flex; flex-direction: column; gap: 12px;">
+<span style="display: block; height: 600px; border-radius: 16px; overflow: hidden; position: relative; background: #FAFAFA; border: 1px solid #e6e2db;">
+<span style="position: absolute; left: 0; top: 0; width: 1440px; height: 655px; overflow: hidden; display: block; transform: scale(0.916667); transform-origin: 0 0;">
+<img src="images/6b5384f85e35d5d84c5daf2624d72ddf.jpg" alt="Homano homepage" style="width: 100%; height: 100%; display: block;">
+</span>
+</span>
+<span style="height: 24px; font-size: 12px; line-height: 1.4; color: #6f6a61;">The homepage — the case for fractional property investing, in the order an investor asks it.</span>
+</div>
+<div style="margin-top: 24px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px;">
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<span style="display: block; height: 420px; border-radius: 16px; overflow: hidden; position: relative; background: #FAFAFA; border: 1px solid #e6e2db;">
+<span style="position: absolute; left: 0; top: 0; width: 1440px; height: 934px; overflow: hidden; display: block; transform: scale(0.450000); transform-origin: 0 0;">
+<img src="images/f875316d54ed1dfffef959556d8696fe.jpg" alt="Homano projects list screen" style="width: 100%; height: 100%; display: block;">
+</span>
+</span>
+<span style="height: 36px; font-size: 12px; line-height: 1.4; color: #6f6a61;">Projects — every card leads with return to date, construction progress and the minimum down payment.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<span style="display: block; height: 420px; border-radius: 16px; overflow: hidden; position: relative; background: #FAFAFA; border: 1px solid #e6e2db;">
+<span style="position: absolute; left: 0; top: 0; width: 1440px; height: 934px; overflow: hidden; display: block; transform: scale(0.450000); transform-origin: 0 0;">
+<img src="images/bc7d6b33127b74087220e15f9794bbaa.jpg" alt="Homano log-in screen" style="width: 100%; height: 100%; display: block;">
+</span>
+</span>
+<span style="height: 36px; font-size: 12px; line-height: 1.4; color: #6f6a61;">Log in — a mobile number and a security code, nothing else to decide.</span>
+</div>
+</div>
+</div>
+
+<div style="margin-top: 64px; height: 1180px; display: flex; flex-direction: column;">
+<div style="height: 60px; display: flex; align-items: baseline; gap: 16px; padding-bottom: 12px; border-bottom: 1px solid #dcd8d1;">
+<span style="display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #ef3411;"></span>
+<h3 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #0a0a0a;">The investor panel</h3>
+<span style="font-size: 13px; line-height: 1.5; color: #6f6a61;">Where the money and the progress actually live</span>
+</div>
+<div style="margin-top: 20px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px;">
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<span style="display: block; height: 420px; border-radius: 16px; overflow: hidden; position: relative; background: #FAFAFA; border: 1px solid #e6e2db;">
+<span style="position: absolute; left: 0; top: 0; width: 1440px; height: 934px; overflow: hidden; display: block; transform: scale(0.450000); transform-origin: 0 0;">
+<img src="images/7bb418b8201e3925298c39701ee44bcb.jpg" alt="Homano unit details screen" style="width: 100%; height: 100%; display: block;">
+</span>
+</span>
+<span style="height: 36px; font-size: 12px; line-height: 1.4; color: #6f6a61;">Unit details — the plan and everything an investor checks before committing.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<span style="display: block; height: 420px; border-radius: 16px; overflow: hidden; position: relative; background: #FAFAFA; border: 1px solid #e6e2db;">
+<span style="position: absolute; left: 0; top: 0; width: 1440px; height: 934px; overflow: hidden; display: block; transform: scale(0.450000); transform-origin: 0 0;">
+<img src="images/159c5632a70101b724412d2955d12ff5.jpg" alt="Homano investor requests screen" style="width: 100%; height: 100%; display: block;">
+</span>
+</span>
+<span style="height: 36px; font-size: 12px; line-height: 1.4; color: #6f6a61;">Requests — one line of five steps, from request received to copies exchanged.</span>
+</div>
+</div>
+<div style="margin-top: 24px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px;">
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<span style="display: block; height: 540px; border-radius: 16px; overflow: hidden; position: relative; background: #FAFAFA; border: 1px solid #e6e2db;">
+<span style="position: absolute; left: 0; top: 0; width: 390px; height: 676px; overflow: hidden; display: block; transform: scale(0.800000); transform-origin: 0 0;">
+<img src="images/401442642205beb5afffdae6138379fc.jpg" alt="Homano mobile home screen" style="width: 100%; height: 100%; display: block;">
+</span>
+</span>
+<span style="height: 36px; font-size: 12px; line-height: 1.4; color: #6f6a61;">Home, at 390.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<span style="display: block; height: 540px; border-radius: 16px; overflow: hidden; position: relative; background: #FAFAFA; border: 1px solid #e6e2db;">
+<span style="position: absolute; left: 0; top: 0; width: 390px; height: 676px; overflow: hidden; display: block; transform: scale(0.800000); transform-origin: 0 0;">
+<img src="images/70b08968f6b0d1f61136c9e11866ab0a.jpg" alt="Homano mobile projects screen" style="width: 100%; height: 100%; display: block;">
+</span>
+</span>
+<span style="height: 36px; font-size: 12px; line-height: 1.4; color: #6f6a61;">Projects, at 390.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<span style="display: block; height: 540px; border-radius: 16px; overflow: hidden; position: relative; background: #FAFAFA; border: 1px solid #e6e2db;">
+<span style="position: absolute; left: 0; top: 0; width: 390px; height: 676px; overflow: hidden; display: block; transform: scale(0.800000); transform-origin: 0 0;">
+<img src="images/894a3021f025b4902b44d37a5aafafd8.jpg" alt="Homano mobile unit screen" style="width: 100%; height: 100%; display: block;">
+</span>
+</span>
+<span style="height: 36px; font-size: 12px; line-height: 1.4; color: #6f6a61;">A unit, at 390.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<span style="display: block; height: 540px; border-radius: 16px; overflow: hidden; position: relative; background: #FAFAFA; border: 1px solid #e6e2db;">
+<span style="position: absolute; left: 0; top: 0; width: 390px; height: 676px; overflow: hidden; display: block; transform: scale(0.800000); transform-origin: 0 0;">
+<img src="images/d28fe77cffb9b494be7bc1338ff57fe3.jpg" alt="Homano mobile requests screen" style="width: 100%; height: 100%; display: block;">
+</span>
+</span>
+<span style="height: 36px; font-size: 12px; line-height: 1.4; color: #6f6a61;">Requests, at 390.</span>
+</div>
+</div>
+</div>
+
+<div style="margin-top: 64px; height: 410px; display: flex; flex-direction: column;">
+<div style="height: 60px; display: flex; align-items: baseline; gap: 16px; padding-bottom: 12px; border-bottom: 1px solid #dcd8d1;">
+<span style="display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #ef3411;"></span>
+<h3 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #0a0a0a;">As shipped, in Persian</h3>
+<span style="font-size: 13px; line-height: 1.5; color: #6f6a61;">The right-to-left originals the English screens were rebuilt from — click any to open it full size</span>
+</div>
+<div style="margin-top: 20px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<a href="images/24bb9695f9162354a9fb1a3123161a70.jpg" target="_blank" rel="noopener" style="display: block;"><img src="images/24bb9695f9162354a9fb1a3123161a70.jpg" alt="The original Persian landing page" style="height: 260px; width: 100%; object-fit: cover; object-position: top; background: #e1dcd6; border-radius: 16px; display: block;"></a>
+<span style="height: 36px; font-size: 12px; line-height: 1.4; color: #6f6a61;">The landing page — the pitch, its backers, three steps to start.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<a href="images/896de6dfc0fa1050ca6e67d916ec41db.png" target="_blank" rel="noopener" style="display: block;"><img src="images/896de6dfc0fa1050ca6e67d916ec41db.png" alt="The original Persian unit page" style="height: 260px; width: 100%; object-fit: cover; object-position: top; background: #e1dcd6; border-radius: 16px; display: block;"></a>
+<span style="height: 36px; font-size: 12px; line-height: 1.4; color: #6f6a61;">A unit — the plan, with the share calculator beside it.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<a href="images/b17cd6c3cd261f6066cd88b4c148f513.png" target="_blank" rel="noopener" style="display: block;"><img src="images/b17cd6c3cd261f6066cd88b4c148f513.png" alt="The original Persian investor dashboard" style="height: 260px; width: 100%; object-fit: cover; background: #e1dcd6; border-radius: 16px; display: block"></a>
+<span style="height: 36px; font-size: 12px; line-height: 1.4; color: #6f6a61;">The dashboard — one card per contract, the portfolio split by risk to the side.</span>
+</div>
+
+</div>
+</div>
+
+
+</section>
+
+<section style="height: 520px; box-sizing: border-box; padding: 96px 60px 0 60px; flex-shrink: 0;">
+<div style="width: 1320px; height: 424px; box-sizing: border-box; background: #0a0a0a; border-radius: 32px; padding: 48px; display: flex; flex-direction: column; justify-content: space-between;">
+<div style="display: flex; flex-direction: column; gap: 20px;">
+<div style="display: flex; align-items: center; gap: 4px;">
+<span style="display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #ef3411;"></span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; color: #f8f7f3; margin-left: 6px;">OUTCOME</span>
+</div>
+<p style="margin: 0; max-width: 900px; font-size: 56px; line-height: 0.96; font-weight: 700; letter-spacing: -0.03em; color: #f8f7f3;">It launched, selling flats by the share, online.</p>
+</div>
+<div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; padding-top: 24px; border-top: 1px solid rgba(248, 247, 243, 0.22);">
+<p style="margin: 0; max-width: 680px; font-size: 15px; line-height: 1.55; color: rgba(248, 247, 243, 0.7);">The platform is live at mano.ir and has been rebuilt since, so what is there today is not all of this — the brand, the UI set and the panel screens here are the version that shipped.</p>
+<a href="https://mano.ir" style="display: inline-flex; align-items: center; gap: 12px; background: #ffffff; border-radius: 999px; padding: 14px 20px; flex-shrink: 0;">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: -0.005em; color: #0a0a0a;">Visit mano.ir</span>
+<span style="display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #ef3411;"></span>
+</a>
+</div>
+</div>
+</section>
+
+<section style="height: 380px; box-sizing: border-box; padding: 80px 60px 0 60px; flex-shrink: 0; display: flex; flex-direction: column; justify-content: space-between;">
+<a href="carriot.html" style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 32px; border-bottom: 1px solid #dcd8d1;">
+<span style="display: flex; flex-direction: column; gap: 8px;">
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; color: #6f6a61;">NEXT PROJECT</span>
+<span style="font-size: 56px; line-height: 0.96; font-weight: 700; letter-spacing: -0.03em; color: #0a0a0a;">Carriot</span>
+</span>
+<span style="display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 999px; background: #0a0a0a;">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#f8f7f3" stroke-width="1" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"></path></svg>
+</span>
+</a>
+<div style="height: 72px; display: flex; align-items: center; justify-content: space-between;">
+<span style="font-size: 13px; color: #6f6a61;">© 2026 Parsa Saraiyeh · parsa-sa.com</span>
+<div style="display: flex; gap: 24px;">
+<a href="index.html" style="font-size: 13px; color: #6f6a61;">Projects</a>
+<a href="mailto:contact@parsa-sa.com" style="font-size: 13px; color: #6f6a61;">Contact</a>
+<a href="images/4dc11ed97142802f6f40e9215ed5ea68.pdf" style="font-size: 13px; color: #6f6a61;">Resume</a>
+</div>
+</div>
+</section>
+
+</div>
+<script>
+class DCLogic { constructor(){ this.props = {}; this.state = {}; } setState(s){ Object.assign(this.state, s || {}); } }
+</script>
+<script>
+
+class Component extends DCLogic {
+  componentDidMount() {
+    var self = this, doc = document, win = window, root = doc.documentElement;
+    var reduce = !!(win.matchMedia && win.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    var clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
+    var ease = function (t) { return 1 - Math.pow(1 - t, 3); };
+    this._off = []; this._rafs = [];
+    // 0 — responsive tags: the stylesheet reflows these below 820px wide
+    (function () {
+      var pg = doc.querySelector('div[style*="width: 1440px"]');
+      if (!pg) return;
+      pg.classList.add('cs-root');
+      var hd = pg.querySelector('header'); if (hd) hd.classList.add('cs-hd');
+      var first = true;
+      Array.prototype.forEach.call(pg.children, function (c) { if (c.tagName === 'SECTION') { c.classList.add('cs-sec'); if (first) { c.classList.add('cs-first'); first = false; } } });
+      var px = function (v) { var n = parseFloat(v); return isNaN(n) ? 0 : n; };
+      Array.prototype.forEach.call(pg.querySelectorAll('section *'), function (el) {
+        var st = el.style;
+        if (!st) return;
+        var gtc = st.gridTemplateColumns;
+        if (gtc) {
+          var m = /repeat\((\d+)/.exec(gtc), n = m ? +m[1] : gtc.split(' ').length;
+          el.classList.add(n >= 4 && n <= 6 ? 'cs-grid2' : 'cs-grid');
+        }
+        if (st.gridColumn) el.classList.add('cs-gc');
+        if (st.display === 'flex' && st.flexDirection !== 'column' && (st.justifyContent === 'space-between' || el.children.length > 2)) el.classList.add('cs-row');
+        if (px(st.width) >= 600) el.classList.add('cs-w');
+        if (st.transform && /scale/.test(st.transform) && el.querySelector('img')) { el.classList.add('cs-shot-in'); if (el.parentElement) el.parentElement.classList.add('cs-shot'); return; }
+        if (el.tagName === 'IMG') { el.classList.add('cs-img'); return; }
+        if (px(st.height) >= 120) el.classList.add('cs-h');
+        var pad = px(st.paddingTop || st.padding);
+        if (pad >= 40 && el.tagName === 'DIV') el.classList.add('cs-pad');
+        var fs = px(st.fontSize);
+        if (fs >= 48) el.classList.add('cs-xl'); else if (fs >= 32) el.classList.add('cs-l'); else if (fs >= 24) el.classList.add('cs-m');
+      });
+    })();
+    var on = function (t, ev, fn, opt) { t.addEventListener(ev, fn, opt); self._off.push(function () { t.removeEventListener(ev, fn, opt); }); };
+    var page = doc.querySelector('div[style*="width: 1440px"]');
+    if (!page) return;
+    var secs = Array.prototype.filter.call(page.children, function (e) { return e.tagName === 'SECTION'; });
+    if (secs.length < 3) return;
+    var later = secs.slice(2);   // first view (title + hero picture) stays still, like Home
+    var q = function (sel) { var out = []; later.forEach(function (s) { out.push.apply(out, s.querySelectorAll(sel)); }); return out; };
+    var stagger = function (el) { var i = 0, n = el; while ((n = n.previousElementSibling)) i++; return Math.min(i, 4) * 90; };
+
+    // 1 — reveal: headings fill from grey, text and cards rise, pictures fade in
+    var styl = function (el) { return win.getComputedStyle(el); };
+    var cards = q('div').filter(function (d) { var c = styl(d); return c.backgroundColor === 'rgb(255, 255, 255)' && parseFloat(c.borderTopLeftRadius) >= 20; });
+    cards.forEach(function (c) { c.classList.add('rvu'); c.style.setProperty('--d', stagger(c) + 'ms'); });
+    q('h2, h3').forEach(function (h) { h.classList.add('rvh'); });
+    q('p').forEach(function (p) {
+      if (p.closest('.rvu')) return;
+      p.classList.add('rvu'); p.style.setProperty('--d', (stagger(p) + 80) + 'ms');
+    });
+    var media = [];
+    q('img').forEach(function (img) {
+      var t = img;
+      for (var i = 0; i < 3; i++) {
+        var par = t.parentElement;
+        if (!par || par.tagName === 'SECTION') break;
+        var cs = win.getComputedStyle(par);
+        if (cs.overflow === 'hidden' && parseFloat(cs.borderTopLeftRadius) > 0) { t = par; break; }
+      }
+      if (media.indexOf(t) < 0 && !t.closest('.rvu')) { media.push(t); t.classList.add('csm'); t.style.setProperty('--d', stagger(t) + 'ms'); }
+    });
+    var rows = {};
+    media.forEach(function (m) { var k = Math.round(m.getBoundingClientRect().top + win.scrollY); (rows[k] = rows[k] || []).push(m); });
+    Object.keys(rows).forEach(function (k) { rows[k].forEach(function (m, i) { m.style.setProperty('--d', Math.min(i, 4) * 110 + 'ms'); }); });
+    var outcome = q('div').filter(function (d) { var c = styl(d); return c.backgroundColor === 'rgb(10, 10, 10)' && parseFloat(c.borderTopLeftRadius) >= 28; })[0] || null;
+    if (outcome) { outcome.classList.add('rvu'); Array.prototype.forEach.call(outcome.querySelectorAll('.rvu'), function (x) { x.classList.remove('rvu'); }); }
+    q('a[href$=".dc.html"]').forEach(function (a) { if (a.querySelector('svg')) a.classList.add('csn'); });
+
+    if ('IntersectionObserver' in win) {
+      root.classList.add('rv-js');
+      this._rvObs = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('rv-in'); obs.unobserve(e.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+      var o = this._rvObs;
+      Array.prototype.forEach.call(page.querySelectorAll('.rvh, .rvu, .csm'), function (el) { o.observe(el); });
+    }
+
+    // 2 — scroll-linked (Play / full window only): pictures stand up as they arrive,
+    //     the hero picture drifts, the outcome card grows into place
+    var heroImg = secs[1].querySelector('img');
+    var live = false;
+    var scrub = function () {
+      var vh = win.innerHeight;
+      var nowLive = !reduce && (root.scrollHeight - vh) >= 2;
+      if (nowLive !== live) {
+        live = nowLive;
+        if (!live) {
+          if (heroImg) heroImg.style.transform = '';
+        }
+      }
+      if (!live) return;
+      if (heroImg) heroImg.style.transform = 'translateY(' + clamp(win.scrollY * 0.12, 0, 48).toFixed(1) + 'px) scale(1.1)';
+    };
+    var ticking = false;
+    var onScroll = function () { if (ticking) return; ticking = true; self._rafs.push(requestAnimationFrame(function () { ticking = false; scrub(); })); };
+    on(win, 'scroll', onScroll, { passive: true });
+    on(win, 'resize', onScroll);
+    scrub();
+
+    // 3 — smooth wheel scrolling, as on Home
+    if (!reduce) {
+      var cur = win.scrollY, tgt = cur, running = false;
+      var maxY = function () { return Math.max(0, root.scrollHeight - win.innerHeight); };
+      var loop = function () {
+        cur += (tgt - cur) * 0.1;
+        if (Math.abs(tgt - cur) < 0.5) { cur = tgt; running = false; }
+        win.scrollTo(0, cur);
+        if (running) self._rafs.push(requestAnimationFrame(loop));
+      };
+      on(win, 'wheel', function (e) {
+        if (e.ctrlKey || maxY() < 2 || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+        e.preventDefault();
+        var d = e.deltaY * (e.deltaMode === 1 ? 40 : e.deltaMode === 2 ? win.innerHeight : 1);
+        if (!running) { cur = win.scrollY; tgt = cur; }
+        tgt = clamp(tgt + d, 0, maxY());
+        if (!running) { running = true; self._rafs.push(requestAnimationFrame(loop)); }
+      }, { passive: false });
+      on(win, 'scroll', function () { if (!running) { cur = tgt = win.scrollY; } }, { passive: true });
+    }
+  }
+  componentWillUnmount() {
+    if (this._rvObs) this._rvObs.disconnect();
+    (this._off || []).forEach(function (f) { f(); });
+    (this._rafs || []).forEach(function (id) { cancelAnimationFrame(id); });
+  }
+  renderVals() {
+    return { accent: this.props.accent ?? '#ef3411' };
+  }
+}
+
+(function(){var c=new Component();function run(){try{c.componentDidMount&&c.componentDidMount();}catch(e){console.error(e);}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();})();
+</script>
+</body></html>
