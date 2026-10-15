@@ -126,6 +126,23 @@ a:hover .roll-i, a:focus-visible .roll-i { transform: translateY(-1.3em); }
   .rv-js .wdb:not(.rv-in) > div:not(:first-child) { opacity: 1; transform: none; }
   .rv-js .swr .sw:not(.on) { color: inherit; }
 }
+/* Get in touch: a light pill like "Download my CV" with the pulsing red dot; opens into the contact card on hover/tap */
+.pcc-pill .pcc-card { width: 156px; height: 52px; border-radius: 26px; background: #f8f7f3; border: none; -webkit-backdrop-filter: none; backdrop-filter: none; transition: height .32s cubic-bezier(.4,0,.2,1), width .32s cubic-bezier(.4,0,.2,1), border-radius .32s cubic-bezier(.4,0,.2,1); }
+.pcc-pill .pcc-head { height: 52px; padding: 0 22px; flex-direction: row; align-items: center; justify-content: flex-start; gap: 12px; }
+.pcc-pill .pcc-t { font-size: 15px; font-weight: 600; color: #0a0a0a; white-space: nowrap; }
+.pcc-pill .pcc-dot { position: relative; top: auto; right: auto; flex-shrink: 0; }
+.pcc-pill .pcc-body { padding: 2px 22px 16px; }
+.pcc-pill .pcc-l { color: #6f6a61; }
+.pcc-pill .pcc-v { color: #0a0a0a !important; }
+.pcc-pill:hover .pcc-card, .pcc-pill:focus-within .pcc-card { width: 290px; height: 146px; border-radius: 20px; transition: height .55s cubic-bezier(.22,1,.36,1), width .55s cubic-bezier(.22,1,.36,1), border-radius .55s cubic-bezier(.22,1,.36,1); }
+.pcc-pill:hover .pcc-stack, .pcc-pill:focus-within .pcc-stack { transform: translateY(-50px); }
+.pcc-cta.pcc-pill { width: 290px; height: 52px; }
+.pcc-cta.pcc-pill .pcc-card { width: 156px; }
+.pcc-cta.pcc-pill:hover .pcc-card, .pcc-cta.pcc-pill:focus-within .pcc-card { width: 290px; }
+.pcc-cta.pcc-pill .pcc-head { padding-right: 22px; }
+.pcc-cta.pcc-pill .pcc-t { font-size: 15px; }
+.pcc-flow.pcc-pill .pcc-card { flex: 0 0 auto; width: 156px; }
+.pcc-flow.pcc-pill:hover .pcc-card, .pcc-flow.pcc-pill:focus-within .pcc-card { width: 100%; }
 </style>
 <style>html,body{background:#f8f7f3;} body > div:first-of-type{margin:0 auto;}</style>
 <script>(function(){function z(){var w=document.documentElement.clientWidth;document.documentElement.style.zoom=(w<1440&&w>=0)?(w/1440).toFixed(4):'';}z();addEventListener('resize',z);})();</script>
@@ -166,10 +183,10 @@ a:hover .roll-i, a:focus-visible .roll-i { transform: translateY(-1.3em); }
 </div>
 </div>
 <img src="images/d67c2682f9365d8db8a1feac3bb0d9b7.png" alt="Parsa Saraiyeh at the lakeside, toned into the panel" class="himg" style="position: absolute; right: 0; top: -48px; width: 554px; height: 636px; object-fit: cover; object-position: center; display: block; flex-grow: 0">
-<div class="pcc pcc-cta" tabindex="0" aria-label="Get in touch: email, LinkedIn or CV">
+<div class="pcc pcc-cta pcc-pill" tabindex="0" aria-label="Get in touch: email, LinkedIn or CV">
 <div class="pcc-card">
 <div class="pcc-stack">
-<div class="pcc-head"><span class="pcc-t">Get in touch</span><span class="pcc-go" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#f8f7f3" stroke-width="1.4"><path d="M6 14L14 6M7.5 6H14v6.5"></path></svg></span></div>
+<div class="pcc-head"><span class="pcc-t">Get in touch</span><span class="pcc-dot" aria-hidden="true"></span></div>
 <div class="pcc-body">
 <div class="pcc-row"><span class="pcc-l">Email</span><a class="pcc-v" href="mailto:parsa.saraiyeh@gmail.com">parsa.saraiyeh@gmail.com</a></div>
 <div class="pcc-row"><span class="pcc-l">LinkedIn</span><a class="pcc-v" href="https://www.linkedin.com/in/parsa-saraiyeh/">in/parsa-saraiyeh</a></div>
