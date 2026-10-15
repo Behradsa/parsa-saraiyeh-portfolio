@@ -81,9 +81,6 @@ a:hover .roll-i, a:focus-visible .roll-i { transform: translateY(-1.3em); }
 .abpin.live { padding-bottom: 280px; }
 .abpin.live > section { will-change: transform; }
 .rv-js .swr .sw:not(.on) { color: #c4bfb7; }
-.wdb > div:not(:first-child) { --wd: 0ms; transition: opacity .8s ease var(--wd), transform 1.1s cubic-bezier(.22,1,.36,1) var(--wd); }
-.wdb > div:nth-child(3) { --wd: 110ms; } .wdb > div:nth-child(4) { --wd: 220ms; } .wdb > div:nth-child(5) { --wd: 330ms; }
-.rv-js .wdb:not(.rv-in) > div:not(:first-child) { opacity: 0; transform: translateY(28px); }
 .ct > *:not(.trail):not(.ct-hint) { position: relative; z-index: 1; }
 .trail { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
 .trail-i { position: absolute; left: 0; top: 0; width: 200px; height: 200px; aspect-ratio: 1 / 1; object-fit: cover; object-position: center; border-radius: 24px; opacity: 0; will-change: transform, opacity; }
@@ -123,7 +120,6 @@ a:hover .roll-i, a:focus-visible .roll-i { transform: translateY(-1.3em); }
   .roll-i, .odo-c, .bar-f, .wdb > div:not(:first-child), #work a[href$=".dc.html"] > img, #work a[href$=".dc.html"] > span:last-child { transition: none !important; }
   .rv-js .odo:not(.rv-in) .odo-c { transform: translateY(calc(var(--n) * -1em)); }
   .rv-js .bar:not(.rv-in) .bar-f { transform: none; }
-  .rv-js .wdb:not(.rv-in) > div:not(:first-child) { opacity: 1; transform: none; }
   .rv-js .swr .sw:not(.on) { color: inherit; }
 }
 /* Get in touch: a dark-glass pill shaped like "Download my CV" with the pulsing red dot; opens into the contact card on hover/tap */
@@ -472,14 +468,14 @@ a:hover .roll-i, a:focus-visible .roll-i { transform: translateY(-1.3em); }
 </div>
 
 <section style="box-sizing: border-box; padding: 96px var(--gx) 0 var(--gx); flex-shrink: 0">
-<div class="rvu wdb" style="width: 100%; box-sizing: border-box; background: #0a0a0a; border-radius: 32px; padding: 48px; padding-top: 48px; padding-right: 48px; padding-bottom: 48px; padding-left: 48px">
+<div class="wdb" style="width: 100%; box-sizing: border-box; background: #0a0a0a; border-radius: 32px; padding: 48px; padding-top: 48px; padding-right: 48px; padding-bottom: 48px; padding-left: 48px">
 <div style="height: 120px; display: flex; align-items: flex-start; justify-content: space-between;">
 <h2 class="rvh" style="margin: 0; font-size: 56px; line-height: 0.96; font-weight: 700; letter-spacing: -0.03em; color: #f8f7f3;">What I do</h2>
 <div class="wd-plus" aria-hidden="true" style="flex: 1 1 0; align-self: center; display: flex; justify-content: space-around; padding: 0 64px; margin-top: -40px; font-size: 22px; font-weight: 400; color: rgba(248, 247, 243, 0.6);"><span>+</span><span>+</span><span>+</span><span>+</span></div>
 <span style="font-size: 56px; line-height: 0.96; font-weight: 700; letter-spacing: -0.03em; color: #f8f7f3;">(04)</span>
 </div>
 
-<div style="margin-left: 25%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 32px 0 40px 0; border-top: 1px solid rgba(248, 247, 243, 0.22)">
+<div class="rvu" style="margin-left: 25%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 32px 0 40px 0; border-top: 1px solid rgba(248, 247, 243, 0.22)">
 <div style="display: flex; flex-direction: column; gap: 18px;">
 <div style="display: flex; align-items: center; gap: 12px;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 999px; background: #ef3411;"></span><h3 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #f8f7f3;">Product &amp; UI design</h3></div>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 400px;">
@@ -494,7 +490,7 @@ a:hover .roll-i, a:focus-visible .roll-i { transform: translateY(-1.3em); }
 <p style="margin: 0; max-width: 380px; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">Carriot’s dispatch dashboard — 50+ screens and a 30-component UI kit.</p>
 </div>
 </div>
-<div style="margin-left: 25%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 32px 0 40px 0; border-top: 1px solid rgba(248, 247, 243, 0.22)">
+<div class="rvu" style="margin-left: 25%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 32px 0 40px 0; border-top: 1px solid rgba(248, 247, 243, 0.22)">
 <div style="display: flex; flex-direction: column; gap: 18px;">
 <div style="display: flex; align-items: center; gap: 12px;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 999px; background: #ef3411;"></span><h3 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #f8f7f3;">Design systems</h3></div>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 400px;">
@@ -509,7 +505,7 @@ a:hover .roll-i, a:focus-visible .roll-i { transform: translateY(-1.3em); }
 <p style="margin: 0; max-width: 380px; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">Shared buttons, fields and toasts for Homano’s site and investor panel.</p>
 </div>
 </div>
-<div style="margin-left: 25%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 32px 0 40px 0; border-top: 1px solid rgba(248, 247, 243, 0.22)">
+<div class="rvu" style="margin-left: 25%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 32px 0 40px 0; border-top: 1px solid rgba(248, 247, 243, 0.22)">
 <div style="display: flex; flex-direction: column; gap: 18px;">
 <div style="display: flex; align-items: center; gap: 12px;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 999px; background: #ef3411;"></span><h3 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #f8f7f3;">Research &amp; HCI</h3></div>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 400px;">
@@ -524,7 +520,7 @@ a:hover .roll-i, a:focus-visible .roll-i { transform: translateY(-1.3em); }
 <p style="margin: 0; max-width: 380px; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">Card sorting and tree testing that settled Nebulox’s architecture.</p>
 </div>
 </div>
-<div style="margin-left: 25%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 32px 0 40px 0; border-top: 1px solid rgba(248, 247, 243, 0.22)">
+<div class="rvu" style="margin-left: 25%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 32px 0 40px 0; border-top: 1px solid rgba(248, 247, 243, 0.22)">
 <div style="display: flex; flex-direction: column; gap: 18px;">
 <div style="display: flex; align-items: center; gap: 12px;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 999px; background: #ef3411;"></span><h3 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #f8f7f3;">Brand &amp; visual</h3></div>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 400px;">
