@@ -77,13 +77,17 @@ a:hover { color: #8f1d06; }
 .rv-js .bar:not(.rv-in) .bar-f { transform: scaleX(0); }
 .swr .sw { transition: color .25s ease; }
 .rv-js .swr-d .sw:not(.on) { color: rgba(248, 247, 243, 0.32); }
+.wdm > div:not(:first-child) { position: relative; background: #0a0a0a; }
+.wdm > div:not(:first-child) > * { opacity: calc(1 - var(--cov, 0) * 0.7); }
+.wdm.live > div:not(:first-child) { position: sticky; top: 16px; padding-bottom: 20px; }
+.wdm.live { padding-bottom: 160px !important; }
 .wkm { transform-origin: 50% 100%; will-change: transform; }
 .himg { will-change: transform; }
 @media (prefers-reduced-motion: reduce) { .odo-c, .bar-f, .swr .sw { transition: none; } .rv-js .odo:not(.rv-in) .odo-c { transform: translateY(calc(var(--n) * -1em)); } .rv-js .bar:not(.rv-in) .bar-f { transform: none; } .rv-js .swr-d .sw:not(.on) { color: inherit; } }
 </style>
 <style>html,body{background:#f8f7f3;} body > div:first-of-type{margin:0 auto;}</style>
 </head><body style="margin:0">
-<div style="width: 100%; box-sizing: border-box; background: #f8f7f3; color: #0a0a0a; display: flex; flex-direction: column; overflow: hidden;">
+<div style="width: 100%; box-sizing: border-box; background: #f8f7f3; color: #0a0a0a; display: flex; flex-direction: column; overflow: clip;">
 
 <header style="height: 64px; box-sizing: border-box; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #dcd8d1; flex-shrink: 0;">
 <span style="font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: #0a0a0a;">Parsa</span>
@@ -360,6 +364,76 @@ a:hover { color: #8f1d06; }
 
 
 
+<section style="box-sizing: border-box; padding: 64px 8px 0 8px; flex-shrink: 0;">
+<div class="rvu wdm" style="box-sizing: border-box; background: #0a0a0a; border-radius: 28px; padding: 24px 20px; display: flex; flex-direction: column; gap: 20px;">
+<div style="display: flex; align-items: flex-start; justify-content: space-between;">
+<h2 class="rvh" style="margin: 0; font-size: 40px; line-height: 1; font-weight: 700; letter-spacing: -0.02em; color: #f8f7f3;">What I do</h2>
+<span style="font-size: 19px; font-weight: 700; color: #f8f7f3;">(04)</span>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(248, 247, 243, 0.22);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<span style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; flex-shrink: 0; border-radius: 999px; background: #ef3411; font-size: 19px; font-weight: 700; color: #ffffff;">1</span>
+<h3 style="margin: 0; font-size: 22px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #f8f7f3;">Product &amp; UI design</h3>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">Flows</span>
+<span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">Wireframing</span>
+<span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">Prototyping</span>
+<span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">Interaction design</span>
+</div>
+<img src="images/4b736ef1108982a5db96df5422985581.jpg" alt="Carriot dispatch dashboard screen" loading="lazy" style="width: 100%; height: 180px; object-fit: cover; border-radius: 16px; display: block;">
+<p style="margin: 0; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">Carriot’s dispatch dashboard — 50+ screens and a 30-component UI kit.</p>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(248, 247, 243, 0.22);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<span style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; flex-shrink: 0; border-radius: 999px; background: #ef3411; font-size: 19px; font-weight: 700; color: #ffffff;">2</span>
+<h3 style="margin: 0; font-size: 22px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #f8f7f3;">Design systems</h3>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">Design tokens</span>
+<span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">Component libraries</span>
+<span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">Documentation</span>
+<span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">Design-to-code</span>
+</div>
+<img src="images/e9133ee6393da7f92dee60699a4a6687.jpg" alt="Homano brand and UI set" loading="lazy" style="width: 100%; height: 180px; object-fit: cover; border-radius: 16px; display: block;">
+<p style="margin: 0; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">Shared buttons, fields and toasts for Homano’s site and investor panel.</p>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(248, 247, 243, 0.22);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<span style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; flex-shrink: 0; border-radius: 999px; background: #ef3411; font-size: 19px; font-weight: 700; color: #ffffff;">3</span>
+<h3 style="margin: 0; font-size: 22px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #f8f7f3;">Research &amp; HCI</h3>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">User research</span>
+<span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">Usability testing</span>
+<span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">Requirements &amp; concepts</span>
+<span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">Socio-technical systems</span>
+</div>
+<span aria-label="Card sorting board" style="width: 100%; height: 180px; border-radius: 16px; background: #f8f7f3; box-sizing: border-box; padding: 10px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; align-items: start; font-family: inherit;"><span style="display: flex; flex-direction: column; gap: 5px; background: #ebe8e1; border-radius: 8px; padding: 7px 6px;"><span style="font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #0a0a0a;">Fleet</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(-2deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Vehicles</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(1.5deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Drivers</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(0deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Live map</span></span><span style="display: flex; flex-direction: column; gap: 5px; background: #ebe8e1; border-radius: 8px; padding: 7px 6px;"><span style="font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #0a0a0a;">Orders</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(-2deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Dispatch</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(1.5deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">History</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(0deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Invoices</span></span><span style="display: flex; flex-direction: column; gap: 5px; background: #ebe8e1; border-radius: 8px; padding: 7px 6px;"><span style="font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #0a0a0a;">Account</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(-2deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Team</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(1.5deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Billing</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(0deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Settings</span></span></span>
+<p style="margin: 0; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">Card sorting and tree testing that settled Nebulox’s architecture.</p>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(248, 247, 243, 0.22);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<span style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; flex-shrink: 0; border-radius: 999px; background: #ef3411; font-size: 19px; font-weight: 700; color: #ffffff;">4</span>
+<h3 style="margin: 0; font-size: 22px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #f8f7f3;">Brand &amp; visual</h3>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">Brand identity</span>
+<span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">Brand books</span>
+<span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">3D illustration</span>
+<span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">Campaign visuals</span>
+</div>
+<img src="images/2711489e4ce3959afcbc45332dcd3af4.jpg" alt="Carriot brand book pages" loading="lazy" style="width: 100%; height: 180px; object-fit: cover; border-radius: 16px; display: block;">
+<p style="margin: 0; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">The Carriot brand book — logotype, app icon and illustration rules.</p>
+</div>
+
+</div>
+</section>
+
 <section style="box-sizing: border-box; padding: 64px 20px 0 20px; flex-shrink: 0; display: flex; flex-direction: column; gap: 24px;">
 <div style="display: flex; flex-direction: column; gap: 16px;">
 <div style="display: flex; align-items: center; gap: 4px;">
@@ -605,7 +679,7 @@ class Component extends DCLogic {
     // Home-style scroll effects (only when the page itself scrolls; static on the canvas)
     var swW = Array.prototype.slice.call(doc.querySelectorAll('.swr .sw'));
     var wkm = Array.prototype.slice.call(doc.querySelectorAll('.wkm'));
-    var ctc = doc.querySelector('.ctm-card'), himg = null;
+    var ctc = doc.querySelector('.ctm-card'), himg = null, wdm = doc.querySelector('.wdm');
     var clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
     var ease = function (t) { return 1 - Math.pow(1 - t, 3); };
     var live = null;
@@ -619,6 +693,15 @@ class Component extends DCLogic {
           wkm.forEach(function (c) { c.style.transform = ''; });
           if (ctc) ctc.style.scale = ''; if (himg) himg.style.transform = '';
         }
+      }
+      if (wdm) {
+        wdm.classList.toggle('live', !!live);
+        var drows = Array.prototype.slice.call(wdm.children, 1);
+        drows.forEach(function (row, i) {
+          var cov = 0, nx = drows[i + 1];
+          if (live && nx) { var rr = row.getBoundingClientRect(), nr = nx.getBoundingClientRect(); cov = clamp((rr.bottom - nr.top) / rr.height, 0, 1); }
+          row.style.setProperty('--cov', cov.toFixed(3));
+        });
       }
       if (!live) return;
       if (swW.length) {
