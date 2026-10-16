@@ -131,6 +131,16 @@ html { scroll-padding-top: 88px; }
 .lsw-dark .lsw-a { color: rgba(248, 247, 243, 0.6) !important; }
 .lsw-dark .lsw-a:hover { color: #f8f7f3 !important; }
 .lsw-dark .lsw-a.on { background: #f8f7f3; color: #0a0a0a !important; }
+/* What I do: every row opens its case study */
+.wd-link { position: absolute; inset: 0; z-index: 3; border-radius: inherit; }
+.wd-cta { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #f8f7f3; opacity: .85; transition: gap .35s cubic-bezier(.22,1,.36,1), opacity .25s ease; }
+.wd-row:hover .wd-cta, .wd-row:focus-within .wd-cta { gap: 12px; opacity: 1; }
+.wd-row:hover .wd-cta { color: #ef3411; }
+.wd-row img { transition: transform .7s cubic-bezier(.22,1,.36,1); }
+.wd-row:hover img { transform: scale(1.03); }
+/* Work cards: "View project" label, slides in as the card settles */
+.wkm-cta { position: absolute; left: 16px; bottom: 16px; z-index: 2; display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; background: #0a0a0a; color: #f8f7f3; font-size: 13px; font-weight: 600; white-space: nowrap; opacity: 0; transform: translateY(10px); transition: opacity .5s ease, transform .6s cubic-bezier(.22,1,.36,1); }
+.wkm.in .wkm-cta { opacity: 1; transform: none; }
 </style>
 <style>html,body{background:#f8f7f3;} body > div:first-of-type{margin:0 auto;}</style>
 <style>.pcc-pill .pcc-card, .pcc-cta.pcc-pill .pcc-card, .pcc-flow.pcc-pill .pcc-card { width: 206px; } .roll, .roll-i > span { white-space: nowrap; } @media (max-width: 819px) { body { -webkit-hyphens: auto; hyphens: auto; overflow-wrap: break-word; } }</style>
@@ -326,6 +336,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <span style="position: absolute; right: 20px; top: 20px; width: 44px; height: 44px; border-radius: 999px; background: #ffffff; display: inline-flex; align-items: center; justify-content: center;">
 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#0a0a0a" stroke-width="1.2" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"></path></svg>
 </span>
+<span class="wkm-cta" aria-hidden="true"><span style="display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #ef3411;"></span>Projekt ansehen</span>
 </a>
 
 <a class="wkm" href="/old/?lang=de#/nebulox" target="_blank" rel="noopener" style="position: relative; display: block; height: 320px; border-radius: 24px; overflow: hidden;">
@@ -339,6 +350,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <span style="position: absolute; right: 20px; top: 20px; width: 44px; height: 44px; border-radius: 999px; background: #ffffff; display: inline-flex; align-items: center; justify-content: center;">
 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#0a0a0a" stroke-width="1.2" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"></path></svg>
 </span>
+<span class="wkm-cta" aria-hidden="true"><span style="display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #ef3411;"></span>Projekt ansehen</span>
 </a>
 
 <a class="wkm" href="carriot.html" style="position: relative; display: block; height: 320px; border-radius: 24px; overflow: hidden;">
@@ -351,6 +363,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <span style="position: absolute; right: 20px; top: 20px; width: 44px; height: 44px; border-radius: 999px; background: #ffffff; display: inline-flex; align-items: center; justify-content: center;">
 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#0a0a0a" stroke-width="1.2" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"></path></svg>
 </span>
+<span class="wkm-cta" aria-hidden="true"><span style="display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #ef3411;"></span>Projekt ansehen</span>
 </a><a class="wkm" href="snapptrip.html" style="position: relative; display: block; height: 320px; border-radius: 24px; overflow: hidden;">
 <img src="../images/d4381a831eca08abf3de5a78c09c2431.jpg" alt="Rotes Artwork mit einem Mann im Snapp!Trip-Shirt und 3D-Reise-Icons" style="width: 100%; height: 100%; object-fit: cover; display: block;">
 <span style="position: absolute; left: 0; right: 0; top: 0; height: 62%; background: linear-gradient(180deg, rgba(10, 10, 10, 0.62) 0%, rgba(10, 10, 10, 0.3) 40%, rgba(10, 10, 10, 0) 100%); opacity: 0.6;"></span>
@@ -361,6 +374,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <span style="position: absolute; right: 20px; top: 20px; width: 44px; height: 44px; border-radius: 999px; background: #ffffff; display: inline-flex; align-items: center; justify-content: center;">
 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#0a0a0a" stroke-width="1.2" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"></path></svg>
 </span>
+<span class="wkm-cta" aria-hidden="true"><span style="display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #ef3411;"></span>Projekt ansehen</span>
 </a>
 
 
@@ -375,6 +389,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <span style="position: absolute; right: 20px; top: 20px; width: 44px; height: 44px; border-radius: 999px; background: #ffffff; display: inline-flex; align-items: center; justify-content: center;">
 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#0a0a0a" stroke-width="1.2" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"></path></svg>
 </span>
+<span class="wkm-cta" aria-hidden="true"><span style="display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #ef3411;"></span>Projekt ansehen</span>
 </a>
 
 <a class="wkm" href="homano.html" style="position: relative; display: block; height: 320px; border-radius: 24px; overflow: hidden;">
@@ -387,6 +402,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <span style="position: absolute; right: 20px; top: 20px; width: 44px; height: 44px; border-radius: 999px; background: #ffffff; display: inline-flex; align-items: center; justify-content: center;">
 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#0a0a0a" stroke-width="1.2" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"></path></svg>
 </span>
+<span class="wkm-cta" aria-hidden="true"><span style="display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #ef3411;"></span>Projekt ansehen</span>
 </a><div class="rvu" style="box-sizing: border-box; background: #e1dcd6; border-radius: 24px; padding: 24px; display: none; flex-direction: column; gap: 16px">
 <div style="display: flex; align-items: center; gap: 4px;">
 <span style="display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #ef3411;"></span>
@@ -438,7 +454,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <span style="font-size: 19px; font-weight: 700; color: #f8f7f3;">(04)</span>
 </div>
 
-<div class="rvu" style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(248, 247, 243, 0.22);">
+<div class="rvu wd-row" style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(248, 247, 243, 0.22);">
 <div style="display: flex; align-items: center; gap: 12px;">
 <span style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; flex-shrink: 0; border-radius: 999px; background: #ef3411; font-size: 19px; font-weight: 700; color: #ffffff;">1</span>
 <h3 style="margin: 0; font-size: 22px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #f8f7f3;">Produkt- &amp; UI-Design</h3>
@@ -451,9 +467,11 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 </div>
 <img src="../images/4b736ef1108982a5db96df5422985581.jpg" alt="Dispositions-Dashboard von Carriot" loading="lazy" style="width: 100%; height: 180px; object-fit: cover; border-radius: 16px; display: block;">
 <p style="margin: 0; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">Das Dispositions-Dashboard von Carriot – über 50 Screens und ein UI-Kit mit 30 Komponenten.</p>
+<span class="wd-cta">Zur Case Study Carriot<svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"></path></svg></span>
+<a class="wd-link" href="carriot.html" aria-label="Case Study Carriot"></a>
 </div>
 
-<div class="rvu" style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(248, 247, 243, 0.22);">
+<div class="rvu wd-row" style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(248, 247, 243, 0.22);">
 <div style="display: flex; align-items: center; gap: 12px;">
 <span style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; flex-shrink: 0; border-radius: 999px; background: #ef3411; font-size: 19px; font-weight: 700; color: #ffffff;">2</span>
 <h3 style="margin: 0; font-size: 22px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #f8f7f3;">Designsysteme</h3>
@@ -466,9 +484,11 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 </div>
 <img src="../images/e9133ee6393da7f92dee60699a4a6687.jpg" alt="Marke und UI-Set von Homano" loading="lazy" style="width: 100%; height: 180px; object-fit: cover; border-radius: 16px; display: block;">
 <p style="margin: 0; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">Gemeinsame Buttons, Felder und Hinweise für die Website und das Investorenportal von Homano.</p>
+<span class="wd-cta">Zur Case Study Homano<svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"></path></svg></span>
+<a class="wd-link" href="homano.html" aria-label="Case Study Homano"></a>
 </div>
 
-<div class="rvu" style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(248, 247, 243, 0.22);">
+<div class="rvu wd-row" style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(248, 247, 243, 0.22);">
 <div style="display: flex; align-items: center; gap: 12px;">
 <span style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; flex-shrink: 0; border-radius: 999px; background: #ef3411; font-size: 19px; font-weight: 700; color: #ffffff;">3</span>
 <h3 style="margin: 0; font-size: 22px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #f8f7f3;">Research &amp; HCI</h3>
@@ -480,10 +500,12 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">Soziotechnische Systeme</span>
 </div>
 <span aria-label="Card-Sorting-Board" style="width: 100%; height: 180px; border-radius: 16px; background: #f8f7f3; box-sizing: border-box; padding: 10px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; align-items: start; font-family: inherit;"><span style="display: flex; flex-direction: column; gap: 5px; background: #ebe8e1; border-radius: 8px; padding: 7px 6px;"><span style="font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #0a0a0a;">Flotte</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(-2deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Fahrzeuge</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(1.5deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Fahrer</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(0deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Live-Karte</span></span><span style="display: flex; flex-direction: column; gap: 5px; background: #ebe8e1; border-radius: 8px; padding: 7px 6px;"><span style="font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #0a0a0a;">Aufträge</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(-2deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Disposition</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(1.5deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Verlauf</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(0deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Belege</span></span><span style="display: flex; flex-direction: column; gap: 5px; background: #ebe8e1; border-radius: 8px; padding: 7px 6px;"><span style="font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #0a0a0a;">Konto</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(-2deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Team</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(1.5deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Zahlung</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(0deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Optionen</span></span></span>
-<p style="margin: 0; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">Card Sorting und Tree Testing, die die Informationsarchitektur von Nebulox festgelegt haben.</p>
+<p style="margin: 0; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">Bestehende Muster prüfen und Stakeholder abstimmen, bevor das Designsystem von NikAndish entstand.</p>
+<span class="wd-cta">Zur Case Study NikAndish<svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"></path></svg></span>
+<a class="wd-link" href="/design-system-case-study/index.html?lang=de" target="_blank" rel="noopener" aria-label="Case Study NikAndish"></a>
 </div>
 
-<div class="rvu" style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(248, 247, 243, 0.22);">
+<div class="rvu wd-row" style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(248, 247, 243, 0.22);">
 <div style="display: flex; align-items: center; gap: 12px;">
 <span style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; flex-shrink: 0; border-radius: 999px; background: #ef3411; font-size: 19px; font-weight: 700; color: #ffffff;">4</span>
 <h3 style="margin: 0; font-size: 22px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #f8f7f3;">Marke &amp; Visual</h3>
@@ -494,8 +516,10 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">3D-Illustration</span>
 <span style="background: rgba(248, 247, 243, 0.08); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: #f8f7f3;">Kampagnenmotive</span>
 </div>
-<img src="../images/2711489e4ce3959afcbc45332dcd3af4.jpg" alt="Seiten aus dem Brand Book von Carriot" loading="lazy" style="width: 100%; height: 180px; object-fit: cover; border-radius: 16px; display: block;">
-<p style="margin: 0; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">Das Brand Book von Carriot – Logotype, App-Icon und Regeln für Illustrationen.</p>
+<img src="../images/0c08aaa4ebda10b5594ea9b268327fde.jpg" alt="Kampagnenmotive von Snapp!Trip" loading="lazy" style="width: 100%; height: 180px; object-fit: cover; border-radius: 16px; display: block;">
+<p style="margin: 0; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">Kampagnenmotive für Snapp!Trip – Bus-, Flug- und Hotelbanner aus einem gemeinsamen 3D-Set.</p>
+<span class="wd-cta">Zur Case Study Snapp!Trip<svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"></path></svg></span>
+<a class="wd-link" href="snapptrip.html" target="_blank" rel="noopener" aria-label="Case Study Snapp!Trip"></a>
 </div>
 
 </div>
@@ -756,7 +780,7 @@ class Component extends DCLogic {
         live = nowLive;
         if (!live) {
           swW.forEach(function (w) { w.classList.add('on'); });
-          wkm.forEach(function (c) { c.style.transform = ''; });
+          wkm.forEach(function (c) { c.style.transform = ''; c.classList.add('in'); });
           if (ctc) ctc.style.scale = ''; if (himg) himg.style.transform = '';
         }
       }
@@ -779,6 +803,7 @@ class Component extends DCLogic {
         var r = c.getBoundingClientRect();
         if (r.top > vh + 60 || r.bottom < -60) return;
         var e = ease(clamp((vh - r.top) / (vh * 0.55), 0, 1));
+        c.classList.toggle('in', e > 0.92);
         c.style.transform = 'perspective(1000px) rotateX(' + (48 * (1 - e)).toFixed(2) + 'deg) scale(' + (0.92 + 0.08 * e).toFixed(4) + ')';
       });
       if (ctc) { var rc = ctc.getBoundingClientRect(); ctc.style.scale = (0.9 + 0.1 * ease(clamp((vh - rc.top) / (vh * 0.7), 0, 1))).toFixed(4); }

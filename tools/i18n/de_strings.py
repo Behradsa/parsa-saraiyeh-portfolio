@@ -406,3 +406,15 @@ DE = {
 "Omid Analyzer — Parsa Saraiyeh": "Omid Analyzer – Parsa Saraiyeh",
 "Homano — Parsa Saraiyeh": "Homano – Parsa Saraiyeh",
 }
+DE.update({
+"Snapp!Trip campaign key art — the bus, flight and hotel banners built from one 3D set.": "Kampagnenmotive für Snapp!Trip – Bus-, Flug- und Hotelbanner aus einem gemeinsamen 3D-Set.",
+"Auditing existing patterns and aligning stakeholders before NikAndish’s design system was built.": "Bestehende Muster prüfen und Stakeholder abstimmen, bevor das Designsystem von NikAndish entstand.",
+"See the Carriot case study": "Zur Case Study Carriot",
+"See the Homano case study": "Zur Case Study Homano",
+"See the NikAndish case study": "Zur Case Study NikAndish",
+"See the Snapp!Trip case study": "Zur Case Study Snapp!Trip",
+"Carriot case study": "Case Study Carriot",
+"Homano case study": "Case Study Homano",
+"NikAndish case study": "Case Study NikAndish",
+"Snapp!Trip case study": "Case Study Snapp!Trip",
+})

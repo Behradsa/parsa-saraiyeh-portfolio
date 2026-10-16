@@ -62,8 +62,8 @@ a:hover { color: #8f1d06; }
 .roll-i { display: block; transition: transform .55s cubic-bezier(.65,0,.35,1); }
 .roll-i > span { display: block; height: 1.3em; }
 a:hover .roll-i, a:focus-visible .roll-i { transform: translateY(-1.3em); }
-#work a[href$=".dc.html"] > span:last-child { transition: transform .6s cubic-bezier(.22,1,.36,1); }
-#work a[href$=".dc.html"]:hover > span:last-child, #work a[href$=".dc.html"]:focus-visible > span:last-child { transform: rotate(45deg); }
+#work a:has(> img) > span:last-child { transition: transform .6s cubic-bezier(.22,1,.36,1); }
+#work a:has(> img):hover > span:last-child, #work a:has(> img):focus-visible > span:last-child { transform: rotate(45deg); }
 .wkc { position: fixed; left: 0; top: 0; z-index: 60; pointer-events: none; }
 .wkc-in { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; background: #0a0a0a; color: #f8f7f3; font-size: 13px; font-weight: 600; white-space: nowrap; opacity: 0; transform: translate(18px, 18px) scale(.4); transform-origin: 0 0; transition: transform .45s cubic-bezier(.22,1,.36,1), opacity .25s ease; }
 .wkc.on .wkc-in { opacity: 1; transform: translate(18px, 18px) scale(1); }
@@ -116,7 +116,7 @@ a:hover .roll-i, a:focus-visible .roll-i { transform: translateY(-1.3em); }
 .rv-js .wkr > a.rvu:not(.rv-in) { transform: none; }
 @media (prefers-reduced-motion: reduce) {
   .hdr, .hin > span, .hpanel, .himg, .hfade, .ctm { animation: none !important; }
-  .roll-i, .odo-c, .bar-f, .wdb > div:not(:first-child), #work a[href$=".dc.html"] > img, #work a[href$=".dc.html"] > span:last-child { transition: none !important; }
+  .roll-i, .odo-c, .bar-f, .wdb > div:not(:first-child), #work a:has(> img) > img, #work a:has(> img) > span:last-child { transition: none !important; }
   .rv-js .odo:not(.rv-in) .odo-c { transform: translateY(calc(var(--n) * -1em)); }
   .rv-js .bar:not(.rv-in) .bar-f { transform: none; }
   .rv-js .swr .sw:not(.on) { color: inherit; }
@@ -150,6 +150,13 @@ html { scroll-padding-top: 88px; }
 .lsw-dark .lsw-a { color: rgba(248, 247, 243, 0.6) !important; }
 .lsw-dark .lsw-a:hover { color: #f8f7f3 !important; }
 .lsw-dark .lsw-a.on { background: #f8f7f3; color: #0a0a0a !important; }
+/* What I do: every row opens its case study */
+.wd-link { position: absolute; inset: 0; z-index: 3; border-radius: inherit; }
+.wd-cta { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #f8f7f3; opacity: .85; transition: gap .35s cubic-bezier(.22,1,.36,1), opacity .25s ease; }
+.wd-row:hover .wd-cta, .wd-row:focus-within .wd-cta { gap: 12px; opacity: 1; }
+.wd-row:hover .wd-cta { color: #ef3411; }
+.wd-row img { transition: transform .7s cubic-bezier(.22,1,.36,1); }
+.wd-row:hover img { transform: scale(1.03); }
 </style>
 <style>html,body{background:#f8f7f3;} body > div:first-of-type{margin:0 auto;}</style>
 <script>(function(){function z(){var w=document.documentElement.clientWidth;document.documentElement.style.zoom=(w<1440&&w>=0)?(w/1440).toFixed(4):'';}z();addEventListener('resize',z);})();</script>
@@ -487,7 +494,7 @@ html { scroll-padding-top: 88px; }
 <span style="font-size: 56px; line-height: 0.96; font-weight: 700; letter-spacing: -0.03em; color: #f8f7f3;">(04)</span>
 </div>
 
-<div class="rvu" style="margin-left: 25%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 32px 0 40px 0; border-top: 1px solid rgba(248, 247, 243, 0.22)">
+<div class="rvu wd-row" style="margin-left: 25%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 32px 0 40px 0; border-top: 1px solid rgba(248, 247, 243, 0.22)">
 <div style="display: flex; flex-direction: column; gap: 18px;">
 <div style="display: flex; align-items: center; gap: 12px;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 999px; background: #ef3411;"></span><h3 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #f8f7f3;">Product &amp; UI design</h3></div>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 400px;">
@@ -500,9 +507,11 @@ html { scroll-padding-top: 88px; }
 <div style="display: flex; flex-direction: column; gap: 16px;">
 <img src="images/4b736ef1108982a5db96df5422985581.jpg" alt="Carriot dispatch dashboard screen" loading="lazy" style="width: 220px; height: 136px; object-fit: cover; border-radius: 12px; display: block;">
 <p style="margin: 0; max-width: 380px; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">Carriot’s dispatch dashboard — 50+ screens and a 30-component UI kit.</p>
+<span class="wd-cta">See the Carriot case study<svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"></path></svg></span>
 </div>
+<a class="wd-link" href="carriot.html" aria-label="Carriot case study"></a>
 </div>
-<div class="rvu" style="margin-left: 25%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 32px 0 40px 0; border-top: 1px solid rgba(248, 247, 243, 0.22)">
+<div class="rvu wd-row" style="margin-left: 25%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 32px 0 40px 0; border-top: 1px solid rgba(248, 247, 243, 0.22)">
 <div style="display: flex; flex-direction: column; gap: 18px;">
 <div style="display: flex; align-items: center; gap: 12px;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 999px; background: #ef3411;"></span><h3 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #f8f7f3;">Design systems</h3></div>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 400px;">
@@ -515,9 +524,11 @@ html { scroll-padding-top: 88px; }
 <div style="display: flex; flex-direction: column; gap: 16px;">
 <img src="images/e9133ee6393da7f92dee60699a4a6687.jpg" alt="Homano brand and UI set" loading="lazy" style="width: 220px; height: 136px; object-fit: cover; border-radius: 12px; display: block;">
 <p style="margin: 0; max-width: 380px; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">Shared buttons, fields and toasts for Homano’s site and investor panel.</p>
+<span class="wd-cta">See the Homano case study<svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"></path></svg></span>
 </div>
+<a class="wd-link" href="homano.html" aria-label="Homano case study"></a>
 </div>
-<div class="rvu" style="margin-left: 25%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 32px 0 40px 0; border-top: 1px solid rgba(248, 247, 243, 0.22)">
+<div class="rvu wd-row" style="margin-left: 25%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 32px 0 40px 0; border-top: 1px solid rgba(248, 247, 243, 0.22)">
 <div style="display: flex; flex-direction: column; gap: 18px;">
 <div style="display: flex; align-items: center; gap: 12px;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 999px; background: #ef3411;"></span><h3 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #f8f7f3;">Research &amp; HCI</h3></div>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 400px;">
@@ -529,10 +540,12 @@ html { scroll-padding-top: 88px; }
 </div>
 <div style="display: flex; flex-direction: column; gap: 16px;">
 <span aria-label="Card sorting board" style="width: 220px; height: 136px; border-radius: 12px; background: #f8f7f3; box-sizing: border-box; padding: 10px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; align-items: start; font-family: inherit;"><span style="display: flex; flex-direction: column; gap: 5px; background: #ebe8e1; border-radius: 8px; padding: 7px 6px;"><span style="font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #0a0a0a;">Fleet</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(-2deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Vehicles</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(1.5deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Drivers</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(0deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Live map</span></span><span style="display: flex; flex-direction: column; gap: 5px; background: #ebe8e1; border-radius: 8px; padding: 7px 6px;"><span style="font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #0a0a0a;">Orders</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(-2deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Dispatch</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(1.5deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">History</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(0deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Invoices</span></span><span style="display: flex; flex-direction: column; gap: 5px; background: #ebe8e1; border-radius: 8px; padding: 7px 6px;"><span style="font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #0a0a0a;">Account</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(-2deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Team</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(1.5deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Billing</span><span style="background: #ffffff; border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: #0a0a0a; border-left: 2px solid #ef3411; transform: rotate(0deg); box-shadow: 0 1px 2px rgba(0,0,0,0.08);">Settings</span></span></span>
-<p style="margin: 0; max-width: 380px; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">Card sorting and tree testing that settled Nebulox’s architecture.</p>
+<p style="margin: 0; max-width: 380px; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">Auditing existing patterns and aligning stakeholders before NikAndish’s design system was built.</p>
+<span class="wd-cta">See the NikAndish case study<svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"></path></svg></span>
 </div>
+<a class="wd-link" href="https://parsa-sa.com/design-system-case-study/index.html" target="_blank" rel="noopener" aria-label="NikAndish case study"></a>
 </div>
-<div class="rvu" style="margin-left: 25%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 32px 0 40px 0; border-top: 1px solid rgba(248, 247, 243, 0.22)">
+<div class="rvu wd-row" style="margin-left: 25%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 32px 0 40px 0; border-top: 1px solid rgba(248, 247, 243, 0.22)">
 <div style="display: flex; flex-direction: column; gap: 18px;">
 <div style="display: flex; align-items: center; gap: 12px;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 999px; background: #ef3411;"></span><h3 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; color: #f8f7f3;">Brand &amp; visual</h3></div>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 400px;">
@@ -545,9 +558,11 @@ html { scroll-padding-top: 88px; }
 </div>
 </div>
 <div style="display: flex; flex-direction: column; gap: 16px;">
-<img src="images/2711489e4ce3959afcbc45332dcd3af4.jpg" alt="Carriot brand book pages" loading="lazy" style="width: 220px; height: 136px; object-fit: cover; border-radius: 12px; display: block;">
-<p style="margin: 0; max-width: 380px; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">The Carriot brand book — logotype, app icon and illustration rules.</p>
+<img src="images/0c08aaa4ebda10b5594ea9b268327fde.jpg" alt="Snapp!Trip campaign key visuals" loading="lazy" style="width: 220px; height: 136px; object-fit: cover; border-radius: 12px; display: block;">
+<p style="margin: 0; max-width: 380px; font-size: 13px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">Snapp!Trip campaign key art — the bus, flight and hotel banners built from one 3D set.</p>
+<span class="wd-cta">See the Snapp!Trip case study<svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5"></path></svg></span>
 </div>
+<a class="wd-link" href="snapptrip.html" target="_blank" rel="noopener" aria-label="Snapp!Trip case study"></a>
 </div>
 
 </div>
@@ -985,7 +1000,7 @@ class Component extends DCLogic {
         wkc.style.transform = 'translate3d(' + lx.toFixed(1) + 'px,' + ly.toFixed(1) + 'px,0)';
         lab = (Math.abs(tx - lx) > 0.2 || Math.abs(ty - ly) > 0.2) ? requestAnimationFrame(lp) : 0;
       };
-      all('#work a[href$=".dc.html"]').forEach(function (c) {
+      all('#work a').filter(function (c) { return c.querySelector(':scope > img'); }).forEach(function (c) {
         on(c, 'mouseenter', function (e) { lx = tx = e.clientX; ly = ty = e.clientY; lp(); wkc.classList.add('on'); });
         on(c, 'mousemove', function (e) { tx = e.clientX; ty = e.clientY; if (!lab) lab = requestAnimationFrame(lp); });
         on(c, 'mouseleave', function () { wkc.classList.remove('on'); });

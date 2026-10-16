@@ -442,7 +442,7 @@ class Component extends DCLogic {
     Object.keys(rows).forEach(function (k) { rows[k].forEach(function (m, i) { m.style.setProperty('--d', Math.min(i, 4) * 110 + 'ms'); }); });
     var outcome = q('div').filter(function (d) { var c = styl(d); return c.backgroundColor === 'rgb(10, 10, 10)' && parseFloat(c.borderTopLeftRadius) >= 28; })[0] || null;
     if (outcome) { outcome.classList.add('rvu'); Array.prototype.forEach.call(outcome.querySelectorAll('.rvu'), function (x) { x.classList.remove('rvu'); }); }
-    q('a[href$=".dc.html"]').forEach(function (a) { if (a.querySelector('svg')) a.classList.add('csn'); });
+    q('a[href]').forEach(function (a) { var h = a.getAttribute('href'); if (a.querySelector('svg') && /\.html(#.*)?$/.test(h) && !/^(https?:|mailto:)/.test(h)) a.classList.add('csn'); });
 
     if ('IntersectionObserver' in win) {
       root.classList.add('rv-js');
