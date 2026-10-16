@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><script>if(location.hash.indexOf("#/")===0)location.replace("/old/"+location.hash);</script><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<html lang="en"><head><meta charset="utf-8"><script>if(location.hash.indexOf("#/")===0)location.replace("/old/"+location.hash);</script><link rel="alternate" hreflang="en" href="https://parsa-sa.com/"><link rel="alternate" hreflang="de" href="https://parsa-sa.com/de/"><link rel="alternate" hreflang="x-default" href="https://parsa-sa.com/"><link rel="canonical" href="https://parsa-sa.com/"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Parsa Saraiyeh</title>
 <script>
 (function(){var mob=false;function go(){var w=window.innerWidth;if(!mob&&w<820&&true)location.replace('m.html'+location.hash);if(mob&&w>=820)location.replace('index.html'+location.hash);}go();var t;addEventListener('resize',function(){clearTimeout(t);t=setTimeout(go,150);});})();
@@ -110,7 +110,7 @@ a:hover .roll-i, a:focus-visible .roll-i { transform: translateY(-1.3em); }
 @media (prefers-reduced-motion: reduce) { .wd-plus > span { animation: none; } }
 .wdb > div:not(:first-child) { position: relative; background: #0a0a0a; }
 .wdb > div:not(:first-child) > * { opacity: calc(1 - var(--cov, 0) * 0.7); }
-.wdb.live > div:not(:first-child) { position: sticky; top: 40px; }
+.wdb.live > div:not(:first-child) { position: sticky; top: 96px; }
 .wdb.live { padding-bottom: 48px !important; }
 .wkr { position: relative; transform-origin: 50% 50%; will-change: transform; }.wkr > a.rvu { transition: opacity .9s ease; }
 .rv-js .wkr > a.rvu:not(.rv-in) { transform: none; }
@@ -138,13 +138,25 @@ a:hover .roll-i, a:focus-visible .roll-i { transform: translateY(-1.3em); }
 .pcc-cta.pcc-pill .pcc-t { font-size: 15px; }
 .pcc-flow.pcc-pill .pcc-card { flex: 0 0 auto; width: 156px; }
 .pcc-flow.pcc-pill:hover .pcc-card, .pcc-flow.pcc-pill:focus-within .pcc-card { width: 100%; }
+/* Header stays on screen while scrolling */
+.site-hdr { position: sticky; top: 0; z-index: 40; background: rgba(248, 247, 243, 0.86); -webkit-backdrop-filter: saturate(1.4) blur(14px); backdrop-filter: saturate(1.4) blur(14px); }
+html { scroll-padding-top: 88px; }
+/* EN / DE switch */
+.lsw { display: inline-flex; align-items: center; gap: 2px; padding: 3px; border: 1px solid #dcd8d1; border-radius: 999px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; line-height: 1; letter-spacing: 0.06em; }
+.lsw-a { display: inline-block; padding: 5px 9px; border-radius: 999px; color: #6f6a61 !important; text-decoration: none; transition: color .2s ease, background .2s ease; }
+.lsw-a:hover { color: #0a0a0a !important; }
+.lsw-a.on { background: #0a0a0a; color: #f8f7f3 !important; }
+.lsw-dark { border-color: rgba(248, 247, 243, 0.24); }
+.lsw-dark .lsw-a { color: rgba(248, 247, 243, 0.6) !important; }
+.lsw-dark .lsw-a:hover { color: #f8f7f3 !important; }
+.lsw-dark .lsw-a.on { background: #f8f7f3; color: #0a0a0a !important; }
 </style>
 <style>html,body{background:#f8f7f3;} body > div:first-of-type{margin:0 auto;}</style>
 <script>(function(){function z(){var w=document.documentElement.clientWidth;document.documentElement.style.zoom=(w<1440&&w>=0)?(w/1440).toFixed(4):'';}z();addEventListener('resize',z);})();</script>
 </head><body style="margin:0">
 <div style="--gx: clamp(16px, 1.4vw, 24px); width: 1440px; box-sizing: border-box; background: #f8f7f3; color: #0a0a0a; display: flex; flex-direction: column; overflow: clip">
 
-<header class="hdr" style="height: 72px; box-sizing: border-box; padding: 0 60px; display: flex; align-items: center; justify-content: space-between; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #dcd8d1; flex-shrink: 0; border-style: dashed; border-top-width: 0px; border-right-width: 0px; border-left-width: 0px">
+<header class="hdr site-hdr" style="height: 72px; box-sizing: border-box; padding: 0 60px; display: flex; align-items: center; justify-content: space-between; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #dcd8d1; flex-shrink: 0; border-style: dashed; border-top-width: 0px; border-right-width: 0px; border-left-width: 0px">
 <div style="display: flex; align-items: center; gap: 16px;">
 <span style="font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: #0a0a0a;">Parsa</span>
 <span style="display: inline-block; width: 1px; height: 18px; background: #dcd8d1;"></span>
@@ -157,6 +169,7 @@ a:hover .roll-i, a:focus-visible .roll-i { transform: translateY(-1.3em); }
 <a href="images/4dc11ed97142802f6f40e9215ed5ea68.pdf" style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 500; color: #0a0a0a;"><span class="roll"><span class="roll-i"><span>Resume</span><span aria-hidden="true">Resume</span></span></span>
 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#0a0a0a" stroke-width="1" aria-hidden="true"><path d="M8 2.5v8M5 7.5l3 3 3-3M3 13h10"></path></svg>
 </a>
+<span class="lsw" role="group" aria-label="Language"><a class="lsw-a on" href="index.html" data-lang="en" hreflang="en" lang="en" aria-current="true">EN</a><a class="lsw-a" href="de/index.html" data-lang="de" hreflang="de" lang="de">DE</a></span>
 </nav>
 </header>
 
