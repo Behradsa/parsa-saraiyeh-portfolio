@@ -39,6 +39,7 @@
     '.sh-hdr a{color:#0a0a0a;text-decoration:none}' +
     '.sh-hdr .sh-l{display:flex;align-items:center;gap:16px}' +
     '.sh-hdr .sh-logo{font-size:20px;font-weight:700;letter-spacing:-.02em}' +
+    '.sh-hdr .sh-logo{align-items:flex-start}.sh-hdr .sh-tm{display:inline-block;font-size:9px;line-height:1;font-weight:600;margin:3px 0 0 0}' +
     '.sh-hdr .sh-bar{display:inline-block;width:1px;height:18px;background:#dcd8d1}' +
     ".sh-hdr .sh-lab{font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em;color:#6f6a61}" +
     '.sh-hdr .sh-nav{display:flex;align-items:center;gap:36px}' +
@@ -65,7 +66,7 @@
   hdr.className = 'sh-hdr';
   function render() {
     hdr.innerHTML =
-      '<div class="sh-l"><a class="sh-logo" href="' + T.root + '">Parsa</a><span class="sh-bar"></span><span class="sh-lab">' + label() + '</span></div>' +
+      '<div class="sh-l"><a class="sh-logo" href="' + T.root + '">Parsa<sup class="sh-tm">™</sup></a><span class="sh-bar"></span><span class="sh-lab">' + label() + '</span></div>' +
       '<div class="sh-nav" role="navigation">' +
       '<a href="' + T.root + '">' + T.home + '</a>' +
       '<a href="' + T.root + '#work">' + T.projects + '<span class="sh-dot"></span></a>' +
