@@ -152,9 +152,11 @@ html { scroll-padding-top: 88px; }
 .lsw-dark .lsw-a.on { background: #f8f7f3; color: #0a0a0a !important; }
 /* What I do: every row opens its case study */
 .wd-link { position: absolute; inset: 0; z-index: 3; border-radius: inherit; }
-.wd-cta { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #f8f7f3; opacity: .85; transition: gap .35s cubic-bezier(.22,1,.36,1), opacity .25s ease; }
-.wd-row:hover .wd-cta, .wd-row:focus-within .wd-cta { gap: 12px; opacity: 1; }
-.wd-row:hover .wd-cta { color: #ef3411; }
+.wd-cta { align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; margin-top: 4px; padding: 13px 18px; border-radius: 999px; background: #f8f7f3; color: #0a0a0a; font-size: 13px; font-weight: 600; letter-spacing: -0.005em; white-space: nowrap; transition: background .3s ease, color .3s ease, gap .35s cubic-bezier(.22,1,.36,1); }
+.wd-cta::before { content: ""; width: 6px; height: 6px; border-radius: 999px; background: #ef3411; order: 2; }
+.wd-cta svg { display: none; }
+.wd-row:hover .wd-cta, .wd-row:focus-within .wd-cta { background: #ef3411; color: #ffffff; gap: 14px; }
+.wd-row:hover .wd-cta::before, .wd-row:focus-within .wd-cta::before { background: #ffffff; }
 .wd-row img { transition: transform .7s cubic-bezier(.22,1,.36,1); }
 .wd-row:hover img { transform: scale(1.03); }
 </style>
@@ -701,9 +703,9 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 </div>
 </div>
 <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: start;">
-<div class="rvu" style="display: block;"><iframe loading="lazy" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7510783982624604160?collapsed=1" height="560" width="100%" frameborder="0" allowfullscreen="" title="Eingebetteter Beitrag" style="display: block; width: 100%; height: 560px; border: 0;"></iframe></div>
-<div class="rvu" style="--d: 90ms; display: block;"><iframe loading="lazy" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7479274351775711232?collapsed=1" height="640" width="100%" frameborder="0" allowfullscreen="" title="Eingebetteter Beitrag" style="display: block; width: 100%; height: 640px; border: 0;"></iframe></div>
-<div class="rvu" style="--d: 180ms; display: block;"><iframe loading="lazy" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7501039049311428609?collapsed=1" height="1450" width="100%" frameborder="0" allowfullscreen="" title="Eingebetteter Beitrag" style="display: block; width: 100%; height: 1450px; border: 0;"></iframe></div>
+<div class="rvu" style="display: block; border-radius: 16px; overflow: hidden; border: 1px solid #e6e2db; background: #ffffff;"><iframe loading="lazy" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7510783982624604160?collapsed=1" height="640" width="100%" frameborder="0" allowfullscreen="" title="Eingebetteter Beitrag" style="display: block; width: 100%; height: 640px; border: 0;"></iframe></div>
+<div class="rvu" style="--d: 90ms; display: block; border-radius: 16px; overflow: hidden; border: 1px solid #e6e2db; background: #ffffff;"><iframe loading="lazy" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7479274351775711232?collapsed=1" height="640" width="100%" frameborder="0" allowfullscreen="" title="Eingebetteter Beitrag" style="display: block; width: 100%; height: 640px; border: 0;"></iframe></div>
+<div class="rvu" style="--d: 180ms; display: block; border-radius: 16px; overflow: hidden; border: 1px solid #e6e2db; background: #ffffff;"><iframe loading="lazy" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7501039049311428609?collapsed=1" height="640" width="100%" frameborder="0" allowfullscreen="" title="Eingebetteter Beitrag" style="display: block; width: 100%; height: 640px; border: 0;"></iframe></div>
 </div>
 </div>
 </section>
@@ -729,7 +731,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <span style="display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #ef3411;"></span>
 <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; color: #f8f7f3; margin-left: 6px;">KONTAKT</span>
 </div>
-<h2 class="rvh" style="margin: 0; text-align: center; font-size: 88px; line-height: 0.92; font-weight: 700; letter-spacing: -0.035em; color: #f8f7f3;">Lust auf Zusammenarbeit?</h2>
+<h2 class="rvh" style="margin: 0; text-align: center; font-size: 88px; line-height: 0.92; font-weight: 700; letter-spacing: -0.035em; color: #f8f7f3;">Möchten Sie Kontakt aufnehmen?</h2>
 <p style="margin: 0; max-width: 560px; text-align: center; font-size: 17px; line-height: 1.5; color: rgba(248, 247, 243, 0.7);">Schreiben Sie mir gern für eine Zusammenarbeit – oder einfach für ein freundliches Hallo :)</p>
 <a href="mailto:parsa.saraiyeh@gmail.com" style="display: inline-flex; align-items: center; gap: 12px; background: #ffffff; border-radius: 999px; padding: 14px 20px;">
 <span style="font-size: 13px; font-weight: 600; letter-spacing: -0.005em; color: #0a0a0a;"><span class="roll"><span class="roll-i"><span>parsa.saraiyeh@gmail.com</span><span aria-hidden="true">parsa.saraiyeh@gmail.com</span></span></span></span>

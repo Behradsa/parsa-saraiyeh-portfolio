@@ -418,3 +418,4 @@ DE.update({
 "NikAndish case study": "Case Study NikAndish",
 "Snapp!Trip case study": "Case Study Snapp!Trip",
 })
+DE.update({"Want to get in touch?": "Möchten Sie Kontakt aufnehmen?"})
