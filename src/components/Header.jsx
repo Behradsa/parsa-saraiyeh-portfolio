@@ -98,7 +98,7 @@ function Header() {
 
             <a
               id="cv-button"
-              href="/PARSA_SARAIYEH_2026-09-05.pdf"
+              href="/PARSA_SARAIYEH_2026-10-16.pdf"
               target="_blank"
               className={` ${
                 isNebulox ? "nebulox-set-text-secondary-color" : ""
