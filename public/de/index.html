@@ -152,11 +152,9 @@ html { scroll-padding-top: 88px; }
 .lsw-dark .lsw-a.on { background: #f8f7f3; color: #0a0a0a !important; }
 /* What I do: every row opens its case study */
 .wd-link { position: absolute; inset: 0; z-index: 3; border-radius: inherit; }
-.wd-cta { align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; margin-top: 4px; padding: 13px 18px; border-radius: 999px; background: #f8f7f3; color: #0a0a0a; font-size: 13px; font-weight: 600; letter-spacing: -0.005em; white-space: nowrap; transition: background .3s ease, color .3s ease, gap .35s cubic-bezier(.22,1,.36,1); }
-.wd-cta::before { content: ""; width: 6px; height: 6px; border-radius: 999px; background: #ef3411; order: 2; }
-.wd-cta svg { display: none; }
-.wd-row:hover .wd-cta, .wd-row:focus-within .wd-cta { background: #ef3411; color: #ffffff; gap: 14px; }
-.wd-row:hover .wd-cta::before, .wd-row:focus-within .wd-cta::before { background: #ffffff; }
+.wd-cta { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #f8f7f3; opacity: .85; transition: gap .35s cubic-bezier(.22,1,.36,1), opacity .25s ease; }
+.wd-row:hover .wd-cta, .wd-row:focus-within .wd-cta { gap: 12px; opacity: 1; }
+.wd-row:hover .wd-cta { color: #ef3411; }
 .wd-row img { transition: transform .7s cubic-bezier(.22,1,.36,1); }
 .wd-row:hover img { transform: scale(1.03); }
 </style>
