@@ -70,7 +70,7 @@
       '<div class="sh-nav" role="navigation">' +
       '<a href="' + T.root + '">' + T.home + '</a>' +
       '<a href="' + T.root + '#work">' + T.projects + '<span class="sh-dot"></span></a>' +
-      '<a class="sh-c" href="' + MAIL + '">' + T.contact + '</a>' +
+      '<a class="sh-c" href="' + T.root + '#contact">' + T.contact + '</a>' +
       '<a class="sh-r" href="' + CV + '" target="_blank" rel="noopener">' + T.resume + '</a>' +
       '<span class="sh-lsw" role="group" aria-label="' + (lang === 'de' ? 'Sprache' : 'Language') + '">' +
       '<a href="' + langUrl('en') + '" hreflang="en" lang="en"' + (lang === 'en' ? ' class="on" aria-current="true"' : '') + '>EN</a>' +

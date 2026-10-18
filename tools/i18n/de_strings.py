@@ -419,3 +419,4 @@ DE.update({
 "Snapp!Trip case study": "Case Study Snapp!Trip",
 })
 DE.update({"Want to get in touch?": "Möchten Sie Kontakt aufnehmen?"})
+DE.update({"Research & Human–Computer Interaction": "Research & Mensch-Computer-Interaktion"})
