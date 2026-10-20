@@ -1,0 +1,49 @@
+---
+// One picture in a case study, with its caption.
+// item fields (from the case JSON):
+//   src, alt, caption
+//   h      – height on the 1440px desktop design (left out: the picture's own proportions)
+//   frame  – a screen recording/screenshot: shown top-aligned in a tinted box (bg), optional border
+//   fit    – "contain" to show the whole picture on a colour (bg)
+//   pos    – which part of the picture to keep when it is cropped
+//   link   – the picture opens full size in a new tab
+interface Props { item: any; delay?: number }
+const { item, delay = 0 } = Astro.props;
+const style = [
+  item.h ? `--h: ${item.h}` : '',
+  item.bg ? `--bg: ${item.bg}` : '',
+  item.pos ? `--pos: ${item.pos}` : '',
+  `--d: ${delay}ms`,
+].filter(Boolean).join('; ');
+const Wrap = item.link ? 'a' : 'div';
+---
+<figure class:list={['fig', { frame: item.frame, contain: item.fit === 'contain', fixed: item.h, border: item.border }]} style={style}>
+  <Wrap class="media rv-watch" {...(item.link ? { href: item.src, target: '_blank', rel: 'noopener' } : {})}>
+    <img src={item.src} alt={item.alt} loading="lazy" decoding="async" />
+  </Wrap>
+  {item.caption && <figcaption>{item.caption}</figcaption>}
+</figure>
+
+<style>
+  .fig { margin: 0; display: flex; flex-direction: column; gap: 12px; }
+  .media { display: block; border-radius: 16px; overflow: hidden; background: var(--bg, transparent); transition: opacity 1s ease var(--d), transform 1.1s var(--ease-out) var(--d); }
+  :global(.rv-js) .media:not(.rv-in) { opacity: 0; transform: translateY(32px); }
+  img { width: 100%; height: auto; object-fit: cover; object-position: var(--pos, center); }
+  .fixed img { height: calc(var(--h) * var(--u)); }
+  .frame img { object-position: top; }
+  .contain img { object-fit: contain; }
+  .border .media { border: 1px solid var(--card-line); }
+  figcaption { font-size: 12px; line-height: 1.4; color: var(--muted); }
+
+  @media (min-width: 820px) {
+    .fixed img { min-height: calc(var(--h) * 0.6px); }
+  }
+  /* phones: pictures keep their own proportions, except the small fixed tiles */
+  @media (max-width: 819px) {
+    .fixed img { height: auto; min-height: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .media { transition: none; }
+    :global(.rv-js) .media:not(.rv-in) { opacity: 1; transform: none; }
+  }
+</style>

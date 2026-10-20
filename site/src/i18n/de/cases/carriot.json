@@ -1,0 +1,279 @@
+{
+  "name": "Carriot",
+  "label": "CARRIOT",
+  "title": "Carriot.",
+  "lede": "Eine cloudbasierte Plattform für Last-Mile-Zustellung und Disposition – ich habe die Marke neu aufgebaut und die Plattform neu gestaltet, mit der die Disponenten die Flotte steuern.",
+  "hero": {
+    "src": "/images/da2147c5ed9dd7e55ce78772d9486217.jpg",
+    "alt": "Markenmotiv von Carriot: das Logo über einer grünen Landschaft",
+    "tag": "Carriot",
+    "pos": "50% 55.3618%"
+  },
+  "meta": [
+    {
+      "label": "WANN",
+      "text": "Feb. 2022 – Feb. 2023 · Teheran"
+    },
+    {
+      "label": "ROLLE",
+      "text": "Grafikdesigner · UI-Designer"
+    },
+    {
+      "label": "TEAM",
+      "text": "Ein dreiköpfiges Produktteam: ein PM, ein Frontend-Entwickler und ich im Design."
+    },
+    {
+      "label": "UMFANG",
+      "text": "Brand Book, Logotype, Illustration, UI der Flottenplattform – über 50 Screens, UI-Kit mit über 30 Komponenten"
+    },
+    {
+      "label": "LIVE",
+      "link": {
+        "href": "https://carriot.ir",
+        "text": "carriot.ir"
+      }
+    }
+  ],
+  "problem": {
+    "label": "DIE AUSGANGSLAGE",
+    "title": "Jeder neue Kunde brachte eine Anforderung mit, die der vorherige nie hatte – und alle mussten in ein einziges Panel passen.",
+    "paragraphs": [
+      "Carriot gewann schnell neue Kunden, und die Strategie war, auf die eigenen Logistikbedürfnisse jeder Flotte einzugehen, statt einen festen Workflow zu verkaufen. Ein Pharmagroßhändler brauchte die Laderaumtemperatur direkt am Fahrzeug erfasst; ein Snack- und Getränkehändler musste sofort wissen, wenn ein Fahrer die Lieferzone verließ.",
+      "Jede Anfrage kam als Feature eines einzelnen Kunden an, nicht als Muster – das Panel wuchs also einfach immer weiter. Und das Logistikteam hing an der manuellen Routenplanung, der es bereits vertraute. Funktionsumfang und Akzeptanz waren daher nicht zwei Probleme, sondern eines."
+    ]
+  },
+  "decisions": {
+    "title": "Wichtige Entscheidungen.",
+    "items": [
+      {
+        "title": "Die Identität vom Zeichen aus neu aufgebaut.",
+        "text": "Der alte Schriftzug zerfiel in kleinen Größen und hielt weder ein App-Icon noch einen einfarbigen Druck aus, also habe ich ihn mit gleichmäßigen Strichstärken und Abständen neu aufgebaut. Aus demselben Grund wechselte die Illustration zu 3D: Flache Zeichnungen transportierten nicht, was das Produkt tatsächlich bewegt.",
+        "cost": "Jedes 3D-Asset kostet mehr Produktionszeit als ein flaches."
+      },
+      {
+        "title": "Das Panel pro Kunde konfigurierbar gemacht, nicht pro Release.",
+        "text": "Pharmaflotten, Snack-Touren und Getränkehändler brauchten jeweils etwas, das die anderen nicht brauchten. Statt eines Panels mit sämtlichen Funktionen wurde das Produkt zu einem Kern aus Screens plus Modulen – Laderaumtemperatur, Sicherheitszone, Fahrerbewertung –, die pro Konto aktiviert werden.",
+        "cost": "Jedes Modul ist eine Sache mehr, die der Vertrieb abgrenzen und der Support erklären muss."
+      },
+      {
+        "title": "Ladungsdiebstahl zum Gestaltungsgegenstand gemacht: die Sicherheitszone.",
+        "text": "Ein Kunde verlor immer wieder Ladung, weil Fahrer sie unterwegs verkauften. Wir haben die Sicherheitszone zu einem zentralen Bestandteil des Produkts gemacht – eine Zone pro Fahrzeug und eine Warnung, sobald sie verlassen wird –, sodass der Alarm mit einem Grund ankommt und nicht nur mit einer Position.",
+        "cost": "Fahrer werden dadurch überwacht, deshalb gilt die Zone pro Fahrzeug und folgt nicht den ganzen Tag der Person."
+      },
+      {
+        "title": "Die intelligente Routenplanung so gestaltet, dass sie Disponenten berät statt sie zu ersetzen.",
+        "text": "Der schwierigste Teil war nicht das Interface. Das Logistikteam vertraute seiner eigenen Routenplanung, hatte Interessen daran und sah ein intelligentes System als Bedrohung für die eigene Rolle. Deshalb zeigt der Vorschlag seine Begründung, und die endgültige Zuweisung bleibt beim Disponenten – genau deshalb wurde es angenommen.",
+        "cost": "Weil ein Mensch eingebunden bleibt, ist begrenzt, wie weit die Routenplanung optimieren kann."
+      }
+    ],
+    "costLabel": "DER PREIS"
+  },
+  "work": {
+    "title": "Die Arbeit.",
+    "note": "ZWEI TEILE – ERST DIE MARKE, DANN DIE PLATTFORM",
+    "groups": [
+      {
+        "title": "Das Brand Book gestalten",
+        "sub": "Logotype, Schriftzug, App-Icon und der Wechsel zur 3D-Illustration",
+        "blocks": [
+          {
+            "type": "image",
+            "src": "/images/2711489e4ce3959afcbc45332dcd3af4.jpg",
+            "alt": "Das Brand Book von Carriot",
+            "h": 520.0,
+            "caption": "Das Brand Book, das all das zusammenhält."
+          },
+          {
+            "type": "grid",
+            "cols": 5,
+            "items": [
+              {
+                "src": "/images/a5f6329075d00320d41f26e2fd20a4e9.png",
+                "alt": "Das überarbeitete Logotype von Carriot",
+                "h": 245.0,
+                "caption": "Die Überarbeitung des Logotypes, alt neben neu."
+              },
+              {
+                "src": "/images/bec40f5622c8b0fcd3ecc1571da6bc09.png",
+                "alt": "Der bereinigte Schriftzug von Carriot",
+                "h": 245.0,
+                "caption": "Der Schriftzug, neu gezeichnet mit gleichmäßiger Strichstärke und Laufweite."
+              },
+              {
+                "src": "/images/c08494ce4125a6dabf10dca7f439b63f.png",
+                "alt": "Das App-Icon von Carriot",
+                "h": 245.0,
+                "caption": "Das App-Icon, nur aus dem Zeichen aufgebaut."
+              },
+              {
+                "src": "/images/503cb4f20ab702e6ce25c4acd7fb51f7.jpg",
+                "alt": "Iterationen des Illustrationsstils von Carriot",
+                "h": 245.0,
+                "caption": "Iterationen des Illustrationsstils auf dem Weg zu 3D."
+              },
+              {
+                "src": "/images/7c4c54d395b8b5b868289238b3d1c3d0.png",
+                "alt": "3D-Illustrationen für die Website von Carriot",
+                "h": 245.0,
+                "caption": "Die fertigen 3D-Illustrationen für die Website."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Die Flottenplattform neu gestalten",
+        "sub": "Elf Screens in der Reihenfolge, in der ein Disponent sie sieht",
+        "blocks": [
+          {
+            "type": "image",
+            "src": "/images/1ef9b9810fe259ba1b9af631129c0adb.jpg",
+            "alt": "Flottenübersicht von Carriot",
+            "frame": true,
+            "h": 520.0,
+            "bg": "#08151E",
+            "caption": "Flottenübersicht – was ein Disponent sieht, bevor etwas schiefgeht.",
+            "label": "DER ERSTE SCREEN"
+          },
+          {
+            "type": "grid",
+            "cols": 2,
+            "items": [
+              {
+                "src": "/images/f00f38a58725f6acea39affda02609a5.jpg",
+                "alt": "Live-Flottenkarte von Carriot",
+                "frame": true,
+                "h": 420.0,
+                "bg": "#08151E",
+                "caption": "Live-Flottenkarte – jedes Fahrzeug, sein Status und sein Auftrag."
+              },
+              {
+                "src": "/images/4b736ef1108982a5db96df5422985581.jpg",
+                "alt": "Aufträge und Disposition bei Carriot",
+                "frame": true,
+                "h": 420.0,
+                "bg": "#08151E",
+                "caption": "Aufträge und Disposition – Arbeit zuweisen, ohne die Karte zu verlassen."
+              }
+            ],
+            "label": "STEUERN"
+          },
+          {
+            "type": "grid",
+            "cols": 3,
+            "items": [
+              {
+                "src": "/images/f2048b32112adf9c04fd38fa4939467c.jpg",
+                "alt": "Fahrtenverlauf und Wiedergabe bei Carriot",
+                "frame": true,
+                "h": 280.0,
+                "bg": "#08151E",
+                "caption": "Fahrtenverlauf und Wiedergabe – eine Route im Nachhinein rekonstruiert."
+              },
+              {
+                "src": "/images/f3c7fa103e1b910c1c6bb91a936d5fc4.jpg",
+                "alt": "Intelligente Warnungen bei Carriot",
+                "frame": true,
+                "h": 280.0,
+                "bg": "#08151E",
+                "caption": "Intelligente Warnungen – was einen Disponenten unterbricht und was warten kann."
+              },
+              {
+                "src": "/images/b8cca01f3f31ff06deceaa3c59cf8184.jpg",
+                "alt": "Fahrersicherheit bei Carriot",
+                "frame": true,
+                "h": 280.0,
+                "bg": "#08151E",
+                "caption": "Fahrersicherheit – Verhalten über die Zeit bewertet, nicht pro Vorfall."
+              }
+            ],
+            "label": "ÜBERWACHEN"
+          },
+          {
+            "type": "grid",
+            "cols": 3,
+            "items": [
+              {
+                "src": "/images/218980fc78015af9820f7b5287e98478.jpg",
+                "alt": "Fahrzeugzustand und Wartung bei Carriot",
+                "frame": true,
+                "h": 280.0,
+                "bg": "#08151E",
+                "caption": "Fahrzeugzustand und Wartung – der Service ist fällig, bevor etwas ausfällt."
+              },
+              {
+                "src": "/images/b65584a0229ed7a123df94582f966489.jpg",
+                "alt": "Kraftstoff und Effizienz bei Carriot",
+                "frame": true,
+                "h": 280.0,
+                "bg": "#08151E",
+                "caption": "Kraftstoff und Effizienz – Verbrauch im Verhältnis zu Strecke und Ladung."
+              },
+              {
+                "src": "/images/9ec65e344b85b6751de94cd9c569beaa.jpg",
+                "alt": "Berichte bei Carriot",
+                "frame": true,
+                "h": 280.0,
+                "bg": "#08151E",
+                "caption": "Berichte – die Zahlen, die der Betrieb tatsächlich exportiert."
+              }
+            ],
+            "label": "KOSTEN & FAHRZEUGE"
+          },
+          {
+            "type": "grid",
+            "cols": 3,
+            "items": [
+              {
+                "src": "/images/6c1360df740d01db774a7d8d1adb6c22.jpg",
+                "alt": "Fahrzeugdetails bei Carriot",
+                "frame": true,
+                "h": 280.0,
+                "bg": "#08151E",
+                "caption": "Fahrzeugdetails – ein Fahrzeug, seine gesamte Geschichte."
+              },
+              {
+                "src": "/images/92d0aa7fc3e8d74349723ab859d32e18.jpg",
+                "alt": "Fahrerdetails bei Carriot",
+                "frame": true,
+                "h": 280.0,
+                "bg": "#08151E",
+                "caption": "Fahrerdetails – ein Fahrer, seine Fahrten, Sicherheit und Schulungen."
+              },
+              {
+                "src": "/images/7e6bb1f03f27e9dbda356f56d4d065bf.jpg",
+                "alt": "Anmeldung bei Carriot",
+                "frame": true,
+                "h": 280.0,
+                "bg": "#08151E",
+                "caption": "Anmeldung – wo die neue Marke zuerst ankommt."
+              }
+            ],
+            "label": "PROFILE & ANMELDUNG"
+          }
+        ]
+      }
+    ],
+    "after": [
+      {
+        "type": "image",
+        "src": "/images/732a21f5c0297021888d76e097704c39.jpg",
+        "alt": "Ein Lieferwagen von Carriot mit der neuen Identität",
+        "h": 400.0,
+        "caption": "Die Identität dort, wo sie am Ende landet: auf dem Fahrzeug."
+      }
+    ]
+  },
+  "outcome": {
+    "label": "ERGEBNIS",
+    "title": "Das Team, das sich gegen die intelligente Routenplanung gewehrt hatte, arbeitet am Ende damit.",
+    "text": "Die Betriebskosten sanken, und die Fahrzeuge wurden besser zugewiesen und im Liefergebiet verteilt. Das Brand Book und die Website gingen live, und die Plattformarbeit – über 50 Screens und ein UI-Kit mit über 30 Komponenten – wurde zur Referenz, an der das Team weiterbaute, mit Modulen, durch die ein Produkt Flotten von der Pharma-Kühlkette bis zu Snacks und Getränken bedienen kann.",
+    "cta": {
+      "href": "https://carriot.ir",
+      "text": "carriot.ir besuchen"
+    }
+  },
+  "next": {
+    "title": "Snapp!Trip."
+  }
+}

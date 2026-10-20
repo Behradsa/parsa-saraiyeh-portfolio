@@ -1,0 +1,79 @@
+---
+// Full-screen menu for phones, opened from the header button.
+import LangSwitch from './LangSwitch.astro';
+import Tm from './Tm.astro';
+import { type Lang, ui, url, site } from '../lib/i18n';
+
+interface Props { lang: Lang; page: string }
+const { lang, page } = Astro.props;
+const t = ui(lang);
+const isHome = page === '';
+const hashes = ['work', 'about', 'posts', 'contact'];
+const to = (hash: string) => (isHome ? '#' + hash : url(lang, '', hash));
+---
+<div class="mnu" id="menu" role="dialog" aria-modal="true" aria-label={t.menu.label} aria-hidden="true" data-own-scroll>
+  <div class="mnu-top">
+    <span class="mnu-logo">Parsa<Tm /></span>
+    <button type="button" class="mnu-x" aria-label={t.menu.close} data-menu-close>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+    </button>
+  </div>
+  <ul class="mnu-list">
+    {t.menu.items.map((item, i) => (
+      <li style={`--i: ${i}`}>
+        <a href={to(hashes[i])} data-menu-close><i>{String(i + 1).padStart(2, '0')}</i><b>{item}</b></a>
+      </li>
+    ))}
+  </ul>
+  <div class="mnu-foot" style="--i: 5">
+    <LangSwitch lang={lang} page={page} dark />
+    <a class="mnu-cv" href={site.cv} target="_blank" rel="noopener">{t.contactCard.cv}<span class="dot" aria-hidden="true"></span></a>
+    <div class="mnu-row">
+      <a href={`mailto:${site.email}`}>{site.email}</a>
+      <a class="mnu-in" href={site.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="3" /><path d="M6.5 8.5v5M6.5 6.2v.1M10 13.5v-3a1.8 1.8 0 0 1 3.5 0v3" /></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .mnu { position: fixed; inset: 0; z-index: 50; background: var(--ink); color: var(--on-dark); display: flex; flex-direction: column; padding: 0 20px 28px; overflow-y: auto; clip-path: inset(0 0 100% 0); visibility: hidden; transition: clip-path .7s var(--ease-io), visibility 0s linear .7s; }
+  .mnu.open { clip-path: inset(0 0 0 0); visibility: visible; transition: clip-path .7s var(--ease-io), visibility 0s; }
+  .mnu-top { height: 64px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(248, 247, 243, 0.16); }
+  .mnu-logo { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
+  .mnu-x { width: 44px; height: 44px; margin-right: -10px; background: transparent; border: 0; color: var(--on-dark); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+  .mnu-list { list-style: none; margin: 0; padding: 32px 0 0; display: flex; flex-direction: column; }
+  .mnu-list a { display: flex; align-items: baseline; gap: 14px; padding: 12px 0; border-bottom: 1px solid rgba(248, 247, 243, 0.1); color: var(--on-dark); }
+  .mnu-list b { font-size: 44px; line-height: 1.05; font-weight: 700; letter-spacing: -0.03em; }
+  .mnu-list i { font-style: normal; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; color: rgba(248, 247, 243, 0.45); width: 22px; }
+  .mnu-list li, .mnu-foot { opacity: 0; transform: translateY(24px); transition: opacity .3s ease, transform .3s ease; }
+  .mnu.open .mnu-list li, .mnu.open .mnu-foot { opacity: 1; transform: none; transition: opacity .6s ease calc(.25s + var(--i, 0) * 60ms), transform .8s var(--ease-out) calc(.25s + var(--i, 0) * 60ms); }
+  .mnu-foot { margin-top: auto; padding-top: 32px; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+  .mnu-cv { display: inline-flex; align-items: center; gap: 12px; background: var(--on-dark); color: var(--ink); border-radius: 999px; padding: 15px 20px; font-size: 13px; font-weight: 600; }
+  .mnu-cv:hover { color: var(--ink); }
+  .mnu-row { align-self: stretch; display: flex; align-items: center; justify-content: space-between; padding-top: 16px; border-top: 1px solid rgba(248, 247, 243, 0.16); }
+  .mnu-row a { color: var(--on-dark); font-size: 15px; font-weight: 600; }
+  .mnu-in { width: 44px; height: 44px; border-radius: 999px; border: 1px solid rgba(248, 247, 243, 0.24); display: inline-flex; align-items: center; justify-content: center; }
+  :global(html.mnu-lock), :global(html.mnu-lock body) { overflow: hidden; }
+  @media (min-width: 820px) { .mnu { display: none; } }
+  @media (prefers-reduced-motion: reduce) { .mnu, .mnu.open, .mnu-list li, .mnu-foot { transition: none !important; } }
+</style>
+
+<script>
+  const menu = document.getElementById('menu');
+  const openBtn = document.querySelector<HTMLButtonElement>('.menu-open');
+  if (menu && openBtn) {
+    const set = (open: boolean) => {
+      menu.classList.toggle('open', open);
+      menu.setAttribute('aria-hidden', String(!open));
+      openBtn.setAttribute('aria-expanded', String(open));
+      document.documentElement.classList.toggle('mnu-lock', open);
+      if (open) menu.querySelector<HTMLElement>('.mnu-x')?.focus();
+      else openBtn.focus({ preventScroll: true });
+    };
+    openBtn.addEventListener('click', () => set(true));
+    menu.querySelectorAll('[data-menu-close]').forEach((el) => el.addEventListener('click', () => set(false)));
+    addEventListener('keydown', (e) => { if (e.key === 'Escape' && menu.classList.contains('open')) set(false); });
+  }
+</script>

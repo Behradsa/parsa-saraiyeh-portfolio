@@ -1,0 +1,114 @@
+/* ------------------------------------------------------------------
+   Design tokens — change a colour or size here and it changes everywhere.
+   Desktop sizes are the 1440px design; between 820px and 1440px they
+   scale down with the window; below 820px the mobile design takes over.
+   ------------------------------------------------------------------ */
+:root {
+  /* colours */
+  --bg: #f8f7f3;
+  --ink: #0a0a0a;
+  --text: #5b574f;          /* body copy on light */
+  --muted: #6f6a61;         /* captions, small labels */
+  --line: #dcd8d1;
+  --card-line: #e6e2db;
+  --sand: #e1dcd6;
+  --ghost: #c4bfb7;         /* headings before they fill in */
+  --accent: #ef3411;
+  --link: #b32508;
+  --link-hover: #8f1d06;
+  --white: #ffffff;
+  --on-dark: #f8f7f3;
+  --on-dark-2: rgba(248, 247, 243, 0.7);
+  --on-dark-line: rgba(248, 247, 243, 0.22);
+  --chip-dark: rgba(248, 247, 243, 0.08);
+
+  /* type */
+  --font: 'Inter Tight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  /* 1 design pixel: 1px at 1440 and wider, smaller on narrower desktops */
+  --u: min(1px, 100vw / 1440);
+  --pad: calc(60 * var(--u));         /* page side padding */
+  --gx: clamp(16px, 1.4vw, 24px);     /* the wide dark panels sit closer to the edge */
+  --header-h: 72px;
+
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-io: cubic-bezier(.76, 0, .24, 1);
+}
+
+@media (max-width: 819px) {
+  :root {
+    --u: 1px;
+    --pad: 20px;
+    --gx: 8px;
+    --header-h: 64px;
+  }
+}
+
+/* ---------- base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-padding-top: calc(var(--header-h) + 16px); -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+img, video { display: block; max-width: 100%; }
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--link-hover); }
+h1, h2, h3, p { margin: 0; }
+button { font: inherit; }
+:lang(de) { hyphens: manual; }
+@media (max-width: 819px) { :lang(de) h1, :lang(de) h2, :lang(de) h3 { hyphens: auto; } }
+
+.page { max-width: 1440px; margin: 0 auto; overflow: clip; }
+.wrap { padding-inline: var(--pad); }
+
+/* ---------- small shared pieces ---------- */
+/* ™ next to the Parsa wordmark */
+.tm { display: inline-block; font-size: max(0.32em, 9px); line-height: 1; font-weight: 600; letter-spacing: 0; vertical-align: top; margin: 0.3em 0 0 0; }
+
+/* red dot */
+.dot { display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: var(--accent); flex-shrink: 0; }
+
+/* "● LABEL" above a section */
+.eyebrow { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: 0.12em; color: var(--text); }
+.eyebrow.on-dark { color: var(--on-dark); }
+.mono { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; color: var(--muted); }
+
+/* pill buttons */
+.pill { display: inline-flex; align-items: center; gap: 12px; border-radius: 999px; padding: 14px 20px; font-size: 13px; font-weight: 600; letter-spacing: -0.005em; white-space: nowrap; }
+.pill-dark { background: var(--ink); color: var(--on-dark); }
+.pill-dark:hover { color: var(--on-dark); }
+.pill-light { background: var(--white); color: var(--ink); }
+.pill-light:hover { color: var(--ink); }
+.pill-line { border: 1px solid rgba(248, 247, 243, 0.32); color: var(--on-dark); gap: 10px; }
+.pill-line:hover { color: var(--on-dark); }
+@media (max-width: 819px) { .pill { padding: 15px 20px; } }
+
+/* text that rolls up on hover */
+.roll { display: inline-block; height: 1.3em; line-height: 1.3em; overflow: hidden; vertical-align: middle; }
+.roll-i { display: block; transition: transform .55s cubic-bezier(.65, 0, .35, 1); }
+.roll-i > span { display: block; height: 1.3em; }
+a:hover .roll-i, a:focus-visible .roll-i { transform: translateY(-1.3em); }
+
+/* round arrow badge */
+.arrow-badge { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 999px; background: var(--white); flex-shrink: 0; }
+
+/* ---------- reveal on scroll (scripts/reveal.ts adds .rv-in) ---------- */
+.rvh { transition: color 1.1s var(--ease-out) var(--d, 0ms); }
+.rv-js .rvh:not(.rv-in) { color: var(--ghost) !important; }
+.rvu { transition: opacity .9s ease var(--d, 0ms), transform 1.1s var(--ease-out) var(--d, 0ms); }
+.rv-js .rvu:not(.rv-in) { opacity: 0; transform: translateY(48px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .rvh, .rvu, .roll-i { transition: none; }
+  .rv-js .rvh:not(.rv-in) { color: inherit !important; }
+  .rv-js .rvu:not(.rv-in) { opacity: 1; transform: none; }
+}
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

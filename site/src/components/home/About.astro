@@ -1,0 +1,140 @@
+---
+// About: video card with the quote, and the heading that fills in word by word.
+// Desktop: the section holds still while the heading fills, then the page carries on.
+// Phones: everything sits inside one dark video card.
+import Tm from '../Tm.astro';
+import Roll from '../Roll.astro';
+import { type Lang, home, site } from '../../lib/i18n';
+interface Props { lang: Lang }
+const a = home(Astro.props.lang).about;
+const words = a.title.split(' ');
+---
+<div class="pin">
+  <section id="about" class="about wrap">
+    <div class="grid rv-watch">
+      <div class="media rvu">
+        <video class="vid" poster={a.video.poster} autoplay muted loop playsinline preload="auto" aria-hidden="true">
+          <source src={a.video.webm} type="video/webm" />
+          <source src={a.video.mp4} type="video/mp4" />
+        </video>
+        <div class="shade" aria-hidden="true"></div>
+        <figure class="quote">
+          <blockquote>{a.quote}</blockquote>
+          <figcaption><b>{a.quoteBy}</b><span>{a.quoteRole}</span></figcaption>
+        </figure>
+        <div class="mark" aria-hidden="true">Parsa<Tm /></div>
+      </div>
+      <div class="text">
+        <span class="eyebrow"><span class="dot"></span>{a.label}</span>
+        <h2 class="words">{words.map((w, i) => <>{i > 0 && ' '}<span class="w">{w}</span></>)}</h2>
+        <p class="rvu" style="--d: 80ms">{a.text}</p>
+        <a class="pill pill-dark cv" href={site.cv} target="_blank" rel="noopener"><Roll text={a.cv} /><span class="dot" aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  .pin { flex-shrink: 0; }
+  .pin.live { padding-bottom: 280px; }
+  .pin.live > .about { will-change: transform; }
+
+  .grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; align-items: stretch; height: min(calc(100vh - 120px), 820px); min-height: 640px; }
+  .media { grid-column: span 6; position: relative; overflow: hidden; border-radius: 32px; background: #07060d; isolation: isolate; }
+  .vid { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: blur(10px); transform: scale(1.08); }
+  .shade { display: none; }
+  .quote {
+    position: absolute; z-index: 1; left: 50%; top: 40%; transform: translate(-50%, -50%); margin: 0;
+    width: min(64%, 420px); padding: 40px 24px 24px; border-radius: 16px; color: var(--on-dark);
+    background: rgba(24, 10, 10, 0.4); border: 1px solid rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(22px) saturate(1.2); backdrop-filter: blur(22px) saturate(1.2);
+  }
+  blockquote { margin: 0 0 40px; text-align: center; font-size: 19px; line-height: 1.32; font-weight: 600; letter-spacing: -0.01em; text-wrap: balance; }
+  figcaption { display: flex; flex-direction: column; gap: 4px; }
+  figcaption b { font-size: 13px; font-weight: 600; }
+  figcaption span { font-size: 11px; color: rgba(248, 247, 243, 0.5); }
+  .mark { position: absolute; z-index: 1; left: 0; right: 0; bottom: 28px; text-align: center; font-size: 32px; font-weight: 700; letter-spacing: -0.03em; color: var(--on-dark); }
+
+  .text { grid-column: 8 / span 5; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .words { max-width: 560px; font-size: calc(44 * var(--u)); line-height: 1.08; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); }
+  .w { transition: color .25s ease; }
+  :global(.rv-js) .words .w:not(.on) { color: var(--ghost); }
+  .text p { max-width: 520px; font-size: 15px; line-height: 1.55; color: var(--text); }
+  .cv { align-self: flex-start; }
+
+  @media (min-width: 820px) and (max-width: 1100px) {
+    .words { font-size: 30px; }
+  }
+
+  @media (max-width: 819px) {
+    .about { padding: 64px var(--gx) 0; }
+    .grid {
+      display: flex; flex-direction: column; gap: 20px; height: auto; min-height: 0;
+      position: relative; overflow: hidden; isolation: isolate; border-radius: 24px; background: #07060d;
+      padding: 24px 24px 28px;
+      transition: opacity .9s ease, transform 1.1s var(--ease-out);
+    }
+    :global(.rv-js) .grid:not(.rv-in) { opacity: 0; transform: translateY(48px); }
+    .media { display: contents; }
+    .shade { display: block; position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg, rgba(7, 6, 13, 0.05) 0%, rgba(7, 6, 13, 0.5) 42%, rgba(7, 6, 13, 0.88) 70%, #07060d 100%); }
+    .quote { position: relative; left: auto; top: auto; transform: none; width: auto; margin: 40px 0 44px; padding: 28px 20px 20px; }
+    blockquote { margin-bottom: 28px; font-size: 17px; }
+    .mark { display: none; }
+    .text { position: relative; z-index: 1; gap: 20px; }
+    .eyebrow { color: var(--on-dark); }
+    .words { font-size: 24px; line-height: 1.25; letter-spacing: -0.015em; color: var(--on-dark); }
+    :global(.rv-js) .words .w:not(.on) { color: rgba(248, 247, 243, 0.32); }
+    .text p { font-size: 15px; color: rgba(248, 247, 243, 0.78); }
+    .cv { background: var(--on-dark); color: var(--ink); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .w, .grid { transition: none; }
+    :global(.rv-js) .words .w:not(.on) { color: inherit !important; }
+  }
+</style>
+
+<script>
+  import { reduceMotion, isMobile, clamp, onScrollFrame, pageScrolls, $$ } from '../../scripts/motion';
+
+  // background video: muted autoplay, retried when the browser blocks it
+  const vid = document.querySelector<HTMLVideoElement>('.about .vid');
+  if (vid) {
+    vid.muted = true; vid.defaultMuted = true; vid.playsInline = true;
+    if (reduceMotion()) vid.pause();
+    else {
+      const play = () => { if (vid.paused) vid.play()?.catch(() => {}); };
+      play();
+      ['canplay', 'loadeddata'].forEach((ev) => vid.addEventListener(ev, play));
+      document.addEventListener('visibilitychange', play);
+      addEventListener('pointerdown', play, { once: true });
+      new IntersectionObserver((es) => es.forEach((e) => e.isIntersecting && play())).observe(vid);
+    }
+  }
+
+  // heading fills word by word with the scroll
+  const pin = document.querySelector<HTMLElement>('.about')?.parentElement;
+  const sec = document.querySelector<HTMLElement>('.about');
+  const words = $$('.about .w');
+  const HOLD = 280; // px of scrolling spent on the heading while the section is held
+  let live = false;
+  onScrollFrame(() => {
+    if (!pin || !sec || !words.length) return;
+    const vh = innerHeight;
+    const canPin = !reduceMotion() && !isMobile();
+    const extra = live ? HOLD : 0;
+    const nowLive = canPin && document.documentElement.scrollHeight - extra - vh >= 2;
+    if (nowLive !== live) { live = nowLive; pin.classList.toggle('live', live); if (!live) sec.style.transform = ''; }
+    let p = 1;
+    if (live) {
+      const hold = Math.max(0, (vh - sec.offsetHeight) / 2);   // section top when it is centred
+      const over = clamp(hold - pin.getBoundingClientRect().top, 0, HOLD);
+      sec.style.transform = `translateY(${over.toFixed(1)}px)`;
+      p = over / HOLD;
+    } else if (!reduceMotion() && pageScrolls()) {
+      const top = words[0].parentElement!.getBoundingClientRect().top;
+      p = clamp((vh * 0.85 - top) / (vh * 0.45), 0, 1);
+    }
+    const lit = Math.round(p * words.length);
+    words.forEach((w, i) => w.classList.toggle('on', i < lit));
+  });
+</script>

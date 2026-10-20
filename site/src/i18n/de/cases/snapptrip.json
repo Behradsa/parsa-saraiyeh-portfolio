@@ -1,0 +1,219 @@
+{
+  "name": "Snapp!Trip",
+  "label": "SNAPP!TRIP",
+  "title": "Snapp!Trip",
+  "lede": "Irans Online-Reiseplattform – Hotels, Flüge, Züge und Busse – innerhalb der Snapp Group. Drei Jahre lang habe ich die wöchentlichen Marketinginhalte gestaltet und das Brand Book aufgebaut, das es nie gegeben hatte.",
+  "hero": {
+    "src": "/images/054b12a001750f685043034c3a733c6d.jpg",
+    "alt": "Snapp!Trip-Schriftzug als Strichzeichnung auf rotem Grund",
+    "tag": "Snapp!Trip"
+  },
+  "meta": [
+    {
+      "label": "WANN",
+      "text": "Drei Jahre in Teheran, von Okt. 2020 bis Okt. 2023."
+    },
+    {
+      "label": "ROLLE",
+      "text": "Grafikdesigner im Marketingteam, der aus jedem Kampagnenbriefing die Motive gemacht hat, die veröffentlicht wurden."
+    },
+    {
+      "label": "TEAM",
+      "text": "Ein vierköpfiges Marketingteam: Kampagnenmanagement, Art Direction, Social Media – und ich im Design."
+    },
+    {
+      "label": "UMFANG",
+      "text": "Kampagnenmotive, Social-Media-Posts, Employer Branding, Illustration und Banner – plus der zwanzigseitige visuelle Leitfaden."
+    },
+    {
+      "label": "LIVE",
+      "link": {
+        "href": "https://snapptrip.com",
+        "text": "snapptrip.com"
+      }
+    }
+  ],
+  "feature": {
+    "href": "/SnappTrip_Visual%20Design%20Guidelines%20Summary.pdf",
+    "image": {
+      "src": "/images/18e2d3731ec46c3c168c3b0c3fb261f2.png",
+      "alt": "Das Cover des visuellen Gestaltungsleitfadens von Snapp!Trip"
+    },
+    "label": "DER LEITFADEN",
+    "title": "Zwanzig Seiten, damit die nächste Person dasselbe gestaltet, ohne fragen zu müssen.",
+    "text": "Logo und Schutzraum · Farbe · Iran Sans · drei Story-Formate · Vorgaben zu Pixelmaß, Format und Dateigröße für jede Bannerplatzierung · drei Icon-Familien",
+    "cta": "PDF öffnen"
+  },
+  "problem": {
+    "label": "DIE AUSGANGSLAGE",
+    "title": "Es hatte die Marke der Muttergesellschaft geerbt und nie eine eigene gehabt.",
+    "paragraphs": [
+      "Die Inhalte liefen jede Woche, ohne Pause: ein E-Mail-Newsletter, Instagram als Bild und Video, Telegram, LinkedIn, Website-Banner, In-App-Banner in der Super-App, Drucksachen und HR-Material – und obendrauf Kampagnen. Vier Personen im Marketing arbeiteten daran, und eine davon war der Designer.",
+      "Die Snapp Group legte die oberste Ebene fest – das Verhältnis der Logos, das Rot, die Schrift –, und darunter gab es nichts. Illustration, Montagestil, wie eine Rabattzahl auf einem Banner sitzt, wie eine Story aussieht: All das wurde bei jedem Motiv neu entschieden, von dem, der gerade zuerst dran war. Deshalb lief das Brand Book als eigenes Projekt parallel zum Marketingkalender, statt auf einen ruhigen Monat zu warten, der nie gekommen wäre."
+    ]
+  },
+  "decisions": {
+    "title": "Wichtige Entscheidungen.",
+    "items": [
+      {
+        "title": "Die Montage von 3D auf echte Fotografie umgestellt.",
+        "text": "Eine 3D-Montage verkauft ein Gefühl; ein Foto von Istanbul verkauft einen Ort, den man buchen kann. Der Leitfaden legte dann drei Post-Techniken und drei Story-Typen fest, damit die Wahl keine Geschmacksfrage mehr war.",
+        "cost": "Jeder Post hängt jetzt davon ab, dass es ein echtes Foto von diesem Ort gibt."
+      },
+      {
+        "title": "Die Illustration in zwei Familien aufgeteilt: Städte und Themen.",
+        "text": "Die Städte tragen das Reiseziel, das Themen-Set trägt die Kampagne. Themen sind nur weiße Linien, wenig Details, auf dem dunklen Primärblau – so bleiben sie auch bei 358×196 neben der Buchungssuche lesbar.",
+        "cost": "Eine neue Stadt bedeutet eine neue Illustration, keine Neukombination der alten."
+      },
+      {
+        "title": "Die Spezifikation geschrieben, statt jedes Asset selbst zu machen.",
+        "text": "Acht Kanäle, jede Woche, vier Personen. Also wurde jede Platzierung festgehalten: Startseiten-Banner 1073×603 JPEG unter 300 KB, Titel 34 pt, CTA 22 pt; breites Banner 1920×320 PNG, ohne CTA; App-Banner 1080×705 PNG unter 200 KB.",
+        "cost": "Eine Spezifikation muss gepflegt werden; an dem Tag, an dem sie veraltet, fängt sie an zu lügen."
+      }
+    ],
+    "costLabel": "DER PREIS"
+  },
+  "work": {
+    "title": "Die Arbeit.",
+    "note": "FÜNF BEREICHE",
+    "groups": [
+      {
+        "title": "Kampagnenmotive",
+        "sub": "Das Hauptmotiv, aus dem eine Kampagne entsteht",
+        "blocks": [
+          {
+            "type": "image",
+            "src": "/images/0c08aaa4ebda10b5594ea9b268327fde.jpg",
+            "alt": "Kampagnenmotive von Snapp!Trip",
+            "h": 560.0,
+            "caption": "Kampagnenmotive und die Ableitungen daraus für jede Platzierung."
+          }
+        ]
+      },
+      {
+        "title": "Social Media",
+        "sub": "Instagram, wo sich der Montagestil mittendrin geändert hat",
+        "blocks": [
+          {
+            "type": "grid",
+            "cols": 3,
+            "items": [
+              {
+                "src": "/images/9b03f57c67b2f11d0bcec9c44491ce13.png",
+                "alt": "Montage-Post „Best Souvenir from Istanbul“",
+                "h": 424.0,
+                "pos": "center top",
+                "caption": "„Best Souvenir from Istanbul“ – eine Montage aus Gegenständen, kein Foto der Stadt."
+              },
+              {
+                "src": "/images/b6f53099e92236afcadad653beae1652.png",
+                "alt": "Post der Rabattkampagne LuckyTrip",
+                "caption": "LuckyTrip – das Rabattspiel, bei dem die Zahl den Post tragen musste."
+              },
+              {
+                "src": "/images/c681048e0a8ba2387cd4f8c5c6d595e2.jpg",
+                "alt": "Ein Post im 3D-Montagestil",
+                "caption": "Vorher: der 3D-Montagestil, bei dem gerenderte Objekte für den Ort stehen."
+              },
+              {
+                "src": "/images/54fc97c5cfc2cc7dbee68a10238d1370.png",
+                "alt": "Dieselbe Idee mit echter Fotografie umgesetzt",
+                "caption": "Nachher: dieselbe Idee mit echter Fotografie – die oben beschriebene Änderung."
+              },
+              {
+                "src": "/images/5ddc8f1141e404391422172e0e5b8b85.png",
+                "alt": "Ein späterer statischer Montage-Post",
+                "caption": "A later post in the settled style — [which campaign this belonged to]."
+              },
+              {
+                "src": "/images/f8eaa31a925414b7a5b95ede3375b4a9.png",
+                "alt": "Ein späterer statischer Montage-Post",
+                "caption": "And another — [which campaign this belonged to]."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Employer Branding",
+        "sub": "Dieselbe Stimme, gerichtet an Menschen, die dazukommen könnten",
+        "blocks": [
+          {
+            "type": "grid",
+            "cols": 3,
+            "items": [
+              {
+                "src": "/images/f0aea9e5bd43ad3a33a818eb180db62e.png",
+                "alt": "Post über Apps für Aufgabenmanagement",
+                "h": 290.0,
+                "caption": "Apps für Aufgabenmanagement, die das Team nutzt – ein Recruiting-Post, der etwas verschenkt."
+              },
+              {
+                "src": "/images/5dc76e202e419ca99df7ec41fa026357.png",
+                "alt": "Post mit Tipps für Vorstellungsgespräche",
+                "h": 290.0,
+                "caption": "Tipps für Vorstellungsgespräche, gerichtet an Kandidaten, bevor sie sich bewerben."
+              },
+              {
+                "src": "/images/cd73db10522c6ec7aeac1d991980caf6.png",
+                "alt": "Ein Post mit einer Stellenausschreibung",
+                "h": 290.0,
+                "caption": "Der Stellen-Post selbst – das Format, das jede offene Stelle wiederverwendet hat."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Illustration",
+        "sub": "Zwei Familien: Städte und das Hauptthema nach dem Snapp-Leitfaden",
+        "blocks": [
+          {
+            "type": "image",
+            "src": "/images/e22b69d1a61e27d82a91581fe68d6044.jpg",
+            "alt": "Das Illustrationsset von Snapp!Trip",
+            "h": 500.0,
+            "caption": "Das Illustrationsset im Ganzen, beide Familien nebeneinander."
+          },
+          {
+            "type": "grid",
+            "cols": 2,
+            "items": [
+              {
+                "src": "/images/1f8f8af99b5d14abc631f211e3820e85.png",
+                "alt": "Städte-Illustrationen",
+                "h": 520.0,
+                "caption": "The cities family — [what each city has to include to stay recognisable]."
+              },
+              {
+                "src": "/images/ce577bb98b37f5027123f8fa7072500c.png",
+                "alt": "Themen-Illustrationen",
+                "h": 520.0,
+                "caption": "The theme family — [the rule the Snapp guideline set for these]."
+              }
+            ]
+          },
+          {
+            "type": "image",
+            "src": "/images/ee9f072af624371735caf599c1e51b6f.png",
+            "alt": "Illustrationen in einem breiten Streifen angeordnet",
+            "h": 400.0,
+            "caption": "The set laid out end to end — [how many there were by the time you left]."
+          }
+        ]
+      }
+    ]
+  },
+  "outcome": {
+    "label": "ERGEBNIS",
+    "title": "Am Ende hatte Snapp!Trip eine eigene Identität.",
+    "text": "Die Illustrationsfamilien und die Montageregel haben die Kampagnen überdauert, für die sie gemacht wurden, und dank der Spezifikation konnten vier Personen jede Woche auf acht Kanälen veröffentlichen, ohne dasselbe zweimal entscheiden zu müssen.",
+    "cta": {
+      "href": "https://snapptrip.com",
+      "text": "snapptrip.com besuchen"
+    }
+  },
+  "next": {
+    "title": "Omid Analyzer."
+  }
+}

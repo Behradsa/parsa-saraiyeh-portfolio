@@ -1,0 +1,57 @@
+{
+  "lang": "de",
+  "locale": "de_DE",
+  "dash": "–",
+  "role": "PRODUCT DESIGNER (UI/UX)",
+  "nav": {
+    "home": "Start",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "resume": "Lebenslauf",
+    "language": "Sprache",
+    "main": "Hauptmenü"
+  },
+  "menu": {
+    "open": "Menü öffnen",
+    "close": "Menü schließen",
+    "label": "Menü",
+    "items": [
+      "Arbeiten",
+      "Über mich",
+      "Beiträge",
+      "Kontakt"
+    ]
+  },
+  "footer": {
+    "pages": "Seiten",
+    "home": "Start",
+    "projects": "Projekte",
+    "posts": "Beiträge",
+    "resume": "Lebenslauf",
+    "contact": "Kontakt",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "copyright": "© 2026 Parsa Saraiyeh",
+    "domain": "parsa-sa.com"
+  },
+  "contactCard": {
+    "title": "Kontakt aufnehmen",
+    "aria": "Kontakt aufnehmen: E-Mail, LinkedIn oder Lebenslauf",
+    "email": "E-Mail",
+    "linkedin": "LinkedIn",
+    "cvLabel": "Lebenslauf",
+    "cv": "Lebenslauf herunterladen"
+  },
+  "viewProject": "Projekt ansehen",
+  "allProjects": "Alle Projekte",
+  "caseStudy": "CASE STUDY",
+  "nextProject": "NÄCHSTES PROJEKT",
+  "meta": {
+    "homeTitle": "Parsa Saraiyeh – Product Designer (UI/UX)",
+    "homeDescription": "Produktdesigner in Oldenburg. Marken, Interfaces und Designsysteme für Produkte aus Fintech, Logistik, Reisen und Immobilien.",
+    "homeImageAlt": "Parsa Saraiyeh, Product Designer (UI/UX)",
+    "caseTitle": "{name} – Parsa Saraiyeh",
+    "caseShareTitle": "{name} – Case Study von Parsa Saraiyeh",
+    "caseImageAlt": "{name} Case Study"
+  }
+}

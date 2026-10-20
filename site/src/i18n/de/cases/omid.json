@@ -1,0 +1,134 @@
+{
+  "name": "Omid Analyzer",
+  "label": "OMID ANALYZER",
+  "title": "Omid Analyzer.",
+  "lede": "Eine Marke für die Omid Financial Group, die seit 2015 algorithmischen Handel und Market-Making am iranischen Kapitalmarkt betreibt – gestaltet, um auf Persisch und in lateinischer Schrift zugleich zu funktionieren.",
+  "hero": {
+    "src": "/images/456dead309bc993a951a23307b04c25c.jpg",
+    "alt": "Die Wortmarke von OMID Analyzer über einem schwarzen Nebel",
+    "tag": "Omid Analyzer"
+  },
+  "meta": [
+    {
+      "label": "ROLLE",
+      "text": "Grafikdesigner"
+    },
+    {
+      "label": "TEAM",
+      "text": "Ein Marketingteam, mit mir für Marke und Design."
+    },
+    {
+      "label": "UMFANG",
+      "text": "Bildmarke, zweisprachige Wortmarke, Zeichen der Produktfamilie, Website"
+    },
+    {
+      "label": "LIVE",
+      "link": {
+        "href": "https://omid.ir",
+        "text": "omid.ir"
+      }
+    }
+  ],
+  "problem": {
+    "label": "DIE AUSGANGSLAGE",
+    "title": "Sie musste für Trader seriös wirken und für Neulinge am Markt verständlich sein – in zwei Schriften, über drei Produkte hinweg.",
+    "paragraphs": [
+      "Omid Analyzer spricht zwei Gruppen gleichzeitig an: Menschen, die bereits handeln und viele Informationen wollen, und Neulinge am Markt, die dieselben Zahlen erklärt bekommen müssen. Beide müssen dasselbe glauben, bevor sie irgendetwas nutzen – dass dies ein seriöser Ort für ihr Geld ist.",
+      "Eine Finanzmarke lebt auf Screens, die fast nur aus Zahlen bestehen – die Identität bekommt also ein paar Sekunden oben auf der Seite und verschwindet dann unter Daten. Und sie musste auf Persisch und in lateinischer Schrift funktionieren, unter drei Produktnamen, ohne dass einer davon wie eine andere Firma aussieht."
+    ]
+  },
+  "decisions": {
+    "title": "Wichtige Entscheidungen.",
+    "items": [
+      {
+        "title": "Die Wortmarke auf Persisch und in lateinischer Schrift als ein Entwurf gezeichnet, nicht als zwei.",
+        "text": "Persische und lateinische Schrift haben weder Grundlinie noch Strichrhythmus noch optische Mitte gemeinsam. Ich habe sie über Strichstärke und Höhe aufeinander abgestimmt statt über die Buchstabenform und dafür etwas vom Strichkontrast der persischen Schrift aufgegeben, damit beide bei gleicher Größe als ein Zeichen wirken."
+      },
+      {
+        "title": "Der Produktfamilie ein System gegeben: OMIDMax, OMIDHub, OMIDPlus.",
+        "text": "Ein Aufbau bleibt fest – das Zeichen, die OMID-Kombination, die Abstände –, nur der Zusatz ändert sich. Ein viertes Produkt ist ein Wort, kein neuer Entwurf."
+      },
+      {
+        "title": "Mit der Galaxie gezeigt, dass der Markt ein System ist und kein Rauschen.",
+        "text": "Trading-Marken verkaufen Chaos: rote und grüne Kerzen, Pfeile, Dringlichkeit. Der Nebel sagt das Gegenteil – weit, geordnet, aus der Distanz lesbar. Er bleibt dunkel und unscharf, damit Schrift immer auf ihm steht und nicht in ihm."
+      }
+    ]
+  },
+  "work": {
+    "title": "Die Arbeit.",
+    "note": "MARKE, WEBSITE",
+    "groups": [
+      {
+        "title": "Marke",
+        "sub": "Das Zeichen, die zweisprachige Wortmarke und die Produktfamilie",
+        "blocks": [
+          {
+            "type": "image",
+            "src": "/images/2a0a419f049c67a6323a139a1f72113d.jpg",
+            "alt": "Die Markenwelt von Omid",
+            "h": 560.0,
+            "caption": "Die Markenwelt, in der die Zeichen leben – die Galaxie, die sich bis auf die Website zieht."
+          },
+          {
+            "type": "grid",
+            "cols": 4,
+            "items": [
+              {
+                "src": "/images/22a5983fbd386cc1b864090690914b61.png",
+                "alt": "Die Bildmarke von Omid: ein Punkt mit Verlauf auf Dunkelblau",
+                "h": 440.0,
+                "fit": "contain",
+                "bg": "#000530",
+                "caption": "Die Bildmarke – ein einzelner Punkt mit Verlauf, die gesamte Identität in ihrer kleinsten Form."
+              },
+              {
+                "src": "/images/c5165d42878ec0245cf9234ce525900c.png",
+                "alt": "Die Wortmarke von Omid Analyzer auf Persisch und in lateinischer Schrift",
+                "h": 440.0,
+                "caption": "Die Wortmarke in beiden Schriften, mit gleicher Strichstärke und Höhe."
+              },
+              {
+                "src": "/images/ccff3c81b6a34d328d247dfd7ee7a168.png",
+                "alt": "Logos für OMIDMax, OMIDHub und OMIDPlus",
+                "h": 440.0,
+                "caption": "OMIDMax, OMIDHub und OMIDPlus – ein Aufbau, drei Namen."
+              },
+              {
+                "src": "/images/7108ede49b68407f9859f995cdb600f9.png",
+                "alt": "Das App-Icon von Omid",
+                "h": 440.0,
+                "caption": "Das App-Icon – nur das Zeichen, ganz ohne Wortmarke."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Website",
+        "sub": "Wo eine Trading-Plattform vertrauenswürdig wirken muss, bevor sie clever wirkt",
+        "blocks": [
+          {
+            "type": "image",
+            "src": "/images/469289fb34495b45254fbd3c19ce8d14.png",
+            "alt": "Das Website-Design von Omid",
+            "h": 620.0,
+            "pos": "center top",
+            "caption": "Die Website wie gestaltet – der erste Screen muss sagen, dass dies ein seriöser Ort für Geld ist, bevor er irgendetwas erklärt."
+          }
+        ]
+      }
+    ]
+  },
+  "outcome": {
+    "label": "ERGEBNIS",
+    "title": "Sie ist live, und die Produktfamilie hält bis heute.",
+    "text": "Die Marke ist auf omid.ir live: Die Galaxie-Welt, die zweisprachige Wortmarke und die Produktfamilie mit einem gemeinsamen Aufbau gingen mit ihr online, und die Omid Financial Group betreibt seit 2015 algorithmischen Handel und Market-Making am iranischen Kapitalmarkt.",
+    "cta": {
+      "href": "https://omid.ir",
+      "text": "omid.ir besuchen"
+    }
+  },
+  "next": {
+    "title": "Homano."
+  }
+}

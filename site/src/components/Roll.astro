@@ -1,0 +1,6 @@
+---
+// Text that rolls up to a copy of itself when its link is hovered.
+interface Props { text: string }
+const { text } = Astro.props;
+---
+<span class="roll"><span class="roll-i"><span>{text}</span><span aria-hidden="true">{text}</span></span></span>

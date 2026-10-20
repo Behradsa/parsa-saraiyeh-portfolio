@@ -1,0 +1,149 @@
+---
+// "What I do" — four rows, each opening its case study. While scrolling, the rows stick
+// near the top and each next one slides up over the one before.
+import { type Lang, home, url, external } from '../../lib/i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const s = home(lang).services;
+const href = (it: any) => (it.page ? url(lang, it.page) : external(lang, it.href));
+---
+<section class="services">
+  <div class="box">
+    <div class="head">
+      <h2 class="rvh">{s.title}</h2>
+      <div class="plus" aria-hidden="true"><span>+</span><span>+</span><span>+</span><span>+</span></div>
+      <span class="count" aria-hidden="true">{s.count}</span>
+    </div>
+
+    {s.items.map((it: any, i: number) => (
+      <div class="row rvu">
+        <div class="col">
+          <div class="title">
+            <span class="num" aria-hidden="true">{i + 1}</span>
+            <span class="bullet" aria-hidden="true"></span>
+            <h3>{it.title}</h3>
+          </div>
+          <div class="chips">
+            {it.chips.map((c: string, k: number) => (
+              <span class:list={['chip', { 'desk-only': it.chipsMobile && k >= it.chipsMobile }]}>{c}</span>
+            ))}
+          </div>
+        </div>
+        <div class="col">
+          {it.image ? (
+            <img class="pic" src={it.image} alt={it.alt} loading="lazy" />
+          ) : (
+            <span class="pic board" role="img" aria-label={it.board.label}>
+              {it.board.columns.map((col: any) => (
+                <span class="b-col">
+                  <span class="b-h">{col.title}</span>
+                  {col.cards.map((c: string) => <span class="b-card">{c}</span>)}
+                </span>
+              ))}
+            </span>
+          )}
+          <p>{it.text}</p>
+          <span class="cta">{it.cta}<svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 14L14 6M7.5 6H14v6.5" /></svg></span>
+        </div>
+        <a class="link" href={href(it)} aria-label={it.cta} {...(it.newTab ? { target: '_blank', rel: 'noopener' } : {})}></a>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .services { padding: calc(96 * var(--u)) var(--gx) 0; }
+  .box { background: var(--ink); border-radius: 32px; padding: calc(48 * var(--u)); color: var(--on-dark); }
+  .box.live { padding-bottom: 48px; }
+
+  .head { min-height: calc(120 * var(--u)); display: flex; align-items: flex-start; justify-content: space-between; }
+  .head h2, .count { font-size: calc(56 * var(--u)); line-height: 0.96; font-weight: 700; letter-spacing: -0.03em; color: var(--on-dark); }
+  .plus { flex: 1 1 0; align-self: center; display: flex; justify-content: space-around; padding: 0 64px; margin-top: -40px; font-size: 22px; color: rgba(248, 247, 243, 0.6); }
+  .plus > span { display: inline-block; transform-origin: 50% 55%; animation: spin 4s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .row {
+    position: relative; margin-left: 25%;
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px;
+    padding: 32px 0 40px; border-top: 1px solid var(--on-dark-line); background: var(--ink);
+  }
+  .box.live .row { position: sticky; top: 96px; }
+  .row > :not(.link) { opacity: calc(1 - var(--cov, 0) * 0.7); }
+  .row.rvu { transition: opacity .9s ease; }
+  :global(.rv-js) .box .row.rvu:not(.rv-in) { transform: none; }
+
+  .col { display: flex; flex-direction: column; gap: 16px; }
+  .col:first-child { gap: 18px; }
+  .title { display: flex; align-items: center; gap: 12px; }
+  .bullet { width: 8px; height: 8px; border-radius: 999px; background: var(--accent); flex-shrink: 0; }
+  .num { display: none; }
+  h3 { font-size: 24px; line-height: 1.25; font-weight: 600; letter-spacing: -0.015em; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; max-width: 400px; }
+  .chip { background: var(--chip-dark); border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 600; }
+
+  .pic { width: 220px; height: 136px; object-fit: cover; border-radius: 12px; transition: transform .7s var(--ease-out); }
+  .row:hover .pic { transform: scale(1.03); }
+  .col p { max-width: 380px; font-size: 13px; line-height: 1.5; color: var(--on-dark-2); }
+  .cta { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; opacity: .85; transition: gap .35s var(--ease-out), opacity .25s ease, color .25s ease; }
+  .row:hover .cta, .row:focus-within .cta { gap: 12px; opacity: 1; }
+  .row:hover .cta { color: var(--accent); }
+  .link { position: absolute; inset: 0; z-index: 3; border-radius: inherit; }
+
+  /* the little card-sorting board */
+  .board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; align-items: start; padding: 10px; background: var(--bg); }
+  .b-col { display: flex; flex-direction: column; gap: 5px; background: #ebe8e1; border-radius: 8px; padding: 7px 6px; }
+  .b-h { font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); }
+  .b-card { background: var(--white); border-radius: 5px; padding: 5px 6px; font-size: 9px; font-weight: 600; color: var(--ink); border-left: 2px solid var(--accent); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); }
+  .b-card:nth-child(2) { transform: rotate(-2deg); }
+  .b-card:nth-child(3) { transform: rotate(1.5deg); }
+
+  @media (min-width: 820px) and (max-width: 1100px) {
+    .row { margin-left: 0; }
+  }
+
+  @media (max-width: 819px) {
+    .services { padding-top: 64px; }
+    .box { border-radius: 28px; padding: 24px 20px; display: flex; flex-direction: column; gap: 20px; }
+    .box.live { padding-bottom: 24px; }
+    .head { min-height: 0; }
+    .head h2 { font-size: 40px; line-height: 1; letter-spacing: -0.02em; }
+    .count { font-size: 19px; letter-spacing: 0; }
+    .plus { display: none; }
+    .row { margin-left: 0; display: flex; flex-direction: column; gap: 12px; padding: 20px 0 0; }
+    .box.live .row { top: 80px; padding-bottom: 20px; }
+    .col, .col:first-child { display: contents; }
+    .bullet { display: none; }
+    .num { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; flex-shrink: 0; border-radius: 999px; background: var(--accent); font-size: 19px; font-weight: 700; color: var(--white); }
+    h3 { font-size: 22px; }
+    .chips { max-width: none; }
+    .chip { padding: 7px 14px; font-size: 12px; }
+    .desk-only { display: none; }
+    .pic { width: 100%; height: 180px; border-radius: 16px; }
+    .row > :not(.link) { opacity: 1; }
+    .title, .chips, .pic, .col p, .cta { opacity: calc(1 - var(--cov, 0) * 0.7); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .plus > span { animation: none; }
+    .pic, .cta { transition: none; }
+  }
+</style>
+
+<script>
+  import { reduceMotion, clamp, onScrollFrame, pageScrolls, $$ } from '../../scripts/motion';
+  const box = document.querySelector<HTMLElement>('.services .box');
+  const rows = $$('.services .row');
+  onScrollFrame(() => {
+    if (!box) return;
+    const live = !reduceMotion() && pageScrolls();
+    box.classList.toggle('live', live);
+    rows.forEach((row, i) => {
+      let cov = 0;
+      const nx = rows[i + 1];
+      if (live && nx) {
+        const rr = row.getBoundingClientRect(), nr = nx.getBoundingClientRect();
+        cov = clamp((rr.bottom - nr.top) / rr.height, 0, 1);
+      }
+      row.style.setProperty('--cov', cov.toFixed(3));
+    });
+  });
+</script>

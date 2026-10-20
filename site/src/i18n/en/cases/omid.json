@@ -1,0 +1,134 @@
+{
+  "name": "Omid Analyzer",
+  "label": "OMID ANALYZER",
+  "title": "Omid Analyzer.",
+  "lede": "A brand for Omid Financial Group, who have run algorithmic trading and market-making in Iran’s capital market since 2015 — built to read in Persian and Latin at once.",
+  "hero": {
+    "src": "/images/456dead309bc993a951a23307b04c25c.jpg",
+    "alt": "The OMID Analyzer wordmark over a black nebula",
+    "tag": "Omid Analyzer"
+  },
+  "meta": [
+    {
+      "label": "ROLE",
+      "text": "Graphic Designer"
+    },
+    {
+      "label": "TEAM",
+      "text": "A marketing team, with me on brand and design."
+    },
+    {
+      "label": "SCOPE",
+      "text": "Logomark, bilingual wordmark, product-family marks, website"
+    },
+    {
+      "label": "LIVE",
+      "link": {
+        "href": "https://omid.ir",
+        "text": "omid.ir"
+      }
+    }
+  ],
+  "problem": {
+    "label": "THE PROBLEM",
+    "title": "It had to read as serious to a trader and as legible to someone new to markets — in two scripts, across three products.",
+    "paragraphs": [
+      "Omid Analyzer talks to two rooms at once: people who already trade and want density, and people new to markets who need the same numbers explained. Both have to believe the same thing before they use anything — that this is a serious place to put money.",
+      "A financial brand lives on screens that are almost entirely numbers, so the identity gets a couple of seconds at the top of a page and then disappears under data. And it had to hold in Persian and Latin, under three product names, without any of them looking like a different company."
+    ]
+  },
+  "decisions": {
+    "title": "Key decisions.",
+    "items": [
+      {
+        "title": "Drew the wordmark in Persian and Latin as one design, not two.",
+        "text": "Persian and Latin share no baseline, stroke rhythm or optical centre. I matched them on weight and height rather than letterform, giving up some of the Persian’s stroke contrast so the pair reads as one mark at the same size."
+      },
+      {
+        "title": "Gave the product family one system: OMIDMax, OMIDHub, OMIDPlus.",
+        "text": "One construction stays fixed — the mark, the OMID lockup, the spacing — and only the suffix changes. A fourth product is a word, not a redraw."
+      },
+      {
+        "title": "Used the galaxy to say the market is a system, not noise.",
+        "text": "Trading brands sell chaos: red and green candles, arrows, urgency. The nebula says the opposite — vast, ordered, readable from a distance. It stays dark and out of focus, so type always sits on top of it rather than in it."
+      }
+    ]
+  },
+  "work": {
+    "title": "The work.",
+    "note": "BRAND, WEBSITE",
+    "groups": [
+      {
+        "title": "Brand",
+        "sub": "The mark, the bilingual wordmark and the product family",
+        "blocks": [
+          {
+            "type": "image",
+            "src": "/images/2a0a419f049c67a6323a139a1f72113d.jpg",
+            "alt": "The Omid brand world",
+            "h": 560.0,
+            "caption": "The brand world the marks live in — the galaxy that carries through to the site."
+          },
+          {
+            "type": "grid",
+            "cols": 4,
+            "items": [
+              {
+                "src": "/images/22a5983fbd386cc1b864090690914b61.png",
+                "alt": "The Omid logomark: a gradient dot on navy",
+                "h": 440.0,
+                "fit": "contain",
+                "bg": "#000530",
+                "caption": "The logomark — a single gradient dot, which is the whole identity at its smallest."
+              },
+              {
+                "src": "/images/c5165d42878ec0245cf9234ce525900c.png",
+                "alt": "The Omid Analyzer wordmark in Persian and Latin",
+                "h": 440.0,
+                "caption": "The wordmark in both scripts, set to the same weight and height."
+              },
+              {
+                "src": "/images/ccff3c81b6a34d328d247dfd7ee7a168.png",
+                "alt": "Logos for OMIDMax, OMIDHub and OMIDPlus",
+                "h": 440.0,
+                "caption": "OMIDMax, OMIDHub and OMIDPlus — one construction, three names."
+              },
+              {
+                "src": "/images/7108ede49b68407f9859f995cdb600f9.png",
+                "alt": "The Omid app icon",
+                "h": 440.0,
+                "caption": "The app icon — the mark alone, with the wordmark dropped entirely."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Website",
+        "sub": "Where a trading platform has to look trustworthy before it looks clever",
+        "blocks": [
+          {
+            "type": "image",
+            "src": "/images/469289fb34495b45254fbd3c19ce8d14.png",
+            "alt": "The Omid website design",
+            "h": 620.0,
+            "pos": "center top",
+            "caption": "The site as designed — the first screen has to say this is a serious place for money before it explains anything."
+          }
+        ]
+      }
+    ]
+  },
+  "outcome": {
+    "label": "OUTCOME",
+    "title": "It launched, and the family still holds.",
+    "text": "The brand is live on omid.ir: the galaxy world, the bilingual wordmark and the one-construction family went live with it, and Omid Financial Group has been running algorithmic trading and market-making in Iran’s capital market since 2015.",
+    "cta": {
+      "href": "https://omid.ir",
+      "text": "Visit omid.ir"
+    }
+  },
+  "next": {
+    "title": "Homano."
+  }
+}

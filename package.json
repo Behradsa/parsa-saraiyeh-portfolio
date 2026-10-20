@@ -8,11 +8,15 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
-    "build": "rm -rf dist && vite build && sed -i.bak -E 's#\"/old/(site-header\\.js|favicon\\.ico|favicon-32\\.png|apple-touch-icon\\.png)\"#\"/\\1\"#g' dist/old/index.html && rm -f dist/old/index.html.bak && cp -R public/. dist/",
+    "build": "rm -rf dist && vite build && sed -i.bak -E 's#\"/old/(site-header\\.js|favicon\\.ico|favicon-32\\.png|apple-touch-icon\\.png)\"#\"/\\1\"#g' dist/old/index.html && rm -f dist/old/index.html.bak && cp -R public/. dist/ && npm run check:i18n && astro build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dev:new": "astro dev",
+    "check:i18n": "node tools/check-i18n.mjs"
   },
   "dependencies": {
+    "@fontsource/inter-tight": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
     "react": "^18.3.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18.3.1",
@@ -24,6 +28,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "astro": "7.3.5",
     "eslint": "^9.9.0",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",

@@ -1,0 +1,373 @@
+{
+  "hero": {
+    "first": "Parsa",
+    "last": "Saraiyeh",
+    "hello": "HALLO",
+    "lead": "Ich bin Parsa,",
+    "roles": [
+      "Visual Designer.",
+      "Product Designer.",
+      "HCI-Masterstudent."
+    ],
+    "label": "Ich bin Parsa – Visual Designer, Product Designer und HCI-Masterstudent.",
+    "text": "Mir liegt viel daran, mit Design etwas Positives zu bewirken – ich gestalte gern nutzerzentrierte, angenehme und menschliche Erlebnisse.",
+    "image": {
+      "src": "/images/d67c2682f9365d8db8a1feac3bb0d9b7.png",
+      "alt": "Parsa Saraiyeh am Seeufer, farblich in die Fläche eingebettet"
+    },
+    "imageMobile": {
+      "src": "/images/f9adadae35bd76c524c97b64a61c0dd1.jpg",
+      "alt": "Schwarz-Weiß-Porträt von Parsa Saraiyeh am Seeufer"
+    }
+  },
+  "partners": {
+    "label": "ZUSAMMENARBEIT MIT",
+    "title": "Teams und Produkte, für die ich gestaltet habe – von Teheran bis Oldenburg.",
+    "items": [
+      {
+        "name": "Universität Oldenburg",
+        "sub": "Carl von Ossietzky Universität",
+        "logo": "/images/381644d4de20521ceda0b090948a5b87.png",
+        "alt": "Logo der Universität Oldenburg",
+        "w": 112,
+        "h": 62
+      },
+      {
+        "name": "OFFIS",
+        "sub": "Informatik-Forschungsinstitut, Oldenburg",
+        "logo": "/images/9aed20bd11dc78c2bdca79bb1598655c.png",
+        "alt": "Logo von OFFIS",
+        "w": 96,
+        "h": 58
+      },
+      {
+        "name": "Carriot",
+        "sub": "Plattform für Flottenmanagement",
+        "logo": "/images/232f6af91a68e0e2af25f54085a4f786.png",
+        "alt": "Logo von Carriot",
+        "w": 84,
+        "h": 64
+      },
+      {
+        "name": "Snapp!Trip",
+        "sub": "Online-Reisen, Snapp Group",
+        "logo": "/images/9466ec13af184009e1e4ab920fee0d97.svg",
+        "alt": "Logo von Snapp!Trip",
+        "w": 96,
+        "h": 60
+      },
+      {
+        "name": "Omid",
+        "sub": "Tools für Marktanalyse",
+        "logo": "/images/01ec97830b0f83fa1d5d5ffeef88a813.png",
+        "alt": "Logo von Omid",
+        "w": 120,
+        "h": 48
+      },
+      {
+        "name": "Homano",
+        "sub": "Plattform für Immobilieninvestments",
+        "logo": "/images/72af476acc228680c15232befa8cc19c.png",
+        "alt": "Logo von Homano",
+        "w": 120,
+        "h": 40
+      },
+      {
+        "name": "Tournova",
+        "sub": "Turnierplattform",
+        "logo": "/images/42cb418509833761035c0816fd3db7d3.png",
+        "alt": "Logo von Tournova",
+        "w": 80,
+        "h": 76
+      },
+      {
+        "name": "RZ TV",
+        "sub": "Live-Gaming-Kanal",
+        "logo": "/images/f3d55d8a96c9f24498354d98953d0e90.png",
+        "alt": "Logo von RZ TV",
+        "w": 96,
+        "h": 76
+      },
+      {
+        "name": "Gamopedia",
+        "sub": "Wissensplattform rund ums Gaming",
+        "logo": "/images/6f203b14cac09a8bb6359c4f873713b7.png",
+        "alt": "Logo von Gamopedia",
+        "w": 124,
+        "h": 40
+      },
+      {
+        "name": "Maani Studio",
+        "sub": "Studio für KI, Animation und Film",
+        "logo": "/images/bc2a2a4095cc4e6df4967304baa3eccc.png",
+        "alt": "Logo von Maani Studio",
+        "w": 116,
+        "h": 56
+      },
+      {
+        "name": "Dice Maniacs",
+        "sub": "",
+        "logo": "/images/2456ce7892e7d3f3bc7f3790dd977ed7.png",
+        "alt": "Logo von Dice Maniacs",
+        "w": 112,
+        "h": 56
+      },
+      {
+        "name": "Tokenova",
+        "sub": "",
+        "logo": "/images/f639dd3c6aad71ef8ef90a5267fae164.png",
+        "alt": "Logo von Tokenova",
+        "w": 116,
+        "h": 24
+      }
+    ]
+  },
+  "work": {
+    "title": "Ausgewählte Arbeiten.",
+    "label": "PROJEKTE (06)",
+    "text": "Produkt- und Interface-Design für Plattformen aus Fintech, Logistik, Reisen und Immobilien – und die Designsysteme, die sie konsistent halten.",
+    "year": "©26",
+    "items": [
+      {
+        "name": "Carriot",
+        "roles": [
+          "Grafikdesigner",
+          "UI-Designer"
+        ],
+        "page": "carriot",
+        "image": "/images/b1cfa860fe9b3476a10f24e3cd7be71a.png",
+        "alt": "Grünes Artwork mit einem orangefarbenen 3D-Lieferwagen und einer Kartennadel auf einem Smartphone"
+      },
+      {
+        "name": "Snapp!Trip",
+        "roles": [
+          "Grafikdesigner"
+        ],
+        "page": "snapptrip",
+        "image": "/images/d4381a831eca08abf3de5a78c09c2431.jpg",
+        "alt": "Rotes Artwork mit einem Mann im Snapp!Trip-Shirt und 3D-Prozentzeichen"
+      },
+      {
+        "name": "Omid Analyzer",
+        "roles": [
+          "Grafikdesigner"
+        ],
+        "page": "omid",
+        "image": "/images/252b8e29e011a718a4d5080630642949.png",
+        "alt": "Schwarzes Artwork mit einem bunten, unscharfen Nebel und Planeten"
+      },
+      {
+        "name": "Homano",
+        "roles": [
+          "Grafikdesigner",
+          "UI-Designer"
+        ],
+        "page": "homano",
+        "image": "/images/6d40f50f2460954c55d1340c9a5e0bad.jpg",
+        "alt": "Senfgelbes Artwork mit drei Smartphone-Screens einer persischen Oberfläche"
+      },
+      {
+        "name": "NikAndish",
+        "roles": [
+          "Visual Designer",
+          "Verantwortlich für die Markenidentität"
+        ],
+        "tag": "Case Study Designsystem",
+        "href": "/design-system-case-study/",
+        "newTab": true,
+        "image": "/images/43cc5da78576a8bece42543119cd8fe5.jpg",
+        "alt": "Lila isometrische Treppen-Illustration"
+      },
+      {
+        "name": "Nebulox",
+        "roles": [
+          "Visual Designer"
+        ],
+        "tag": "Case Study",
+        "href": "/old/#/nebulox",
+        "newTab": true,
+        "image": "/images/1770a11960f065ba01470f0292f12e7b.jpg",
+        "alt": "Dunkelblaues Artwork mit leuchtenden Krypto-Icons über einem Gitterstrudel"
+      }
+    ]
+  },
+  "about": {
+    "label": "ÜBER MICH",
+    "title": "Ich arbeite zwischen Marke und Interface – an der Identität, der Bildsprache und den Screens, die Menschen wirklich nutzen.",
+    "text": "Ich studiere im Master Engineering of Socio-Technical Systems an der Universität Oldenburg – nach einem Informatikstudium und sechs Jahren Produktdesign. Aktuell arbeite ich als Web- und UI/UX-Designer an der Universität Oldenburg und bei OFFIS, wo ich die Forschungswebsite des SPP 2199 neu aufgebaut habe und als Web & Design Chair für die Mensch und Computer 2027 tätig bin.",
+    "cv": "Lebenslauf herunterladen",
+    "quote": "„Design ist nicht nur, wie etwas aussieht und sich anfühlt. Design ist, wie es funktioniert.“",
+    "quoteBy": "Steve Jobs",
+    "quoteRole": "Mitgründer von Apple",
+    "video": {
+      "poster": "/images/20313088ea0a8ef0fe160c45504d4c76.jpg",
+      "webm": "/images/43b0ae9aa0ffb29749cf092b9b47cf77.webm",
+      "mp4": "/images/9c927e037fc451f09571690fd960c723.webm"
+    }
+  },
+  "services": {
+    "title": "Was ich mache",
+    "count": "(04)",
+    "items": [
+      {
+        "title": "Produkt- & UI-Design",
+        "chips": [
+          "User Flows",
+          "Wireframing",
+          "Prototyping",
+          "Interaction Design"
+        ],
+        "image": "/images/4b736ef1108982a5db96df5422985581.jpg",
+        "alt": "Dispositions-Dashboard von Carriot",
+        "text": "Das Dispositions-Dashboard von Carriot – über 50 Screens und ein UI-Kit mit 30 Komponenten.",
+        "cta": "Zur Case Study Carriot",
+        "page": "carriot"
+      },
+      {
+        "title": "Designsysteme",
+        "chips": [
+          "Design Tokens",
+          "Komponentenbibliotheken",
+          "Dokumentation",
+          "Design-to-Code"
+        ],
+        "image": "/images/e9133ee6393da7f92dee60699a4a6687.jpg",
+        "alt": "Marke und UI-Set von Homano",
+        "text": "Gemeinsame Buttons, Felder und Hinweise für die Website und das Investorenportal von Homano.",
+        "cta": "Zur Case Study Homano",
+        "page": "homano"
+      },
+      {
+        "title": "Research & Mensch-Computer-Interaktion",
+        "chips": [
+          "Nutzerforschung",
+          "Usability-Tests",
+          "Anforderungen & Konzepte",
+          "Soziotechnische Systeme"
+        ],
+        "board": {
+          "label": "Card-Sorting-Board",
+          "columns": [
+            {
+              "title": "Flotte",
+              "cards": [
+                "Fahrzeuge",
+                "Fahrer",
+                "Live-Karte"
+              ]
+            },
+            {
+              "title": "Aufträge",
+              "cards": [
+                "Disposition",
+                "Verlauf",
+                "Belege"
+              ]
+            },
+            {
+              "title": "Konto",
+              "cards": [
+                "Team",
+                "Zahlung",
+                "Optionen"
+              ]
+            }
+          ]
+        },
+        "text": "Bestehende Muster prüfen und Stakeholder abstimmen, bevor das Designsystem von NikAndish entstand.",
+        "cta": "Zur Case Study NikAndish",
+        "href": "/design-system-case-study/",
+        "newTab": true
+      },
+      {
+        "title": "Marke & Visual",
+        "chips": [
+          "Markenidentität",
+          "Brand Books",
+          "3D-Illustration",
+          "Social-Media-Inhalte",
+          "Kampagnenmotive",
+          "Employer Branding"
+        ],
+        "chipsMobile": 4,
+        "image": "/images/0c08aaa4ebda10b5594ea9b268327fde.jpg",
+        "alt": "Kampagnenmotive von Snapp!Trip",
+        "text": "Kampagnenmotive für Snapp!Trip – Bus-, Flug- und Hotelbanner aus einem gemeinsamen 3D-Set.",
+        "cta": "Zur Case Study Snapp!Trip",
+        "page": "snapptrip"
+      }
+    ]
+  },
+  "testimonials": {
+    "label": "STIMMEN",
+    "title": "Was andere über meine Arbeit sagen – und was sie bewegt hat.",
+    "measured": "Gemessen an früheren Projekten",
+    "metrics": [
+      {
+        "value": "30",
+        "suffix": "%",
+        "text": "weniger UI-Entwicklungszeit bei Nikandish nach Einführung der Design Tokens"
+      },
+      {
+        "value": "20",
+        "suffix": "%",
+        "text": "schnelleres Prototyping in den Produktteams"
+      },
+      {
+        "value": "15",
+        "suffix": "%",
+        "text": "besseres Onboarding und höhere Bindung bei MGC-Produkten"
+      }
+    ],
+    "featured": null,
+    "quotes": [
+      {
+        "quote": "“What stood out most was his keen eye for design and his meticulous approach to every task. Parsa is dependable, eager to learn, and takes ownership of his work.”",
+        "name": "Amirfarhad Kamaee",
+        "role": "Product Design Chapter Lead, Nikandish Group",
+        "photo": "/images/c15a5660a973d046d02b2986e936fcae.jpg"
+      },
+      {
+        "quote": "“Parsa designed our website from the ground up and gave Medai Digital a brand that looks as serious as our work. Clear, thoughtful and easy to build from.”",
+        "name": "Dr. Medai Abadi",
+        "role": "Founder and CEO, Medai Digital",
+        "photo": "/images/8b1bc2d68a920167dbe4670720269c1c.png"
+      }
+    ],
+    "stats": [
+      {
+        "value": "10",
+        "suffix": "+",
+        "text": "Startups bei MGC Ecosystem von Anfang bis Ende gestaltet"
+      },
+      {
+        "value": "5",
+        "suffix": "",
+        "text": "begleitete Produktlaunches und Finanzierungsrunden"
+      },
+      {
+        "value": "100",
+        "suffix": "+",
+        "text": "ausgelieferte Marketing- und Produkt-Assets für Snapp!Trip"
+      }
+    ]
+  },
+  "posts": {
+    "label": "LINKEDIN",
+    "title": "Neueste Beiträge",
+    "all": "Alle auf LinkedIn ansehen",
+    "embedTitle": "Eingebetteter Beitrag",
+    "items": [
+      "urn:li:ugcPost:7510783982624604160",
+      "urn:li:ugcPost:7479274351775711232",
+      "urn:li:ugcPost:7501039049311428609"
+    ]
+  },
+  "contact": {
+    "label": "KONTAKT",
+    "title": "Möchten Sie Kontakt aufnehmen?",
+    "text": "Schreiben Sie mir gern für eine Zusammenarbeit – oder einfach für ein freundliches Hallo :)",
+    "hint": "BEWEGEN SIE DIE MAUS –",
+    "linkedin": "LinkedIn"
+  }
+}

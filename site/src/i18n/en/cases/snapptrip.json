@@ -1,0 +1,219 @@
+{
+  "name": "Snapp!Trip",
+  "label": "SNAPP!TRIP",
+  "title": "Snapp!Trip",
+  "lede": "Iran’s online travel platform — hotels, flights, trains and buses — inside the Snapp Group. I made its weekly marketing output for three years, and built the brand book it never had.",
+  "hero": {
+    "src": "/images/054b12a001750f685043034c3a733c6d.jpg",
+    "alt": "Snapp!Trip line-art lettering on a red field",
+    "tag": "Snapp!Trip"
+  },
+  "meta": [
+    {
+      "label": "WHEN",
+      "text": "Three years in Tehran, from Oct 2020 to Oct 2023."
+    },
+    {
+      "label": "ROLE",
+      "text": "Graphic designer on the marketing team, turning each campaign brief into the visuals that shipped."
+    },
+    {
+      "label": "TEAM",
+      "text": "A four-person marketing team: a campaign manager, an art director, a social media specialist, and me on design."
+    },
+    {
+      "label": "SCOPE",
+      "text": "Campaign key art, social posts, HR branding, illustration and banners, plus the twenty-page visual guideline."
+    },
+    {
+      "label": "LIVE",
+      "link": {
+        "href": "https://snapptrip.com",
+        "text": "snapptrip.com"
+      }
+    }
+  ],
+  "feature": {
+    "href": "/SnappTrip_Visual%20Design%20Guidelines%20Summary.pdf",
+    "image": {
+      "src": "/images/18e2d3731ec46c3c168c3b0c3fb261f2.png",
+      "alt": "The cover of the Snapp!Trip visual design guidelines"
+    },
+    "label": "THE GUIDELINE",
+    "title": "Twenty pages, so the next person makes the same thing without asking.",
+    "text": "Logo and clearspace · colour · Iran Sans · three story formats · a pixel, format and weight spec for every banner placement · three icon families",
+    "cta": "Open the PDF"
+  },
+  "problem": {
+    "label": "THE PROBLEM",
+    "title": "It inherited a brand from its parent and never had one of its own.",
+    "paragraphs": [
+      "The output ran weekly and never stopped: an email newsletter, Instagram in static and video, Telegram, LinkedIn, website banners, in-app banners in the super app, printed stationery and HR material — with campaign pushes on top of all of it. Four people in marketing touched that output, and one of them was the designer.",
+      "Snapp Group fixed the top layer — the logo relationship, the red, the typeface — and below that there was nothing. Illustration, montage style, how a discount figure sat on a banner, what a story looked like: each was decided again per piece, by whoever got there first. So the brand book ran as its own project alongside the marketing calendar, rather than waiting for a quiet month that was never coming."
+    ]
+  },
+  "decisions": {
+    "title": "Key decisions.",
+    "items": [
+      {
+        "title": "Moved the montage from 3D to real photography.",
+        "text": "A 3D montage sells a feeling; a photograph of Istanbul sells a place you can book. The guideline then named three post techniques and three story types, so the choice stopped being taste.",
+        "cost": "every post is now tied to a real photograph of that place existing."
+      },
+      {
+        "title": "Split illustration into two families: cities, and theme.",
+        "text": "Cities carry the destination, the theme set carries the campaign. Theme is white line only, low detail, on the dark primary blue — so it still reads at 358×196 beside the booking search.",
+        "cost": "a new city means a new illustration, not a recombination of the old ones."
+      },
+      {
+        "title": "Wrote the spec instead of making every asset.",
+        "text": "Eight channels, every week, four people. So every placement was written down: home banner 1073×603 JPEG under 300 KB, title 34 pt, CTA 22 pt; wide banner 1920×320 PNG, no CTA; app banner 1080×705 PNG under 200 KB.",
+        "cost": "a spec has to be maintained; the day it goes stale it starts lying."
+      }
+    ],
+    "costLabel": "THE COST"
+  },
+  "work": {
+    "title": "The work.",
+    "note": "FIVE GROUPS",
+    "groups": [
+      {
+        "title": "Campaign visuals",
+        "sub": "The key art a campaign is built out from",
+        "blocks": [
+          {
+            "type": "image",
+            "src": "/images/0c08aaa4ebda10b5594ea9b268327fde.jpg",
+            "alt": "Snapp!Trip campaign key visuals",
+            "h": 560.0,
+            "caption": "Campaign key art, and the pieces cut from it for each placement."
+          }
+        ]
+      },
+      {
+        "title": "Social media",
+        "sub": "Instagram, where the montage style changed mid-run",
+        "blocks": [
+          {
+            "type": "grid",
+            "cols": 3,
+            "items": [
+              {
+                "src": "/images/9b03f57c67b2f11d0bcec9c44491ce13.png",
+                "alt": "Best Souvenir from Istanbul montage post",
+                "h": 424.0,
+                "pos": "center top",
+                "caption": "“Best Souvenir from Istanbul” — a montage built from objects, not a photograph of the city."
+              },
+              {
+                "src": "/images/b6f53099e92236afcadad653beae1652.png",
+                "alt": "LuckyTrip discount campaign post",
+                "caption": "LuckyTrip — the discount game, where the number had to carry the post."
+              },
+              {
+                "src": "/images/c681048e0a8ba2387cd4f8c5c6d595e2.jpg",
+                "alt": "A post in the 3D montage style",
+                "caption": "Before: the 3D montage style, with rendered objects standing in for the place."
+              },
+              {
+                "src": "/images/54fc97c5cfc2cc7dbee68a10238d1370.png",
+                "alt": "The same idea rebuilt with real photography",
+                "caption": "After: the same idea with real photography — the change described above."
+              },
+              {
+                "src": "/images/5ddc8f1141e404391422172e0e5b8b85.png",
+                "alt": "A later static montage post",
+                "caption": "A later post in the settled style — [which campaign this belonged to]."
+              },
+              {
+                "src": "/images/f8eaa31a925414b7a5b95ede3375b4a9.png",
+                "alt": "A later static montage post",
+                "caption": "And another — [which campaign this belonged to]."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "HR branding",
+        "sub": "The same voice, pointed at people who might join",
+        "blocks": [
+          {
+            "type": "grid",
+            "cols": 3,
+            "items": [
+              {
+                "src": "/images/f0aea9e5bd43ad3a33a818eb180db62e.png",
+                "alt": "Post about task-management apps",
+                "h": 290.0,
+                "caption": "Task-management apps the team uses — a recruiting post that gives something away."
+              },
+              {
+                "src": "/images/5dc76e202e419ca99df7ec41fa026357.png",
+                "alt": "Post with hiring-interview tips",
+                "h": 290.0,
+                "caption": "Interview tips, aimed at candidates before they apply."
+              },
+              {
+                "src": "/images/cd73db10522c6ec7aeac1d991980caf6.png",
+                "alt": "A hiring announcement post",
+                "h": 290.0,
+                "caption": "The hiring post itself — the format every open role reused."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Illustration",
+        "sub": "Two families: cities, and the main theme set by the Snapp guideline",
+        "blocks": [
+          {
+            "type": "image",
+            "src": "/images/e22b69d1a61e27d82a91581fe68d6044.jpg",
+            "alt": "The Snapp!Trip illustration set",
+            "h": 500.0,
+            "caption": "The illustration set as a whole, both families side by side."
+          },
+          {
+            "type": "grid",
+            "cols": 2,
+            "items": [
+              {
+                "src": "/images/1f8f8af99b5d14abc631f211e3820e85.png",
+                "alt": "City illustrations",
+                "h": 520.0,
+                "caption": "The cities family — [what each city has to include to stay recognisable]."
+              },
+              {
+                "src": "/images/ce577bb98b37f5027123f8fa7072500c.png",
+                "alt": "Theme illustrations",
+                "h": 520.0,
+                "caption": "The theme family — [the rule the Snapp guideline set for these]."
+              }
+            ]
+          },
+          {
+            "type": "image",
+            "src": "/images/ee9f072af624371735caf599c1e51b6f.png",
+            "alt": "Illustrations laid out in a wide strip",
+            "h": 400.0,
+            "caption": "The set laid out end to end — [how many there were by the time you left]."
+          }
+        ]
+      }
+    ]
+  },
+  "outcome": {
+    "label": "OUTCOME",
+    "title": "Snapp!Trip ended with an identity of its own.",
+    "text": "The illustration families and the montage rule outlived the campaigns they were made for, and the spec meant four people could ship on eight channels a week without deciding the same thing twice.",
+    "cta": {
+      "href": "https://snapptrip.com",
+      "text": "Visit snapptrip.com"
+    }
+  },
+  "next": {
+    "title": "Omid Analyzer."
+  }
+}

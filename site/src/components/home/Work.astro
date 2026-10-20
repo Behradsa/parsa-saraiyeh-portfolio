@@ -1,0 +1,164 @@
+---
+// "Selected work." — project cards. Desktop: rows of three that stand up as they scroll in,
+// with a "View project" label following the mouse. Phones: one column, each card tilts up.
+import { type Lang, home, ui, url, external } from '../../lib/i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const w = home(lang).work;
+const t = ui(lang);
+const rows: (typeof w.items)[] = [];
+for (let i = 0; i < w.items.length; i += 3) rows.push(w.items.slice(i, i + 3));
+const href = (it: (typeof w.items)[number]) => ('page' in it && it.page ? url(lang, it.page) : external(lang, (it as any).href));
+---
+<section id="work" class="work wrap">
+  <div class="head">
+    <h2 class="title rvh">{w.title}</h2>
+    <div class="intro">
+      <span class="eyebrow"><span class="dot m-dot"></span><span class="rvh" style="--d: 220ms">{w.label}</span></span>
+      <p class="rvh" style="--d: 320ms">{w.text}</p>
+    </div>
+    <span class="year rvh" style="--d: 480ms" aria-hidden="true">{w.year}</span>
+  </div>
+
+  <div class="rows">
+    {rows.map((row) => (
+      <div class="row">
+        {row.map((it, i) => (
+          <a class="card rvu" href={href(it)} style={`--d: ${i * 90}ms`} {...((it as any).newTab ? { target: '_blank', rel: 'noopener' } : {})}>
+            <img src={it.image} alt={it.alt} loading="lazy" />
+            <span class="shade" aria-hidden="true"></span>
+            <span class="txt">
+              <span class="name">{it.name}</span>
+              <span class="roles">{it.roles.map((r, k) => <>{k > 0 && <br />}{r}</>)}</span>
+              {(it as any).tag && <span class="tag">{(it as any).tag}</span>}
+            </span>
+            <span class="arrow arrow-badge" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#0a0a0a" stroke-width="1.2"><path d="M6 14L14 6M7.5 6H14v6.5" /></svg>
+            </span>
+            <span class="cta" aria-hidden="true"><span class="dot"></span>{t.viewProject}</span>
+          </a>
+        ))}
+      </div>
+    ))}
+  </div>
+</section>
+<span class="cursor-label" aria-hidden="true"><span class="cursor-in"><span class="dot"></span>{t.viewProject}</span></span>
+
+<style>
+  .work { padding-top: calc(96 * var(--u)); }
+  .head { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; align-items: start; min-height: calc(200 * var(--u)); }
+  .title, .year { font-size: calc(88 * var(--u)); line-height: 0.92; font-weight: 700; letter-spacing: -0.035em; color: var(--ink); }
+  .title { grid-column: span 5; }
+  .intro { grid-column: span 4; display: flex; flex-direction: column; gap: 16px; padding-top: 12px; }
+  .intro p { max-width: 340px; font-size: 15px; line-height: 1.55; color: var(--text); }
+  .year { grid-column: span 3; justify-self: end; }
+  .m-dot { display: none; }
+
+  /* the rows start a little wider than the text column, then settle to it (see script) */
+  .rows { margin: calc(40 * var(--u)) calc(var(--gx) - var(--pad)) calc(128 * var(--u)); display: flex; flex-direction: column; gap: 24px; }
+  .row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; transform-origin: 50% 50%; will-change: transform; }
+  .row > .card { transition: opacity .9s ease var(--d, 0ms); }
+  :global(.rv-js) .row > .card:not(.rv-in) { transform: none; }
+
+  .card { position: relative; display: block; height: calc(424 * var(--u)); min-height: 300px; border-radius: 24px; overflow: hidden; color: var(--on-dark); }
+  .card:hover { color: var(--on-dark); }
+  .card img { width: 100%; height: 100%; object-fit: cover; }
+  .shade { position: absolute; left: 0; right: 0; top: 0; height: 62%; opacity: 0.6; background: linear-gradient(180deg, rgba(10, 10, 10, 0.62) 0%, rgba(10, 10, 10, 0.3) 40%, rgba(10, 10, 10, 0) 100%); }
+  .txt { position: absolute; left: 24px; top: 24px; right: 88px; display: flex; flex-direction: column; gap: 8px; }
+  .name { font-size: 24px; line-height: 1.2; font-weight: 600; letter-spacing: -0.015em; }
+  .roles { font-size: 15px; line-height: 1.45; color: rgba(248, 247, 243, 0.78); }
+  .tag { align-self: flex-start; margin-top: 4px; background: var(--white); border-radius: 999px; padding: 6px 14px; font-size: 12px; line-height: 1.4; font-weight: 600; color: var(--ink); }
+  .arrow { position: absolute; right: 24px; top: 24px; transition: transform .6s var(--ease-out); }
+  .card:hover .arrow, .card:focus-visible .arrow { transform: rotate(45deg); }
+  .cta { display: none; }
+
+  /* "View project" label that follows the mouse over the cards */
+  .cursor-label { position: fixed; left: 0; top: 0; z-index: 60; pointer-events: none; }
+  .cursor-in { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; background: var(--ink); color: var(--on-dark); font-size: 13px; font-weight: 600; white-space: nowrap; opacity: 0; transform: translate(18px, 18px) scale(.4); transform-origin: 0 0; transition: transform .45s var(--ease-out), opacity .25s ease; }
+  .cursor-label.on .cursor-in { opacity: 1; transform: translate(18px, 18px) scale(1); }
+
+  @media (max-width: 819px) {
+    .work { padding-top: 64px; }
+    .head { display: flex; flex-direction: column; gap: 12px; min-height: 0; }
+    .title { order: 2; font-size: 40px; line-height: 1; letter-spacing: -0.02em; }
+    .intro { display: contents; }
+    .intro .eyebrow { order: 1; }
+    .m-dot { display: inline-block; }
+    .intro p { order: 3; max-width: none; }
+    .year { display: none; }
+
+    .rows { margin: 24px 0 0; gap: 16px; }
+    .row { display: flex; flex-direction: column; gap: 16px; transform: none !important; will-change: auto; }
+    .card { height: 320px; min-height: 0; transform-origin: 50% 100%; will-change: transform; }
+    .txt { left: 20px; top: 20px; right: 76px; }
+    .name { font-size: 22px; }
+    .roles { font-size: 14px; }
+    .arrow { right: 20px; top: 20px; width: 44px; height: 44px; }
+    .cta { position: absolute; left: 16px; bottom: 16px; z-index: 2; display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; background: var(--ink); color: var(--on-dark); font-size: 13px; font-weight: 600; white-space: nowrap; opacity: 0; transform: translateY(10px); transition: opacity .5s ease, transform .6s var(--ease-out); }
+    .card.in .cta { opacity: 1; transform: none; }
+    .cursor-label { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { .arrow, .cta, .cursor-in { transition: none; } }
+</style>
+
+<script>
+  import { reduceMotion, finePointer, isMobile, clamp, easeOut, onScrollFrame, pageScrolls, $$ } from '../../scripts/motion';
+
+  const box = document.querySelector<HTMLElement>('.work .rows');
+  const rows = $$('.work .row');
+  const cards = $$<HTMLAnchorElement>('.work .card');
+
+  onScrollFrame(() => {
+    if (!box) return;
+    const vh = innerHeight;
+    const still = reduceMotion() || !pageScrolls();
+    if (isMobile()) {
+      // phones: each card tilts up from its bottom edge as it arrives, then shows "View project"
+      cards.forEach((c) => {
+        if (still) { c.style.transform = ''; c.classList.add('in'); return; }
+        const r = c.getBoundingClientRect();
+        if (r.top > vh + 60 || r.bottom < -60) return;
+        const e = easeOut(clamp((vh - r.top) / (vh * 0.55), 0, 1));
+        c.classList.toggle('in', e > 0.92);
+        c.style.transform = `perspective(1000px) rotateX(${(48 * (1 - e)).toFixed(2)}deg) scale(${(0.92 + 0.08 * e).toFixed(4)})`;
+      });
+      return;
+    }
+    cards.forEach((c) => (c.style.transform = ''));
+    // desktop: each row lies back and stands up as it comes in (phase 1), then shrinks
+    // to the width of the heading above (phase 2); rows are pulled together around the middle.
+    const top = box.getBoundingClientRect().top;
+    const mid = box.offsetHeight / 2;
+    const sec = box.parentElement!;
+    const cs = getComputedStyle(sec);
+    const target = sec.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+    const END = box.offsetWidth > 0 ? Math.min(1, target / box.offsetWidth) : 1;
+    rows.forEach((r) => {
+      if (still) { r.style.transform = ''; return; }
+      const h = r.offsetHeight;
+      const d = vh - (top + r.offsetTop);
+      const a = clamp(d / (vh / 2 + h / 2), 0, 1);
+      const b = clamp((d - (vh / 2 + h / 2)) / (vh * 0.2), 0, 1);
+      const rx = 58 * (1 - a);
+      const s = 1 + (END - 1) * b;
+      const ty = (1 - s) * (mid - r.offsetTop - h / 2);
+      r.style.transform = `translateY(${ty.toFixed(2)}px) perspective(1400px) rotateX(${rx.toFixed(2)}deg) scale(${s.toFixed(4)})`;
+    });
+  });
+
+  // "View project" label following the mouse
+  const label = document.querySelector<HTMLElement>('.cursor-label');
+  if (label && finePointer() && !reduceMotion()) {
+    let lx = 0, ly = 0, tx = 0, ty = 0, raf = 0;
+    const step = () => {
+      lx += (tx - lx) * 0.22; ly += (ty - ly) * 0.22;
+      label.style.transform = `translate3d(${lx.toFixed(1)}px,${ly.toFixed(1)}px,0)`;
+      raf = Math.abs(tx - lx) > 0.2 || Math.abs(ty - ly) > 0.2 ? requestAnimationFrame(step) : 0;
+    };
+    cards.forEach((c) => {
+      c.addEventListener('mouseenter', (e) => { lx = tx = e.clientX; ly = ty = e.clientY; step(); label.classList.add('on'); });
+      c.addEventListener('mousemove', (e) => { tx = e.clientX; ty = e.clientY; if (!raf) raf = requestAnimationFrame(step); });
+      c.addEventListener('mouseleave', () => label.classList.remove('on'));
+    });
+  }
+</script>

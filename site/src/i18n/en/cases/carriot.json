@@ -1,0 +1,279 @@
+{
+  "name": "Carriot",
+  "label": "CARRIOT",
+  "title": "Carriot.",
+  "lede": "A cloud-based last-mile delivery and dispatch platform — I rebuilt its brand and redesigned the platform its dispatchers run the fleet from.",
+  "hero": {
+    "src": "/images/da2147c5ed9dd7e55ce78772d9486217.jpg",
+    "alt": "Carriot brand hero: the logo over a green landscape",
+    "tag": "Carriot",
+    "pos": "50% 55.3618%"
+  },
+  "meta": [
+    {
+      "label": "WHEN",
+      "text": "Feb 2022 — Feb 2023 · Tehran"
+    },
+    {
+      "label": "ROLE",
+      "text": "Graphic Designer · UI Designer"
+    },
+    {
+      "label": "TEAM",
+      "text": "A three-person product team: a PM, a front-end developer, and me on design."
+    },
+    {
+      "label": "SCOPE",
+      "text": "Brand book, logotype, illustration, fleet platform UI — 50+ screens, 30+ component UI kit"
+    },
+    {
+      "label": "LIVE",
+      "link": {
+        "href": "https://carriot.ir",
+        "text": "carriot.ir"
+      }
+    }
+  ],
+  "problem": {
+    "label": "THE PROBLEM",
+    "title": "Every new customer brought a requirement the last one never had — and all of them had to live in one panel.",
+    "paragraphs": [
+      "Carriot was winning customers quickly, and the company’s strategy was to meet each fleet’s own logistics needs rather than sell one fixed workflow. A pharmaceutical distributor needed the cabin temperature recorded on the vehicle itself; a snack and beverage distributor needed to know the moment a driver left the delivery zone.",
+      "Each request arrived as one customer’s feature rather than a pattern, so the panel was growing by accretion. And the logistics team was attached to the manual routing it already trusted — so breadth and adoption were not two problems but one."
+    ]
+  },
+  "decisions": {
+    "title": "Key decisions.",
+    "items": [
+      {
+        "title": "Rebuilt the identity from the mark out.",
+        "text": "The old lettering fell apart at small sizes and could not survive an app icon or a single-colour print, so I rebuilt it on even weights and spacing. The illustration moved to 3D for the same reason: flat drawings were not carrying what the product actually moves.",
+        "cost": "every 3D asset costs more production time than a flat one."
+      },
+      {
+        "title": "Made the panel configurable per customer, not per release.",
+        "text": "Pharma fleets, snack routes and beverage distributors each needed something the others did not. Instead of one panel holding every control, the product became a core set of screens plus modules — cabin temperature, safe area, driver scoring — switched on per account.",
+        "cost": "every module is one more thing sales has to scope and support has to explain."
+      },
+      {
+        "title": "Turned cargo theft into a design object: the safe area.",
+        "text": "One customer kept losing cargo to drivers selling it en route. We made the safe area a first-class thing in the product — a zone set per vehicle, and a warning the moment it is left — so the alert arrives with a reason attached, not just a position.",
+        "cost": "it puts drivers under watch, so the zone is scoped per vehicle rather than following the person all day."
+      },
+      {
+        "title": "Designed smart routing to advise the dispatcher, not replace them.",
+        "text": "The hardest part was not the interface. The logistics team trusted its own routing, had interests tied to it, and read a smart system as a threat to the role. So the suggestion shows its reasoning and the dispatcher keeps the final assignment — and that is why they took it up.",
+        "cost": "keeping a human in the loop caps how far the routing can optimise."
+      }
+    ],
+    "costLabel": "THE COST"
+  },
+  "work": {
+    "title": "The work.",
+    "note": "TWO GROUPS — BRAND, THEN THE PLATFORM",
+    "groups": [
+      {
+        "title": "Designing the brand book",
+        "sub": "Logotype, lettering, app icon and the move to 3D illustration",
+        "blocks": [
+          {
+            "type": "image",
+            "src": "/images/2711489e4ce3959afcbc45332dcd3af4.jpg",
+            "alt": "The Carriot brand book",
+            "h": 520.0,
+            "caption": "The brand book that holds all of this together."
+          },
+          {
+            "type": "grid",
+            "cols": 5,
+            "items": [
+              {
+                "src": "/images/a5f6329075d00320d41f26e2fd20a4e9.png",
+                "alt": "The Carriot logotype makeover",
+                "h": 245.0,
+                "caption": "The logotype makeover, old against new."
+              },
+              {
+                "src": "/images/bec40f5622c8b0fcd3ecc1571da6bc09.png",
+                "alt": "The cleaned-up Carriot lettering",
+                "h": 245.0,
+                "caption": "The lettering redrawn for even weight and spacing."
+              },
+              {
+                "src": "/images/c08494ce4125a6dabf10dca7f439b63f.png",
+                "alt": "The Carriot app icon",
+                "h": 245.0,
+                "caption": "The app icon, built from the mark alone."
+              },
+              {
+                "src": "/images/503cb4f20ab702e6ce25c4acd7fb51f7.jpg",
+                "alt": "Iterations of the Carriot illustration style",
+                "h": 245.0,
+                "caption": "Illustration style iterations on the way to 3D."
+              },
+              {
+                "src": "/images/7c4c54d395b8b5b868289238b3d1c3d0.png",
+                "alt": "3D illustrations made for the Carriot website",
+                "h": 245.0,
+                "caption": "The finished 3D illustrations for the website."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Redesigning the fleet platform",
+        "sub": "Eleven screens, in the order an operator meets them",
+        "blocks": [
+          {
+            "type": "image",
+            "src": "/images/1ef9b9810fe259ba1b9af631129c0adb.jpg",
+            "alt": "Carriot fleet overview screen",
+            "frame": true,
+            "h": 520.0,
+            "bg": "#08151E",
+            "caption": "Fleet overview — what a dispatcher sees before anything goes wrong.",
+            "label": "THE FIRST SCREEN"
+          },
+          {
+            "type": "grid",
+            "cols": 2,
+            "items": [
+              {
+                "src": "/images/f00f38a58725f6acea39affda02609a5.jpg",
+                "alt": "Carriot live fleet map screen",
+                "frame": true,
+                "h": 420.0,
+                "bg": "#08151E",
+                "caption": "Live fleet map — every vehicle, its state and its mission."
+              },
+              {
+                "src": "/images/4b736ef1108982a5db96df5422985581.jpg",
+                "alt": "Carriot missions and dispatch screen",
+                "frame": true,
+                "h": 420.0,
+                "bg": "#08151E",
+                "caption": "Missions and dispatch — assigning work without leaving the map."
+              }
+            ],
+            "label": "OPERATE"
+          },
+          {
+            "type": "grid",
+            "cols": 3,
+            "items": [
+              {
+                "src": "/images/f2048b32112adf9c04fd38fa4939467c.jpg",
+                "alt": "Carriot trip history and replay screen",
+                "frame": true,
+                "h": 280.0,
+                "bg": "#08151E",
+                "caption": "Trip history and replay — a route reconstructed after the fact."
+              },
+              {
+                "src": "/images/f3c7fa103e1b910c1c6bb91a936d5fc4.jpg",
+                "alt": "Carriot smart alerts screen",
+                "frame": true,
+                "h": 280.0,
+                "bg": "#08151E",
+                "caption": "Smart alerts — what interrupts an operator, and what waits."
+              },
+              {
+                "src": "/images/b8cca01f3f31ff06deceaa3c59cf8184.jpg",
+                "alt": "Carriot driver safety screen",
+                "frame": true,
+                "h": 280.0,
+                "bg": "#08151E",
+                "caption": "Driver safety — behaviour scored over time, not per incident."
+              }
+            ],
+            "label": "MONITOR"
+          },
+          {
+            "type": "grid",
+            "cols": 3,
+            "items": [
+              {
+                "src": "/images/218980fc78015af9820f7b5287e98478.jpg",
+                "alt": "Carriot vehicle health and maintenance screen",
+                "frame": true,
+                "h": 280.0,
+                "bg": "#08151E",
+                "caption": "Vehicle health and maintenance — service due before it fails."
+              },
+              {
+                "src": "/images/b65584a0229ed7a123df94582f966489.jpg",
+                "alt": "Carriot fuel and efficiency screen",
+                "frame": true,
+                "h": 280.0,
+                "bg": "#08151E",
+                "caption": "Fuel and efficiency — consumption read against distance and load."
+              },
+              {
+                "src": "/images/9ec65e344b85b6751de94cd9c569beaa.jpg",
+                "alt": "Carriot reports screen",
+                "frame": true,
+                "h": 280.0,
+                "bg": "#08151E",
+                "caption": "Reports — the numbers operations actually export."
+              }
+            ],
+            "label": "COST & ASSETS"
+          },
+          {
+            "type": "grid",
+            "cols": 3,
+            "items": [
+              {
+                "src": "/images/6c1360df740d01db774a7d8d1adb6c22.jpg",
+                "alt": "Carriot vehicle details screen",
+                "frame": true,
+                "h": 280.0,
+                "bg": "#08151E",
+                "caption": "Vehicle details — one asset, its whole history."
+              },
+              {
+                "src": "/images/92d0aa7fc3e8d74349723ab859d32e18.jpg",
+                "alt": "Carriot driver details screen",
+                "frame": true,
+                "h": 280.0,
+                "bg": "#08151E",
+                "caption": "Driver details — one driver, trips, safety and training."
+              },
+              {
+                "src": "/images/7e6bb1f03f27e9dbda356f56d4d065bf.jpg",
+                "alt": "Carriot sign-in screen",
+                "frame": true,
+                "h": 280.0,
+                "bg": "#08151E",
+                "caption": "Sign in — where the new brand lands first."
+              }
+            ],
+            "label": "PROFILES & ENTRY"
+          }
+        ]
+      }
+    ],
+    "after": [
+      {
+        "type": "image",
+        "src": "/images/732a21f5c0297021888d76e097704c39.jpg",
+        "alt": "A Carriot delivery truck carrying the new identity",
+        "h": 400.0,
+        "caption": "The identity where it ends up: on the vehicle."
+      }
+    ]
+  },
+  "outcome": {
+    "label": "OUTCOME",
+    "title": "The team that resisted smart routing ended up running on it.",
+    "text": "Running costs came down and vehicles were allocated and spread better across the delivery area. The brand book and the website went live, and the platform work — 50+ screens and a 30+ component UI kit — became the reference the team built against, with modules that let one product serve fleets from pharmaceutical cold chain to snacks and beverages.",
+    "cta": {
+      "href": "https://carriot.ir",
+      "text": "Visit carriot.ir"
+    }
+  },
+  "next": {
+    "title": "Snapp!Trip."
+  }
+}

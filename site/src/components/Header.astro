@@ -1,0 +1,70 @@
+---
+// Sticky header. Desktop: logo, page label and links. Mobile: logo, EN/DE and the menu button.
+import LangSwitch from './LangSwitch.astro';
+import Roll from './Roll.astro';
+import Menu from './Menu.astro';
+import Tm from './Tm.astro';
+import { type Lang, ui, url, site } from '../lib/i18n';
+
+interface Props { lang: Lang; page: string; label?: string }
+const { lang, page, label } = Astro.props;
+const t = ui(lang);
+const isHome = page === '';
+// On the home page the links jump within the page; elsewhere they go to the home page first.
+const home = isHome ? '#top' : url(lang);
+const to = (hash: string) => (isHome ? '#' + hash : url(lang, '', hash));
+---
+<header class:list={['hdr', { 'hdr-home': isHome }]}>
+  <div class="hdr-l">
+    <a class="logo" href={home}>Parsa<Tm /></a>
+    <span class="bar" aria-hidden="true"></span>
+    <span class="mono lab">{label ?? t.role}</span>
+  </div>
+  <nav class="nav" aria-label={t.nav.main}>
+    <a href={home}><Roll text={t.nav.home} /></a>
+    <a href={to('work')} class="nav-dot"><Roll text={t.nav.projects} /><span class="dot" aria-hidden="true"></span></a>
+    <a href={to('contact')}><Roll text={t.nav.contact} /></a>
+    <a href={site.cv} target="_blank" rel="noopener" class="nav-cv">
+      <Roll text={t.nav.resume} />
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M8 2.5v8M5 7.5l3 3 3-3M3 13h10" /></svg>
+    </a>
+    <LangSwitch lang={lang} page={page} />
+  </nav>
+  <div class="hdr-m">
+    <LangSwitch lang={lang} page={page} />
+    <button type="button" class="menu-open" aria-label={t.menu.open} aria-controls="menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M4 9h16M4 15h16" /></svg>
+    </button>
+  </div>
+</header>
+<Menu lang={lang} page={page} />
+
+<style>
+  .hdr {
+    position: sticky; top: 0; z-index: 40;
+    height: var(--header-h);
+    padding: 0 var(--pad);
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+    background: rgba(248, 247, 243, 0.86);
+    -webkit-backdrop-filter: saturate(1.4) blur(14px);
+    backdrop-filter: saturate(1.4) blur(14px);
+  }
+  .hdr-home { border-bottom-style: dashed; }
+  .hdr-l { display: flex; align-items: center; gap: 16px; }
+  .logo { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); }
+  .bar { width: 1px; height: 18px; background: var(--line); }
+  .nav { display: flex; align-items: center; gap: 36px; }
+  .nav > a { font-size: 15px; font-weight: 500; color: var(--ink); display: inline-flex; align-items: center; }
+  .nav-dot { align-items: flex-start !important; gap: 5px; }
+  .nav-dot .dot { margin-top: 2px; }
+  .nav-cv { gap: 8px; }
+  .hdr-m { display: none; align-items: center; gap: 8px; }
+  .menu-open { width: 44px; height: 44px; background: transparent; border: 0; color: var(--ink); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+
+  @media (max-width: 819px) {
+    .hdr-home { border-bottom-style: solid; }
+    .bar, .lab, .nav { display: none; }
+    .hdr-m { display: flex; }
+  }
+</style>

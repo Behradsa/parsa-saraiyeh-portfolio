@@ -1,0 +1,119 @@
+---
+// "Worked with" — logo carousel that keeps moving and can be dragged.
+import { type Lang, home } from '../../lib/i18n';
+interface Props { lang: Lang }
+const p = home(Astro.props.lang).partners;
+// the list is drawn twice so the loop has no gap; the copy is hidden from screen readers
+const loop = [...p.items.map((it) => ({ ...it, copy: false })), ...p.items.map((it) => ({ ...it, copy: true }))];
+---
+<section id="partners" class="partners rv-watch">
+  <div class="head">
+    <span class="eyebrow"><span class="dot"></span>{p.label}</span>
+    <h2 class="ph">{p.title}</h2>
+  </div>
+  <div class="strip">
+    <div class="track">
+      {loop.map((it, i) => (
+        <div class="card" style={`--d: ${Math.min(i, 9) * 70}ms`} aria-hidden={it.copy ? 'true' : undefined}>
+          <div class="tile">
+            <img class="logo" src={it.logo} alt={it.copy ? '' : it.alt} style={`--lw: ${it.w}px; --lh: ${it.h}px`} draggable="false" loading="lazy" />
+          </div>
+          <div class="cap">
+            <span class="cap-t">{it.name}</span>
+            {it.sub && <span class="cap-s">{it.sub}</span>}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .partners {
+    padding: calc(128 * var(--u)) calc(120 * var(--u));
+    display: flex; flex-direction: column; gap: calc(64 * var(--u));
+    border-bottom: 1px dashed var(--line);
+  }
+  .head { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; align-items: start; }
+  .head .eyebrow { grid-column: span 4; padding-top: 8px; }
+  .ph { grid-column: span 8; max-width: 680px; font-size: calc(34 * var(--u)); line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); transition: color 1.1s var(--ease-out); }
+
+  .strip {
+    margin-inline: calc(-120 * var(--u)); overflow: hidden; cursor: grab; touch-action: pan-y; user-select: none;
+    --fade: calc(120 * var(--u));
+    mask-image: linear-gradient(90deg, transparent 0, #000 var(--fade), #000 calc(100% - var(--fade)), transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 var(--fade), #000 calc(100% - var(--fade)), transparent 100%);
+  }
+  .strip.dragging { cursor: grabbing; }
+  .track { display: flex; width: max-content; animation: marquee 70s linear infinite; }
+  .track.js { animation: none; }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+
+  .card { --size: 240px; width: var(--size); margin-right: 24px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .tile { width: var(--size); height: var(--size); background: var(--white); border-radius: 24px; display: flex; align-items: center; justify-content: center; }
+  .logo { max-width: var(--lw); max-height: var(--lh); width: auto; height: auto; -webkit-user-drag: none; }
+  .cap { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; }
+  .cap-t { font-size: 17px; line-height: 1.3; font-weight: 600; letter-spacing: -0.01em; }
+  .cap-s { font-size: 13px; line-height: 1.45; color: var(--muted); }
+
+  /* reveal: heading fills in, cards rise, logos un-blur, captions follow */
+  .card { transition: opacity .8s ease var(--d), transform 1.1s var(--ease-out) var(--d); }
+  .logo { transition: filter 1s ease calc(var(--d) + 120ms), opacity .8s ease calc(var(--d) + 120ms); }
+  .cap { transition: opacity .8s ease calc(var(--d) + 260ms), transform 1s var(--ease-out) calc(var(--d) + 260ms); }
+  :global(.rv-js) .partners:not(.rv-in) .ph { color: var(--ghost); }
+  :global(.rv-js) .partners:not(.rv-in) .card { opacity: 0; transform: translateY(36px); }
+  :global(.rv-js) .partners:not(.rv-in) .logo { opacity: 0; filter: blur(12px); }
+  :global(.rv-js) .partners:not(.rv-in) .cap { opacity: 0; transform: translateY(12px); }
+
+  @media (max-width: 819px) {
+    .partners { padding: 64px 20px 56px; gap: 24px; }
+    .head { display: flex; flex-direction: column; gap: 16px; }
+    .head .eyebrow { padding-top: 0; }
+    .ph { font-size: 28px; }
+    .strip { margin-inline: -20px; --fade: 40px; }
+    .track { animation-duration: 58s; }
+    .card { --size: 200px; margin-right: 16px; }
+    .logo { max-width: calc(var(--lw) * 0.833); max-height: calc(var(--lh) * 0.833); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .track { animation: none; }
+    .card, .logo, .cap, .ph { transition: none; }
+  }
+</style>
+
+<script>
+  import { reduceMotion, isMobile } from '../../scripts/motion';
+  // Drive the loop from script so it can be dragged (mouse or finger) and flicked.
+  const track = document.querySelector<HTMLElement>('.partners .track');
+  const strip = track?.parentElement;
+  if (track && strip) {
+    track.classList.add('js');
+    let pos = 0, drag = false, vx = 0, lastX = 0, lastT = 0, prevT = 0;
+    const tick = (t: number) => {
+      const dt = prevT ? Math.min(0.05, (t - prevT) / 1000) : 0; prevT = t;
+      const half = track.scrollWidth / 2;
+      if (!drag) {
+        if (Math.abs(vx) > 5) { pos += vx * dt; vx *= Math.pow(0.03, dt); } else vx = 0;
+        if (!reduceMotion() && half > 0) pos -= (half / (isMobile() ? 58 : 70)) * dt;
+      }
+      if (half > 0) { while (pos <= -half) pos += half; while (pos > 0) pos -= half; }
+      track.style.transform = `translate3d(${pos.toFixed(2)}px,0,0)`;
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+    strip.addEventListener('pointerdown', (e) => {
+      drag = true; vx = 0; lastX = e.clientX; lastT = performance.now();
+      try { strip.setPointerCapture(e.pointerId); } catch {}
+      strip.classList.add('dragging');
+    });
+    strip.addEventListener('pointermove', (e) => {
+      if (!drag) return;
+      const now = performance.now(), dx = e.clientX - lastX;
+      pos += dx; vx = (dx / Math.max(1, now - lastT)) * 1000;
+      lastX = e.clientX; lastT = now;
+    });
+    const end = () => { if (!drag) return; drag = false; strip.classList.remove('dragging'); };
+    strip.addEventListener('pointerup', end);
+    strip.addEventListener('pointercancel', end);
+  }
+</script>

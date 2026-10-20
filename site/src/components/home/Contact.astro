@@ -1,0 +1,100 @@
+---
+// The dark contact card. On desktop, moving the mouse over it leaves a trail of project pictures.
+import Roll from '../Roll.astro';
+import { type Lang, home, site } from '../../lib/i18n';
+interface Props { lang: Lang }
+const c = home(Astro.props.lang).contact;
+const work = home(Astro.props.lang).work.items.map((w) => w.image);
+// trail order: NikAndish, Nebulox, then the four case studies — twice
+const trail = [work[4], work[5], work[0], work[1], work[2], work[3]];
+---
+<section id="contact" class="contact wrap">
+  <div class="card rvu">
+    <div class="trail" aria-hidden="true">
+      {[...trail, ...trail].map((src) => <img class="trail-i" src={src} alt="" loading="lazy" />)}
+    </div>
+    <div class="hint" aria-hidden="true"><div class="hint-run">{Array.from({ length: 16 }, () => <span>{c.hint}</span>)}</div></div>
+    <span class="eyebrow on-dark"><span class="dot"></span>{c.label}</span>
+    <h2 class="rvh">{c.title}</h2>
+    <p>{c.text}</p>
+    <div class="actions">
+      <a class="pill pill-light" href={`mailto:${site.email}`}><Roll text={site.email} /><span class="dot" aria-hidden="true"></span></a>
+      <a class="pill pill-line" href={site.linkedin} target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="3" /><path d="M6.5 8.5v5M6.5 6.2v.1M10 13.5v-3a1.8 1.8 0 0 1 3.5 0v3" /></svg>
+        <Roll text={c.linkedin} />
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact { padding-top: 96px; }
+  .card {
+    position: relative; overflow: hidden; min-height: 424px; padding: 48px;
+    background: var(--ink); border-radius: 32px; color: var(--on-dark);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center;
+  }
+  .card > :not(.trail):not(.hint) { position: relative; z-index: 1; }
+  h2 { font-size: calc(88 * var(--u)); line-height: 0.92; font-weight: 700; letter-spacing: -0.035em; color: var(--on-dark); }
+  p { max-width: 560px; font-size: 17px; line-height: 1.5; color: var(--on-dark-2); }
+  .actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; }
+
+  .trail { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+  .trail-i { position: absolute; left: 0; top: 0; width: 200px; height: 200px; object-fit: cover; border-radius: 24px; opacity: 0; will-change: transform, opacity; }
+  .hint {
+    position: absolute; left: 0; right: 0; bottom: 22px; z-index: 1; overflow: hidden; pointer-events: none;
+    mask-image: linear-gradient(90deg, transparent 0, #000 140px, #000 calc(100% - 140px), transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 140px, #000 calc(100% - 140px), transparent 100%);
+  }
+  .hint-run { display: flex; width: max-content; animation: run 32s linear infinite; font-family: var(--mono); font-size: 11px; letter-spacing: .12em; color: rgba(248, 247, 243, 0.42); }
+  .hint-run > span { padding-right: 32px; }
+  @keyframes run { to { transform: translateX(-50%); } }
+  @media (hover: none) { .hint { display: none; } }
+
+  @media (max-width: 819px) {
+    .contact { padding-top: 64px; }
+    .card { min-height: 0; padding: 32px 24px; gap: 20px; }
+    h2 { font-size: 40px; line-height: 1; letter-spacing: -0.02em; }
+    p { font-size: 15px; line-height: 1.55; }
+    .trail, .hint { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { .hint-run { animation: none; } }
+</style>
+
+<script>
+  import { reduceMotion, finePointer, clamp, easeOut, isMobile, onScrollFrame, $$ } from '../../scripts/motion';
+  const card = document.querySelector<HTMLElement>('.contact .card');
+  if (card && !reduceMotion()) {
+    // the card grows to full size as it scrolls into view
+    onScrollFrame(() => {
+      const r = card.getBoundingClientRect(), vh = innerHeight;
+      const p = isMobile() ? easeOut(clamp((vh - r.top) / (vh * 0.7), 0, 1)) : clamp((vh - r.top) / (vh * 0.75), 0, 1);
+      card.style.scale = (0.9 + 0.1 * p).toFixed(4);
+    });
+  }
+  // image trail following the mouse
+  const imgs = $$<HTMLImageElement>('.contact .trail-i');
+  if (card && imgs.length && finePointer() && !reduceMotion() && imgs[0].animate) {
+    let px: number | null = null, py = 0, k = 0, z = 1;
+    const A = ' translate(-50%,-50%) ';
+    card.addEventListener('mousemove', (e) => {
+      const r = card.getBoundingClientRect(), s = parseFloat(card.style.scale) || 1;
+      const x = (e.clientX - r.left) / s, y = (e.clientY - r.top) / s;
+      if (px === null) { px = x; py = y; return; }
+      if (Math.abs(x - px) < 90 && Math.abs(y - py) < 90) return;
+      const el = imgs[k++ % imgs.length];
+      el.loading = 'eager';
+      el.style.zIndex = String(++z);
+      el.animate([
+        { opacity: 0, transform: `translate(${px}px,${py}px)${A}scale(.9)` },
+        { opacity: 1, transform: `translate(${(px + x) / 2}px,${(py + y) / 2}px)${A}scale(1)`, offset: 0.25 },
+        { opacity: 1, transform: `translate(${x}px,${y}px)${A}scale(1)`, offset: 0.6 },
+        { opacity: 0, transform: `translate(${x}px,${y}px)${A}scale(.6)` },
+      ], { duration: 1050, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'forwards' });
+      px = x; py = y;
+    });
+    card.addEventListener('mouseleave', () => { px = null; });
+    // load the pictures once the mouse first comes near, so they show without a delay
+    card.addEventListener('mouseenter', () => imgs.forEach((i) => (i.loading = 'eager')), { once: true });
+  }
+</script>

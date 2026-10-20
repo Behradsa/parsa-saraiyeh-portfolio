@@ -1,0 +1,25 @@
+---
+// EN | DE — links to this same page in the other language.
+import { type Lang, LANGS, ui, url } from '../lib/i18n';
+interface Props { lang: Lang; page: string; dark?: boolean }
+const { lang, page, dark = false } = Astro.props;
+const t = ui(lang);
+---
+<span class:list={['lsw', { 'lsw-dark': dark }]} role="group" aria-label={t.nav.language}>
+  {LANGS.map((l) => (
+    <a class:list={['lsw-a', { on: l === lang }]} href={url(l, page)} hreflang={l} lang={l} aria-current={l === lang ? 'true' : undefined}>
+      {l.toUpperCase()}
+    </a>
+  ))}
+</span>
+
+<style>
+  .lsw { display: inline-flex; align-items: center; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; font-family: var(--mono); font-size: 11px; line-height: 1; letter-spacing: 0.06em; }
+  .lsw-a { display: inline-block; padding: 5px 9px; border-radius: 999px; color: var(--muted); transition: color .2s ease, background .2s ease; }
+  .lsw-a:hover { color: var(--ink); }
+  .lsw-a.on { background: var(--ink); color: var(--on-dark); }
+  .lsw-dark { border-color: rgba(248, 247, 243, 0.24); }
+  .lsw-dark .lsw-a { color: rgba(248, 247, 243, 0.6); }
+  .lsw-dark .lsw-a:hover { color: var(--on-dark); }
+  .lsw-dark .lsw-a.on { background: var(--on-dark); color: var(--ink); }
+</style>

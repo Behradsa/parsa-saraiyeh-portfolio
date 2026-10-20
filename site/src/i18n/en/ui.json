@@ -1,0 +1,57 @@
+{
+  "lang": "en",
+  "locale": "en_US",
+  "dash": "—",
+  "role": "PRODUCT DESIGNER (UI/UX)",
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact",
+    "resume": "Resume",
+    "language": "Language",
+    "main": "Main menu"
+  },
+  "menu": {
+    "open": "Open menu",
+    "close": "Close menu",
+    "label": "Menu",
+    "items": [
+      "Work",
+      "About",
+      "Posts",
+      "Contact"
+    ]
+  },
+  "footer": {
+    "pages": "Pages",
+    "home": "Home",
+    "projects": "Projects",
+    "posts": "Posts",
+    "resume": "Resume",
+    "contact": "Contact",
+    "imprint": "Imprint",
+    "privacy": "Privacy",
+    "copyright": "© 2026 Parsa Saraiyeh",
+    "domain": "parsa-sa.com"
+  },
+  "contactCard": {
+    "title": "Get in touch",
+    "aria": "Get in touch: email, LinkedIn or CV",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "cvLabel": "Résumé",
+    "cv": "Download my CV"
+  },
+  "viewProject": "View project",
+  "allProjects": "All projects",
+  "caseStudy": "CASE STUDY",
+  "nextProject": "NEXT PROJECT",
+  "meta": {
+    "homeTitle": "Parsa Saraiyeh — Product Designer (UI/UX)",
+    "homeDescription": "Product designer in Oldenburg, Germany. Brand, interfaces and design systems for products in fintech, logistics, travel and real estate.",
+    "homeImageAlt": "Parsa Saraiyeh, Product Designer (UI/UX)",
+    "caseTitle": "{name} — Parsa Saraiyeh",
+    "caseShareTitle": "{name} — Case study by Parsa Saraiyeh",
+    "caseImageAlt": "{name} case study"
+  }
+}

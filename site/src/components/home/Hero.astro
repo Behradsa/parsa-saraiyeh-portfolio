@@ -1,0 +1,98 @@
+---
+// Big name, then the dark panel: rotating role, intro text, photo and the "Get in touch" pill.
+import Tm from '../Tm.astro';
+import ContactPill from '../ContactPill.astro';
+import { type Lang, home, ui } from '../../lib/i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const h = home(lang).hero;
+const t = ui(lang);
+---
+<section class="name wrap">
+  <h1><span>{h.first}<Tm /></span> <span>{h.last}</span></h1>
+  <span class="mono role">{t.role}</span>
+</section>
+
+<section class="hero">
+  <div class="panel">
+    <picture class="photo">
+      <source media="(max-width: 819px)" srcset={h.imageMobile.src} />
+      <img class="himg" src={h.image.src} alt={h.image.alt} fetchpriority="high" />
+    </picture>
+    <div class="copy">
+      <span class="eyebrow on-dark"><span class="dot"></span>{h.hello}</span>
+      <h2 aria-label={h.label}>
+        <span aria-hidden="true">{h.lead}</span>
+        <span class="hrot" aria-hidden="true">
+          {h.roles.map((r, i) => <span class:list={{ on: i === 0 }}>{r}</span>)}
+        </span>
+      </h2>
+      <p>{h.text}</p>
+    </div>
+    <ContactPill lang={lang} />
+  </div>
+</section>
+
+<style>
+  /* ---- name row ---- */
+  .name { padding-top: calc(34 * var(--u)); height: calc(220 * var(--u)); }
+  h1 { display: flex; justify-content: space-between; font-size: calc(120 * var(--u)); line-height: 0.9; font-weight: 700; letter-spacing: -0.04em; color: var(--ink); }
+  .role { display: none; }
+
+  /* ---- dark panel ---- */
+  .hero { padding: 0 var(--gx); height: calc(560 * var(--u)); }
+  .panel { position: relative; height: calc(540 * var(--u)); background: var(--ink); border-radius: 32px; padding: calc(40 * var(--u)) calc(48 * var(--u)) calc(48 * var(--u)); overflow: hidden; }
+  .copy { position: relative; z-index: 1; display: flex; flex-direction: column; gap: calc(24 * var(--u)); max-width: calc(820 * var(--u)); }
+  .eyebrow { gap: 10px; }
+  h2 { font-size: calc(56 * var(--u)); line-height: 0.96; font-weight: 700; letter-spacing: -0.03em; color: var(--on-dark); }
+  .copy p { max-width: 560px; font-size: 17px; line-height: 1.5; color: var(--on-dark-2); }
+  .photo img { position: absolute; right: 0; top: calc(-48 * var(--u)); width: calc(554 * var(--u)); height: calc(636 * var(--u)); object-fit: cover; will-change: translate; }
+
+  /* rotating role words */
+  .hrot { display: block; position: relative; height: 1.12em; margin-bottom: -0.16em; overflow: hidden; }
+  .hrot > span { position: absolute; left: 0; top: 0; white-space: nowrap; line-height: 1.12; transform: translateY(105%); transition: transform .75s var(--ease-io); }
+  .hrot > span.on { transform: translateY(0); }
+  .hrot > span.out { transform: translateY(-105%); }
+  .hrot > span.snap { transition: none; }
+
+  @media (max-width: 819px) {
+    .name { height: auto; padding-top: 28px; }
+    h1 { flex-direction: column; font-size: 60px; }
+    .role { display: block; margin-top: 16px; }
+
+    .hero { height: auto; padding-top: 24px; }
+    .panel { height: auto; padding: 20px; display: flex; flex-direction: column; gap: 20px; }
+    .photo { position: relative; display: block; height: 360px; border-radius: 22px; overflow: hidden; }
+    .photo::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 45%; background: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, rgba(10, 10, 10, 0.55) 55%, #0a0a0a 100%); pointer-events: none; }
+    .photo img { position: static; width: 100%; height: 100%; }
+    .copy { gap: 20px; max-width: none; }
+    h2 { font-size: 32px; line-height: 1.02; letter-spacing: -0.025em; }
+    .copy p { font-size: 15px; line-height: 1.55; }
+  }
+  @media (prefers-reduced-motion: reduce) { .hrot > span { transition: none; } }
+</style>
+
+<script>
+  import { reduceMotion, onScrollFrame, isMobile, clamp } from '../../scripts/motion';
+  // rotate the role word every 2.6 s
+  const hrot = document.querySelector('.hrot');
+  if (hrot && !reduceMotion()) {
+    const words = Array.from(hrot.children) as HTMLElement[];
+    let i = 0;
+    setInterval(() => {
+      const cur = words[i], nx = words[(i + 1) % words.length];
+      cur.classList.remove('on'); cur.classList.add('out');
+      nx.classList.add('snap'); nx.classList.remove('out'); void nx.offsetWidth; nx.classList.remove('snap'); nx.classList.add('on');
+      i = (i + 1) % words.length;
+      setTimeout(() => { cur.classList.add('snap'); cur.classList.remove('out'); void cur.offsetWidth; cur.classList.remove('snap'); }, 800);
+    }, 2600);
+  }
+  // the photo drifts down a little as the page scrolls (desktop)
+  const img = document.querySelector<HTMLElement>('.himg');
+  if (img && !reduceMotion()) {
+    onScrollFrame(() => {
+      img.style.translate = isMobile() ? '' : `0 ${clamp(scrollY * 0.12, 0, 48).toFixed(1)}px`;
+    });
+  }
+</script>
