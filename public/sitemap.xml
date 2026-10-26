@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://parsa-sa.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parsa-sa.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://parsa-sa.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parsa-sa.com/"/>
+  </url>
+  <url>
+    <loc>https://parsa-sa.com/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parsa-sa.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://parsa-sa.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parsa-sa.com/"/>
+  </url>
+  <url>
+    <loc>https://parsa-sa.com/carriot</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parsa-sa.com/carriot"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://parsa-sa.com/de/carriot"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parsa-sa.com/carriot"/>
+  </url>
+  <url>
+    <loc>https://parsa-sa.com/de/carriot</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parsa-sa.com/carriot"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://parsa-sa.com/de/carriot"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parsa-sa.com/carriot"/>
+  </url>
+  <url>
+    <loc>https://parsa-sa.com/homano</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parsa-sa.com/homano"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://parsa-sa.com/de/homano"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parsa-sa.com/homano"/>
+  </url>
+  <url>
+    <loc>https://parsa-sa.com/de/homano</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parsa-sa.com/homano"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://parsa-sa.com/de/homano"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parsa-sa.com/homano"/>
+  </url>
+  <url>
+    <loc>https://parsa-sa.com/omid</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parsa-sa.com/omid"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://parsa-sa.com/de/omid"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parsa-sa.com/omid"/>
+  </url>
+  <url>
+    <loc>https://parsa-sa.com/de/omid</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parsa-sa.com/omid"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://parsa-sa.com/de/omid"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parsa-sa.com/omid"/>
+  </url>
+  <url>
+    <loc>https://parsa-sa.com/snapptrip</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parsa-sa.com/snapptrip"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://parsa-sa.com/de/snapptrip"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parsa-sa.com/snapptrip"/>
+  </url>
+  <url>
+    <loc>https://parsa-sa.com/de/snapptrip</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parsa-sa.com/snapptrip"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://parsa-sa.com/de/snapptrip"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parsa-sa.com/snapptrip"/>
+  </url>
+  <url>
+    <loc>https://parsa-sa.com/design-system-case-study/</loc>
+  </url>
+</urlset>
